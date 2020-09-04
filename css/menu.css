@@ -1,0 +1,18 @@
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    padding-bottom: 25px;
+}
+
+
+.menu-link {
+    color: beige;
+    font-weight: bold;
+}
+
+.menu-link:hover {
+    color: violet;
+    transform: scale(1.2);
+}
