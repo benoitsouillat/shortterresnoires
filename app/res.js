@@ -24,5 +24,5 @@ let femaleClass = [okkaina, panama];
 let maleClass = [rock];
 
 let path = "../src/img/";
-let images = ["okkaina1", "okkaina2", "okkaina3", "okkaina4", "okkainapanama", "panama1", "panama2","panama3", "panama4", "rock1", "rock2", "rock3", "irréelle1", "nuit d'étoiles1"];
+let images = ["okkaina1", "okkaina2", "okkaina3", "okkaina4", "panama1", "panama2","panama3", "panama4", "okkainapanama", "rock1", "rock2", "rock3", "irréelle1", "nuit d'étoiles1"];
 let jpg = ".jpg";
