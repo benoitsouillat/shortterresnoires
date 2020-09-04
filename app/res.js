@@ -26,7 +26,7 @@ let maleClass = [rock];
 
 let path = "../src/img/";
 let images = ["okkaina1", "okkaina2", "okkaina3", 
-"okkaina4", "okkaina5", "okkaina6", "okkaina7", "okkaina8", "okkaina9",
+"okkaina4", "okkaina5", "okkaina6", "okkaina7", "okkaina8", //"okkaina9",
 "okkaina10", "okkaina11",
 "panama1", "panama2","panama3", "panama4", "panama5", "panama6", 
 "okkainapanama", "rock1", "rock2", "rock3", "rock4", "rock5",
