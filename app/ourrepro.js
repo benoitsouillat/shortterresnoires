@@ -2,6 +2,25 @@
 
 let ourRepro = document.getElementById("our-repro");
 
+const reformingImg = (dogName) => {
+
+    let img = document.getElementById(dogName + "-image");
+    let button = document.getElementById(dogName + "-next-button");
+    let div = document.getElementById(dogName + "-diapo");
+
+    let buttonValue = getComputedStyle(button);
+    let divValue = getComputedStyle(div);
+
+    let buttonValueW = buttonValue.width.slice(0, -2);
+    let divValueW = divValue.width.slice(0, -2);
+
+    img.style.maxWidth =  divValueW - (buttonValueW * 2 ) + 'px';
+    div.style.height = '330' + 'px';
+    img.style.height = "330px";
+
+
+}
+
 
 const createImgArray = (dogName) => {
 
@@ -103,6 +122,7 @@ femaleClass.forEach(elm => {
     let dogSex = elm.dogSex;
     let dogBirth = elm.dogBirth;
     let dogBreeder = elm.dogBreeder;
+    let dogLitter = elm.dogLitter;
 
         /* Partie Infos du chien */
 
@@ -116,6 +136,9 @@ femaleClass.forEach(elm => {
         dogSexPrint.textContent = dogSex;
     let dogBirthPrint = document.createElement("p");
         dogBirthPrint.textContent = "née le : " +  dogBirth;
+    let dogLitterLink = document.createElement("a");
+        dogLitterLink.href = "okkainaweeding.html";
+        dogLitterLink.textContent = " Voir ses bébés";
 
         /* Partie Diapo */
 
@@ -123,19 +146,25 @@ femaleClass.forEach(elm => {
     let lastButton = document.createElement("button");
         lastButton.textContent = " << ";
         lastButton.id = dogName.toLowerCase() + "-last-button";
+        lastButton.classList.add("diapo-button");
     let nextButton = document.createElement("button");
         nextButton.textContent = " >> ";
         nextButton.id = dogName.toLowerCase() + "-next-button";
-
+        nextButton.classList.add("diapo-button");
 
     let divDiapo = document.createElement("div");
         divDiapo.classList.add("diapo-dog");
         divDiapo.id = dogName.toLowerCase() + "-diapo";
 
+
     let imgDiapo = document.createElement("img");
         imgDiapo.id = dogName.toLowerCase() + "-image";
-        imgDiapo.src = path + images[0] + jpg;
-        imgDiapo.classList.add("img-scaling");
+        imgDiapo.src = path + dogName.toLowerCase() + "1" + jpg;
+
+    /*let clicky = document.createElement("p");
+        clicky.textContent = " Cliquez pour défiler. ";
+        clicky.classList.add("clicky-flex-align");*/
+
 
 
         /* Insertions */
@@ -145,18 +174,21 @@ femaleClass.forEach(elm => {
     divInfo.appendChild(dogNamePrint);
     divInfo.appendChild(dogSexPrint);
     divInfo.appendChild(dogBirthPrint);
+    if(dogLitter === true)
+    {
+        divInfo.appendChild(dogLitterLink);
+    }
     dogInfo.appendChild(divDiapo);
     divDiapo.appendChild(lastButton);
     divDiapo.appendChild(imgDiapo);
     divDiapo.appendChild(nextButton);
+    //dogInfo.appendChild(clicky);
 
 
 lastButton.addEventListener("click", actionClic, {once:true});
 nextButton.addEventListener("click", actionClic, {once:true});
 
 });
-
-
 
                     /* Les Mâles */
 
@@ -175,10 +207,12 @@ maleClass.forEach(elm => {
     let dogSex = elm.dogSex;
     let dogBirth = elm.dogBirth;
     let dogBreeder = elm.dogBreeder;
+    let dogLitter = elm.dogLitter;
+
 
         /* Partie Infos du chien */
 
-        let dogInfo = document.createElement("aside");
+    let dogInfo = document.createElement("aside");
         dogInfo.classList.add("repro-info")
     let divInfo = document.createElement("div");
         divInfo.classList.add("dog-info");
@@ -188,6 +222,10 @@ maleClass.forEach(elm => {
         dogSexPrint.textContent = dogSex;
     let dogBirthPrint = document.createElement("p");
         dogBirthPrint.textContent = "née le : " +  dogBirth;
+    let dogLitterLink = document.createElement("a");
+        dogLitterLink.href = "okkainaweeding.html";
+        dogLitterLink.textContent = " Voir ses bébés";
+
 
         /* Partie Diapo */
 
@@ -195,9 +233,12 @@ maleClass.forEach(elm => {
     let lastButton = document.createElement("button");
         lastButton.textContent = " << ";
         lastButton.id = dogName.toLowerCase() + "-last-button";
+        lastButton.classList.add("diapo-button");
     let nextButton = document.createElement("button");
         nextButton.textContent = " >> ";
         nextButton.id = dogName.toLowerCase() + "-next-button";
+        nextButton.classList.add("diapo-button");
+
 
 
     let divDiapo = document.createElement("div");
@@ -206,8 +247,11 @@ maleClass.forEach(elm => {
 
     let imgDiapo = document.createElement("img");
         imgDiapo.id = dogName.toLowerCase() + "-image";
-        imgDiapo.src = path + images[0] + jpg;
-        imgDiapo.classList.add("img-scaling");
+        imgDiapo.src = path + dogName.toLowerCase() + "1" + jpg;
+
+   /* let clicky = document.createElement("p");
+        clicky.textContent = " Cliquez pour défiler. ";
+        clicky.classList.add("clicky-flex-align"); */
 
 
         /* Insertions */
@@ -217,13 +261,22 @@ maleClass.forEach(elm => {
     divInfo.appendChild(dogNamePrint);
     divInfo.appendChild(dogSexPrint);
     divInfo.appendChild(dogBirthPrint);
+    if(dogLitter === true)
+    {
+        divInfo.appendChild(dogLitterLink);
+    }
     dogInfo.appendChild(divDiapo);
     divDiapo.appendChild(lastButton);
     divDiapo.appendChild(imgDiapo);
     divDiapo.appendChild(nextButton);
+   // divDiapo.appendChild(clicky);
 
 
 lastButton.addEventListener("click", actionClic, {once:true});
 nextButton.addEventListener("click", actionClic, {once:true});
 
 });
+
+dogClass.forEach(elm => {
+    reformingImg(elm.dogName.toLowerCase());
+})

@@ -4,6 +4,21 @@
     flex-direction: row;
     justify-content: center;
     align-content: center;
+    font-size: 1.2em;
+}
+
+#contact {
+    display: flex;
+    margin: auto;
+    margin-top: 100px;
+    justify-content: space-around;
+    
+}
+
+#image-contact {
+
+    max-width: 600px;
+    border-radius: 5%;
 }
 
 /*------------------------------------Section 1 ------------------------------*/
@@ -124,6 +139,9 @@
 
 .list-style {
     list-style: none;
+    text-align: justify;
+    font-weight: bold;
+    line-height: 2.8em;
 }
 .repro-info {
     display: flex;
@@ -140,12 +158,21 @@
     color: beige;
 }
 .diapo-dog {
-    display: flex;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
 }
 
-.img-scaling {
-    max-width: 500px;
+.diapo-button {
+    align-self: stretch;
+}
+
+.clicky-flex-align {
+    align-self: flex-end;
+    text-align: center;
 }
 
 /* -------------------------------Général----------------------------------- */
@@ -173,5 +200,15 @@ footer {
     text-shadow: white 0px 1px 0px;
     text-align: center;
     line-height: 150%;
+}
+
+a {
+    color: beige;
+    font-weight: bold;
+}
+
+a:hover {
+    color: violet;
+    transform: scale(1.2);
 }
 
