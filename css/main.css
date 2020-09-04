@@ -21,6 +21,35 @@
     border-radius: 5%;
 }
 
+#breed-info h2{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#breed-info aside {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 110px;
+}
+
+#breed-info aside div {
+    display: flex;
+    justify-content: space-around;
+}
+
+#breed-info img {
+
+    min-width: 200px;
+    max-width: 350px;
+    height: auto;
+    border-radius: 2%;
+    box-shadow: white 3px 5px 3px;
+}
+
 /*------------------------------------Section 1 ------------------------------*/
 #last-weeding {
 
@@ -123,6 +152,15 @@
     border-color: violet;
     transform: scale(1.12);
 }
+.no-a {
+    color: beige;
+    font-weight: bold;
+}
+.no-a:hover {
+    color: violet;
+    transform: scale(1.0);
+}
+
 .weeding-parent {
     display: flex;
     flex-direction: row;
@@ -173,6 +211,15 @@
 .clicky-flex-align {
     align-self: flex-end;
     text-align: center;
+}
+
+.breed-para {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    max-width: 80%;
 }
 
 /* -------------------------------Général----------------------------------- */

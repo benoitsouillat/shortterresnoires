@@ -13,7 +13,7 @@ index.id = "index-link";
 index.href = "index.html";
 index.classList.add("menu-link");
 
-/* puppy.textContent = "Nos Chiots"; // A afficher quand il y aura des chiots
+/*puppy.textContent = "Nos Chiots"; // A afficher quand il y aura des chiots
 puppy.id = "puppy-link";
 puppy.href = "puppy.html";
 puppy.classList.add("menu-link"); */
@@ -37,6 +37,6 @@ contact.classList.add("menu-link");
 nav.appendChild(list);
 list.appendChild(index);
 list.appendChild(repro);
-// list.appendChild(puppy); A Afficher quand il y aura des chiots
+//list.appendChild(puppy); // A Afficher quand il y aura des chiots
 list.appendChild(breed);
 list.appendChild(contact);
