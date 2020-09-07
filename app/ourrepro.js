@@ -15,8 +15,18 @@ const reformingImg = (dogName) => {
     let divValueW = divValue.width.slice(0, -2);
 
     img.style.maxWidth =  divValueW - (buttonValueW * 2 ) + 'px';
-    div.style.height = '330' + 'px';
-    img.style.height = "330px";
+
+    if(window.innerWidth >= 840)
+    {
+        div.style.height = '330' + 'px';
+        img.style.height = "330px";
+    }
+    else if(window.innerWidth < 840)
+    {
+        div.style.height = '170px';
+        img.style.height = "170px";
+    }
+    console.log(window.innerWidth);
 
 
 }

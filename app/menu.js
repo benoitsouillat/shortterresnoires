@@ -40,3 +40,13 @@ list.appendChild(repro);
 //list.appendChild(puppy); // A Afficher quand il y aura des chiots
 list.appendChild(breed);
 list.appendChild(contact);
+
+// Recupérer la valeur maximale de l'écran 
+
+/* let widthBody = document.getElementById("content");
+
+let widthScreen = screen.width;
+
+widthBody.style.maxWidth = (widthScreen - 1) + "px"; 
+
+nav.style.width = widthScreen + "px"; */

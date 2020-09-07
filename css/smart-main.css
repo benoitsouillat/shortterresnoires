@@ -1,3 +1,5 @@
+/* ------- Affichage sur téléphone portable et petite résolution ------ */
+
 #copyright {
     font-style: italic;
     font-size: 0.9em;
@@ -21,28 +23,31 @@
     justify-content: center;
     align-content: center;
     font-size: 1.2em;
-}
-
-#contact {
-    display: flex;
-    margin-top: 100px;
-    margin-left: 70px;
-    justify-content: space-around;
-    flex-wrap: wrap;
     
 }
 
+#contact {
+
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
 #image-contact {
 
-    max-width: 600px;
+    max-width: 300px;
     border-radius: 5%;
 }
+
 #link-friend {
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-size: 16px;
 
 }
+
 
 #breed-info h2{
     text-align: center;
@@ -66,12 +71,14 @@
 
 #breed-info img {
 
-    min-width: 200px;
+    align-self: center;
     max-width: 350px;
     height: auto;
     border-radius: 2%;
     box-shadow: white 3px 5px 3px;
 }
+
+
 
 /*------------------------------------Section 1 ------------------------------*/
 #last-weeding {
@@ -202,29 +209,63 @@
     list-style: none;
     text-align: justify;
     font-weight: bold;
-    line-height: 2.8em;
+    line-height: 2.6em;
+
+    display: flex;
+    flex-direction: column;
+
 }
 .repro-info {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 50px;
 }
-.dog-info {
-    padding-left: 200px;
-    font-size: 1.7em;
-    text-align: center;
-    line-height: 150%;
-    text-shadow: white 1px 1px 2px;
-    color: beige;
+@media all and (min-width: 840px)
+{
+    .dog-info {
+        padding-right: 50px;
+        font-size: 1.7em;
+        text-align: center;
+        line-height: 150%;
+        text-shadow: white 1px 1px 2px;
+        color: beige;
+    }
 }
-.diapo-dog {
+@media all and (max-width: 840px)
+{
+    .dog-info {
+        padding-right: 50px;
+        font-size: 1.0em;
+        text-align: center;
+        line-height: 150%;
+        text-shadow: white 1px 1px 2px;
+        color: beige;
+    }
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 500px;
+}
+@media all and (min-width: 840px)
+{
+    .diapo-dog {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 500px;
+    }
+}
+@media all and (max-width: 840px)
+{
+    .diapo-dog {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px;
+
+    }
 }
 
 .diapo-button {
@@ -245,6 +286,7 @@
     align-items: flex-start;
 
     max-width: 80%;
+    padding-right: 20px;
 }
 
 /* -------------------------------Général----------------------------------- */
@@ -262,7 +304,7 @@ body {
 h3 {
     text-align: center;
     text-decoration: underline;
-    font-size: 2em;
+    font-size: 40px;
 }
 
 footer {
@@ -271,7 +313,7 @@ footer {
     padding-bottom: 25px;
     text-shadow: white 0px 1px 0px;
     text-align: center;
-    line-height: 150%;
+    font-size: 22px;
 }
 
 a {
