@@ -1,338 +1,320 @@
+@charset "UTF-8";
 #copyright {
-    font-style: italic;
-    font-size: 0.9em;
+  font-style: italic;
+  font-size: 0.9em;
 }
-#remerciement {
-    font-weight: bold;
-    font-style: italic;
-    line-height: 1.3em;
-    /*background-color: #2D2F30; */
 
+#remerciement {
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.3em;
+  /*background-color: #2D2F30; */
 }
+
 /*
 #footer {
     background-color: #2D2F30;
 } 
 */
-
 #coor-array {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    font-size: 1.2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.2em;
 }
 
 #contact {
-    display: flex;
-    margin-top: 100px;
-    margin-left: 70px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    
+  display: flex;
+  margin-top: 100px;
+  margin-left: 70px;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 #image-contact {
-
-    max-width: 600px;
-    border-radius: 5%;
+  max-width: 600px;
+  border-radius: 5%;
 }
+
 #link-friend {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-#breed-info h2{
-    text-align: center;
-    text-decoration: underline;
-    font-weight: bold;
-    line-height: 1.5em;
-    padding-bottom: 20px;
-    padding-top: 20px;
+#breed-info h2 {
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
-
 #breed-info aside {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 110px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 110px;
 }
-
 #breed-info aside div {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
-
 #breed-info img {
-
-    min-width: 200px;
-    max-width: 350px;
-    height: auto;
-    border-radius: 2%;
-    box-shadow: white 3px 5px 3px;
+  min-width: 200px;
+  max-width: 350px;
+  height: auto;
+  border-radius: 2%;
+  box-shadow: white 3px 5px 3px;
 }
 
 /*------------------------------------Section 1 ------------------------------*/
 #last-weeding {
-
-    background-image:url("../src/img/okkaina1.jpg") ;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    height: 700px;
-    border-bottom: solid black 2px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+  background-image: url("../src/img/okkaina1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  border-bottom: solid black 2px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
-
 #last-weeding p {
-    color: white; 
-    text-shadow: black 2px 2px 3px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-
+  color: white;
+  text-shadow: black 2px 2px 3px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 #last-weeding button {
-
-    margin-left: 10%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-
-
+  margin-left: 10%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
- /*----------------------------Section 2 -----------------------------------*/
+/*----------------------------Section 2 -----------------------------------*/
 #who-are-us {
-
-    background-color: beige;
-    color: black;
-    text-align: center;
-    font-style: italic;
-    font-size: 1.2rem;
-    text-shadow: black 1px 0px 0px;
-
-    height: 600px;
-    border-bottom: solid black 2px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
-
+  background-color: beige;
+  color: black;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  text-shadow: black 1px 0px 0px;
+  height: 600px;
+  border-bottom: solid black 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
 }
 #who-are-us h2 {
-
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* ------------------------------Section 3--------------------------------- */
-
 #our-lovely-dog {
-    background-image: url("../src/img/okkaina12.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    color: white;
-    text-align: center;
-    font-style: italic;
-    font-size: 1.5rem;
-    text-shadow: black 1px 1px 1px;
-
-    height: 700px;
-    border-bottom: solid black 2px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
+  background-image: url("../src/img/okkaina12.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.5rem;
+  text-shadow: black 1px 1px 1px;
+  height: 700px;
+  border-bottom: solid black 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
-
 #our-lovely-dog h2 {
-    font-size: 1.7rem;
-    padding-right: 3rem;
+  font-size: 1.7rem;
+  padding-right: 3rem;
 }
-
 #our-lovely-dog a {
-
-    font-size: 1.2rem;
-    padding-top: 0.4rem;
-    padding-right: 8rem;
-
+  font-size: 1.2rem;
+  padding-top: 0.4rem;
+  padding-right: 8rem;
 }
 
 /*-------------------------------Classes-------------------------------------*/
 .title {
-    color: beige;
-    font-weight: bold;
-    font-style: italic;
-    text-align: center;
-    text-shadow: beige 1px 1px 1px;
-
-    padding-bottom: 30px;
+  color: beige;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  text-shadow: beige 1px 1px 1px;
+  padding-bottom: 30px;
 }
+
 .button {
-    border-radius: 15%;
-    padding: 10px;
-    background-color: black;
-    color: beige;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1em;
+  border-radius: 15%;
+  padding: 10px;
+  background-color: black;
+  color: beige;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1em;
 }
 .button:hover {
-    color: violet;
-    border-color: violet;
-    transform: scale(1.12);
+  color: violet;
+  border-color: violet;
+  transform: scale(1.12);
 }
+
 .no-a {
-    color: beige;
-    font-weight: bold;
+  color: beige;
+  font-weight: bold;
 }
 .no-a:hover {
-    color: violet;
-    transform: scale(1.0);
+  color: violet;
+  transform: scale(1);
 }
 
 .weeding-parent {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .weeding-parent img {
-
-    width: 400px;
-    height: auto;
-    border: 2px solid black;
-    box-shadow: white 2px 2px 2px;
+  width: 400px;
+  height: auto;
+  border: 2px solid black;
+  box-shadow: white 2px 2px 2px;
 }
 
 .list-style {
-    list-style: none;
-    text-align: justify;
-    font-weight: bold;
-    line-height: 2.8em;
+  list-style: none;
+  text-align: justify;
+  font-weight: bold;
+  line-height: 2.8em;
 }
+
 .repro-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 50px;
 }
+
 .dog-info {
-    padding-left: 100px;
-    text-align: center;
-    line-height: 150%;
-    text-shadow: white 1px 1px 2px;
-    color: beige;
+  padding-left: 100px;
+  text-align: center;
+  line-height: 150%;
+  text-shadow: white 1px 1px 2px;
+  color: beige;
 }
 .dog-info h2 {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 .dog-info p {
-    font-size: 1.3rem;
-
+  font-size: 1.3rem;
 }
-.diapo-dog {
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 500px;
+.diapo-dog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
 }
 
 .diapo-button {
-    align-self: stretch;
-    font-weight: bold;
-    text-shadow: black 2px 2px 5px;
-    min-width: 30px;
+  align-self: stretch;
+  font-weight: bold;
+  text-shadow: black 2px 2px 5px;
+  min-width: 30px;
 }
 
 .clicky-flex-align {
-    align-self: flex-end;
-    text-align: center;
+  align-self: flex-end;
+  text-align: center;
 }
 
 .breed-para {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 80%;
 }
 
-.article-prev {
-    border: white 1px solid;
-    border-radius: 5%;
-    display: flex;
-
+/*--------------------- Page News -------------------------------*/
+.article {
+  border: white 1px solid;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin: 20px 10px;
 }
-.article-title {
-    text-align: center;
+.article__head {
+  text-align: center;
+  text-decoration: underline violet;
 }
-.article-description {
-    text-align: justify;
+.article__content {
+  display: flex;
+  justify-content: space-evenly;
 }
-.article-date {
-    text-decoration: underline;
+.article__content .article__description {
+  text-align: justify;
+  padding: 20px;
+  line-height: 1.5rem;
 }
-.article-author {
-    font-style: italic;
+.article__content .article__image {
+  max-width: 300px;
+}
+.article__foot {
+  align-self: flex-end;
+}
+.article__foot .article__date {
+  text-decoration: underline;
+}
+.article__foot .article__author {
+  font-style: italic;
 }
 
 /* -------------------------------Général----------------------------------- */
-
 html {
-    font-family: Helvetica, Arial, sans-serif;
-
-    font-size: 20px;
-
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
 }
 
 body {
-
-
-    background-color: black;
-    color: beige;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: center;
+  background-color: black;
+  color: beige;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
 }
 
 h3 {
-    text-align: center;
-    text-decoration: underline;
-    font-size: 2em;
-    font-style: italic;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 2em;
+  font-style: italic;
 }
 
 footer {
-    height: 150px;
-    padding-top: 20px;
-    padding-bottom: 25px;
-    text-shadow: white 0px 1px 0px;
-    text-align: center;
-    line-height: 150%;
+  height: 150px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  text-shadow: white 0px 1px 0px;
+  text-align: center;
+  line-height: 150%;
 }
 
 a {
-    color: beige;
-    font-weight: bold;
+  color: beige;
+  font-weight: bold;
 }
-
 a:hover {
-    color: violet;
-    transform: scale(1.2);
+  color: violet;
+  transform: scale(1.2);
 }
 
+/*# sourceMappingURL=main.css.map */

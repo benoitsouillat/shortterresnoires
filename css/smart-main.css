@@ -340,11 +340,9 @@
 }
 .article-date {
     text-decoration: underline;
-    align-self: flex-end;
 }
 .article-author {
     font-style: italic;
-    align-self: flex-end;
 
 }
 

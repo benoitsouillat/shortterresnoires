@@ -43,38 +43,38 @@ $text-color: beige;
     display: flex;
     flex-direction: column;
     text-align: center;
-
 }
 
-#breed-info h2{
-    text-align: center;
-    text-decoration: underline;
-    font-weight: bold;
-    line-height: 1.5em;
-    padding-bottom: 20px;
-    padding-top: 20px;
+#breed-info {
+
+    h2 {
+        text-align: center;
+        text-decoration: underline;
+        font-weight: bold;
+        line-height: 1.5em;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 110px;
+    }
+
+    aside div {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    img {
+        min-width: 200px;
+        max-width: 350px;
+        height: auto;
+        border-radius: 2%;
+        box-shadow: white 3px 5px 3px;
+    }
 }
-
-#breed-info aside {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 110px;
-}
-
-#breed-info aside div {
-    display: flex;
-    justify-content: space-around;
-}
-
-#breed-info img {
-
-    min-width: 200px;
-    max-width: 350px;
-    height: auto;
-    border-radius: 2%;
-    box-shadow: white 3px 5px 3px;
-}
-
 /*------------------------------------Section 1 ------------------------------*/
 #last-weeding {
 
@@ -91,29 +91,24 @@ $text-color: beige;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
+
+    p {
+        color: white; 
+        text-shadow: black 2px 2px 3px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    button {
+        margin-left: 10%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
 }
-
-#last-weeding p {
-    color: white; 
-    text-shadow: black 2px 2px 3px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-
-}
-#last-weeding button {
-
-    margin-left: 10%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-
-
-}
-
  /*----------------------------Section 2 -----------------------------------*/
 #who-are-us {
 
-    background-color: beige;
+    background-color: $text-color;
     color: black;
     text-align: center;
     font-style: italic;
@@ -128,12 +123,10 @@ $text-color: beige;
     justify-content: space-around;
     align-content: center;
 
+    h2 {
+        text-decoration: underline;
+    }
 }
-#who-are-us h2 {
-
-    text-decoration: underline;
-}
-
 /* ------------------------------Section 3--------------------------------- */
 
 #our-lovely-dog {
@@ -141,7 +134,7 @@ $text-color: beige;
     background-repeat: no-repeat;
     background-size: cover;
 
-    color: $text-color;
+    color: white;
     text-align: center;
     font-style: italic;
     font-size: 1.5rem;
@@ -185,33 +178,33 @@ $text-color: beige;
     font-style: italic;
     font-weight: bold;
     font-size: 1em;
-}
-.button:hover {
-    color: violet;
-    border-color: violet;
-    transform: scale(1.12);
+
+    &:hover {
+        color: violet;
+        border-color: violet;
+        transform: scale(1.12);
+    }
 }
 .no-a {
     color: beige;
     font-weight: bold;
-}
-.no-a:hover {
-    color: violet;
-    transform: scale(1.0);
-}
 
+    &:hover {
+        color: violet;
+        transform: scale(1.0);
+    }
+}
 .weeding-parent {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 
-}
-.weeding-parent img {
-
-    width: 400px;
-    height: auto;
-    border: 2px solid black;
-    box-shadow: white 2px 2px 2px;
+    img {
+        width: 400px;
+        height: auto;
+        border: 2px solid black;
+        box-shadow: white 2px 2px 2px;
+    }
 }
 
 .list-style {
@@ -232,13 +225,13 @@ $text-color: beige;
     line-height: 150%;
     text-shadow: white 1px 1px 2px;
     color: beige;
-}
-.dog-info h2 {
-    font-size: 1.8rem;
-}
-.dog-info p {
-    font-size: 1.3rem;
 
+    h2 {
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1.3rem;
+    }
 }
 .diapo-dog {
 
@@ -269,38 +262,52 @@ $text-color: beige;
 
     max-width: 80%;
 }
-
-.article-prev {
+/*--------------------- Page News -------------------------------*/
+.article {
     border: white 1px solid;
-    border-radius: 5%;
     display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 20px 10px;
 
+    &__head {
+        text-align: center;
+        text-decoration: underline violet;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-evenly;
+
+        .article__description {
+            text-align: justify;
+            padding: 20px;
+            line-height: 1.5rem;
+        }
+        .article__image {
+            max-width: 300px;
+        }
+    }
+    &__foot {
+        align-self: flex-end;
+
+        .article__date {
+            text-decoration: underline;
+        }
+        .article__author {
+            font-style: italic;
+        }
+    }
 }
-.article-title {
-    text-align: center;
-}
-.article-description {
-    text-align: justify;
-}
-.article-date {
-    text-decoration: underline;
-}
-.article-author {
-    font-style: italic;
-}
+
 
 /* -------------------------------Général----------------------------------- */
 
 html {
     font-family: Helvetica, Arial, sans-serif;
-
     font-size: 20px;
-
 }
 
 body {
-
-
     background-color: black;
     color: beige;
 
@@ -329,10 +336,8 @@ footer {
 a {
     color: beige;
     font-weight: bold;
+    &:hover {
+        color: violet;
+        transform: scale(1.2);
+    }
 }
-
-a:hover {
-    color: violet;
-    transform: scale(1.2);
-}
-
