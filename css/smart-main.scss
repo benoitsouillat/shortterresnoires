@@ -3,10 +3,10 @@
 #copyright {
     font-size: 1rem;
     line-height: 1.5rem;
-}
 
-#copyright i {
-    font-size: 0.8rem;
+    i {
+        font-size: 0.8rem;
+    }
 }
 
 #remerciement {
@@ -32,8 +32,11 @@
     
 }
 
-#our-repro h3 {
+#our-repro {
+
+    h3 {
     font-size: 1.4rem;
+    }
 
 }
 
@@ -59,37 +62,33 @@
 }
 
 
-#breed-info h2{
-    text-align: center;
-    text-decoration: underline;
-    font-weight: bold;
-    line-height: 1.5rem;
-    padding-bottom: 20px;
-    padding-top: 20px;
+#breed-info 
+{
+    h2 {
+        text-align: center;
+        text-decoration: underline;
+        font-weight: bold;
+        line-height: 1.5rem;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    aside {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 110px;
+        div {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    img {
+        align-self: center;
+        max-width: 350px;
+        height: auto;
+        border-radius: 2%;
+        box-shadow: white 3px 5px 3px;
+    }
 }
-
-#breed-info aside {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 110px;
-}
-
-#breed-info aside div {
-    display: flex;
-    justify-content: space-around;
-}
-
-#breed-info img {
-
-    align-self: center;
-    max-width: 350px;
-    height: auto;
-    border-radius: 2%;
-    box-shadow: white 3px 5px 3px;
-}
-
-
-
 /*------------------------------------Section 1 ------------------------------*/
 #last-weeding {
 
@@ -97,6 +96,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    width: 100%;
     height: 700px;
     border-bottom: solid black 2px;
     padding-bottom: 15px;
@@ -106,24 +106,20 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
+
+    p {
+        color: white; 
+        text-shadow: black 2px 2px 3px;
+        font-size: 1.0rem;
+        font-weight: bold;
+        padding-bottom: 1rem;
+    
+    }
+    button {
+        margin-left: 10%;
+        margin-bottom: 5rem;
+    }
 }
-
-#last-weeding p {
-    color: white; 
-    text-shadow: black 2px 2px 3px;
-    font-size: 1.0rem;
-    font-weight: bold;
-    padding-bottom: 1rem;
-
-}
-#last-weeding button {
-
-    margin-left: 10%;
-    margin-bottom: 5rem;
-
-
-}
-
  /*----------------------------Section 2 -----------------------------------*/
 #who-are-us {
 
@@ -142,12 +138,18 @@
     justify-content: space-around;
     align-content: center;
 
+    h2 {
+        text-decoration: underline;
+    }
+    p > i {
+        font-size: 0.9em;
+        display: flex;
+        padding: 10px;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-decoration: underline;
+    }
 }
-#who-are-us h2 {
-
-    text-decoration: underline;
-}
-
 /* ------------------------------Section 3--------------------------------- */
 
 #our-lovely-dog {
@@ -191,19 +193,22 @@
     font-style: italic;
     font-weight: bold;
     font-size: 1rem;
+
+    &:hover {
+        color: violet;
+        border-color: violet;
+        transform: scale(1.12);
+    }
 }
-.button:hover {
-    color: violet;
-    border-color: violet;
-    transform: scale(1.12);
-}
+
 .no-a {
     color: beige;
     font-weight: bold;
-}
-.no-a:hover {
-    color: violet;
-    transform: scale(1.0);
+
+    &:hover {
+        color: violet;
+        transform: scale(1.0);
+    }
 }
 
 .weeding-parent {
@@ -211,15 +216,14 @@
     flex-direction: row;
     justify-content: space-around;
 
-}
-.weeding-parent img {
+    img {
 
-    width: 400px;
-    height: auto;
-    border: 2px solid black;
-    box-shadow: white 2px 2px 2px;
+        width: 400px;
+        height: auto;
+        border: 2px solid black;
+        box-shadow: white 2px 2px 2px;
+    }
 }
-
 .list-style {
     list-style: none;
     text-align: justify;
@@ -245,12 +249,12 @@
         line-height: 150%;
         text-shadow: white 1px 1px 2px;
         color: beige;
-    }
-    .dog-info p {
-        font-size: 1.2rem;
-    }
-    .dog-info h2 {
-        font-size: 1.5rem;
+        p {
+            font-size: 1.2rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
     }
 }
 @media all and (max-width: 840px)
@@ -262,11 +266,11 @@
         line-height: 150%;
         text-shadow: white 1px 1px 2px;
         color: beige;
-    }
-    .dog-info p {
-        font-size: 1.0rem;
-    }
 
+        p {
+            font-size: 1.0rem;
+        }
+    }
 }
 @media all and (min-width: 840px)
 {
@@ -310,42 +314,44 @@
     padding-right: 20px;
 }
 
-.article-prev {
+/*--------------------- Page News -------------------------------*/
+.article {
     border: white 1px solid;
     display: flex;
     flex-direction: column;
     padding: 15px;
     margin: 20px 10px;
-}
-.article-head { /*Entête de l'article Titre */
-    text-align: center;
-    text-decoration: underline violet;
-}
-.article-content { /* Contenu de l'article Description + Image */
-    display: flex;
-    justify-content: space-evenly;
 
-}
-.article-description {
-    text-align: justify;
-    padding: 20px;
-    line-height: 1.5rem;
-}
-.article-image {
-    max-width: 300px;
-}
-.article-foot { /*  Pied de l'article Date + Auteur */
-    align-self: flex-end;
+    &__head {
+        text-align: center;
 
-}
-.article-date {
-    text-decoration: underline;
-    align-self: flex-end;
-}
-.article-author {
-    font-style: italic;
-    align-self: flex-end;
+        .article__title {
+            text-decoration: underline violet;
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: space-evenly;
 
+        .article__description {
+            text-align: justify;
+            padding: 20px;
+            line-height: 1.5rem;
+        }
+        .article__image {
+            max-width: 300px;
+        }
+    }
+    &__foot {
+        align-self: flex-end;
+
+        .article__date {
+            text-decoration: underline;
+        }
+        .article__author {
+            font-style: italic;
+        }
+    }
 }
 
 /* -------------------------------Général----------------------------------- */
@@ -357,16 +363,26 @@ html {
 }
 
 body {
+    @media (min-width: 992px) and (max-width: 1280px)
+    {
+        max-width: 960px;
+    }
+    @media (min-width: 768px) and (max-width: 992px)
+    {
+        max-width: 720px;
+    }
+    @media (min-width: 576px) and (max-width: 768px)
+    {
+        max-width: 540px;
+    }
     background-color: black;
     color: beige;
-
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-content: center;
+    margin: auto;
 }
 
-h3 {
+h1, h2, h3 {
     text-align: center;
     text-decoration: underline;
     font-size: 2rem;
@@ -379,12 +395,10 @@ p {
 a {
     color: beige;
     font-weight: bold;
-    font-size: 0.9rem;
-}
-
-a:hover {
-    color: violet;
-    transform: scale(1.2);
+    &:hover {
+        color: violet;
+        transform: scale(1.2);
+    }
 }
 
 footer {
