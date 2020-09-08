@@ -13,11 +13,9 @@
 
 .menu-link {
     color: black;
-    font-weight: bold;
-    font-size: 1.2em;
 }
 
-.menu-link:hover {
+/*.menu-link:hover {
     color: violet;
     transform: scale(1.2);
-}
+}*/

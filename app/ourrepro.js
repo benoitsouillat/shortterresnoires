@@ -140,7 +140,7 @@ femaleClass.forEach(elm => {
         dogInfo.classList.add("repro-info")
     let divInfo = document.createElement("div");
         divInfo.classList.add("dog-info");
-    let dogNamePrint = document.createElement("h1");
+    let dogNamePrint = document.createElement("h2");
         dogNamePrint.textContent = dogName + dogBreeder;
     let dogSexPrint = document.createElement("p");
         dogSexPrint.textContent = dogSex;

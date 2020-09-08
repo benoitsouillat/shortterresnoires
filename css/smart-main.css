@@ -1,13 +1,19 @@
 /* ------- Affichage sur téléphone portable et petite résolution ------ */
 
 #copyright {
-    font-style: italic;
-    font-size: 0.9em;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
+
+#copyright i {
+    font-size: 0.8rem;
+}
+
 #remerciement {
     font-weight: bold;
     font-style: italic;
     line-height: 1.3em;
+    font-size: 1rem;
     /*background-color: #2D2F30; */
 
 }
@@ -22,8 +28,13 @@
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    font-size: 1.2em;
+    font-size: 1.0rem;
     
+}
+
+#our-repro h3 {
+    font-size: 1.4rem;
+
 }
 
 #contact {
@@ -44,8 +55,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 16px;
-
+    padding: 10px 70px;
 }
 
 
@@ -53,7 +63,7 @@
     text-align: center;
     text-decoration: underline;
     font-weight: bold;
-    line-height: 1.5em;
+    line-height: 1.5rem;
     padding-bottom: 20px;
     padding-top: 20px;
 }
@@ -83,9 +93,9 @@
 /*------------------------------------Section 1 ------------------------------*/
 #last-weeding {
 
-    background-image:url("../src/img/okkaina1.jpg") ;
+    background:url("../src/img/okkaina1.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 
     height: 700px;
     border-bottom: solid black 2px;
@@ -101,13 +111,16 @@
 #last-weeding p {
     color: white; 
     text-shadow: black 2px 2px 3px;
-    font-size: 20px;
+    font-size: 1.0rem;
     font-weight: bold;
+    padding-bottom: 1rem;
 
 }
 #last-weeding button {
 
     margin-left: 10%;
+    margin-bottom: 5rem;
+
 
 }
 
@@ -140,12 +153,13 @@
 #our-lovely-dog {
     background-image: url("../src/img/okkaina12.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position-x: 30%;
 
     color: white;
     text-align: center;
     font-style: italic;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     text-shadow: black 1px 1px 1px;
 
     height: 700px;
@@ -165,6 +179,7 @@
     font-style: italic;
     text-align: center;
     text-shadow: beige 1px 1px 1px;
+    font-size: 2.1rem;
 
     padding-bottom: 30px;
 }
@@ -175,7 +190,7 @@
     color: beige;
     font-style: italic;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1rem;
 }
 .button:hover {
     color: violet;
@@ -209,7 +224,7 @@
     list-style: none;
     text-align: justify;
     font-weight: bold;
-    line-height: 2.6em;
+    line-height: 2.4em;
 
     display: flex;
     flex-direction: column;
@@ -225,22 +240,31 @@
 {
     .dog-info {
         padding-right: 50px;
-        font-size: 1.7em;
+        font-size: 1.4rem;
         text-align: center;
         line-height: 150%;
         text-shadow: white 1px 1px 2px;
         color: beige;
+    }
+    .dog-info p {
+        font-size: 1.2rem;
+    }
+    .dog-info h2 {
+        font-size: 1.5rem;
     }
 }
 @media all and (max-width: 840px)
 {
     .dog-info {
         padding-right: 50px;
-        font-size: 1.0em;
+        font-size: 1.0rem;
         text-align: center;
         line-height: 150%;
         text-shadow: white 1px 1px 2px;
         color: beige;
+    }
+    .dog-info p {
+        font-size: 1.0rem;
     }
 
 }
@@ -272,6 +296,7 @@
     align-self: stretch;
     font-weight: bold;
     text-shadow: black 2px 2px 5px;
+    min-width: 30px;
 }
 
 .clicky-flex-align {
@@ -280,16 +305,56 @@
 }
 
 .breed-para {
-    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    max-width: 80%;
+    align-self: flex-start;
     padding-right: 20px;
 }
 
+.article-prev {
+    border: white 1px solid;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 20px 10px;
+}
+.article-head { /*Entête de l'article Titre */
+    text-align: center;
+    text-decoration: underline violet;
+}
+.article-content { /* Contenu de l'article Description + Image */
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.article-description {
+    text-align: justify;
+    padding: 20px;
+    line-height: 1.5rem;
+}
+.article-image {
+    max-width: 300px;
+}
+.article-foot { /*  Pied de l'article Date + Auteur */
+    align-self: flex-end;
+
+}
+.article-date {
+    text-decoration: underline;
+    align-self: flex-end;
+}
+.article-author {
+    font-style: italic;
+    align-self: flex-end;
+
+}
+
 /* -------------------------------Général----------------------------------- */
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+
+}
 
 body {
     background-color: black;
@@ -304,7 +369,22 @@ body {
 h3 {
     text-align: center;
     text-decoration: underline;
-    font-size: 40px;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+a {
+    color: beige;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+a:hover {
+    color: violet;
+    transform: scale(1.2);
 }
 
 footer {
@@ -313,16 +393,5 @@ footer {
     padding-bottom: 25px;
     text-shadow: white 0px 1px 0px;
     text-align: center;
-    font-size: 22px;
+    font-size: 1.0rem;
 }
-
-a {
-    color: beige;
-    font-weight: bold;
-}
-
-a:hover {
-    color: violet;
-    transform: scale(1.2);
-}
-
