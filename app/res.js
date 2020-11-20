@@ -1,7 +1,12 @@
+
+const breederNumber = "362026";
+const affixeNumber = "92123";
+const siretNumber = "";
+const capacityNumber = "";
 const breedName = "Le Domaine des Terres Noires";
-const terresNoires = "du domaine des terres noires";
-const templeJade = " du temple de jade";
-const diMunteanu = " Corso di munteanu";
+const terresNoires = " du Domaine des Terres Noires";
+const templeJade = " du Temple de Jade";
+const diMunteanu = " Corso di Munteanu";
 const caneCorso = " Cane Corso ";
 
 class dog {
@@ -16,7 +21,22 @@ class dog {
     }
 }
 
-let okkaina = new dog ("Okkaina", "10 Septembre 2018", caneCorso, templeJade, " ♀ femelle", false);
+class puppy {
+    constructor (puppyMom, puppyDad, puppyBirth, puppySex, puppyColor, puppyNecklace, puppyHead, puppyProfil, puppyAvailable)
+    {
+        this.puppyMom = puppyMom;
+        this.puppyDad = puppyDad;
+        this.puppyBirth = puppyBirth;
+        this.puppySex = puppySex;
+        this.puppyColor = puppyColor;
+        this.puppyHead = puppyHead;
+        this.puppyProfil = puppyProfil;
+        this.puppyNecklace = puppyNecklace;
+        this.puppyAvailable = puppyAvailable;
+    }
+}
+
+let okkaina = new dog ("Okkaina", "10 Septembre 2018", caneCorso, templeJade, " ♀ femelle", true);
 let panama = new dog ("Panama", "02 Juin 2019", caneCorso, templeJade, " ♀ femelle", false);
 let rock = new dog ("Rock", "18 Mars 2018", caneCorso, diMunteanu, " ♂ mâle", false);
 
@@ -24,12 +44,26 @@ let dogClass = [okkaina, panama, rock];
 let femaleClass = [okkaina, panama];
 let maleClass = [rock];
 
+let male1 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Vert", "Vert2-3","Vert16-9", "y");
+let male2 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Rouge" ,"Rouge2-3", "Rouge16-9", "y");
+let male3 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Bleu Foncé" ,"BleuF2-3", "BleuF16-9", "y");
+let male4 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Bleu Clair" ,"BleuC2-3", "BleuC16-9", "y");
+let male6 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Jaune" ,"Jaune2-3", "Jaune16-9","y");
+let male7 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Beige" ,"Beige2-3", "Beige16-9","y");
+let male5 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir (bringé)", "Marron" ,"Marron2-3", "Marron16-9", "y");
+
+let okkainaLitterOne = [male1, male2, male3, male4, male5, male6, male7];
+
+
+
 let path = "../src/img/";
 let images = ["okkaina1", "okkaina2", "okkaina3",
-"okkaina4", "okkaina5", "okkaina6", "okkaina7", "okkaina8", //"okkaina9",
+"okkaina4", "okkaina5", "okkaina7", "okkaina8", //"okkaina9",
 "okkaina10", "okkaina11",
-"panama1", "panama2","panama3", "panama4", "panama5", "panama6", 
-"okkainapanama", "rock1", "rock2", "rock3", "rock4", "rock5",
+"panama1", "panama2","panama3", "panama4", "panama5", "panama6", "panama7",
+"panama8",
+"okkainapanama", "rock16-9couché", "rockface", "rock3", "rock4", "rock5", "rock6", "rockprofil", 
+"rockpropuls", "rocktete",
 "okkainarock", "irréelle1", "nuit d'étoiles1"];
 let jpg = ".jpg";
 
@@ -91,3 +125,26 @@ let okkainaMarried = new article("mariage-okkaina","Mariage d'Okkaina et Rock", 
 let articles = [rockArrived, expoDompierre20, okkainaMarried];
 
 
+/* --------------------------- Generating Footer --------------------- */
+
+const generateFooter = () => {
+    let body = document.body;
+    let footer = document.createElement('footer');
+    let footerContainer = document.createElement('div');
+    let paraThanks = document.createElement('p');
+        paraThanks.id = "footer-merci";
+        paraThanks.innerHTML = "<b>Merci d'avoir visité notre site</b><br/><b>Passez une excellente journée</b>";
+    let paraCopyright = document.createElement('p');
+        paraCopyright.id = "footer-copyright";
+        paraCopyright.innerHTML = "<u>Photos : </u><br/><i>Cathy Thouvenin</i><br/><i>Eva Brochet</i><br/><i>Benoit Souillat</i><br/> <i>© Reproduction Interdite</i>";
+    let paraSign = document.createElement('p');
+        paraSign.id = "footer-signature";
+        paraSign.innerHTML = "Eva Brochet - Eleveuse Canin <br/> Titulaire du Baccalauréat : Conduite et Gestion dans le secteur élevage Canin et Félin <br/> Titulaire du Brevet Professionnel Agricole : Travaux en élevage Canin et Félin<br/> N°Eleveur : 362026 - N°Affixe : 92123 <br/><i>Textes, vidéos et photos tous droits réservés pour tous pays</i>";
+
+    body.insertAdjacentElement("beforeend", footer);
+    footer.appendChild(footerContainer);
+    footerContainer.appendChild(paraThanks);
+    footerContainer.appendChild(paraCopyright);
+    footerContainer.appendChild(paraSign);
+
+}

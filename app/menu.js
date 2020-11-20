@@ -1,26 +1,34 @@
 let nav = document.getElementById("nav");
 let list = document.createElement("ul");
+let accueil = document.createElement("a");
+let accueilIco = document.createElement("img");
 let index = document.createElement("a");
-let puppy = document.createElement("a");
+let puppies = document.createElement("a");
 let repro = document.createElement("a");
 let breed = document.createElement("a");
 let contact = document.createElement("a");
 
 list.id = "menu";
 
+accueil.href = "../index.html";
+accueil.classList.add("menu-link");
+
+accueilIco.src = "../src/img/home.png";
+accueilIco.style.width = "21px";
+
 index.textContent = "Accueil";
 index.id = "index-link";
 index.href = "index.html";
 index.classList.add("menu-link");
 
-/*puppy.textContent = "Nos Chiots"; // A afficher quand il y aura des chiots
-puppy.id = "puppy-link";
-puppy.href = "puppy.html";
-puppy.classList.add("menu-link"); */
+puppies.textContent = "Nos Chiots"; 
+puppies.id = "puppy-link";
+puppies.href = "weeding.php";
+puppies.classList.add("menu-link"); 
 
 repro.textContent = "Nos Reproducteurs";
 repro.id = "repro-link";
-repro.href = "ourrepro.html";
+repro.href = "ourdog.html";
 repro.classList.add("menu-link");
 
 breed.textContent = "Le Cane Corso";
@@ -35,18 +43,10 @@ contact.classList.add("menu-link");
 
 
 nav.appendChild(list);
+list.appendChild(accueil);
+accueil.appendChild(accueilIco);
 list.appendChild(index);
 list.appendChild(repro);
-//list.appendChild(puppy); // A Afficher quand il y aura des chiots
+list.appendChild(puppies); 
 list.appendChild(breed);
 list.appendChild(contact);
-
-// Recupérer la valeur maximale de l'écran 
-
-/* let widthBody = document.getElementById("content");
-
-let widthScreen = screen.width;
-
-widthBody.style.maxWidth = (widthScreen - 1) + "px"; 
-
-nav.style.width = widthScreen + "px"; */

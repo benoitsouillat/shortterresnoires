@@ -1,5 +1,24 @@
 @charset "UTF-8";
 /* ------- Affichage sur téléphone portable et petite résolution ------ */
+#header {
+  margin: auto;
+}
+@media (min-width: 992px) and (max-width: 1280px) {
+  #header {
+    width: 960px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #header {
+    width: 720px;
+  }
+}
+@media (max-width: 767px) {
+  #header {
+    width: 90%;
+  }
+}
+
 #copyright {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -69,6 +88,18 @@
   display: flex;
   justify-content: space-around;
 }
+@media (max-width: 970px) {
+  #breed-info aside div {
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+@media (max-width: 970px) {
+  #breed-info aside {
+    padding-bottom: 0;
+  }
+}
 #breed-info img {
   align-self: center;
   max-width: 350px;
@@ -77,12 +108,39 @@
   box-shadow: white 3px 5px 3px;
 }
 
+#standard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 50px;
+}
+#standard p {
+  width: 80%;
+  line-height: 2rem;
+}
+#standard p u {
+  margin: 30%;
+}
+#standard mark {
+  text-decoration: underline;
+  font-weight: bold;
+  background-color: #000;
+  color: beige;
+}
+
+#puppiesTab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /*------------------------------------Section 1 ------------------------------*/
 #last-weeding {
   background: url("../src/img/okkaina1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
   height: 700px;
   border-bottom: solid black 2px;
   padding-bottom: 15px;
@@ -108,27 +166,29 @@
 #who-are-us {
   background-color: beige;
   color: black;
-  text-align: center;
   font-style: italic;
-  font-size: 1.2em;
   text-shadow: black 1px 0px 0px;
-  height: 600px;
+  min-height: 600px;
   border-bottom: solid black 2px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-content: center;
 }
 #who-are-us h2 {
   text-decoration: underline;
 }
+#who-are-us p {
+  text-align: center;
+  font-size: 1rem;
+  width: 80%;
+  align-self: center;
+}
 #who-are-us p > i {
   font-size: 0.9em;
-  display: flex;
   padding: 10px;
-  justify-content: flex-end;
-  align-items: flex-end;
   text-decoration: underline;
+  position: relative;
+  left: 35%;
 }
 
 /* ------------------------------Section 3--------------------------------- */
@@ -152,6 +212,56 @@
 }
 
 /*-------------------------------Classes-------------------------------------*/
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+.opacity-1 {
+  opacity: 0.2 !important;
+}
+
+.opacity-2 {
+  opacity: 0.4 !important;
+}
+
+.opacity-3 {
+  opacity: 0.6 !important;
+}
+
+.opacity-4 {
+  opacity: 0.8 !important;
+}
+
+.opacity-5 {
+  opacity: 1 !important;
+}
+
+.line-height-1 {
+  line-height: 0.5rem !important;
+}
+
+.line-height-2 {
+  line-height: 1rem !important;
+}
+
+.line-height-3 {
+  line-height: 1.5rem !important;
+}
+
+.line-height-4 {
+  line-height: 4rem !important;
+}
+
+.align-para-img {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.align-para-img p {
+  width: 80%;
+  padding-right: 20px;
+}
+
 .title {
   color: beige;
   font-weight: bold;
@@ -172,9 +282,46 @@
   font-size: 1rem;
 }
 .button:hover {
-  color: violet;
-  border-color: violet;
+  color: #6032AA;
+  border-color: #6032AA;
   transform: scale(1.12);
+}
+
+.btn-beige {
+  color: black;
+  background-color: beige;
+}
+.btn-beige:hover {
+  text-decoration: underline;
+}
+
+.btn-avail {
+  text-decoration: underline;
+  color: white;
+  padding: 10%;
+  border-radius: 100%;
+  font-weight: bold;
+}
+
+.btn-dispo {
+  background-color: #198c19;
+  border: #198c19 solid 1px;
+  box-shadow: 4px 4px 4px #0a350a;
+  color: black;
+}
+
+.btn-undispo {
+  background-color: #d04b56;
+  border: #d04b56 solid 1px;
+  box-shadow: 4px 4px 4px #90252e;
+  color: black;
+}
+
+.btn-option {
+  background-color: sandybrown;
+  border: sandybrown solid 1px;
+  box-shadow: 4px 4px 4px #df6f0f;
+  color: black;
 }
 
 .no-a {
@@ -182,20 +329,51 @@
   font-weight: bold;
 }
 .no-a:hover {
-  color: violet;
+  color: #6032AA;
   transform: scale(1);
 }
 
-.weeding-parent {
+.aside-weeding {
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
-.weeding-parent img {
-  width: 400px;
+
+.female-weeding img {
+  max-width: 20rem;
   height: auto;
-  border: 2px solid black;
-  box-shadow: white 2px 2px 2px;
+  margin-bottom: 3rem;
+}
+.female-weeding h3 {
+  position: relative;
+  left: 3rem;
+  text-align: left;
+  color: pink;
+  font-size: 1.3rem;
+}
+.female-weeding p {
+  position: relative;
+  left: 3rem;
+  text-align: left;
+}
+
+.male-weeding img {
+  max-width: 20rem;
+  height: auto;
+  margin-bottom: 3rem;
+}
+.male-weeding h3 {
+  position: relative;
+  left: 3rem;
+  text-align: left;
+  font-size: 1.3rem;
+  color: lightblue;
+}
+.male-weeding p {
+  position: relative;
+  left: 3rem;
+  text-align: left;
 }
 
 .list-style {
@@ -220,7 +398,6 @@
     font-size: 1.4rem;
     text-align: center;
     line-height: 150%;
-    text-shadow: white 1px 1px 2px;
     color: beige;
   }
   .dog-info p {
@@ -236,11 +413,13 @@
     font-size: 1rem;
     text-align: center;
     line-height: 150%;
-    text-shadow: white 1px 1px 2px;
     color: beige;
   }
   .dog-info p {
     font-size: 1rem;
+  }
+  .dog-info h2 {
+    font-size: 1.4rem;
   }
 }
 @media all and (min-width: 840px) {
@@ -277,21 +456,39 @@
   flex-direction: column;
   align-self: flex-start;
   padding-right: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 /*--------------------- Page News -------------------------------*/
 .article {
+  margin: auto;
   border: white 1px solid;
   display: flex;
   flex-direction: column;
   padding: 15px;
-  margin: 20px 10px;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) and (max-width: 1280px) {
+  .article {
+    width: 960px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .article {
+    width: 720px;
+  }
+}
+@media (max-width: 767px) {
+  .article {
+    width: 90%;
+  }
 }
 .article__head {
   text-align: center;
 }
 .article__head .article__title {
-  text-decoration: underline violet;
+  text-decoration: underline #6032AA;
 }
 .article__content {
   display: flex;
@@ -315,6 +512,65 @@
   font-style: italic;
 }
 
+.puppy__card {
+  border-radius: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  width: 70%;
+}
+.puppy__card p {
+  font-weight: bold;
+  min-width: 110px;
+  text-align: center;
+}
+.puppy__card img {
+  max-height: 14rem;
+  width: auto;
+  padding: 10px;
+}
+
+.puppy_male {
+  color: lightblue;
+  text-shadow: 2px 2px 2px black;
+  box-shadow: 4px 8px 2px lightblue;
+  background-color: #235e71;
+}
+
+.puppy_female {
+  color: pink;
+  text-shadow: 2px 2px 2px black;
+  box-shadow: 4px 8px 2px pink;
+  background-color: #6f0b30;
+}
+
+.puppy-info-align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.puppy-para {
+  text-align: center;
+}
+.puppy-para .para-right {
+  width: 80%;
+  text-align: end;
+}
+
+.puppy-img img {
+  border-radius: 5%;
+  width: auto;
+  max-width: 90%;
+}
+.puppy-img:hover {
+  transform: scale(1.05);
+}
+
 /* -------------------------------Général----------------------------------- */
 html {
   font-family: Helvetica, Arial, sans-serif;
@@ -326,28 +582,14 @@ body {
   color: beige;
   display: flex;
   flex-direction: column;
-  margin: auto;
-}
-@media (min-width: 992px) and (max-width: 1280px) {
-  body {
-    max-width: 960px;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  body {
-    max-width: 720px;
-  }
-}
-@media (min-width: 576px) and (max-width: 768px) {
-  body {
-    max-width: 540px;
-  }
 }
 
 h1, h2, h3 {
+  margin-top: 2rem;
   text-align: center;
   text-decoration: underline;
   font-size: 2rem;
+  font-weight: bold;
 }
 
 p {
@@ -359,17 +601,34 @@ a {
   font-weight: bold;
 }
 a:hover {
-  color: violet;
+  color: #6032AA;
   transform: scale(1.2);
 }
 
 footer {
-  height: 150px;
-  padding-top: 20px;
-  padding-bottom: 25px;
-  text-shadow: white 0px 1px 0px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
   text-align: center;
-  font-size: 1rem;
+}
+footer div {
+  width: 80%;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: solid beige 1px;
+  border-radius: 1%;
+  box-shadow: inset beige 2px 2px 15px, beige 2px 2px 15px;
+}
+footer p {
+  margin-top: 1em;
+}
+footer #footer-copyright {
+  font-size: 0.95em;
+}
+footer #footer-signature {
+  font-size: 0.8em;
 }
 
 /*# sourceMappingURL=smart-main.css.map */
