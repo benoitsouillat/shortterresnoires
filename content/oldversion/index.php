@@ -36,7 +36,7 @@
             ont pointé le bout de leur nez !<br />
             Portée née le 16 Novembre 2020<br/>
             Retrouvez les informations sur nos portées :</p>
-        <a href="weeding.html" class="no-a"><button class="button">Nos Mariages</button></a>
+        <a href="weeding.html" class=" btn btn-info" role="button">Nos Mariages</a>
     </section>
     <section id="who-are-us">
         <h2>Qui sommes-nous ?</h2>
@@ -54,7 +54,7 @@
     </section>
     <section id="our-lovely-dog">
         <h2>Qu'est-ce que le Cane Corso ?</h2>
-        <a href="breed.html" class="no-a"><button class="button">En savoir plus sur la race</button></a>
+        <a href="breed.html" class="btn btn-danger" role="button">En savoir plus sur la race</a>
     </section>
     <br />
 

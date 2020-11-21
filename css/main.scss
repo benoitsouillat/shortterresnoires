@@ -224,6 +224,44 @@ $puppy-female-back: #6f0b30;
 
 
 /*-------------------------------Classes-------------------------------------*/
+
+/* ------ tests ------ */
+
+.carousel-indicators-review {
+
+    left: unset;
+    top: 2%;
+    right: 1%;
+    bottom: unset;
+    margin-left: unset;
+    margin-right: unset;
+
+    li {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        border: black 1px solid;
+        box-shadow: beige 2px 2px 5px;
+    }
+}
+.carousel-caption-move {
+    bottom: 10%;
+    right: 20%;
+    left: 20%;
+}
+.carousel-button-prevnext {
+    top: 20%;
+    bottom: 20%;
+}
+.carousel-control-prev-btn {
+    left: 10%;
+}
+.carousel-control-next-btn {
+    right: 10%;
+}
+
+/* ------- Valide ----------*/
+
 .opacity-0 {
     opacity:0!important;
   }

@@ -18,7 +18,7 @@ accueilIco.style.width = "21px";
 
 index.textContent = "Accueil";
 index.id = "index-link";
-index.href = "index.html";
+index.href = "accueil.php";
 index.classList.add("menu-link");
 
 puppies.textContent = "Nos Chiots"; 
@@ -28,17 +28,17 @@ puppies.classList.add("menu-link");
 
 repro.textContent = "Nos Reproducteurs";
 repro.id = "repro-link";
-repro.href = "ourdog.html";
+repro.href = "ourdog.php";
 repro.classList.add("menu-link");
 
 breed.textContent = "Le Cane Corso";
 breed.id = "breed-link";
-breed.href = "breed.html";
+breed.href = "breed.php";
 breed.classList.add("menu-link");
 
 contact.textContent = "Nous Contacter";
 contact.id = "contact-link";
-contact.href = "contact.html";
+contact.href = "contact.php";
 contact.classList.add("menu-link");
 
 
