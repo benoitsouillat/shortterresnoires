@@ -12,7 +12,11 @@
     <body>
         <header id="header">
             <h1 class="title">Le Standard du Cane Corso</h1>
-            <nav id="nav"></nav>
+            <nav id="nav">
+                <?php
+                    include "./php/navbar.php";
+                ?>
+            </nav>
         </header>
         <section>
             <aside id="standard">
@@ -132,7 +136,6 @@
         </section>
 
         <script src="../app/res.js" ></script>
-        <script src="../app/menu.js" ></script>
         <script src="../app/showfooter.js"></script>
 
     </body>
