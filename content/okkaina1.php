@@ -40,11 +40,14 @@
 
         </section>
 
+        <?php 
+            include "./php/footer.php";
+        ?>
+
 
 
         <script src="../app/res.js" ></script>
         <script src="../app/puppies.js" ></script>
-        <script src="../app/showfooter.js"></script>
 
     </body>
 </html>

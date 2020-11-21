@@ -27,6 +27,10 @@
             <img src="../src/img/irréelle1.jpg" />
 
         </section>
+
+        <?php 
+            include "./php/footer.php";
+        ?>
         
 
         <script src="../app/res.js"></script>
