@@ -1,7 +1,7 @@
 <footer>
         <div>
             <p id="footer-merci">
-                <b>Merci d'avoir visité notre site</b><br/>
+                <b>Nous vous remercions de votre visite sur notre site</b><br/>
                 <b>Passez une excellente journée</b>
             </p>
             <p id="footer-copyright">

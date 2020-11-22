@@ -3,7 +3,7 @@ let content = document.getElementById("weedings");
 const createPart = (female, male, countLitter) => {
 
     let litterDate = document.createElement("h5");
-        litterDate.textContent = "Chiot nés le 16 Novembre 2020 ";
+        litterDate.textContent = "Chiots nés le 16 Novembre 2020 ";
         litterDate.style.textAlign = "right";
         litterDate.style.marginBottom = "3rem";
 

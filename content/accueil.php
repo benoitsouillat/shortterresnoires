@@ -39,7 +39,7 @@
                             <img src="../src/img/bb-okkaina.jpg" class="w-75 align-self-center">
                             <div class="carousel-caption carousel-caption-move bg-dark opacity-4 rounded">
                                 <p>Okkaina et Rock se sont unis, les chiots sont nés le 16 Novembre 2020 <br/>
-                            Ils sont déjà disponible à la réservation.</p>
+                            Ils sont déjà disponibles à la réservation.</p>
                                 <a href="./okkaina1.php" role="button" class="btn btn-success">Voir nos Bébés disponibles </a>
                             </div>
                         </div>

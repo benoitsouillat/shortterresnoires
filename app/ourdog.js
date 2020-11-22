@@ -61,7 +61,7 @@ femaleClass.forEach(elm => {
     let dogBirthPrint = document.createElement("p");
         dogBirthPrint.textContent = "née le : " +  dogBirth;
     let dogLitterLink = document.createElement("a");
-        dogLitterLink.href = "weeding.html";
+        dogLitterLink.href = "weeding.php";
         dogLitterLink.textContent = " Voir ses bébés";
 
         /* Partie Diapo */

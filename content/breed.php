@@ -51,7 +51,7 @@
                 <img src="../src/img/rock4.jpg" alt="rock-cane-corso" />
                 <div class="breed-para">
                     <p>Le Cane Corso (ou 'chien de cour italien'), de son vrai nom (Cane Corso Italiano)
-                        est une race de chiens molosses d'origine italienne (les Pouilles), utilisés comme chiens de garde, de défense, 
+                        est une race de chiens molosses d'origine italienne (les Pouilles), utilisée comme chiens de garde, de défense, 
                         de police
                         et de pistage. <br/>Il s'agit d'un descendant direct des molosses utilisés par des légions romaines.<br/><br/>
                         Tous les chiens ont un ancêtre commun : le loup, en effet 98% de leur génétique est identique à celle du loup.
@@ -61,8 +61,8 @@
                     </br> <br/>
                     Le Cane Corso a aussi servi à garder le gros bétail de la ferme, dans les domaines agricoles 
                         d'Italie du Sud.
-                        Les Producteurs de taureaux quant à eux, l'utilisaient tristement comme bouclier vivant, 
-                        afin d'arrêter les taureaux lorsqu'ils chargeaient.<br/>
+                        Les Producteurs de taureaux quant à eux, les utilisaient tristement comme bouclier vivant, 
+                        afin de les arrêter lorsqu'ils chargeaient.<br/>
                         A partir de 1987, le docteur Morsiani a observé 100 individus, 
                         afin de définir le standard de la race, ce n’est qu’en 1996 que la FCI reconnaît la race Cane corso. 
                     </p>
@@ -80,7 +80,7 @@
                     </p>
                     <p>De nature douce et calme, le cane corso possède un instinct protecteur pour sa famille
                         et peut sembler réservé envers les personnes qui sortent du cercle familial.<br/>
-                        Très proche de son maître, c'est un joueur hors pair, intelligent et très équilibré <br/>
+                        Très proche de son maître, c'est un joueur hors pair, intelligent et très équilibré. <br/>
                         Il aime travailler avec ses proches et sa famille, c'est pourquoi il sera très important de 
                         partager des moments avec votre cane corso pour l'aider à s'épanouir intellectuellement.
                     </p>
@@ -88,7 +88,7 @@
                         C’est une race simple à éduquer, à condition de s’y prendre dès le début et de ne pas laisser de mauvaises habitudes s’installer. 
                         Comme avec les enfants, il faut souvent se répéter durant sa période de croissance 
                         pour qu’il adopte les bonnes conduites à l'âge adulte. <br/>
-                        Un manque de socialisation dès le plus jeune âge peut amener des chiens à devenir dominant et parfois agressifs,
+                        Un manque de socialisation dès le plus jeune âge peut amener des chiens à devenir dominants et parfois agressifs,
                          d'où l'importance de ne pas les isoler. 
                         Le respect mutuel entre vous et votre chien est l’une des clés essentielles dans la réussite de l’éducation de cette race. 
 
