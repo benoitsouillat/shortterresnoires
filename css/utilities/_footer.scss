@@ -1,0 +1,31 @@
+@import "variables";
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    line-height: 1.0;
+
+    div {
+        width: 80%;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: solid $text-color 1px;
+        border-radius: 1%;
+        box-shadow: inset $text-color 2px 2px 15px, $text-color 2px 2px 15px;
+    }
+    p {
+        margin-top: 1em;
+    }
+    #footer-copyright {
+        font-size: 0.95em;
+    }
+
+    #footer-signature {
+        font-size: 0.8em;
+    }
+}

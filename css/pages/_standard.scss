@@ -1,0 +1,24 @@
+// @import "../utilities/variables";
+
+
+#standard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    p {
+        u {
+            margin: 30%;
+        }
+        width: 80%;
+        line-height: 2rem;
+    }
+    mark {
+        text-decoration: underline;
+        font-weight: bold;
+        background-color: $font-color;
+        color: $text-color;
+    }
+    padding-bottom: 50px;
+}

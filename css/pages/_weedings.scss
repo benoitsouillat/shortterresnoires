@@ -1,0 +1,56 @@
+@import "../utilities/variables";
+
+.aside-weeding {
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.female-weeding {
+
+    img {
+        max-width: 20rem;
+        height: auto;
+        margin-bottom: 3rem;
+        box-shadow: 4px 4px 6px grey;
+    }
+    h3 {
+        position: relative;
+        left: 3rem;
+        text-align: left;
+        color: pink;
+        font-size: 1.3rem;
+    }
+    p {
+        position: relative;
+        left: 3rem;
+        text-align: left;
+    }
+}
+
+.male-weeding {
+
+    img {
+        max-width: 20rem;
+        height: auto;
+        margin-bottom: 3rem;
+        box-shadow: 4px 4px 6px grey;
+
+    }
+    h3 {
+        position: relative;
+        left: 3rem;
+        text-align: left;
+        font-size: 1.3rem;
+        color : lightblue;
+    }
+    p {
+        position: relative;
+        left: 3rem;
+        text-align: left;
+    }
+
+}

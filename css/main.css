@@ -1,205 +1,43 @@
 @charset "UTF-8";
-#header {
-  width: 90%;
-  margin: auto;
-}
-
-#coor-array {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  font-size: 1.2em;
-}
-
-#contact {
-  display: flex;
-  margin-top: 100px;
-  margin-left: 70px;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-#image-contact {
-  max-width: 400px;
-  border-radius: 5%;
-}
-
-#link-friend {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-#breed-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#breed-info h2 {
-  text-align: center;
-  text-decoration: underline;
-  font-weight: bold;
-  line-height: 1.5em;
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
-#breed-info aside {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 110px;
-}
-#breed-info aside div {
-  display: flex;
-  justify-content: space-evenly;
-}
-#breed-info img {
-  align-self: flex-start;
-  max-width: 350px;
-  height: auto;
-  border-radius: 2%;
-  box-shadow: white 3px 5px 3px;
-  margin: 10px;
-}
-
-#standard {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding-bottom: 50px;
-}
-#standard p {
-  width: 80%;
-  line-height: 2rem;
-}
-#standard p u {
-  margin: 30%;
-}
-#standard mark {
-  text-decoration: underline;
-  font-weight: bold;
-  background-color: #000000;
-  color: beige;
-}
-
-#puppiesTab {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/*------------------------------------Section 1 ------------------------------*/
-#last-weeding {
-  background-image: url("../src/img/okkaina1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 700px;
-  border-bottom: solid black 2px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-end;
-}
-#last-weeding p {
-  color: white;
-  text-shadow: black 2px 2px 3px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding: 20px;
-}
-#last-weeding button {
-  margin-right: 10%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-/*----------------------------Section 2 -----------------------------------*/
-#who-are-us {
-  background-color: beige;
+/* Bouton Couleur Complétant Bootstrap */
+.btn-beige {
   color: black;
-  font-style: italic;
-  font-size: 1rem;
-  text-shadow: black 1px 0px 0px;
-  height: 600px;
-  border-bottom: solid black 2px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  background-color: beige;
 }
-#who-are-us h2 {
+.btn-beige:hover {
   text-decoration: underline;
-}
-#who-are-us p {
-  text-align: center;
-  max-width: 80%;
-  align-self: center;
-}
-#who-are-us p > i {
-  font-size: 0.9em;
-  padding: 10px;
-  text-decoration: underline;
-  position: relative;
-  left: 500px;
 }
 
-/* ------------------------------Section 3--------------------------------- */
-#our-lovely-dog {
-  background-image: url("../src/img/okkaina12.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: 35%;
+/* Bouton Disponibilité Chiots */
+.btn-avail {
+  text-decoration: underline;
   color: white;
-  text-align: center;
-  font-style: italic;
-  font-size: 1.5rem;
-  text-shadow: black 1px 1px 1px;
-  height: 700px;
-  border-bottom: solid black 2px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-#our-lovely-dog h2 {
-  font-size: 1.7rem;
-  padding-right: 3rem;
-}
-#our-lovely-dog a {
-  font-size: 1.2rem;
-  padding-top: 0.4rem;
-  padding-right: 8rem;
+  padding: 2% 10%;
+  font-weight: bold;
 }
 
-/*-------------------------------Classes-------------------------------------*/
-/* ------ tests ------ */
-.carousel-indicators-review {
-  left: unset;
-  top: 2%;
-  right: 1%;
-  bottom: unset;
-  margin-left: unset;
-  margin-right: unset;
-}
-.carousel-indicators-review li {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-  border: black 1px solid;
-  box-shadow: beige 2px 2px 5px;
+.btn-dispo {
+  background-color: #198c19;
+  border: #198c19 solid 1px;
+  box-shadow: 4px 4px 4px #0a350a;
+  color: black;
 }
 
-.carousel-caption-move {
-  bottom: 10%;
-  right: 20%;
-  left: 20%;
+.btn-undispo {
+  background-color: #d04b56;
+  border: #d04b56 solid 1px;
+  box-shadow: 4px 4px 4px #90252e;
+  color: black;
 }
 
+.btn-option {
+  background-color: sandybrown;
+  border: sandybrown solid 1px;
+  box-shadow: 4px 4px 4px #df6f0f;
+  color: black;
+}
+
+/* Carousel Page Accueil */
 .carousel-button-prevnext {
   top: 20%;
   bottom: 20%;
@@ -213,7 +51,6 @@
   right: 10%;
 }
 
-/* ------- Valide ----------*/
 .opacity-0 {
   opacity: 0 !important;
 }
@@ -254,84 +91,159 @@
   line-height: 4rem !important;
 }
 
-.align-para-img {
-  display: flex;
-  justify-content: space-evenly;
+#header {
   width: 90%;
-}
-.align-para-img p {
-  width: 80%;
-  padding-right: 20px;
+  margin: auto;
 }
 
-.title {
-  color: beige;
-  font-weight: bold;
-  font-style: italic;
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
   text-align: center;
-  text-shadow: beige 1px 1px 1px;
-  padding-bottom: 30px;
+  line-height: 1;
+}
+footer div {
+  width: 80%;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: solid beige 1px;
+  border-radius: 1%;
+  box-shadow: inset beige 2px 2px 15px, beige 2px 2px 15px;
+}
+footer p {
+  margin-top: 1em;
+}
+footer #footer-copyright {
+  font-size: 0.95em;
+}
+footer #footer-signature {
+  font-size: 0.8em;
 }
 
-.button {
-  border-radius: 15%;
-  padding: 10px;
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: beige;
+  border-radius: 2%;
+  text-decoration: underline;
+}
+
+@media (max-width: 990px) {
+  #menu {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 1.3rem;
+  }
+}
+.menu-link {
+  color: black;
+}
+
+/*.menu-link:hover {
+    color: violet;
+    transform: scale(1.2);
+}*/
+/* -------------------------------Général----------------------------------- */
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+body {
   background-color: black;
   color: beige;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  margin-top: 2rem;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 2em;
   font-style: italic;
   font-weight: bold;
-  font-size: 1em;
-}
-.button:hover {
-  color: #6032AA;
-  border-color: #6032AA;
-  transform: scale(1.12);
 }
 
-.btn-beige {
-  color: black;
-  background-color: beige;
-}
-.btn-beige:hover {
-  text-decoration: underline;
-}
-
-.btn-avail {
-  text-decoration: underline;
-  color: white;
-  padding: 10%;
-  border-radius: 100%;
-  font-weight: bold;
-}
-
-.btn-dispo {
-  background-color: #198c19;
-  border: #198c19 solid 1px;
-  box-shadow: 4px 4px 4px #0a350a;
-  color: black;
-}
-
-.btn-undispo {
-  background-color: #d04b56;
-  border: #d04b56 solid 1px;
-  box-shadow: 4px 4px 4px #90252e;
-  color: black;
-}
-
-.btn-option {
-  background-color: sandybrown;
-  border: sandybrown solid 1px;
-  box-shadow: 4px 4px 4px #df6f0f;
-  color: black;
-}
-
-.no-a {
+a {
   color: beige;
   font-weight: bold;
 }
-.no-a:hover {
+a:hover {
   color: #6032AA;
-  transform: scale(1);
+  transform: scale(1.2);
+}
+
+/* Importation Identifiant par page */
+/* Page - Le Cane Corso */
+#breed-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#breed-info h2 {
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+#breed-info aside {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 110px;
+}
+#breed-info aside div {
+  display: flex;
+  justify-content: space-evenly;
+}
+#breed-info img {
+  align-self: flex-start;
+  max-width: 350px;
+  height: auto;
+  border-radius: 2%;
+  box-shadow: white 3px 5px 3px;
+  margin: 10px;
+}
+
+.breed-para {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 80%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#standard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 50px;
+}
+#standard p {
+  width: 80%;
+  line-height: 2rem;
+}
+#standard p u {
+  margin: 30%;
+}
+#standard mark {
+  text-decoration: underline;
+  font-weight: bold;
+  background-color: #000000;
+  color: beige;
 }
 
 .aside-weeding {
@@ -379,6 +291,133 @@
   text-align: left;
 }
 
+/* Mixins && Extensions */
+/*
+#puppiesTab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+*/
+.puppy__card {
+  border-radius: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.puppy__card p {
+  font-weight: bold;
+  min-width: 110px;
+  text-align: center;
+}
+.puppy__card img {
+  max-height: 14rem;
+  width: auto;
+  padding: 10px;
+}
+
+.puppy_male {
+  text-shadow: 2px 2px 2px black;
+  color: lightblue;
+  box-shadow: 4px 8px 2px lightblue;
+  background-color: #235e71;
+}
+
+.puppy_female {
+  text-shadow: 2px 2px 2px black;
+  color: pink;
+  box-shadow: 4px 8px 2px pink;
+  background-color: #6f0b30;
+}
+
+.puppy-info-align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  max-width: 15%;
+}
+
+.puppy-list-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.puppy-para {
+  text-align: center;
+}
+.puppy-para .para-right {
+  width: 80%;
+  text-align: end;
+}
+
+.puppy-img img {
+  border-radius: 5%;
+}
+.puppy-img:hover {
+  transform: scale(1.05);
+}
+
+/*-------------------------------Classes-------------------------------------*/
+.carousel-indicators-review {
+  left: unset;
+  top: 2%;
+  right: 1%;
+  bottom: unset;
+  margin-left: unset;
+  margin-right: unset;
+}
+.carousel-indicators-review li {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border: black 1px solid;
+  box-shadow: beige 2px 2px 5px;
+}
+
+.carousel-caption-move {
+  bottom: 10%;
+  right: 20%;
+  left: 20%;
+}
+
+.align-para-img {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+}
+.align-para-img p {
+  width: 80%;
+  padding-right: 20px;
+}
+
+.title {
+  color: beige;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  text-shadow: beige 1px 1px 1px;
+  padding-bottom: 30px;
+}
+
+.no-a {
+  color: beige;
+  font-weight: bold;
+}
+.no-a:hover {
+  color: #6032AA;
+  transform: scale(1);
+}
+
 .list-style {
   list-style: none;
   text-align: justify;
@@ -405,36 +444,6 @@
 }
 .dog-info p {
   font-size: 1.3rem;
-}
-
-.diapo-dog {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 500px;
-}
-
-.diapo-button {
-  align-self: stretch;
-  font-weight: bold;
-  text-shadow: black 2px 2px 5px;
-  min-width: 30px;
-}
-
-.clicky-flex-align {
-  align-self: flex-end;
-  text-align: center;
-}
-
-.breed-para {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  max-width: 80%;
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 /*--------------------- Page News -------------------------------*/
@@ -473,122 +482,6 @@
 }
 .article__foot .article__author {
   font-style: italic;
-}
-
-.puppy__card {
-  border-radius: 2%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 50px;
-  width: 70%;
-}
-.puppy__card p {
-  font-weight: bold;
-  min-width: 110px;
-  text-align: center;
-}
-.puppy__card img {
-  max-height: 14rem;
-  width: auto;
-  padding: 10px;
-}
-
-.puppy_male {
-  text-shadow: 2px 2px 2px black;
-  color: lightblue;
-  box-shadow: 4px 8px 2px lightblue;
-  background-color: #235e71;
-}
-
-.puppy_female {
-  text-shadow: 2px 2px 2px black;
-  color: pink;
-  box-shadow: 4px 8px 2px pink;
-  background-color: #6f0b30;
-}
-
-.puppy-info-align {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  max-width: 15%;
-}
-
-.puppy-para {
-  text-align: center;
-}
-.puppy-para .para-right {
-  width: 80%;
-  text-align: end;
-}
-
-.puppy-img img {
-  border-radius: 5%;
-}
-.puppy-img:hover {
-  transform: scale(1.05);
-}
-
-/* -------------------------------Général----------------------------------- */
-html {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 20px;
-}
-
-body {
-  background-color: black;
-  color: beige;
-  display: flex;
-  flex-direction: column;
-}
-
-h1, h2, h3 {
-  margin-top: 2rem;
-  text-align: center;
-  text-decoration: underline;
-  font-size: 2em;
-  font-style: italic;
-  font-weight: bold;
-}
-
-a {
-  color: beige;
-  font-weight: bold;
-}
-a:hover {
-  color: #6032AA;
-  transform: scale(1.2);
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin-top: 20px;
-  margin-bottom: 25px;
-  text-align: center;
-  line-height: 1;
-}
-footer div {
-  width: 80%;
-  padding-left: 30px;
-  padding-right: 30px;
-  border: solid beige 1px;
-  border-radius: 1%;
-  box-shadow: inset beige 2px 2px 15px, beige 2px 2px 15px;
-}
-footer p {
-  margin-top: 1em;
-}
-footer #footer-copyright {
-  font-size: 0.95em;
-}
-footer #footer-signature {
-  font-size: 0.8em;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,90 @@
+@import "../utilities/variables";
+
+
+/* Mixins && Extensions */
+
+@mixin puppy-card($colour, $back-colour) {
+    color: $colour;
+    box-shadow: 4px 8px 2px $colour;
+    background-color: $back-colour;
+}
+
+/*
+#puppiesTab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+.puppy__card {
+
+    border-radius: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    width: 75%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    p {
+        font-weight: bold;
+        min-width: 110px;
+        text-align: center;
+    }
+    img {
+
+        max-height: 14rem;
+        width: auto;
+        padding: 10px;
+    }
+}
+
+.puppy_male {
+    text-shadow: 2px 2px 2px black;
+    @include puppy-card($puppy-male, darken($puppy-male, 50));
+}
+
+.puppy_female {
+    text-shadow: 2px 2px 2px black;
+    @include puppy-card($puppy-female, $puppy-female-back);
+}
+.puppy-info-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    max-width: 15%;
+}
+
+.puppy-list-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.puppy-para {
+    text-align: center;
+
+    .para-right {
+        width: 80%;
+        text-align: end;
+    }
+}
+
+.puppy-img {
+
+    img {
+        border-radius: 5%;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

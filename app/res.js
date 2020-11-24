@@ -44,8 +44,8 @@ let dogClass = [okkaina, panama, rock];
 let femaleClass = [okkaina, panama];
 let maleClass = [rock];
 
-let male1 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Vert", "Vert2-3","Vert16-9", "y");
-let male2 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Rouge" ,"Rouge2-3", "Rouge16-9", "y");
+let male1 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir (bringé)", "Vert", "Vert2-3","Vert16-9", "y");
+let male2 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir (bringé)", "Rouge" ,"Rouge2-3", "Rouge16-9", "y");
 let male3 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Bleu Foncé" ,"BleuF2-3", "BleuF16-9", "y");
 let male4 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Bleu Clair" ,"BleuC2-3", "BleuC16-9", "y");
 let male6 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Jaune" ,"Jaune2-3", "Jaune16-9","y");
@@ -148,3 +148,14 @@ const generateFooter = () => {
     footerContainer.appendChild(paraSign);
 
 }
+
+
+/* ---------------------- FANCYBOX ---------------------------- */
+
+$(document).ready(function() {
+    $(".fancybox").fancybox({
+        openEffect	: 'elastic',
+    	closeEffect	: 'elastic',
+
+    });
+});

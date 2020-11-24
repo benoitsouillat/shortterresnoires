@@ -1,0 +1,50 @@
+@import "variables";
+
+@mixin btn-colour($colour) {
+
+    background-color: $colour;
+    border: $colour solid 1px;
+    box-shadow: 4px 4px 4px darken($colour, 20);
+    color: black;
+}
+/* Bouton Couleur Complétant Bootstrap */
+
+    .btn-beige {
+        color: black;
+        background-color: $text-color;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+/* Bouton Disponibilité Chiots */
+
+.btn-avail {
+    text-decoration: underline;
+    color: white;
+    padding: 2% 10%;
+    font-weight: bold;
+}
+.btn-dispo {
+    @include btn-colour($available);
+}
+.btn-undispo {
+    @include btn-colour($reserved);
+}
+.btn-option {
+    @include btn-colour($en-option);
+}
+
+/* Carousel Page Accueil */
+
+.carousel-button-prevnext {
+    top: 20%;
+    bottom: 20%;
+}
+.carousel-control-prev-btn {
+    left: 10%;
+}
+.carousel-control-next-btn {
+    right: 10%;
+}

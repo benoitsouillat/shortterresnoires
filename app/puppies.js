@@ -5,8 +5,6 @@ let puppySection = document.createElement("div");
 
 content.appendChild(puppySection);
 
-
-
 const listingPuppy = (puppyClass) => {
 
     let maleCount = 0;
@@ -43,20 +41,33 @@ let puppyNecklace = document.createElement("p");
     puppyNecklace.textContent = "Collier " + elm.puppyNecklace;
 
 let puppyCardImgLink = document.createElement("a");
-    puppyCardImgLink.href = path + "okkaina-puppies/" + elm.puppyHead + jpg;
+    puppyCardImgLink.href = path + "okkaina-puppies/" + elm.puppyProfil + jpg;
     puppyCardImgLink.classList.add("puppy-img");
-let puppyCardImgLink2 = document.createElement("a");
-    puppyCardImgLink2.href = path + "okkaina-puppies/" + elm.puppyProfil + jpg;
-    puppyCardImgLink2.classList.add("puppy-img");
+    puppyCardImgLink.classList.add("fancybox");
+    puppyCardImgLink.classList.add("col-5");
 
+    puppyCardImgLink.rel = elm.puppyNecklace.toLowerCase();
+
+let puppyAlbumDiv = document.createElement("div");
+    puppyAlbumDiv.classList.add("puppy-list-button")
+    puppyAlbumDiv.classList.add("col-2");
+
+
+let puppyAlbum = document.createElement('a');
+    puppyAlbum.textContent = "Album Photo";
+    puppyAlbum.rel = "vert";                            //elm.puppyNecklace.toLowerCase();
+    puppyAlbum.role = "button";
+    puppyAlbum.href = path + "okkaina-puppies/" + elm.puppyProfil + jpg;
+    puppyAlbum.classList.add("fancybox");
+    puppyAlbum.classList.add("btn");
+    puppyAlbum.classList.add("btn-success");
 
 let puppyCardImg = document.createElement('img');
-    puppyCardImg.src =  path + "okkaina-puppies/" + elm.puppyHead + jpg;
-let puppyCardImg2 = document.createElement('img');
-    puppyCardImg2.src = path + "okkaina-puppies/" + elm.puppyProfil + jpg;
+    puppyCardImg.src =  path + "okkaina-puppies/" + elm.puppyProfil + jpg;
 
 let puppyAvail = document.createElement("button");
     puppyAvail.classList.add("btn-avail");
+    puppyAvail.classList.add("btn-sm");
 
     if (elm.puppyAvailable === "y" || elm.puppyAvailable === "Y")
     {
@@ -83,9 +94,10 @@ let puppyAvail = document.createElement("button");
         puppyCardInfo.appendChild(puppyColor);
         puppyCardInfo.appendChild(puppyAvail);
     puppyCard.appendChild(puppyCardImgLink);
-    puppyCard.appendChild(puppyCardImgLink2);
     puppyCardImgLink.appendChild(puppyCardImg);
-    puppyCardImgLink2.appendChild(puppyCardImg2);
+    puppyCard.appendChild(puppyAlbumDiv);
+    puppyAlbumDiv.appendChild(puppyAlbum);
+
 });
 
 }

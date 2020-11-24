@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" media="all and (max-width: 1280px)" href="../css/smart-main.css" type="text/css" />
         <link rel="stylesheet" media="all and (min-width: 1280px)" href="../css/main.css" type="text/css" />
-        <link rel="stylesheet"  media="all" href="../css/menu.css" type="text/css" />
         <link rel="shortcut icon" type="image/ico" href="../favicon/favicon.ico"/>
 
     </head>

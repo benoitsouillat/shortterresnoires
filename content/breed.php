@@ -5,7 +5,6 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" media="all and (max-width: 1280px)" href="../css/smart-main.css" type="text/css" />
         <link rel="stylesheet" media="all and (min-width: 1280px)" href="../css/main.css" type="text/css" />
-        <link rel="stylesheet"  media="all" href="../css/menu.css" type="text/css" />
         <link rel="shortcut icon" type="image/ico" href="../favicon/favicon.ico"/>
 
     </head>
@@ -39,7 +38,7 @@
                         sauf avis vétérinaire contraire.
                     </p>
                     <p>Retrouvez toutes les informations plus détaillées sur notre page standard :
-                        <a href="standard.html" alt="standard-cane-corso" >Le standard du Cane Corso</a>
+                        <a href="standard.php" alt="standard-cane-corso" >Le standard du Cane Corso</a>
                     </p>
                 </div>
                 <img src="../src/img/panama4.jpg" alt="panama-cane-corso" />

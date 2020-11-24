@@ -1,125 +1,47 @@
-/* ------- Affichage sur téléphone portable et petite résolution ------ */
-$text-color: beige;
-$link-hover: #6032AA;
-$font-color: #000;
-$available: #198c19;
-$reserved: #d04b56;
-$en-option: sandybrown;
+@import "utilities/btn";
+@import "utilities/classboot";
+@import "utilities/header";
+@import "utilities/footer";
+@import "utilities/menu";
+@import "utilities/bases";
 
-@mixin btn-colour($colour) {
+/* Importation Identifiant par page */
 
-    background-color: $colour;
-    border: $colour solid 1px;
-    box-shadow: 4px 4px 4px darken($colour, 20);
-    color: black;
-}
+@import "pages/breed";
+@import "pages/standard";
+@import "pages/weedings";
+@import "pages/puppies";
 
-@mixin text-color($colour: $text-color) {
+/* Mixins && Extensions */
 
-    color: $colour;
-}
 
-@mixin button-hover($colour: $link-hover) {
-    color: $colour;
-    border-color: $colour;
-    transform: scale(1.12);
-}
+.carousel-indicators-review {
 
-#header {
-    margin: auto;
+    left: unset;
+    top: 2%;
+    right: 7%;
+    bottom: unset;
+    margin-left: unset;
+    margin-right: unset;
 
-    @media (min-width: 992px) and (max-width: 1280px)
-    {
-        width: 960px;
-    }
-    @media (min-width: 768px) and (max-width: 992px)
-    {
-        width: 720px;
-    }
-    @media (max-width: 767px)
-    {
-        width: 90%;
-    }
-}
-
-#copyright {
-    font-size: 1rem;
-    line-height: 1.5rem;
-
-    i {
-        font-size: 0.8rem;
-    }
-}
-
-#remerciement {
-    font-weight: bold;
-    font-style: italic;
-    line-height: 1.3em;
-    font-size: 1rem;
-    /*background-color: #2D2F30; */
-
-}
-/*
-#footer {
-    background-color: #2D2F30;
-} 
-*/
-
-#coor-array {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    font-size: 1.0rem;
-    
-}
-
-#our-repro {
-
-    h3 {
-    font-size: 1.4rem;
-    }
-
-}
-
-#contact {
-
-    display: flex;
-    margin-top: 100px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-}
-#image-contact {
-
-    max-width: 300px;
-    border-radius: 5%;
-}
-
-#link-friend {
-    display: flex;
     flex-direction: column;
-    text-align: center;
-    padding: 10px 70px;
+
+    li {
+        width: 30px;
+        height: 30px;
+        margin-top: 10px;
+        border: black 1px solid;
+        box-shadow: beige 2px 2px 5px;
+    }
 }
 
 
 #breed-info 
 {
-    h2 {
-        text-align: center;
-        text-decoration: underline;
-        font-weight: bold;
-        line-height: 1.5rem;
-        padding-bottom: 20px;
-        padding-top: 20px;
-    }
     aside {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 110px;
+        width: 100%;
+
         div {
-            display: flex;
             justify-content: space-around;
 
             @media (max-width: 970px)
@@ -133,7 +55,6 @@ $en-option: sandybrown;
         {
             padding-bottom: 0;
         }
-
     }
     img {
 
@@ -144,158 +65,10 @@ $en-option: sandybrown;
         box-shadow: white 3px 5px 3px;
     }
 }
-
-#standard {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    
-        p {
-            u {
-                margin: 30%;
-            }
-            width: 80%;
-            line-height: 2rem;
-        }
-        mark {
-            text-decoration: underline;
-            font-weight: bold;
-            background-color: $font-color;
-            color: $text-color;
-        }
-    
-        padding-bottom: 50px;
-    }
-
-    #puppiesTab {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-    }
-/*------------------------------------Section 1 ------------------------------*/
-#last-weeding {
-
-    background:url("../src/img/okkaina1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    height: 700px;
-    border-bottom: solid black 2px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-
-    p {
-        color: white; 
-        text-shadow: black 2px 2px 3px;
-        font-size: 1.0rem;
-        font-weight: bold;
-        padding-bottom: 1rem;
-    
-    }
-    button {
-        margin-left: 10%;
-        margin-bottom: 5rem;
-    }
+.puppy__card {
+    width: 90%;
 }
- /*----------------------------Section 2 -----------------------------------*/
-#who-are-us {
-
-    background-color: $text-color;
-    color: black;
-    font-style: italic;
-    text-shadow: black 1px 0px 0px;
-
-    min-height: 600px;
-    border-bottom: solid black 2px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    h2 {
-        text-decoration: underline;
-    }
-    p {
-        text-align: center;
-        font-size: 1.0rem;
-        width: 80%;
-        align-self: center;
-    }
-
-    p > i {
-        font-size: 0.9em;
-        padding: 10px;
-        text-decoration: underline;
-        position: relative;
-        left: 35%;
-
-    }
-}
-/* ------------------------------Section 3--------------------------------- */
-
-#our-lovely-dog {
-    background-image: url("../src/img/okkaina12.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: 30%;
-
-    color: white;
-    text-align: center;
-    font-style: italic;
-    font-size: 1.2rem;
-    text-shadow: black 1px 1px 1px;
-
-    height: 700px;
-    border-bottom: solid black 2px;
-    padding-right: 10px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
-
-/*-------------------------------Classes-------------------------------------*/
-
-.opacity-0 {
-    opacity:0!important;
-  }
-  .opacity-1 {
-    opacity:0.2!important;
-  }
-  .opacity-2 {
-    opacity:0.4!important;
-  }
-  .opacity-3 {
-    opacity:0.6!important;
-  }
-  .opacity-4 {
-    opacity:.8!important;
-  }
-  .opacity-5 {
-    opacity:1!important;
-  }
-
-  .line-height-1 {
-    line-height: 0.5rem!important;
-  }
-  .line-height-2 {
-    line-height: 1rem!important;
-  }
-  .line-height-3 {
-    line-height: 1.5rem!important;
-  }
-  .line-height-4 {
-    line-height: 4rem!important;
-  }
+ /**/ 
 
 .align-para-img {
 
@@ -310,7 +83,7 @@ $en-option: sandybrown;
 }
 
 .title {
-    @include text-color();
+    color: $text-color;
     font-weight: bold;
     font-style: italic;
     text-align: center;
@@ -318,51 +91,6 @@ $en-option: sandybrown;
     font-size: 2.1rem;
 
     padding-bottom: 30px;
-}
-.button {
-    border-radius: 15%;
-    padding: 10px;
-    background-color: black;
-    color: $text-color;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1rem;
-
-    &:hover {
-        @include button-hover();
-    }
-}
-
-.btn-beige {
-    color: black;
-    background-color: $text-color;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-.btn-avail {
-    text-decoration: underline;
-    color: white;
-    padding: 10%;
-    border-radius: 100%;
-    font-weight: bold;
-
-}
-.btn-dispo {
-
-    @include btn-colour($available);
-
-}
-.btn-undispo {
-
-    @include btn-colour($reserved);
-
-}
-.btn-option {
-
-    @include btn-colour($en-option);
 }
 
 .no-a {
@@ -507,10 +235,6 @@ $en-option: sandybrown;
     min-width: 30px;
 }
 
-.clicky-flex-align {
-    align-self: flex-end;
-    text-align: center;
-}
 
 .breed-para {
     flex-direction: column;
@@ -575,133 +299,9 @@ $en-option: sandybrown;
     }
 }
 
-.puppy__card {
-
-    border-radius: 2%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 50px;
-    width: 70%;
-
-    p {
-        font-weight: bold;
-        min-width: 110px;
-        text-align: center;
-    }
-
-    img {
-
-        max-height: 14rem;
-        width: auto;
-        padding: 10px;
-    }
-}
-.puppy_male {
-    color: lightblue;
-    text-shadow: 2px 2px 2px black;
-    box-shadow: 4px 8px 2px lightblue;
-    background-color: darken(lightblue, 50);
-}
-
-.puppy_female {
-    color: pink;
-    text-shadow: 2px 2px 2px black;
-    box-shadow: 4px 8px 2px pink;
-    background-color: #6f0b30;
-
-}
-.puppy-info-align {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-.puppy-para {
-    text-align: center;
-
-    .para-right {
-        width: 80%;
-        text-align: end;
-    }
-}
-
-.puppy-img {
-
-    img {
-        border-radius: 5%;
-        width: auto;
-        max-width: 90%;
-    }
-    &:hover {
-        transform: scale(1.05);
-    }
-}
-
-
 /* -------------------------------Général----------------------------------- */
 
-html {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 20px;
-
-}
-
-body {
-    background-color: black;
-    color: $text-color;
-    display: flex;
-    flex-direction: column;
-}
-
-h1, h2, h3 {
-    margin-top: 2rem;
-    text-align: center;
-    text-decoration: underline;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
 p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
-a {
-    color: $text-color;
-    font-weight: bold;
-    &:hover {
-        color: $link-hover;
-        transform: scale(1.2);
-    }
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    text-align: center;
-
-    div {
-        width: 80%;
-        padding-left: 30px;
-        padding-right: 30px;
-        border: solid $text-color 1px;
-        border-radius: 1%;
-        box-shadow: inset $text-color 2px 2px 15px, $text-color 2px 2px 15px;
-    }
-    p {
-        margin-top: 1em;
-    }
-    #footer-copyright {
-        font-size: 0.95em;
-    }
-
-    #footer-signature {
-        font-size: 0.8em;
-    }
-}

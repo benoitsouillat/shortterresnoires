@@ -11,7 +11,6 @@
         <!-- CSS -->
         <link rel="stylesheet" media="screen and (max-width: 1279px)" href="../css/smart-main.css" type="text/css" />
         <link rel="stylesheet" media="screen and (min-width: 1280px)" href="../css/main.css" type="text/css" />
-        <link rel="stylesheet" media="all" href="../css/menu.css" type="text/css" />
         <link rel="shortcut icon" type="image/ico" href="../favicon/favicon.ico" />
 
     </head>
