@@ -1,0 +1,23 @@
+@import "../utilities/variables";
+@import "../utilities/classboot";
+
+
+.carousel-caption-move {
+
+    @media all and (max-width: 1279px)
+    {
+        position: static;
+        width: 75%;
+
+    }
+
+    @media all and (min-width: 1280px)
+    {
+        bottom: 10%;
+        right: 20%;
+        left: 20%;
+    }
+
+}
+
+

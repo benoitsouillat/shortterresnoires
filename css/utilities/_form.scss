@@ -1,0 +1,108 @@
+@import "variables";
+
+
+/* --------------------- Cours & Tests ---------------------------- */
+.form {
+    &__group {
+        & input {
+            color: purple;
+
+            transition: all;
+            transition-duration:  400ms;
+            transition-delay: 100ms;
+            transition-timing-function: cubic-bezier(0, 2,.75,-0.5);
+        
+            &:focus {
+                border: 2px solid $text-color;
+                background-color: lightgreen;
+                transform: scale(1.05);
+
+            }
+            &:not(:focus):invalid {
+                border: 2px solid darken(red, 50);
+            }
+            
+
+        }
+    }
+}
+
+.btn {
+    &__form {
+        transition: background-color 400ms, transform 450ms;
+        transition-delay: 0ms, 200ms;
+        transition-timing-function: ease-in-out;
+
+        &:hover {
+            background-color: coral;
+            transform: scale(1.3);
+            text-decoration: underline;
+
+        }
+    }
+
+    &__easeinout {
+
+        transition: background-color 400ms, transform 450ms;
+        transition-delay: 0ms, 200ms;
+        transition-timing-function: ease-in-out;
+
+        &:hover {
+            background-color: beige;
+            transform: rotate(720deg);
+            text-decoration: underline;
+
+        }
+    }
+    &__ease {
+        transition: background-color 400ms, transform 750ms;
+        transition-delay: 0ms, 200ms;
+        transition-timing-function: ease;
+
+        &:hover {
+            background-color: red;
+            transform: translateY(100%);
+            text-decoration: underline;
+
+        }
+    }
+    &__easein {
+        transition: background-color 400ms, color 400ms, transform 450ms;
+        transition-delay: 0, 0, 200ms;
+        transition-timing-function: ease-in;
+
+        &:hover {
+            background-color: yellow;
+            transform: scale(1.19);
+            text-decoration: underline;
+            color: purple;
+
+        }
+    }
+    &__easeout {
+        transition: background-color 400ms, transform 450ms;
+        transition-delay: 0ms, 200ms;
+        transition-timing-function: ease-out;
+
+        &:hover {
+            background-color: coral;
+            transform: scale(1.19);
+            text-decoration: underline;
+
+        }
+    }
+}
+
+/* ------------------- VERSION STABLE -------------------------- */
+
+.menu-anim {
+    transition: transform 200ms, color 300ms;
+    transition-delay: 0ms, 0ms;
+    transition-timing-function: ease-in;
+    list-style-type: none;
+    &:hover {
+        transform: translateY(-10%) scale(1.1);
+        color: purple;
+
+    }
+}

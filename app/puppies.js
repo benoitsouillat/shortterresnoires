@@ -16,7 +16,12 @@ let puppyCard = document.createElement("div");
     puppyCard.classList.add('puppy__card');
 
 let puppyCardInfo = document.createElement('div');
-    puppyCardInfo.classList.add('puppy-info-align');
+    puppyCardInfo.classList.add('puppy_info-align');
+
+let puppyName = document.createElement("p");
+    puppyName.textContent = elm.puppyName;
+    puppyName.classList.add('puppy_info-align_dogname');
+
 
 let puppySex = document.createElement("p");
 
@@ -42,25 +47,35 @@ let puppyNecklace = document.createElement("p");
 
 let puppyCardImgLink = document.createElement("a");
     puppyCardImgLink.href = path + "okkaina-puppies/" + elm.puppyProfil + jpg;
-    puppyCardImgLink.classList.add("puppy-img");
+    puppyCardImgLink.classList.add("puppy_img");
     puppyCardImgLink.classList.add("fancybox");
-    puppyCardImgLink.classList.add("col-5");
 
     puppyCardImgLink.rel = elm.puppyNecklace.toLowerCase();
 
 let puppyAlbumDiv = document.createElement("div");
-    puppyAlbumDiv.classList.add("puppy-list-button")
-    puppyAlbumDiv.classList.add("col-2");
-
+    puppyAlbumDiv.classList.add("puppy_list-button")
 
 let puppyAlbum = document.createElement('a');
-    puppyAlbum.textContent = "Album Photo";
-    puppyAlbum.rel = "vert";                            //elm.puppyNecklace.toLowerCase();
+    puppyAlbum.textContent = "Son Album Photo";
+    puppyAlbum.rel = elm.puppyNecklace.toLowerCase();
     puppyAlbum.role = "button";
     puppyAlbum.href = path + "okkaina-puppies/" + elm.puppyProfil + jpg;
     puppyAlbum.classList.add("fancybox");
     puppyAlbum.classList.add("btn");
     puppyAlbum.classList.add("btn-success");
+    puppyAlbum.classList.add("btn__anim");
+
+
+let puppyAlbumExt = document.createElement('a');
+    puppyAlbumExt.textContent = "Photos d'extérieur";
+    puppyAlbumExt.rel = "ext";
+    puppyAlbumExt.role = "button";
+    puppyAlbumExt.href = path + "okkaina-puppies/groupe/Image0000" + maleCount + jpg;
+    puppyAlbumExt.classList.add("fancybox");
+    puppyAlbumExt.classList.add("btn");
+    puppyAlbumExt.classList.add("btn-primary");
+    puppyAlbumExt.classList.add("btn__anim");
+
 
 let puppyCardImg = document.createElement('img');
     puppyCardImg.src =  path + "okkaina-puppies/" + elm.puppyProfil + jpg;
@@ -89,6 +104,7 @@ let puppyAvail = document.createElement("button");
 
     puppySection.appendChild(puppyCard);
     puppyCard.appendChild(puppyCardInfo);
+        puppyCardInfo.appendChild(puppyName);
         puppyCardInfo.appendChild(puppySex);
         puppyCardInfo.appendChild(puppyNecklace);
         puppyCardInfo.appendChild(puppyColor);
@@ -97,6 +113,7 @@ let puppyAvail = document.createElement("button");
     puppyCardImgLink.appendChild(puppyCardImg);
     puppyCard.appendChild(puppyAlbumDiv);
     puppyAlbumDiv.appendChild(puppyAlbum);
+    puppyAlbumDiv.appendChild(puppyAlbumExt);
 
 });
 

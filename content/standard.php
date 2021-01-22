@@ -2,11 +2,9 @@
 <html lang="fr-fr"> 
     <head>
         <title>Les Terres Noires</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" media="all and (max-width: 1280px)" href="../css/smart-main.css" type="text/css" />
-        <link rel="stylesheet" media="all and (min-width: 1280px)" href="../css/main.css" type="text/css" />
-        <link rel="shortcut icon" type="image/ico" href="../favicon/favicon.ico"/>
-
+        <?php 
+            include "./php/head.php";
+        ?>
     </head>
     <body>
         <header id="header">

@@ -9,65 +9,146 @@
     background-color: $back-colour;
 }
 
-/*
-#puppiesTab {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-*/
-
-.puppy__card {
-
-    border-radius: 1%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 50px;
-    width: 75%;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    p {
-        font-weight: bold;
-        min-width: 110px;
-        text-align: center;
+.puppy {
+    &_male {
+        text-shadow: 2px 2px 2px black;
+        @include puppy-card($puppy-male, darken($puppy-male, 50));
     }
-    img {
 
-        max-height: 14rem;
-        width: auto;
-        padding: 10px;
+    &_female {
+        text-shadow: 2px 2px 2px black;
+        @include puppy-card($puppy-female, $puppy-female-back);
+    }
+    &__card {
+
+        p {
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        @media all and (min-width: 1200px)
+        {
+            border-radius: 1%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+            width: 90%;
+            height: 350px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        @media all and (min-width: 1000px) and (max-width: 1199px)
+        {
+            border-radius: 1%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        @media all and (max-width: 999px)
+        {
+            border-radius: 1%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            flex-wrap: wrap; // Soucis du Wrap - Il faut jouer avec les orders
+        }
+    }
+
+    &_info-align {
+        &_dogname {
+            color : black;
+            text-shadow : none;
+            text-decoration : underline;
+            border : solid black 2px;
+            border-radius : 5%;
+            background-color : #E6BA7E;
+            width : 200px;
+
+        }
+        @media all and (min-width: 1200px)
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            max-width: 15%;
+            margin-left: auto;
+            margin-right: auto;
+
+
+
+        }
+        @media all and (max-width: 1199px)
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 30%;
+        }
+    }
+    &_img {
+
+        @media all and (max-width: 1000px)
+        {
+            width: 60%;
+        } 
+
+        img {
+                border-radius: 5%;
+                padding: 10px;
+                width: 570px;
+                height: auto;
+
+
+           @media all and (max-width: 1000px)
+            {
+                width: 70%;
+                border-radius: 10%;
+                margin-left: 25%;
+                margin-top: 10%;
+                margin-bottom: 10%;
+                box-shadow: black 2px 2px 4px;
+            }
+            
+
+        }
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &_list-button {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: stretch;
+        margin: auto;
+        height: 60%;
+        flex-wrap: nowrap;
+
+        @media all and (max-width: 1199px)
+        {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
     }
 }
 
-.puppy_male {
-    text-shadow: 2px 2px 2px black;
-    @include puppy-card($puppy-male, darken($puppy-male, 50));
-}
-
-.puppy_female {
-    text-shadow: 2px 2px 2px black;
-    @include puppy-card($puppy-female, $puppy-female-back);
-}
-.puppy-info-align {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    max-width: 15%;
-}
-
-.puppy-list-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 .puppy-para {
     text-align: center;
@@ -78,13 +159,3 @@
     }
 }
 
-.puppy-img {
-
-    img {
-        border-radius: 5%;
-    }
-
-    &:hover {
-        transform: scale(1.05);
-    }
-}

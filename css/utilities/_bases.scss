@@ -2,9 +2,7 @@
 
 /* -------------------------------Général----------------------------------- */
 
-
 html {
-    font-family: Helvetica, Arial, sans-serif;
     font-size: 20px;
 }
 
@@ -13,6 +11,9 @@ body {
     color: $text-color;
     display: flex;
     flex-direction: column;
+    font-family: 'Fraunces', Helvetica, Arial, sans-serif;
+
+
 }
 
 h1, h2, h3 {
@@ -35,3 +36,11 @@ a {
     }
 }
 
+body p {
+    font-family: 'Roboto Condensed' ,Helvetica, Arial, sans-serif;
+}
+
+.hidden {
+    overflow: hidden;
+    display: none;
+}

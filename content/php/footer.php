@@ -17,7 +17,7 @@
                 élevage Canin et Félin <br/>
                 Titulaire du Brevet Professionnel Agricole : 
                 Travaux en élevage Canin et Félin
-                <br/> N°Eleveur : 362026 - N°Affixe : 92123 
+                <br/> N°Eleveur : 362026 - N°Affixe : 92123 - N° Siret : 891 460 644 00018
                 <br/>
                 <i>Textes, vidéos et photos tous droits réservés pour tous pays</i>
             </p>

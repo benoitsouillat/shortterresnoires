@@ -24,8 +24,35 @@
             </nav>
         </header>
 
+        <section class="row d-flex justify-content-around text-justify">
+            <aside class="col-7">
+                <h4 class="title">Qui sommes-nous ??</h4>
+                <p>Passionnée des animaux depuis très jeune, j'ai consacré mon temps et mes études à
+                    connaître les chiens,
+                    le Cane Corso m'est apparu comme une évidence, moi qui aime les chiens d'une certaine corpulence <br />
+                    son caractère exceptionnel, sa capacité de protection, ainsi que l'amour qu'il nous porte.
+                </p>
+                <p>Situés actuellement dans le nord de la Haute-Vienne (87), nous cherchons à perfectionner 
+                    la race du Cane Corso afin d'obtenir
+                    une sélection splendide qui s'instaurera dans le monde des expositions de beauté 
+                    en Cane Corso et en Molossoïdes.
+                    <br /> 
+                    Nous sélectionnons évidemment sur le caractère, 
+                    puisque le Cane Corso reste un chien de garde avant tout, 
+                    il est important d'avoir des chiens équilibrés, tant sur le plan éducatif 
+                    que relationnel avec l'humain ou les autres chiens.</p>
+                <p class="w-100"> Nous serons ravis de vous présenter nos magnifiques Cane Corso, <br />
+                    en vous souhaitant une excellente navigation sur notre site.<br/>
+                    <span style="position:relative; right:2px">Eva Brochet.</span>
+                </p>
+            </aside>
+            <aside class="col-3">
+                <img src="../src/img/okkaina2.jpg" alt="okkaina" />
+            </aside>
+        </section>
 
-<?php 
+
+        <?php 
             include "./php/footer.php";
         ?>
         

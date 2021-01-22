@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr-fr">
     <head>
-        <title>Les Terres Noires</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" media="all and (max-width: 1280px)" href="../css/smart-main.css" type="text/css" />
-        <link rel="stylesheet" media="all and (min-width: 1280px)" href="../css/main.css" type="text/css" />
-        <link rel="shortcut icon" type="image/ico" href="../favicon/favicon.ico"/>
-
+        <title>Nous Contacter - Les Terres Noires</title>
+        <?php
+            include "./php/head.php";
+        ?>
     </head>
     <body id="content">
         <header id="header">
@@ -18,8 +15,8 @@
              ?>
         </nav>
     </header>
-    <section class="container mt-5">
-        <aside class="row mb-4 d-sm-flex justify-content-sm-center align-content-sm-center ">
+    <div class="container mt-5">
+        <section class="row mb-4 d-sm-flex justify-content-sm-center align-content-sm-center ">
             <div class="col-4 d-flex flex-wrap align-content-center">
                 <img src="../src/img/evapanama.jpg" alt="contactez-nous" class="w-100 rounded"/>
             </div>
@@ -34,21 +31,21 @@
                     <li>06 70 37 81 13</li>
                     <li>domainedesterresnoires@gmail.com</li>
                     <li><a href="https://www.facebook.com/ledomainedes.terresnoires" target="_blank" ><u>Le domaine des Terres Noires</u></a></li>
-                    <li>Eva Brochet </li>
+                    <address><li>Eva Brochet </li>
                     <li>2 Avenue du clocher </li> 
-                    <li>87190 St-Léger-Magnazeix</li>
+                    <li>87190 St-Léger-Magnazeix</li></address>
                 </ul>
             </div>
-        </aside>
+        </section>
         <br/>
-        <aside>
+        <section>
             <h3 class="mb-5">Où sommes-nous ?</h3>
             <div class="d-flex flex-column justify-content-center align-items-center mb-5">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2757.188179496862!2d1.243944316046092!3d46.28623557911921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fc0737b2a2559d%3A0x2082e5ba25e841a8!2s2%20Avenue%20du%20Clocher%2C%2087190%20Saint-L%C3%A9ger-Magnazeix!5e0!3m2!1sfr!2sfr!4v1605519064445!5m2!1sfr!2sfr" width="400" height="300" frameborder="1" style="border:1;" allowfullscreen="" aria-hidden="false" tabindex="0">
                 </iframe>
             </div>
-        </aside>
-        <aside class="mb-5">
+        </section>
+        <section class="mb-5">
             <u><h3 class="mb-2 line-height-4"> Nos adresses conseils :</h3></u><br/>
             <div class="row d-flex flex-column justify-content-center align-content-center text-center mb-3 h5">
                 <div class="col-10">
@@ -65,8 +62,8 @@
                         <b>Merci Régis et Cathy.</b></p>
                 </div>
             </div>
-        </aside>
-    </section>
+        </section>
+    </div>
 
     <?php 
         include "./php/footer.php";

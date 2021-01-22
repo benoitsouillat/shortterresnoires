@@ -2,16 +2,10 @@
 <html lang="fr-fr">
 
     <head>
-        <title>Les Terres Noires</title>
-        <meta charset="utf-8" />
-        <meta name="description" content="Page LOF Elevage Cane Corso Limousin 87" />
-        <meta name="KEYWORDS" content="Elevage Cane Corso Chien de cour Italien Limousin eleveur" />
-        <!--BOOTSTRAP-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <!-- CSS -->
-        <link rel="stylesheet" media="screen and (max-width: 1279px)" href="../css/smart-main.css" type="text/css" />
-        <link rel="stylesheet" media="screen and (min-width: 1280px)" href="../css/main.css" type="text/css" />
-        <link rel="shortcut icon" type="image/ico" href="../favicon/favicon.ico" />
+        <title>Le Livre des Origines Françaises - Les terres noires</title>
+        <?php
+            include "./php/head.php";
+        ?>
 
     </head>
     <body class="container-fluid">

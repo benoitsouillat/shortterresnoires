@@ -9,8 +9,19 @@ const templeJade = " du Temple de Jade";
 const diMunteanu = " Corso di Munteanu";
 const caneCorso = " Cane Corso ";
 
+class litter {
+    constructor (puppyMom, puppyDad, puppyBirth, maleNumber, femaleNumber)
+    {
+        this.puppyMom = puppyMom;
+        this.puppyDad = puppyDad;
+        this.puppyBirth = puppyBirth;
+        this.maleNumber = maleNumber;
+        this.femaleNumber = femaleNumber;
+    }
+}
+
 class dog {
-    constructor(dogName, dogBirth, dogBreed, dogBreeder, dogSex, dogLitter){
+    constructor(dogName, dogBirth, dogBreed, dogBreeder, dogSex, dogLitter, dogLitterOne){
 
     this.dogName = dogName;
     this.dogBirth = dogBirth;
@@ -18,42 +29,42 @@ class dog {
     this.dogBreeder = dogBreeder;
     this.dogSex = dogSex;
     this.dogLitter = dogLitter;
+    this.dogLitterOne = dogLitterOne;
     }
 }
 
 class puppy {
-    constructor (puppyMom, puppyDad, puppyBirth, puppySex, puppyColor, puppyNecklace, puppyHead, puppyProfil, puppyAvailable)
+    constructor ( puppyBirth, puppySex, puppyColor, puppyNecklace, puppyProfil, puppyAvailable, puppyName)
     {
-        this.puppyMom = puppyMom;
-        this.puppyDad = puppyDad;
         this.puppyBirth = puppyBirth;
         this.puppySex = puppySex;
         this.puppyColor = puppyColor;
-        this.puppyHead = puppyHead;
         this.puppyProfil = puppyProfil;
         this.puppyNecklace = puppyNecklace;
         this.puppyAvailable = puppyAvailable;
+        this.puppyName = puppyName;
     }
 }
 
-let okkaina = new dog ("Okkaina", "10 Septembre 2018", caneCorso, templeJade, " ♀ femelle", true);
-let panama = new dog ("Panama", "02 Juin 2019", caneCorso, templeJade, " ♀ femelle", false);
-let rock = new dog ("Rock", "18 Mars 2018", caneCorso, diMunteanu, " ♂ mâle", false);
+
+let male1 = new puppy("16 Novembre 2020", " ♂ mâle", "Noir", "Vert", "vert4s006", "n", "Riscott");
+let male2 = new puppy("16 Novembre 2020", " ♂ mâle", "Noir", "Rouge", "rouge001", "n", "Randy");
+let male3 = new puppy("16 Novembre 2020", " ♂ mâle", "Noir", "Bleu Foncé", "bleuf4s001", "n", "Rod");
+let male4 = new puppy("16 Novembre 2020", " ♂ mâle", "Noir Bringé", "Bleu Clair", "bleuc4s003", "n", "Ramsès");
+let male5 = new puppy("16 Novembre 2020", " ♂ mâle", "Bringé", "Marron", "marron4s002", "n", "Raoul");
+let male6 = new puppy("16 Novembre 2020", " ♂ mâle", "Noir Bringé", "Jaune", "jaune4s001","n", "Reïko");
+let male7 = new puppy("16 Novembre 2020", " ♂ mâle", "Noir", "Beige", "beige4s002","n", "Rosko");
+
+let okkainaLitterOne = [male1, male2, male3, male4, male5, male6, male7];
+let panamaLitterOne = ["12 Février 2021"];
+
+let okkaina = new dog ("Okkaina", "10 Septembre 2018", caneCorso, templeJade, " ♀ femelle", true, okkainaLitterOne);
+let panama = new dog ("Panama", "02 Juin 2019", caneCorso, templeJade, " ♀ femelle", false, panamaLitterOne);
+let rock = new dog ("Rock", "18 Mars 2018", caneCorso, diMunteanu, " ♂ mâle", false, false);
 
 let dogClass = [okkaina, panama, rock];
 let femaleClass = [okkaina, panama];
 let maleClass = [rock];
-
-let male1 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir (bringé)", "Vert", "Vert2-3","Vert16-9", "y");
-let male2 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir (bringé)", "Rouge" ,"Rouge2-3", "Rouge16-9", "y");
-let male3 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Bleu Foncé" ,"BleuF2-3", "BleuF16-9", "y");
-let male4 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Bleu Clair" ,"BleuC2-3", "BleuC16-9", "y");
-let male6 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Jaune" ,"Jaune2-3", "Jaune16-9","y");
-let male7 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir", "Beige" ,"Beige2-3", "Beige16-9","y");
-let male5 = new puppy(okkaina, rock, "16 Novembre 2020", " ♂ mâle", "Noir (bringé)", "Marron" ,"Marron2-3", "Marron16-9", "y");
-
-let okkainaLitterOne = [male1, male2, male3, male4, male5, male6, male7];
-
 
 
 let path = "../src/img/";
@@ -154,6 +165,12 @@ const generateFooter = () => {
 
 $(document).ready(function() {
     $(".fancybox").fancybox({
+        fitToView: false,
+        beforeShow: function () {
+            this.width = 1024;
+            this.height = 576;
+        },
+
         openEffect	: 'elastic',
     	closeEffect	: 'elastic',
 

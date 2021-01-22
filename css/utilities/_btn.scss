@@ -48,3 +48,19 @@
 .carousel-control-next-btn {
     right: 10%;
 }
+
+
+/* Définir les animations des boutons */
+
+.btn {
+    &__anim {
+
+        transition: transform 300ms;
+        transition-delay: 10ms;
+        transition-timing-function: ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
