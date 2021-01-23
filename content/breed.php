@@ -64,6 +64,9 @@
                         A partir de 1987, le docteur Morsiani a observé 100 individus, 
                         afin de définir le standard de la race, ce n’est qu’en 1996 que la FCI reconnaît la race Cane corso. 
                     </p>
+                    <p>Retrouvez toutes les informations complémentaire sur le LOF :
+                        <a href="lof.php" alt="livre des origines francaises"> Le Livre des Origines Françaises</a>
+                    </p>
                 </div>
             </div>
         </aside>

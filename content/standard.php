@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-fr"> 
     <head>
-        <title>Les Terres Noires</title>
+        <title>Le standard du Cane Corso - Les Terres Noires</title>
         <?php 
             include "./php/head.php";
         ?>

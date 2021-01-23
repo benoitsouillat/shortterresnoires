@@ -131,7 +131,6 @@ footer {
 }*/
 /* -------------------------------Général----------------------------------- */
 html {
-  font-family: 'Fraunces', Helvetica, Arial, sans-serif;
   font-size: 20px; }
 
 body {
@@ -240,13 +239,15 @@ body p {
     text-decoration: underline;
     font-weight: bold;
     line-height: 1.5em;
-    padding-bottom: 20px;
-    padding-top: 20px; }
+    padding-bottom: 30px; }
+    @media all and (max-width: 976px) {
+      #breed-info h2 {
+        padding-bottom: 0; } }
   #breed-info aside {
     width: 80%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 110px; }
+    padding-bottom: 70px; }
   #breed-info aside div {
     display: flex;
     justify-content: space-evenly; }
@@ -471,6 +472,38 @@ body p {
     bottom: 10%;
     right: 20%;
     left: 20%; } }
+
+/* Page du livre des origines françaises */
+.div-lof img {
+  padding: 2px;
+  margin: 0;
+  margin-bottom: 20px;
+  max-width: 30%;
+  height: auto;
+  box-shadow: beige 2px 2px 10px; }
+
+.div-lof .img-right {
+  float: right;
+  margin-left: 20px;
+  margin-top: 5px; }
+
+.div-lof .img-left {
+  float: left;
+  margin-right: 20px;
+  margin-top: 5px; }
+
+.div-lof p span {
+  padding-left: 25px; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+main section {
+  width: 75%;
+  padding-top: 40px;
+  margin-bottom: 20px; }
 
 /* Mixins && Extensions */
 .carousel-indicators-review {
