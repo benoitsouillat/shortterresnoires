@@ -1,0 +1,200 @@
+#ourdog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    width: 100%;
+    text-align: center;
+    line-height: 0.8em;
+}
+
+#ourdog section {
+    margin: auto;
+    min-width: 95%;
+    max-width: 98%;
+    padding-top: 0;
+}
+
+#ourdog h2 {
+    margin-bottom: 50px;
+}
+
+#ourdog > section > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#ourdog  div > div {
+    min-width: 242px;
+    max-width: 350px;
+}
+#ourdog figure {
+
+    border: 2px solid beige;
+    box-shadow: 2px 2px 2px white;
+    border-radius: 5%;
+    padding: 2px;
+
+    min-width: 242px;
+    max-width: 350px;
+    max-height: 250px;
+    margin: 0 20px;
+    margin-bottom: 25px;
+}
+#ourdog figure:hover {
+    border: 5px solid violet;
+    box-sizing: border-box;
+    background-color: violet;
+}
+
+#ourdog figcaption {
+    padding-top: 15px;
+    height: 50px;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+
+}
+#ourdog figure:hover figcaption {
+    background-color: beige;
+    color: black;
+    font-weight: bold;
+    border-top: black solid 2px;
+    text-decoration: underline;
+}
+#ourdog figure img {
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    max-height: 170px;
+    border-radius: 5%;
+}
+#ourdog #dog-card {
+    width: 100%;
+    max-width: 100%;
+
+    border: beige 5px solid;
+    border-radius: 1%;
+    box-shadow: 2px 2px 5px beige;
+    margin: 50px;
+    padding: 50px;
+}
+#dog-card > div {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#dog-card img {
+    max-width: 35%;
+    box-shadow: beige 1px 1px 20px;
+}
+#dog-card img:hover {
+    transform: scale(1.1);
+}
+#dog-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#dog-info a {
+    margin-bottom: 20px;
+    transform: none;
+}
+#repro-page .fancybox-inner {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#repro-page .fancybox-image {
+    width: auto;
+    object-fit: contain;
+    align-self: center;
+}
+#repro-page nav {
+    width: 90%;
+    margin: auto;
+}
+
+#ourdog .card-hidden {
+    display: none;
+}
+#ourdog .card-visible {
+    display: visible;
+}
+.hidden {
+    display: none;
+}
+
+@media all and (max-width: 990px) {
+    #ourdog > section > div {
+        flex-wrap: wrap;
+    }
+    #ourdog div > div {
+        max-width: 250px;
+        margin-top: 25px;
+    }
+    #repro-page nav {
+        width: 100%;
+    }
+
+}
+
+@media all and (min-width: 680px) and (max-width : 750px) {
+
+    #ourdog > section {
+        min-width: 45%;
+        max-width: 45%;
+    }
+    #ourdog h2 {
+        width: 200%;
+    }
+
+    #ourdog > section > div {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #ourdog #dog-card {
+        max-width: 49%;
+        margin: 0;
+        margin-right: 25px;
+        padding: 30px;
+    }
+    #ourdog #dog-card img {
+        max-width: 100%;
+    }
+
+
+}
+
+@media all and (max-width: 679px) {
+
+
+    #ourdog section:first-child {
+        order: 3;
+    }
+
+    #ourdog > section {
+        min-width: 95%;
+        max-width: 95%;
+        margin: auto;
+    }
+    #ourdog > section {
+        flex-direction: column;
+    }
+    #ourdog div > div {
+        max-width: 350px;
+        margin-top: 25px;
+    }
+    #ourdog #dog-card img {
+        max-width: 100%;
+    }
+
+}

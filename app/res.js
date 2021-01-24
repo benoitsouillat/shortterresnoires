@@ -167,7 +167,7 @@ $(document).ready(function() {
     $(".fancybox").fancybox({
         fitToView: false,
         beforeShow: function () {
-            this.width = 1024;
+            this.width = '90%';
             this.height = 576;
         },
 

@@ -1,297 +1,76 @@
+let fiche = document.getElementById("dog-card");
+let image = document.getElementById("dog-card-img");
+let info = document.getElementById("dog-info");
+let fancyDiv = document.getElementById("our-dog-fancybox");
 
-let ourRepro = document.getElementById("our-repro");
+let figures = document.getElementsByTagName('figure');
 
-const createImgArray = (dogName) => {
+const createBlock = (name) => {
 
-    let dogArray = [];
-    let j = 0;
-
-    for (let i in images)
-    {
-        if (images[i].indexOf(dogName.toLowerCase()) === 0)
+    dogClass.forEach(elm => {
+        if (elm.dogName.toLowerCase() === name)
         {
-            dogArray[j] = images[i];
-            j++
+            fiche.classList.add('card-visible');
+            fiche.classList.remove('card-hidden');
+            info.children[0].textContent = ' ' + elm.dogName + '  ' + elm.dogBreeder;
+            if (elm.dogSex === " ♂ mâle")
+            {
+                info.children[1].textContent = " Né le " + elm.dogBirth;
+                info.children[2].classList.add("fa-mars");
+            }
+            else 
+            {
+                info.children[1].textContent = " Née le " + elm.dogBirth;
+                info.children[2].classList.add("fa-venus");
+
+            }
+            info.children[0].classList.add("fa-paw");
+            info.children[1].classList.add("fa-calendar-check");
+            info.children[2].textContent = elm.dogSex;
+            
+            if (elm.dogLitter === true)
+            {
+                info.children[3].classList.remove("hidden");
+                info.children[3].href = elm.dogName.toLowerCase() + '1.php';
+            }
+            else
+            {
+                info.children[3].classList.add("hidden");
+            }
+            
+            info.children[4].rel = elm.dogName.toLowerCase();
+            info.children[4].href = path + elm.dogName.toLowerCase() + '-pres' + jpg;
+
+            image.src = path + elm.dogName.toLowerCase() + '-pres' + jpg;
+            image.alt = elm.dogName;
         }
-    }
-    return dogArray;
+    });
 }
 
-                    /* Les Femelles */
-
-let femaleSection = document.createElement("section");
-    femaleSection.classList.add("container-fluid");
-let femaleTitle = document.createElement("h3");
-    femaleTitle.textContent = "Nos Femelles ";
-    femaleTitle.style.marginTop = "1rem";
-
-
-ourRepro.insertAdjacentElement("beforeend", femaleTitle);
-ourRepro.insertAdjacentElement("beforeend", femaleSection);
-
-
-femaleClass.forEach(elm => {
-
-    let dogName = elm.dogName;
-    let dogSex = elm.dogSex;
-    let dogBirth = elm.dogBirth;
-    let dogBreeder = elm.dogBreeder;
-    let dogLitter = elm.dogLitter;
-
-        /* Partie Infos du chien */
-
-    let dogInfo = document.createElement("aside");
-        dogInfo.classList.add("repro-info");
-        dogInfo.classList.add("row");
-        dogInfo.id = dogName + "-row";
-        dogInfo.style.marginBottom = "40px";
-        dogInfo.style.display = "flex";
-        dogInfo.style.justifyContent = "space-evenly";
-        dogInfo.style.alignItems = "center";
-
-    let divInfo = document.createElement("div");
-        divInfo.classList.add("dog-info");
-        divInfo.classList.add("col-6");
-        divInfo.classList.add("col-lg-4");
-
-    let dogNamePrint = document.createElement("h2");
-        dogNamePrint.textContent = dogName + dogBreeder;
-    let dogSexPrint = document.createElement("p");
-        dogSexPrint.textContent = dogSex;
-    let dogBirthPrint = document.createElement("p");
-        dogBirthPrint.textContent = "née le : " +  dogBirth;
-    let dogLitterLink = document.createElement("a");
-        dogLitterLink.href = "weeding.php";
-        dogLitterLink.textContent = " Voir ses bébés";
-
-        /* Partie Diapo */
-
-    let lastButton = document.createElement("a");
-        lastButton.classList.add("carousel-control-prev");
-        lastButton.role = "button";
-        lastButton.href = "#" + dogName + "-carousel";
-        lastButton.dataset.slide = "prev";
-    let lastButtonIco = document.createElement("span");
-        lastButtonIco.classList.add("carousel-control-prev-icon");
-    let lastButtonBack = document.createElement("span");
-        lastButtonBack.classList.add("sr-only");
-        lastButtonBack.textContent = "Précédent"
-
-    let nextButton = document.createElement("a");
-        nextButton.classList.add("carousel-control-next");
-        nextButton.role = "button";
-        nextButton.href = "#" + dogName + "-carousel";
-        nextButton.dataset.slide = "next";
-    let nextButtonIco = document.createElement("span");
-        nextButtonIco.classList.add("carousel-control-next-icon");
-    let nextButtonSwitch = document.createElement("span");
-        nextButtonSwitch.classList.add("sr-only");
-        nextButtonSwitch.textContent = "Suivant";
-
-    let divDiapo = document.createElement("div");
-        divDiapo.classList.add("diapo-dog");
-        divDiapo.classList.add("col-6");
-        divDiapo.classList.add("col-lg-5");
-        divDiapo.style.display = "flex";
-        divDiapo.style.justifyContent = "center";
-
-    let divCarousel = document.createElement("div");
-        divCarousel.classList.add("carousel");
-        divCarousel.classList.add("slide");
-        divCarousel.dataset.ride = "carousel";
-        divCarousel.id = dogName + "-carousel";
-
-    let divCarouselInner = document.createElement("div");
-        divCarouselInner.classList.add("carousel-inner");
-
-    imgArray = createImgArray(dogName);
-
-        /* Insertions */
-
-    femaleSection.insertAdjacentElement("beforeend",dogInfo);
-    dogInfo.appendChild(divInfo);
-    divInfo.appendChild(dogNamePrint);
-    divInfo.appendChild(dogSexPrint);
-    divInfo.appendChild(dogBirthPrint);
-    if(dogLitter === true)
-    {
-        divInfo.appendChild(dogLitterLink);
-    }
-    dogInfo.appendChild(divDiapo);
-
-    divDiapo.appendChild(divCarousel);
-    divCarousel.appendChild(divCarouselInner);
-    imgArray.forEach(elm => {
-
-        let divImg = document.createElement("div");
-            divImg.classList.add("carousel-item");
-            divImg.style.transitionDuration = "0s";
-        let image = document.createElement("img");
-            image.src = path + elm + jpg;
-            image.classList.add("d-block");
-            //image.classList.add("w-100");
-            image.style.width = "auto";
-            image.style.maxHeight = "299px";
-
-           /* if (window.innerWidth < 1100)
-            {
-                image.style.height = "15%";
-            }
-            */
-
-        divCarouselInner.appendChild(divImg);
-        divImg.appendChild(image);
+const checkName = (name) => {
+    dogClass.forEach(elm => {
+        if (elm.dogName.toLowerCase() === name)
+        {
+            createBlock(name);
+        }
     });
+}
 
-    divCarouselInner.children[0].classList.add("active");
+const figureIdCatch = (e) => {
+    e.preventDefault();
+    let figureId = "0";
 
-    divDiapo.appendChild(lastButton);
-    lastButton.appendChild(lastButtonIco);
-    lastButton.appendChild(lastButtonBack);
-
-    divDiapo.appendChild(nextButton);
-    nextButton.appendChild(nextButtonIco);
-    nextButton.appendChild(nextButtonSwitch);
-
-
-});
-
- 
-
-// Les Mâles
-
-let maleSection = document.createElement("section");
-    maleSection.classList.add("container-fluid")
-let maleTitle = document.createElement("h3");
-    maleTitle.textContent = "Nos Mâles ";
-    maleTitle.style.marginTop = "1rem";
-
-
-ourRepro.insertAdjacentElement("beforeend", maleTitle);
-ourRepro.insertAdjacentElement("beforeend", maleSection);
-
-
-maleClass.forEach(elm => {
-
-    let dogName = elm.dogName;
-    let dogSex = elm.dogSex;
-    let dogBirth = elm.dogBirth;
-    let dogBreeder = elm.dogBreeder;
-    let dogLitter = elm.dogLitter;
-
-        /* Partie Infos du chien */
-
-    let dogInfo = document.createElement("aside");
-        dogInfo.classList.add("repro-info");
-        dogInfo.classList.add("row");
-        dogInfo.id = dogName + "-row";
-        dogInfo.style.marginBottom = "40px";
-        dogInfo.style.display = "flex";
-        dogInfo.style.justifyContent = "space-evenly";
-        dogInfo.style.alignItems = "center";
-
-    let divInfo = document.createElement("div");
-        divInfo.classList.add("dog-info");
-        divInfo.classList.add("col-6");
-        divInfo.classList.add("col-lg-4");
-
-    let dogNamePrint = document.createElement("h2");
-        dogNamePrint.textContent = dogName + dogBreeder;
-    let dogSexPrint = document.createElement("p");
-        dogSexPrint.textContent = dogSex;
-    let dogBirthPrint = document.createElement("p");
-        dogBirthPrint.textContent = "né le : " +  dogBirth;
-    let dogLitterLink = document.createElement("a");
-        dogLitterLink.href = "okkainaweeding.html";
-        dogLitterLink.textContent = " Voir ses bébés";
-
-        /* Partie Diapo */
-
-    let lastButton = document.createElement("a");
-        lastButton.classList.add("carousel-control-prev");
-        lastButton.role = "button";
-        lastButton.href = "#" + dogName + "-carousel";
-        lastButton.dataset.slide = "prev";
-    let lastButtonIco = document.createElement("span");
-        lastButtonIco.classList.add("carousel-control-prev-icon");
-    let lastButtonBack = document.createElement("span");
-        lastButtonBack.classList.add("sr-only");
-        lastButtonBack.textContent = "Précédent"
-
-    let nextButton = document.createElement("a");
-        nextButton.classList.add("carousel-control-next");
-        nextButton.role = "button";
-        nextButton.href = "#" + dogName + "-carousel";
-        nextButton.dataset.slide = "next";
-    let nextButtonIco = document.createElement("span");
-        nextButtonIco.classList.add("carousel-control-next-icon");
-    let nextButtonSwitch = document.createElement("span");
-        nextButtonSwitch.classList.add("sr-only");
-        nextButtonSwitch.textContent = "Suivant";
-
-    let divDiapo = document.createElement("div");
-        divDiapo.classList.add("diapo-dog");
-        divDiapo.classList.add("col-6");
-        divDiapo.classList.add("col-lg-5");
-        divDiapo.style.display = "flex";
-        divDiapo.style.justifyContent = "center";
-
-    let divCarousel = document.createElement("div");
-        divCarousel.classList.add("carousel");
-        divCarousel.classList.add("slide");
-        divCarousel.dataset.ride = "carousel";
-        divCarousel.id = dogName + "-carousel";
-
-    let divCarouselInner = document.createElement("div");
-        divCarouselInner.classList.add("carousel-inner");
-
-    imgArray = createImgArray(dogName);
-
-        /* Insertions */
-
-    maleSection.insertAdjacentElement("beforeend",dogInfo);
-    dogInfo.appendChild(divInfo);
-    divInfo.appendChild(dogNamePrint);
-    divInfo.appendChild(dogSexPrint);
-    divInfo.appendChild(dogBirthPrint);
-    if(dogLitter === true)
+    for (let i = 0; i < e.path.length; i++)
     {
-        divInfo.appendChild(dogLitterLink);
+        if (e.path[i].localName == 'figure')
+        {
+            figureId = e.path[i].id;
+            checkName(figureId);
+        }
     }
-    dogInfo.appendChild(divDiapo);
+}
 
-    divDiapo.appendChild(divCarousel);
-    divCarousel.appendChild(divCarouselInner);
-    imgArray.forEach(elm => {
-
-        let divImg = document.createElement("div");
-            divImg.classList.add("carousel-item");
-            divImg.style.transitionDuration = "0s";
-        let image = document.createElement("img");
-            image.src = path + elm + jpg;
-            image.classList.add("d-block");
-            image.style.width = "auto";
-            image.style.maxHeight = "299px";
-
-           /* if (window.innerWidth < 1100)
-            {
-                image.style.height = "15%";
-            }
-            */
-
-        divCarouselInner.appendChild(divImg);
-        divImg.appendChild(image);
-    });
-
-    divCarouselInner.children[0].classList.add("active");
-
-    divDiapo.appendChild(lastButton);
-    lastButton.appendChild(lastButtonIco);
-    lastButton.appendChild(lastButtonBack);
-
-    divDiapo.appendChild(nextButton);
-    nextButton.appendChild(nextButtonIco);
-    nextButton.appendChild(nextButtonSwitch);
-
-
-});
+for (let i = 0; i < figures.length; i++)
+{
+    figures[i].addEventListener("click", figureIdCatch);
+}
