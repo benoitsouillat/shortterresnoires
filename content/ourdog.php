@@ -21,24 +21,24 @@
             <section>
                 <h2>Nos Reproducteurs</h2>
                 <div>
-                    <a>
-                        <figure id="okkaina">
+                    <a href="#dog-card" class="vignet-dog" id="okkaina">
+                        <figure >
                             <img src="../src/img/Mimi16-9couché.jpg" alt="okkaina du temple de jade" />
                             <figcaption>
                                 <h6>Okkaina</h6>
                             </figcaption>
                         </figure>
                     </a>
-                    <a>
-                        <figure id="panama">
+                    <a href="#dog-card" class="vignet-dog" id="panama">
+                        <figure>
                             <img src="../src/img/panama4.jpg" alt="panama du temple de jade" />
                             <figcaption>
                                 <h6>Panama</h6>
                             </figcaption>
                         </figure>
                     </a>
-                    <a>
-                        <figure id="rock">
+                    <a href="#dog-card" class="vignet-dog" id="rock">
+                        <figure>
                             <img src="../src/img/rock 16-9debout 2.jpg" alt="rock corso di munteanu" />
                             <figcaption>
                                 <h6>Rock</h6>

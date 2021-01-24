@@ -2,7 +2,7 @@ let fiche = document.getElementById("dog-card");
 let image = document.getElementById("dog-card-img");
 let info = document.getElementById("dog-info");
 
-let figures = document.getElementsByTagName('figure');
+let figures = document.getElementsByClassName('vignet-dog');
 
 const createBlock = (name) => {
 
@@ -60,7 +60,7 @@ const figureIdCatch = (e) => {
 
     for (let i = 0; i < e.path.length; i++)
     {
-        if (e.path[i].localName == 'figure')
+        if (e.path[i].localName == 'a')
         {
             figureId = e.path[i].id;
             checkName(figureId);

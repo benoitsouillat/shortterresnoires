@@ -47,7 +47,7 @@
     margin: 0 20px;
     margin-bottom: 25px;
 }
-#ourdog figure:hover {
+#ourdog a:hover figure{
     border: 5px solid violet;
     box-sizing: border-box;
     background-color: violet;
@@ -60,7 +60,7 @@
     border-bottom-right-radius: 5%;
 
 }
-#ourdog figure:hover figcaption {
+#ourdog a:hover figcaption {
     background-color: beige;
     color: black;
     font-weight: bold;
@@ -140,7 +140,7 @@
     #ourdog > section > div {
         flex-wrap: wrap;
     }
-    #ourdog div > div {
+    #ourdog div > a {
         max-width: 250px;
         margin-top: 25px;
     }
@@ -194,7 +194,7 @@
     #ourdog > section {
         flex-direction: column;
     }
-    #ourdog div > div {
+    #ourdog div > a {
         max-width: 350px;
         margin-top: 25px;
     }
