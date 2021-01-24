@@ -1017,6 +1017,7 @@ main section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 25px;
 }
 
 #dog-info a {
