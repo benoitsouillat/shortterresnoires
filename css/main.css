@@ -913,6 +913,13 @@ main section {
   max-width: 350px;
 }
 
+#ourdog div > a {
+  min-width: 242px;
+  max-width: 350px;
+  -webkit-transform: none;
+          transform: none;
+}
+
 #ourdog figure {
   border: 2px solid beige;
   -webkit-box-shadow: 2px 2px 2px white;

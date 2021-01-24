@@ -1,7 +1,6 @@
 let fiche = document.getElementById("dog-card");
 let image = document.getElementById("dog-card-img");
 let info = document.getElementById("dog-info");
-let fancyDiv = document.getElementById("our-dog-fancybox");
 
 let figures = document.getElementsByTagName('figure');
 
@@ -10,7 +9,6 @@ const createBlock = (name) => {
     dogClass.forEach(elm => {
         if (elm.dogName.toLowerCase() === name)
         {
-            fiche.classList.add('card-visible');
             fiche.classList.remove('card-hidden');
             info.children[0].textContent = ' ' + elm.dogName + '  ' + elm.dogBreeder;
             if (elm.dogSex === " ♂ mâle")
