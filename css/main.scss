@@ -1,5 +1,4 @@
 @import "utilities/btn";
-@import "utilities/classboot";
 @import "utilities/header";
 @import "utilities/footer";
 @import "utilities/menu";
@@ -8,11 +7,11 @@
 
 /* Importation Identifiant par page */
 
+@import "pages/accueil";
 @import "pages/breed";
 @import "pages/standard";
 @import "pages/weedings";
 @import "pages/puppies";
-@import "pages/accueil";
 @import "pages/lof";
 @import "pages/ourdog";
 
