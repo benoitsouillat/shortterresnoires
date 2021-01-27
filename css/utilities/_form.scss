@@ -95,14 +95,4 @@
 
 /* ------------------- VERSION STABLE -------------------------- */
 
-.menu-anim {
-    transition: transform 200ms, color 300ms;
-    transition-delay: 0ms, 0ms;
-    transition-timing-function: ease-in;
-    list-style-type: none;
-    &:hover {
-        transform: translateY(-10%) scale(1.1);
-        color: purple;
 
-    }
-}

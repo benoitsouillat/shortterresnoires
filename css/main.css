@@ -122,7 +122,7 @@
 }
 
 #header {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 
@@ -163,6 +163,11 @@ footer #footer-signature {
   font-size: 0.8em;
 }
 
+nav {
+  width: 90%;
+  margin: auto;
+}
+
 #menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,11 +178,34 @@ footer #footer-signature {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding: 0;
   padding-top: 25px;
   padding-bottom: 25px;
   background-color: beige;
   border-radius: 2%;
   text-decoration: underline;
+}
+
+.menu-anim {
+  -webkit-transition: color 300ms, -webkit-transform 200ms;
+  transition: color 300ms, -webkit-transform 200ms;
+  transition: transform 200ms, color 300ms;
+  transition: transform 200ms, color 300ms, -webkit-transform 200ms;
+  -webkit-transition-delay: 0ms, 0ms;
+          transition-delay: 0ms, 0ms;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  list-style-type: none;
+}
+
+.menu-anim:hover {
+  -webkit-transform: translateY(-10%) scale(1.1);
+          transform: translateY(-10%) scale(1.1);
+  color: purple;
+}
+
+.menu-link {
+  color: black;
 }
 
 @media (max-width: 990px) {
@@ -186,23 +214,22 @@ footer #footer-signature {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     line-height: 1.3rem;
   }
+  .menu-anim {
+    padding: 3px 0;
+  }
 }
 
-.menu-link {
-  color: black;
+@media all and (max-width: 600px) {
+  nav {
+    width: 100%;
+  }
 }
 
-/*.menu-link:hover {
-    color: violet;
-    transform: scale(1.2);
-}*/
 /* -------------------------------Général----------------------------------- */
 html {
   font-size: 20px;
@@ -366,24 +393,6 @@ body p {
 }
 
 /* ------------------- VERSION STABLE -------------------------- */
-.menu-anim {
-  -webkit-transition: color 300ms, -webkit-transform 200ms;
-  transition: color 300ms, -webkit-transform 200ms;
-  transition: transform 200ms, color 300ms;
-  transition: transform 200ms, color 300ms, -webkit-transform 200ms;
-  -webkit-transition-delay: 0ms, 0ms;
-          transition-delay: 0ms, 0ms;
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
-  list-style-type: none;
-}
-
-.menu-anim:hover {
-  -webkit-transform: translateY(-10%) scale(1.1);
-          transform: translateY(-10%) scale(1.1);
-  color: purple;
-}
-
 /* Importation Identifiant par page */
 /* Page - Le Cane Corso */
 #breed-info {
@@ -687,10 +696,10 @@ body p {
     margin-top: unset;
   }
   .female-weeding p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     position: unset;
     text-align: center;
-    margin-bottom: 2px;
+    margin: 5px;
   }
   .male-weeding {
     display: -webkit-box;
@@ -727,10 +736,10 @@ body p {
     margin-top: unset;
   }
   .male-weeding p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     position: unset;
     text-align: center;
-    margin-bottom: 2px;
+    margin: 5px;
   }
   #weedings h5 {
     font-size: 0.8rem;
