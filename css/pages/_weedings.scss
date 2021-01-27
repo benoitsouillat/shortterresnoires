@@ -9,6 +9,7 @@
 .female-weeding {
     display: flex;
     flex-direction: column;
+    -webkit-box-align: center;
     .img-weeding {
         order: 1;
     }        
