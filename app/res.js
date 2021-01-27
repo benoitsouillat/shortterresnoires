@@ -58,9 +58,9 @@ let male7 = new puppy("16 Novembre 2020", " ♂ mâle", "Noir", "Beige", "beige4
 let okkainaLitterOne = [male1, male2, male3, male4, male5, male6, male7];
 let panamaLitterOne = ["12 Février 2021"];
 
-let okkaina = new dog ("Okkaina", "10 Septembre 2018", caneCorso, templeJade, " ♀ femelle", true, okkainaLitterOne);
-let panama = new dog ("Panama", "02 Juin 2019", caneCorso, templeJade, " ♀ femelle", false, panamaLitterOne);
-let rock = new dog ("Rock", "18 Mars 2018", caneCorso, diMunteanu, " ♂ mâle", false, false);
+let okkaina = new dog ("Okkaina", "10 Septembre 2018", caneCorso, templeJade, "  femelle", true, okkainaLitterOne);
+let panama = new dog ("Panama", "02 Juin 2019", caneCorso, templeJade, "  femelle", false, panamaLitterOne);
+let rock = new dog ("Rock", "18 Mars 2018", caneCorso, diMunteanu, "  mâle", false, false);
 
 let dogClass = [okkaina, panama, rock];
 let femaleClass = [okkaina, panama];

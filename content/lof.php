@@ -6,7 +6,7 @@
             include "./php/head.php";
         ?>
     </head>
-    <body class="container-fluid">
+    <body class="container-fluid" id="#lof-page">
         <header id="header">
             <h1 id="title" class="title">Le Domaine des Terres Noires</h1>
             <nav id="nav">

@@ -1,6 +1,6 @@
 <ul id="menu" >
     <li class="menu-anim"><a href="../index.html" class="menu-link">
-        <img src="../src/img/home.png" style="width: 21px" alt="index"/>
+        <img src="/src/img/home.png" style="width: 21px" alt="index"/>
     </a></li>
     <li class="menu-anim"><a href="accueil.php" class="menu-link menu-anim">Accueil</a></li>
     <li class="menu-anim"><a href="ourdog.php" class="menu-link menu-anim">Nos Reproducteurs</a></li>

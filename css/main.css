@@ -498,6 +498,7 @@ body p {
 }
 
 .aside-weeding {
+  /*A retirer pour respecter la sémantique*/
   padding-top: 50px;
   padding-bottom: 50px;
   display: -webkit-box;
@@ -506,6 +507,23 @@ body p {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.div-weeding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.female-weeding div {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .female-weeding img {
@@ -550,6 +568,140 @@ body p {
   position: relative;
   left: 3rem;
   text-align: left;
+}
+
+.date-weeding {
+  text-align: right;
+  margin-bottom: 4rem;
+  margin-right: 3rem;
+}
+
+.separate-weeding {
+  background-color: #fff;
+  width: 50%;
+}
+
+@media all and (max-width: 1023px) {
+  #weeding-page {
+    width: 100%;
+  }
+  #weeding-page header, #weeding-page main, #weeding-page footer {
+    width: 100%;
+  }
+  #weedings {
+    width: 100%;
+  }
+  #weedings .div-weeding {
+    width: 100%;
+  }
+  #weedings section {
+    max-width: 50%;
+    overflow: hidden;
+  }
+  .div-weeding {
+    padding: 20px 0;
+  }
+  .div-weeding > div {
+    max-width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #weedings img {
+    width: 85%;
+    max-width: 85%;
+  }
+  /*Vieille utilisation des selecteurs à corriger */
+  .female-weeding {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .female-weeding div {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .female-weeding img {
+    height: auto;
+    margin: 0;
+    margin-top: 50px;
+    -webkit-box-shadow: 4px 4px 6px grey;
+            box-shadow: 4px 4px 6px grey;
+  }
+  .female-weeding h3 {
+    text-align: center;
+    color: pink;
+    font-size: 1rem;
+    position: unset;
+    margin-top: unset;
+  }
+  .female-weeding p {
+    font-size: 0.7rem;
+    position: unset;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+  .male-weeding {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .male-weeding div {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .male-weeding img {
+    height: auto;
+    margin: 0;
+    margin-top: 50px;
+    -webkit-box-shadow: 4px 4px 6px grey;
+            box-shadow: 4px 4px 6px grey;
+  }
+  .male-weeding h3 {
+    text-align: center;
+    color: lightblue;
+    font-size: 1rem;
+    position: unset;
+    margin-top: unset;
+  }
+  .male-weeding p {
+    font-size: 0.7rem;
+    position: unset;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+  #weedings h5 {
+    font-size: 0.8rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
 }
 
 /* Mixins && Extensions */
@@ -849,7 +1001,7 @@ body p {
   padding-left: 25px;
 }
 
-main {
+#lof-page main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -862,7 +1014,7 @@ main {
           align-items: center;
 }
 
-main section {
+#lof-page main section {
   width: 75%;
   padding-top: 40px;
   margin-bottom: 20px;

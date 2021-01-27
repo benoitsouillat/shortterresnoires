@@ -11,15 +11,18 @@ const createBlock = (name) => {
         {
             fiche.classList.remove('card-hidden');
             info.children[0].textContent = ' ' + elm.dogName + '  ' + elm.dogBreeder;
-            if (elm.dogSex === " ♂ mâle")
+            if (elm.dogSex === "  mâle")
             {
                 info.children[1].textContent = " Né le " + elm.dogBirth;
                 info.children[2].classList.add("fa-mars");
+                info.children[2].classList.remove("fa-venus");
+
             }
             else 
             {
                 info.children[1].textContent = " Née le " + elm.dogBirth;
                 info.children[2].classList.add("fa-venus");
+                info.children[2].classList.remove("fa-mars");
 
             }
             info.children[0].classList.add("fa-paw");

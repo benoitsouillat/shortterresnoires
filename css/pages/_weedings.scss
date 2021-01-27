@@ -1,16 +1,21 @@
 @import "../utilities/variables";
 
-.aside-weeding {
-
+.aside-weeding {            /*A retirer pour respecter la sémantique*/
     padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
     justify-content: space-evenly;
-
 }
-
+.div-weeding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
 .female-weeding {
-
+    div {
+        order: 1;
+    }
     img {
         max-width: 20rem;
         height: auto;
@@ -30,9 +35,7 @@
         text-align: left;
     }
 }
-
 .male-weeding {
-
     img {
         max-width: 20rem;
         height: auto;
@@ -52,5 +55,113 @@
         left: 3rem;
         text-align: left;
     }
-
 }
+.date-weeding {
+    text-align: right;
+    margin-bottom: 4rem;
+    margin-right: 3rem;
+}
+.separate-weeding {
+    background-color: #fff;
+    width: 50%;
+}
+
+@media all and (max-width: 1023px)
+{
+
+    #weeding-page {
+        width: 100%;
+    }
+    #weeding-page header, #weeding-page main, #weeding-page footer {
+        width: 100%;
+
+    }
+    #weedings {
+        width: 100%;
+    }
+    #weedings .div-weeding {
+        width: 100%;
+    }
+    #weedings section {
+        max-width: 50%;
+        overflow: hidden;
+    }
+    .div-weeding {
+        padding: 20px 0;
+    }
+
+    .div-weeding > div {
+        max-width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+    #weedings img {
+        width: 85%;
+        max-width: 85%;
+    }
+    /*Vieille utilisation des selecteurs à corriger */
+    .female-weeding {
+        display: flex;
+        flex-direction: column;
+        div {
+            order: 1;
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            height: auto;
+            margin: 0;
+            margin-top: 50px;
+            box-shadow: 4px 4px 6px grey;
+        }
+        h3 {
+            text-align: center;
+            color: pink;
+            font-size: 1rem;
+            position: unset;
+            margin-top: unset;
+        }
+        p {
+            font-size: 0.7rem;
+            position: unset;
+            text-align: center;
+            margin-bottom: 2px;
+        }
+    }
+    .male-weeding {
+        display: flex;
+        flex-direction: column;
+        div {
+            order: 1;
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            height: auto;
+            margin: 0;
+            margin-top: 50px;
+            box-shadow: 4px 4px 6px grey;
+        }
+        h3 {
+            text-align: center;
+            color: lightblue;
+            font-size: 1rem;
+            position: unset;
+            margin-top: unset;
+        }
+        p {
+            font-size: 0.7rem;
+            position: unset;
+            text-align: center;
+            margin-bottom: 2px;
+        }
+    }
+    #weedings h5 {
+        font-size: 0.8rem;
+        margin: 0;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+}   
+
