@@ -497,18 +497,6 @@ body p {
   color: beige;
 }
 
-.aside-weeding {
-  /*A retirer pour respecter la sémantique*/
-  padding-top: 50px;
-  padding-bottom: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
 .div-weeding {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -520,10 +508,26 @@ body p {
           justify-content: space-evenly;
 }
 
-.female-weeding div {
+.female-weeding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.female-weeding .img-weeding {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+.female-weeding .txt-weeding {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 .female-weeding img {
@@ -546,6 +550,28 @@ body p {
   position: relative;
   left: 3rem;
   text-align: left;
+}
+
+.male-weeding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.male-weeding .img-weeding {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.male-weeding .txt-weeding {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 .male-weeding img {
@@ -579,6 +605,16 @@ body p {
 .separate-weeding {
   background-color: #fff;
   width: 50%;
+}
+
+.weeding-baby {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
 }
 
 @media all and (max-width: 1023px) {
@@ -625,16 +661,16 @@ body p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .female-weeding div {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+  .female-weeding .img-weeding {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   .female-weeding img {
     height: auto;
@@ -665,16 +701,16 @@ body p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .male-weeding div {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+  .male-weeding .img-weeding {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   .male-weeding img {
     height: auto;
@@ -701,6 +737,9 @@ body p {
     margin: 0;
     margin-bottom: 2rem;
     text-align: center;
+  }
+  .weeding-baby {
+    margin-bottom: 20px;
   }
 }
 

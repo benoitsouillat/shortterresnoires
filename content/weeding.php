@@ -7,7 +7,7 @@
         ?>
 
     </head>
-    <body>
+    <body id="weeding-page">
         <header id="header">
             <h1 class="title">Nos Mariages</h1>
             <nav id="nav">

@@ -1,11 +1,5 @@
 @import "../utilities/variables";
 
-.aside-weeding {            /*A retirer pour respecter la sémantique*/
-    padding-top: 50px;
-    padding-bottom: 50px;
-    display: flex;
-    justify-content: space-evenly;
-}
 .div-weeding {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -13,8 +7,13 @@
     justify-content: space-evenly;
 }
 .female-weeding {
-    div {
+    display: flex;
+    flex-direction: column;
+    .img-weeding {
         order: 1;
+    }        
+    .txt-weeding {
+        order: 2;
     }
     img {
         max-width: 20rem;
@@ -36,6 +35,14 @@
     }
 }
 .male-weeding {
+    display: flex;
+    flex-direction: column;
+    .img-weeding {
+        order: 1;
+    }        
+    .txt-weeding {
+        order: 2;
+    }
     img {
         max-width: 20rem;
         height: auto;
@@ -64,6 +71,11 @@
 .separate-weeding {
     background-color: #fff;
     width: 50%;
+}
+.weeding-baby {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
 @media all and (max-width: 1023px)
@@ -104,11 +116,12 @@
     .female-weeding {
         display: flex;
         flex-direction: column;
-        div {
-            order: 1;
+        .img-weeding {
             display: flex;
             justify-content: center;
+            order: 2;
         }
+
         img {
             height: auto;
             margin: 0;
@@ -132,10 +145,10 @@
     .male-weeding {
         display: flex;
         flex-direction: column;
-        div {
-            order: 1;
+        .img-weeding {
             display: flex;
             justify-content: center;
+            order: 2;
         }
         img {
             height: auto;
@@ -162,6 +175,9 @@
         margin: 0;
         margin-bottom: 2rem;
         text-align: center;
+    }
+    .weeding-baby {
+        margin-bottom: 20px;
     }
 }   
 

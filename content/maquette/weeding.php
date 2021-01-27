@@ -18,18 +18,22 @@
             <section id="weedings">
                 <div class="div-weeding">             <!-- A Modifier pour un respect de la sémantique-->
                     <section class="female-weeding">
-                        <h3>Panama</h3>
-                        <p>née le : 02 Juin 2019</p>
-                        <p>Issue du Temple de Jade</p>
-                        <div>
+                        <div class="txt-weeding">
+                            <h3>Panama</h3>
+                            <p>née le : 02 Juin 2019</p>
+                            <p>Issue du Temple de Jade</p>
+                        </div>
+                        <div class="img-weeding">
                             <img src="/src/img/panama-pres.jpg" alt="panama" />
                         </div>
                     </section>
                     <section class="male-weeding">
-                        <h3>Rock</h3>
-                        <p>née le : 18 Mars 2018</p>
-                        <p>Issu Corso di Munteanu</p>
-                        <div>
+                        <div class="txt-weeding">
+                            <h3>Rock</h3>
+                            <p>née le : 18 Mars 2018</p>
+                            <p>Issu Corso di Munteanu</p>
+                        </div>
+                        <div class="img-weeding">
                             <img src="/src/img/rock-pres.jpg" alt="rock" />
                         </div>
                     </section>
