@@ -565,6 +565,7 @@ body p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
 }
 
 .female-weeding .img-weeding {
