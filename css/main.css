@@ -81,46 +81,6 @@
           transform: scale(1.2);
 }
 
-.opacity-0 {
-  opacity: 0 !important;
-}
-
-.opacity-1 {
-  opacity: 0.2 !important;
-}
-
-.opacity-2 {
-  opacity: 0.4 !important;
-}
-
-.opacity-3 {
-  opacity: 0.6 !important;
-}
-
-.opacity-4 {
-  opacity: 0.8 !important;
-}
-
-.opacity-5 {
-  opacity: 1 !important;
-}
-
-.line-height-1 {
-  line-height: 1rem !important;
-}
-
-.line-height-2 {
-  line-height: 1.2rem !important;
-}
-
-.line-height-3 {
-  line-height: 1.5rem !important;
-}
-
-.line-height-4 {
-  line-height: 4rem !important;
-}
-
 #header {
   width: 100%;
   margin: auto;
@@ -434,6 +394,21 @@ body p {
 
 /* ------------------- VERSION STABLE -------------------------- */
 /* Importation Identifiant par page */
+@media all and (max-width: 1279px) {
+  .carousel-caption-move {
+    position: static;
+    width: 75%;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .carousel-caption-move {
+    bottom: 10%;
+    right: 20%;
+    left: 20%;
+  }
+}
+
 /* Page - Le Cane Corso */
 #breed-info {
   display: -webkit-box;
@@ -561,11 +536,11 @@ body p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: -webkit-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
 }
 
 .female-weeding .img-weeding {
@@ -718,11 +693,15 @@ body p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
   .female-weeding img {
+    width: 100%;
     height: auto;
     margin: 0;
     margin-top: 50px;
@@ -758,11 +737,15 @@ body p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
   .male-weeding img {
+    width: 100%;
     height: auto;
     margin: 0;
     margin-top: 50px;
@@ -1006,61 +989,6 @@ body p {
 .puppy-para .para-right {
   width: 80%;
   text-align: end;
-}
-
-.opacity-0 {
-  opacity: 0 !important;
-}
-
-.opacity-1 {
-  opacity: 0.2 !important;
-}
-
-.opacity-2 {
-  opacity: 0.4 !important;
-}
-
-.opacity-3 {
-  opacity: 0.6 !important;
-}
-
-.opacity-4 {
-  opacity: 0.8 !important;
-}
-
-.opacity-5 {
-  opacity: 1 !important;
-}
-
-.line-height-1 {
-  line-height: 1rem !important;
-}
-
-.line-height-2 {
-  line-height: 1.2rem !important;
-}
-
-.line-height-3 {
-  line-height: 1.5rem !important;
-}
-
-.line-height-4 {
-  line-height: 4rem !important;
-}
-
-@media all and (max-width: 1279px) {
-  .carousel-caption-move {
-    position: static;
-    width: 75%;
-  }
-}
-
-@media all and (min-width: 1280px) {
-  .carousel-caption-move {
-    bottom: 10%;
-    right: 20%;
-    left: 20%;
-  }
 }
 
 /* Page du livre des origines françaises */

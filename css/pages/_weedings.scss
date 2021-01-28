@@ -8,8 +8,8 @@
 }
 .female-weeding {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
-    -webkit-box-align: center;
     .img-weeding {
         order: 1;
     }        
@@ -119,10 +119,12 @@
         .img-weeding {
             display: flex;
             justify-content: center;
+            align-items: flex-start;
             order: 2;
         }
 
         img {
+            width: 100%;
             height: auto;
             margin: 0;
             margin-top: 50px;
@@ -148,9 +150,11 @@
         .img-weeding {
             display: flex;
             justify-content: center;
+            align-items: flex-start;
             order: 2;
         }
         img {
+            width: 100%;
             height: auto;
             margin: 0;
             margin-top: 50px;
