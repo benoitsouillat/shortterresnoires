@@ -17,8 +17,8 @@
     </header>
     <div class="container mt-5">
         <section class="row mb-4 d-sm-flex justify-content-sm-center align-content-sm-center ">
-            <div class="col-4 d-flex flex-wrap align-content-center">
-                <img src="../src/img/evapanama.jpg" alt="contactez-nous" class="w-100 rounded"/>
+            <div class="col-4 img-contact-container">
+                <img src="../src/img/evapanama.jpg" alt="contactez-nous" class="img-contact"/>
             </div>
             <div class="col d-flex justify-content-center mt-5 font-weight-bold">
                 <ul class="col-3 d-flex flex-column justify-content-start list-unstyled">

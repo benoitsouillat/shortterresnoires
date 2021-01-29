@@ -2,7 +2,6 @@
 .fancybox-wrap,
 .fancybox-skin,
 .fancybox-outer,
-.fancybox-inner,
 .fancybox-image,
 .fancybox-wrap iframe,
 .fancybox-wrap object,
@@ -68,14 +67,10 @@
 
 .fancybox-image, .fancybox-iframe {
 	display: block;
-	width: 100%;
+	width: auto;
 	height: 100%;
 }
 
-.fancybox-image {
-	max-width: 100%;
-	max-height: 100%;
-}
 
 #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
 	background-image: url(fancybox_sprite.png);
@@ -122,11 +117,11 @@
 }
 
 .fancybox-prev {
-	left: 0;
+	left: 10px;
 }
 
 .fancybox-next {
-	right: 0;
+	right: 10px;
 }
 
 .fancybox-nav span {
@@ -196,7 +191,6 @@
 
 .fancybox-lock .fancybox-overlay {
 	overflow: auto;
-	overflow-y: scroll;
 }
 
 /* Title helper */

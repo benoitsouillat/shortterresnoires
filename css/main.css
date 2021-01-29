@@ -277,6 +277,38 @@ body p {
   line-height: 4rem !important;
 }
 
+.fancybox-inner {
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fancybox-image {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media all and (max-width: 999px) {
+  .fancybox-skin {
+    overflow: hidden;
+  }
+  .fancybox-close {
+    top: 0;
+    right: 0;
+  }
+}
+
 /* --------------------- Cours & Tests ---------------------------- */
 .form__group input {
   color: purple;
@@ -1037,6 +1069,12 @@ body p {
   margin-bottom: 20px;
 }
 
+@media all and (max-width: 999px) {
+  #lof-page main section {
+    width: 98%;
+  }
+}
+
 #ourdog {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1062,6 +1100,11 @@ body p {
 }
 
 #ourdog h2 {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+#ourdog h3 {
   margin-bottom: 50px;
 }
 
@@ -1209,7 +1252,7 @@ body p {
 }
 
 #repro-page .fancybox-image {
-  width: auto;
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   -ms-flex-item-align: center;
@@ -1253,7 +1296,7 @@ body p {
     min-width: 45%;
     max-width: 45%;
   }
-  #ourdog h2 {
+  #ourdog h3 {
     width: 200%;
   }
   #ourdog > section > div {
@@ -1303,6 +1346,26 @@ body p {
   #ourdog #dog-card img {
     max-width: 100%;
   }
+}
+
+.img-contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.img-contact {
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 /*-------------------------------Classes-------------------------------------*/

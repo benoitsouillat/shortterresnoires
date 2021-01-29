@@ -6,6 +6,13 @@ let figures = document.getElementsByClassName('vignet-dog');
 
 const createBlock = (name) => {
 
+    console.log(info.children[0]);
+    console.log(info.children[1]);
+    console.log(info.children[2]);
+    console.log(info.children[3]);
+    console.log(info.children[4]);
+    console.log(info.children[5]);
+
     dogClass.forEach(elm => {
         if (elm.dogName.toLowerCase() === name)
         {
@@ -51,24 +58,13 @@ const createBlock = (name) => {
 const checkName = (name) => {
     dogClass.forEach(elm => {
         if (elm.dogName.toLowerCase() === name)
-        {
             createBlock(name);
-        }
     });
 }
 
 const figureIdCatch = (e) => {
-    e.preventDefault();
-    let figureId = "0";
-
-    for (let i = 0; i < e.path.length; i++)
-    {
-        if (e.path[i].localName == 'a')
-        {
-            figureId = e.path[i].id;
-            checkName(figureId);
-        }
-    }
+    let figureId = e.target.closest('a').id;
+        checkName(figureId);
 }
 
 for (let i = 0; i < figures.length; i++)

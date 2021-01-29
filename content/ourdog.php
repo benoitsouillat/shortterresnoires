@@ -18,8 +18,9 @@
             </nav>
         </header>
         <main id="ourdog">
+            <h2>Nos Reproducteurs</h2>
             <section>
-                <h2>Nos Reproducteurs</h2>
+                <h3 class="hidden">Nos Reproducteurs</h3>
                 <div>
                     <a href="#dog-card" class="vignet-dog" id="okkaina">
                         <figure >
@@ -48,7 +49,7 @@
                 </div>
             </section>
             <section id="dog-card" class="card-hidden">
-                <h2 class="hidden">Nos Cane Corsos</h2>
+                <h3 class="hidden">Nos Cane Corsos</h3>
                 <div>
                     <img id="dog-card-img" src="../src/img/okkaina 16-9.jpg" alt="okkaina" />
                     <div id="dog-info">

@@ -1,0 +1,16 @@
+@import '../utilities/variables';
+
+
+.img-contact-container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.img-contact {
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+    align-items: flex-start;
+
+}
