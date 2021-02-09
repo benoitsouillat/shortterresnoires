@@ -65,33 +65,6 @@
 
     <br/>
     <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
         <section class="mb-5">
             <u><h3 class="mb-2 line-height-4"> Nos adresses conseils :</h3></u><br/>
             <div class="row d-flex flex-column justify-content-center align-content-center text-center mb-3 h5">

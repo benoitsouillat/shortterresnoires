@@ -1560,6 +1560,8 @@ body p {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 200px;
+  font-weight: bold;
+  font-style: italic;
 }
 
 #contact-main .contact-info div {
