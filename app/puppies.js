@@ -5,10 +5,11 @@ let puppySection = document.createElement("div");
 
 content.appendChild(puppySection);
 
-const listingPuppy = (puppyClass) => {
+const listingPuppy = (puppyClass, puppyLice) => {
 
     let maleCount = 0;
     let femaleCount = 0;
+    let litterLice = puppyLice.toLowerCase();
 
 puppyClass.forEach(elm => {
         
@@ -24,17 +25,20 @@ let puppyName = document.createElement("p");
 
 
 let puppySex = document.createElement("p");
+    puppySex.classList.add("fa");
 
-    if (elm.puppySex === " ♂ mâle")
+    if (elm.puppySex === male)
     {
         maleCount++;
-        puppySex.textContent = "Mâle" + " N°" + maleCount + " ♂";
+        puppySex.textContent = " Mâle" + " N°" + maleCount;
+        puppySex.classList.add("fa-mars");
         puppyCard.classList.add("puppy_male");
     }
     else 
     {
         femaleCount++;
-        puppySex.textContent = "Femelle" + " N°" + femaleCount + " ♀";
+        puppySex.textContent = " Femelle" + " N°" + femaleCount;
+        puppySex.classList.add("fa-venus");
         puppyCard.classList.add("puppy_female");
     }
 
@@ -46,7 +50,8 @@ let puppyNecklace = document.createElement("p");
     puppyNecklace.textContent = "Collier " + elm.puppyNecklace;
 
 let puppyCardImgLink = document.createElement("a");
-    puppyCardImgLink.href = path + "okkaina-puppies/" + elm.puppyProfil + jpg;
+    puppyCardImgLink.href = path + litterLice + "-puppies/" + 
+    /* elm.puppyNecklace + */ elm.puppyProfil + jpg;
     puppyCardImgLink.classList.add("puppy_img");
     puppyCardImgLink.classList.add("fancybox");
 
@@ -58,27 +63,25 @@ let puppyAlbumDiv = document.createElement("div");
 let puppyAlbum = document.createElement('a');
     puppyAlbum.textContent = "Son Album Photo";
     puppyAlbum.rel = elm.puppyNecklace.toLowerCase();
-    puppyAlbum.role = "button";
-    puppyAlbum.href = path + "okkaina-puppies/" + elm.puppyProfil + jpg;
+    puppyAlbum.href = path + litterLice + "-puppies/" + elm.puppyProfil + jpg;
     puppyAlbum.classList.add("fancybox");
     puppyAlbum.classList.add("btn");
     puppyAlbum.classList.add("btn-success");
     puppyAlbum.classList.add("btn__anim");
 
-
+/*
 let puppyAlbumExt = document.createElement('a');
     puppyAlbumExt.textContent = "Photos d'extérieur";
     puppyAlbumExt.rel = "ext";
-    puppyAlbumExt.role = "button";
-    puppyAlbumExt.href = path + "okkaina-puppies/groupe/Image0000" + maleCount + jpg;
+    puppyAlbumExt.href = path + litterLice + "-puppies/groupe/Image0000" + maleCount + jpg;
     puppyAlbumExt.classList.add("fancybox");
     puppyAlbumExt.classList.add("btn");
     puppyAlbumExt.classList.add("btn-primary");
     puppyAlbumExt.classList.add("btn__anim");
-
+*/
 
 let puppyCardImg = document.createElement('img');
-    puppyCardImg.src =  path + "okkaina-puppies/" + elm.puppyProfil + jpg;
+    puppyCardImg.src =  path + litterLice + "-puppies/" + elm.puppyProfil + jpg;
 
 let puppyAvail = document.createElement("button");
     puppyAvail.classList.add("btn-avail");
@@ -113,10 +116,8 @@ let puppyAvail = document.createElement("button");
     puppyCardImgLink.appendChild(puppyCardImg);
     puppyCard.appendChild(puppyAlbumDiv);
     puppyAlbumDiv.appendChild(puppyAlbum);
-    puppyAlbumDiv.appendChild(puppyAlbumExt);
+    /* puppyAlbumDiv.appendChild(puppyAlbumExt);*/
 
 });
 
 }
-
-listingPuppy(okkainaLitterOne);

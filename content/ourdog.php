@@ -66,16 +66,25 @@
                 <a class="fancybox" rel="okkaina" href="../src/img/okkaina2.jpg"></a>
                 <a class="fancybox" rel="okkaina" href="../src/img/okkaina3.jpg"></a>
                 <a class="fancybox" rel="okkaina" href="../src/img/okkaina4.jpg"></a>
+                <a class="fancybox" rel="okkaina" href="../src/img/okkaina5.jpg"></a>
+                <a class="fancybox" rel="okkaina" href="../src/img/okkaina8.jpg"></a>
+                <a class="fancybox" rel="okkaina" href="../src/img/okkaina9.jpg"></a>
+                <a class="fancybox" rel="okkaina" href="../src/img/okkaina10.jpg"></a>
 
                 <a class="fancybox" rel="panama" href="../src/img/panama1.jpg"></a>
-                <a class="fancybox" rel="panama" href="../src/img/panama2.jpg"></a>
                 <a class="fancybox" rel="panama" href="../src/img/panama3.jpg"></a>
-                <a class="fancybox" rel="panama" href="../src/img/panama4.jpg"></a>
+                <a class="fancybox" rel="panama" href="../src/img/panama5.jpg"></a>
+                <a class="fancybox" rel="panama" href="../src/img/panama6.jpg"></a>
+                <a class="fancybox" rel="panama" href="../src/img/panama7.jpg"></a>
+                <a class="fancybox" rel="panama" href="../src/img/panama8.jpg"></a>
+                <a class="fancybox" rel="panama" href="../src/img/okkainapanama.jpg"></a>
 
                 <a class="fancybox" rel="rock" href="../src/img/rock1.jpg"></a>
                 <a class="fancybox" rel="rock" href="../src/img/rock2.jpg"></a>
                 <a class="fancybox" rel="rock" href="../src/img/rock3.jpg"></a>
                 <a class="fancybox" rel="rock" href="../src/img/rock4.jpg"></a>
+                <a class="fancybox" rel="rock" href="../src/img/rockpropuls.jpg"></a>
+                <a class="fancybox" rel="rock" href="../src/img/rockprofil.jpg"></a>
 
 
                 
@@ -86,8 +95,8 @@
         ?>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="../app/res.js"></script>
-    <script src="../app/ourdog.js" ></script>
+    <script type="text/javascript" src="../app/res.js"></script>
+    <script type="text/javascript" src="../app/ourdog.js" ></script>
 
     <script type="text/javascript" src="../fancybox/source/jquery.fancybox.pack.js?v=2.1.7"></script>
     <script type="text/javascript" src="../fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>

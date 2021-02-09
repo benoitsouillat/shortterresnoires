@@ -1,22 +1,111 @@
 @import "../utilities/variables";
 
+#accueil-page {
 
-.carousel-caption-move {
+    .carousel-inner .carousel-caption {
+        background-color: #343a40!important;
+        align-self: center;
+        border-radius: 0.25rem!important;
 
-    @media all and (max-width: 1279px)
-    {
-        position: static;
-        width: 75%;
+        @media all and (max-width: 1279px)
+        {
+            position: static;
+            width: 75%;
+        }
+        @media all and (min-width: 1280px)
+        {
+            bottom: 10%;
+            right: 20%;
+            left: 20%;
+        }
+    }
+    @media all and (max-width:1280px) {
 
+        .carousel-indicators {
+
+            left: unset;
+            top: 2%;
+            right: 7%;
+            bottom: unset;
+            margin-left: unset;
+            margin-right: unset;
+
+            flex-direction: column;
+
+            li {
+                width: 20px;
+                height: 40px;
+                margin-top: 10px;
+                border: black 1px solid;
+                box-shadow: beige 1px 1px 5px;
+            }
+        }
     }
 
-    @media all and (min-width: 1280px)
-    {
-        bottom: 10%;
-        right: 20%;
-        left: 20%;
+    .carousel-inner {
+        font-weight: 700;
+    }
+
+    .carousel-inner .carousel-item {
+        display: flex;
+        flex-direction: column;
+    }
+    .carousel-inner .carousel-item img {
+        width: 75%;
+        align-self: center;
+    }
+
+    .carousel-button-prevnext {
+        top: 20%;
+        bottom: 20%;
+    }
+    .carousel-control-prev-btn {
+        left: 10%;
+    }
+    .carousel-control-next-btn {
+        right: 10%;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    #accueil-page .carousel-inner .carousel-item img {
+        width: 90%;
+    }
+    #accueil-page .carousel-inner .carousel-caption {
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 700px) {
+    #accueil-page .carousel .carousel-button-prevnext {
+        display: none;
+    }
+}
+@media all and (max-width: 600px) {
+    #accueil-page .carousel-inner .carousel-item img {
+        width: 96%;
+    }
+    #accueil-page .carousel-inner .carousel-caption {
+        width: 96%;
+    }
+    #accueil-page .carousel-indicators {
+        left: unset;
+        right: unset;
+        top: 1%;
+        bottom: unset;
+
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+
+        li {
+            max-width: 10%;
+            width: 40px;
+            height: 10px;
+            margin-top: 1%;
+            box-shadow: beige 1px 1px 5px;
+            border: unset;
+        }
     }
 
 }
-
-

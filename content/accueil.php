@@ -12,51 +12,51 @@
             <h1 id="title" class="title">Le Domaine des Terres Noires</h1>
             <nav id="nav">
                 <?php 
-                include "./php/navbar.php";
+                    include "./php/navbar.php";
                  ?>
             </nav>
         </header>
-        <main class="row">
-            <section class="col">
+        <main id="accueil-page">
+            <section>
                 <h2 class="hidden">Le Cane Corso Elevage Passion</h2>
                 <div class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="6000" id="option">
-                    <ol class="carousel-indicators carousel-indicators-review">
+                    <ol class="carousel-indicators">
                         <li data-target="#option" data-slide-to="0" class="active btn__anim"></li>
                         <li data-target="#option" data-slide-to="1" class="btn__anim"></li>
                         <li data-target="#option" data-slide-to="2" class="btn__anim"></li>
                         <li data-target="#option" data-slide-to="3" class="btn__anim"></li>
                     </ol>    
-                    <div class="carousel-inner font-weight-bold">
-                        <div class='carousel-item active d-flex flex-column'>
-                            <img src="../src/img/panama4.jpg" class="w-75 align-self-center" alt="Annonce Gestation et Portée">
-                            <div class="carousel-caption carousel-caption-move bg-dark opacity-4 rounded align-self-center">
-                                <p>Nous sommes ravis de vous confirmer la gestation de Panama mariée avec Rock<br/>
-                                Les pré-réservations pour cette portée à venir sont ouvertes.</p>
-                                <a href="./weeding.php" role="button" class="btn btn-success btn__anim">Voir nos mariages </a>
+                    <div class="carousel-inner">
+                        <div class='carousel-item active'>
+                            <img src="../src/img/panama4.jpg" alt="Annonce Gestation et Portée">
+                            <div class="carousel-caption opacity-4">
+                                <p>Nous sommes enchantés de vous annoncer la naissance des 13 chiots issus de Panama et Rock<br/>
+                                Les réservations pour cette portée sont ouvertes.</p>
+                                <a href="/content/weeding.php" class="btn btn-success btn__anim">Voir nos mariages </a>
                             </div>
                         </div>
-                        <div class='carousel-item d-flex flex-column'>
-                            <img src="../src/img/rock16-9couché.jpg" class="w-75 align-self-center" alt="Rock Corso di Munteanu">
-                            <div class="carousel-caption carousel-caption-move bg-dark opacity-4 rounded align-self-center">
+                        <div class='carousel-item'>
+                            <img src="../src/img/rock16-9couché.jpg" alt="Rock Corso di Munteanu">
+                            <div class="carousel-caption opacity-4">
                                 <p>Nos Cane Corso sont très sociables, <br/>
                                 cependant ils savent très bien faire leur boulot de gardien.</p>
-                                <a href="./ourdog.php" role="button" class="btn btn-warning btn__anim">Voir les photos</a>
+                                <a href="/content/ourdog.php" class="btn btn-warning btn__anim">Voir les photos</a>
                             </div>
                         </div>
-                        <div class='carousel-item d-flex flex-column'>
-                            <img src="../src/img/panama16-9.jpg" class="w-75 align-self-center" alt="Le standard du Cane Corso">
-                            <div class="carousel-caption carousel-caption-move bg-dark opacity-4 rounded align-self-center">
+                        <div class='carousel-item'>
+                            <img src="../src/img/panama16-9.jpg" alt="Le standard du Cane Corso">
+                            <div class="carousel-caption opacity-4">
                                 <p>Retrouvez notre page standard du Cane Corso <br/> 
                                 Pour tout connaître sur la race.</p>
-                                <a href="./breed.php" role="button" class="btn btn-info btn__anim">Le Cane Corso</a>
+                                <a href="/content/breed.php" class="btn btn-info btn__anim">Le Cane Corso</a>
                             </div>
                         </div>
-                        <div class='carousel-item d-flex flex-column'>
-                            <img style="background-color: lightblue" src="../src/img/terrenoirealpha2.png" class="w-75 align-self-center" alt="domaine des terres noires - elevage cane corso">
-                            <div class="carousel-caption carousel-caption-move bg-dark opacity-4 rounded align-self-center">
+                        <div class='carousel-item'>
+                            <img style="background-color: lightblue" src="../src/img/terrenoirealpha2.png" alt="domaine des terres noires - elevage cane corso">
+                            <div class="carousel-caption opacity-4">
                                 <p>Voici toutes nos coordonnées,<br/> 
                                 N'hésitez pas à nous contacter pour plus d'informations.</p>
-                                <a href="./okkaina1.php" role="button" class="btn btn-primary btn__anim">Contact</a>
+                                <a href="/content/okkaina1.php" class="btn btn-primary btn__anim">Contact</a>
                             </div>
                         </div>
                     </div>

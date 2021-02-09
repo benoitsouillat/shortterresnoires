@@ -6,19 +6,12 @@ let figures = document.getElementsByClassName('vignet-dog');
 
 const createBlock = (name) => {
 
-    console.log(info.children[0]);
-    console.log(info.children[1]);
-    console.log(info.children[2]);
-    console.log(info.children[3]);
-    console.log(info.children[4]);
-    console.log(info.children[5]);
-
     dogClass.forEach(elm => {
         if (elm.dogName.toLowerCase() === name)
         {
             fiche.classList.remove('card-hidden');
             info.children[0].textContent = ' ' + elm.dogName + '  ' + elm.dogBreeder;
-            if (elm.dogSex === "  mâle")
+            if (elm.dogSex === male)
             {
                 info.children[1].textContent = " Né le " + elm.dogBirth;
                 info.children[2].classList.add("fa-mars");
