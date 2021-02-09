@@ -18,7 +18,7 @@
     <main id="contact-main">
         <section class="contact-form">
             <h2>Contactez-nous</h2>
-            <form>
+            <form method="post" action="./php/mail.php">
                 <div>
                     <label name="nom">Votre Nom :</label>
                     <input type="text" name="nom" />
@@ -47,7 +47,7 @@
             </div>
             <div>
                 <a href="tel:+33670378113" class="btn btn-dark"><span class="fa fa-phone"></span> Appelez-nous </a>
-                <a href="https://www.facebook.com/domaineterresnoires" class="btn btn-dark"><span class="fa fa-facebook-square" ></span> Facebook </a>
+                <a href="https://www.facebook.com/domaineterresnoires" target="blank_" class="btn btn-dark"><span class="fa fa-facebook-square" ></span> Facebook </a>
             </div>
             <div>
                 <a href="mailto:domainedesterresnoires@gmail.com" class="btn btn-dark"><span class="fa fa-envelope"></span> Email </a>
@@ -61,12 +61,9 @@
                 frameborder="1" allowfullscreen="" aria-hidden="false" tabindex="0">
             </iframe>
         </div>
-    </main>
-
-    <br/>
-    <br/>
-        <section class="mb-5">
-            <u><h3 class="mb-2 line-height-4"> Nos adresses conseils :</h3></u><br/>
+        <br/>
+        <section id="adress-friend">
+            <h3 class="mb-2 line-height-4"> Nos adresses conseils :</h3><br/>
             <div class="row d-flex flex-column justify-content-center align-content-center text-center mb-3 h5">
                 <div class="col-10">
                     <u><a href="http://www.lewhippet.com" target="blank_"><b>La Romance des Damoiseaux</b></a></u><br/>
@@ -83,7 +80,7 @@
                 </div>
             </div>
         </section>
-    </div>
+    </main>
 
     <?php 
         include "./php/footer.php";

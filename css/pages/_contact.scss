@@ -102,23 +102,27 @@
             }
 
         }
+        p {
+            padding-left: 10%;
+        }
 
         a {
             color: $font-color;
+            transition: transform 300ms;
             &:hover {
-                transform: unset;
+                transform: translateY(7px);
                 color: $font-color;
             }
         }
         .btn-dark {
             width: 230px;
+            margin: 1px;
             color: $text-color;
             &:hover {
                 color: $text-color;
                 text-decoration: underline;
             }
         }
-
     }
 
     #contact-map {
@@ -135,9 +139,19 @@
     }
 
 
-
-
-
-
 }
 
+
+#page-mail {
+    text-align: center;
+    background-color: #000;
+    margin-top: 1%;
+}
+#page-mail .btn-mail {
+    text-align: center;
+    padding: 2%;
+    margin: 10%;
+    &:hover {
+        transform: unset;
+    }
+}

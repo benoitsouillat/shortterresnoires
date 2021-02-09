@@ -1595,18 +1595,27 @@ body p {
       justify-content: space-around;
 }
 
+#contact-main .contact-info p {
+  padding-left: 10%;
+}
+
 #contact-main .contact-info a {
   color: #000000;
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
 }
 
 #contact-main .contact-info a:hover {
-  -webkit-transform: unset;
-          transform: unset;
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
   color: #000000;
 }
 
 #contact-main .contact-info .btn-dark {
   width: 230px;
+  margin: 1px;
   color: beige;
 }
 
@@ -1632,6 +1641,23 @@ body p {
 #contact-main #contact-map iframe {
   width: 50%;
   min-height: 350px;
+}
+
+#page-mail {
+  text-align: center;
+  background-color: #000;
+  margin-top: 1%;
+}
+
+#page-mail .btn-mail {
+  text-align: center;
+  padding: 2%;
+  margin: 10%;
+}
+
+#page-mail .btn-mail:hover {
+  -webkit-transform: unset;
+          transform: unset;
 }
 
 /* Mixins && Extensions */
