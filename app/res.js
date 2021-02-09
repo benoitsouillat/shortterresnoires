@@ -66,7 +66,7 @@ let female2 = new puppy("7 Février 2021", female, "Noire", "Orange", "orange-1j
 let female3 = new puppy("7 Février 2021", female, "Noire", "Rose Pâle", "rosepale-1j", "y", "");
 let female4 = new puppy("7 Février 2021", female, "Bringée", "Beige", "beige-1j", "y", "");
 let female5 = new puppy("7 Février 2021", female, "Bringée", "Marron", "marron-1j", "y", "");
-let female6 = new puppy("7 Février 2021", female, "Grise", "Noir", "noir-1j", "y", "");
+let female6 = new puppy("7 Février 2021", female, "Grise", "Noir", "noir-1j", "n", "");
 let female7 = new puppy("7 Février 2021", female, "Fauve", "Rose", "rose-1j", "y", "");
 let female8 = new puppy("7 Février 2021", female, "Fauve", "Aucun", "aucun-1j", "y", "");
 
