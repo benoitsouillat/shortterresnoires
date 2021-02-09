@@ -1446,24 +1446,218 @@ body p {
   }
 }
 
-.img-contact-container {
+#contact-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+#contact-main .contact-form {
+  background-color: #1a1a1a;
+  padding: 0 5%;
+  width: 65%;
+}
+
+#contact-main .contact-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+#contact-main .contact-form form div {
+  width: 40%;
+  max-width: 45%;
+  padding: 20px 0;
+  margin-right: 5%;
+}
+
+#contact-main .contact-form form div label {
+  max-width: 100%;
+}
+
+#contact-main .contact-form form div input {
+  border: unset;
+  border-bottom: solid 2px beige;
+  background-color: #1f1f1f;
+  max-width: 100%;
+  color: beige;
+}
+
+#contact-main .contact-form form div input:focus {
+  color: beige;
+}
+
+#contact-main .contact-form form div:nth-child(3) {
+  width: 95%;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#contact-main .contact-form form div:nth-child(3) label {
+  width: 100%;
+}
+
+#contact-main .contact-form form div:nth-child(3) textarea {
+  width: 90%;
+  min-height: 150px;
+  color: beige;
+  border: unset;
+  border-bottom: solid 2px beige;
+  background-color: #1f1f1f;
+}
+
+#contact-main .contact-form form div:nth-child(3) textarea:focus {
+  color: beige;
+}
+
+#contact-main .contact-form form button {
+  margin: 7% 0 5% 0;
+  padding: 3%;
+  position: relative;
+  bottom: 0;
+  left: calc(100% - 230px);
+}
+
+#contact-main .contact-info {
+  width: 35%;
+  background-color: beige;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  padding-bottom: 200px;
+  font-weight: bold;
+  font-style: italic;
 }
 
-.img-contact {
+#contact-main .contact-info div {
+  width: 90%;
+}
+
+#contact-main .contact-info div:nth-child(4) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact-main .contact-info div:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#contact-main .contact-info p {
+  padding-left: 10%;
+}
+
+#contact-main .contact-info a {
+  color: #000000;
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+#contact-main .contact-info a:hover {
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+  color: #000000;
+}
+
+#contact-main .contact-info .btn-dark {
+  width: 230px;
+  margin: 1px;
+  color: beige;
+}
+
+#contact-main .contact-info .btn-dark:hover {
+  color: beige;
+  text-decoration: underline;
+}
+
+#contact-main #contact-map {
   width: 100%;
-  height: auto;
-  border-radius: 0.25rem;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 80px;
+}
+
+#contact-main #contact-map iframe {
+  width: 50%;
+  min-height: 350px;
+}
+
+#page-mail {
+  text-align: center;
+  background-color: #000;
+  margin-top: 1%;
+}
+
+#page-mail .btn-mail {
+  text-align: center;
+  padding: 2%;
+  margin: 10%;
+}
+
+#page-mail .btn-mail:hover {
+  -webkit-transform: unset;
+          transform: unset;
 }
 
 /*-------------------------------Classes-------------------------------------*/
