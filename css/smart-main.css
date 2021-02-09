@@ -1446,6 +1446,11 @@ body p {
   }
 }
 
+#contact-page nav {
+  margin-top: 1%;
+  width: 100%;
+}
+
 #contact-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1639,7 +1644,7 @@ body p {
 }
 
 #contact-main #contact-map iframe {
-  width: 50%;
+  width: 60%;
   min-height: 350px;
 }
 
@@ -1658,6 +1663,46 @@ body p {
 #page-mail .btn-mail:hover {
   -webkit-transform: unset;
           transform: unset;
+}
+
+@media all and (max-width: 1000px) {
+  #contact-main .contact-form {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #contact-main .contact-info {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #contact-main .contact-info div:nth-child(3), #contact-main .contact-info div:nth-child(4) {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #contact-main #contact-map {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  #contact-main #contact-map iframe {
+    width: 90%;
+  }
+  #contact-main #adress-friend {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+
+@media all and (max-width: 600px) {
+  #contact-main .contact-info .btn-dark {
+    margin-top: 5px;
+    height: 80px;
+    min-width: 160px;
+  }
 }
 
 /* Mixins && Extensions */

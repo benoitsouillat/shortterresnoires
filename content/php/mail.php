@@ -11,10 +11,10 @@
     include "./navbar.php";
 
 
-   $retour = mail('tido.squat@gmail.com', $_POST['pseudo'].' vous a envoyé un message depuis la page contact du site',
+   $retour = mail('domainedesterresnoires@gmail.com', $_POST['pseudo'].' vous a envoyé un message depuis la page contact du site',
         "\r\n"."\r\n"."\r\n".
             'Un message de M : '.$_POST['pseudo']."\r\n". 'Email : ' .' '.
-        $_POST['mail']."\n".'Voici son message : '."\r\n".$_POST['message'],
+        $_POST['mail']."\n".'Voici son message : '."\r\n".$_POST['message']."\r\n",
             'Envoyé depuis : lecanecorso.fr');
    if ($retour) {
        echo "Votre message a bien été envoyé \r\n ";
