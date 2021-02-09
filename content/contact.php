@@ -15,36 +15,83 @@
              ?>
         </nav>
     </header>
-    <div class="container mt-5">
-        <section class="row mb-4 d-sm-flex justify-content-sm-center align-content-sm-center ">
-            <div class="col-4 img-contact-container">
-                <img src="../src/img/evapanama.jpg" alt="contactez-nous" class="img-contact"/>
-            </div>
-            <div class="col d-flex justify-content-center mt-5 font-weight-bold">
-                <ul class="col-3 d-flex flex-column justify-content-start list-unstyled">
-                    <li> Téléphone :</li>
-                    <li> Email :</li>
-                    <li> Facebook :</li>
-                    <li> Courrier :</li>
-                </ul>
-                <ul class="col d-flex flex-column list-unstyled">
-                    <li>06 70 37 81 13</li>
-                    <li>domainedesterresnoires@gmail.com</li>
-                    <li><a href="https://www.facebook.com/ledomainedes.terresnoires" target="_blank" ><u>Le domaine des Terres Noires</u></a></li>
-                    <address><li>Eva Brochet </li>
-                    <li>2 Avenue du clocher </li> 
-                    <li>87190 St-Léger-Magnazeix</li></address>
-                </ul>
-            </div>
+    <main id="contact-main">
+        <section class="contact-form">
+            <h2>Contactez-nous</h2>
+            <form>
+                <div>
+                    <label name="nom">Votre Nom :</label>
+                    <input type="text" name="nom" />
+                </div>
+                <div>
+                    <label name="mail">Votre Email :</label>
+                    <input type="email" name="mail" />
+                </div>
+                <div>
+                    <label>Votre Message :</label>
+                    <textarea name="message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-beige">Envoyer le message</button>
+            </form>
+
         </section>
-        <br/>
-        <section>
-            <h3 class="mb-5">Où sommes-nous ?</h3>
-            <div class="d-flex flex-column justify-content-center align-items-center mb-5">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2757.188179496862!2d1.243944316046092!3d46.28623557911921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fc0737b2a2559d%3A0x2082e5ba25e841a8!2s2%20Avenue%20du%20Clocher%2C%2087190%20Saint-L%C3%A9ger-Magnazeix!5e0!3m2!1sfr!2sfr!4v1605519064445!5m2!1sfr!2sfr" width="400" height="300" frameborder="1" style="border:1;" allowfullscreen="" aria-hidden="false" tabindex="0">
-                </iframe>
+        <section class="contact-info">
+            <h2>Nos informations :</h2>
+            <div>
+                <p>Eva Brochet <br/>
+                Le domaine des Terres Noires <br/>
+                2 Avenue du clocher<br/>
+                87190 Saint-Léger-Magnazeix</p>
+                <p>06 70 37 81 13<br/>
+                domainedesterresnoires @gmail.com</p>
             </div>
+            <div>
+                <a href="tel:+33670378113" class="btn btn-dark"><span class="fa fa-phone"></span> Appelez-nous </a>
+                <a href="https://www.facebook.com/domaineterresnoires" class="btn btn-dark"><span class="fa fa-facebook-square" ></span> Facebook </a>
+            </div>
+            <div>
+                <a href="mailto:domainedesterresnoires@gmail.com" class="btn btn-dark"><span class="fa fa-envelope"></span> Email </a>
+                <a href="#contact-map" class="btn btn-dark"><span class="fa fa-map-marker"></span> Où sommes-nous </a>
+            </div>
+
+
         </section>
+        <div id="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2757.188179496862!2d1.243944316046092!3d46.28623557911921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fc0737b2a2559d%3A0x2082e5ba25e841a8!2s2%20Avenue%20du%20Clocher%2C%2087190%20Saint-L%C3%A9ger-Magnazeix!5e0!3m2!1sfr!2sfr!4v1605519064445!5m2!1sfr!2sfr" 
+                frameborder="1" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+        </div>
+    </main>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
         <section class="mb-5">
             <u><h3 class="mb-2 line-height-4"> Nos adresses conseils :</h3></u><br/>
             <div class="row d-flex flex-column justify-content-center align-content-center text-center mb-3 h5">
