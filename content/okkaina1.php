@@ -69,6 +69,7 @@
         </section>
         <section> <!-- Rouge -->
 
+            <a class="fancybox" rel="rouge" href="../src/img/randy.jpg"></a>
             <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/Rouge.jpg"></a>
             <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/Rouge16-9.jpg"></a>
             <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/CollierRouge2s-2.jpg"></a>
@@ -78,6 +79,11 @@
             <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/Chiotsensemble-1.jpg"></a>
             <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/rouge002.jpg"></a>
             <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/rouge003.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/randycanape2.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/randyCanape.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/randy-izaka.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/randy-peluche-verte.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/randyPelucheRose.jpg"></a>
 
 
         </section>
@@ -197,6 +203,8 @@
             <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige/Image00034.jpg"></a>
             <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige/Image00035.jpg"></a>
             <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige/Image00036.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige/Image00037.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige/Image00038.jpg"></a>
 
         </section>
 

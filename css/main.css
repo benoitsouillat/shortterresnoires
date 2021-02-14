@@ -567,7 +567,7 @@ body p {
   }
 }
 
-#breed-info aside {
+#breed-info section {
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -579,7 +579,7 @@ body p {
   padding-bottom: 70px;
 }
 
-#breed-info aside div {
+#breed-info section div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -599,7 +599,7 @@ body p {
   margin: 10px;
 }
 
-.breed-para {
+#breed-info .breed-para {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -616,6 +616,42 @@ body p {
   max-width: 80%;
   margin-left: 50px;
   margin-right: 50px;
+}
+
+@media all and (max-width: 1200px) {
+  #breed-info section {
+    width: 100%;
+  }
+  #breed-info section div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  #breed-info img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    width: 30%;
+    min-width: 200px;
+    border-radius: 2%;
+    margin-bottom: 30px;
+  }
+  #breed-info .breed-para {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 #standard {
@@ -907,6 +943,26 @@ body p {
 }
 
 /* Mixins && Extensions */
+#puppiesTab {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
 .puppy_male {
   text-shadow: 2px 2px 2px black;
   color: lightblue;
@@ -923,75 +979,43 @@ body p {
   background-color: #6f0b30;
 }
 
+.puppy__card {
+  border-radius: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+  width: 90%;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .puppy__card p {
   font-weight: bold;
   text-align: center;
 }
 
-@media all and (min-width: 1200px) {
+@media all and (max-width: 1199px) {
   .puppy__card {
-    border-radius: 1%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 50px;
-    width: 90%;
-    height: 350px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media all and (min-width: 1000px) and (max-width: 1199px) {
-  .puppy__card {
-    border-radius: 1%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 50px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-}
-
-@media all and (max-width: 999px) {
-  .puppy__card {
-    border-radius: 1%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 50px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    height: auto;
   }
 }
 
@@ -1057,6 +1081,8 @@ body p {
   padding: 10px;
   width: 570px;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media all and (max-width: 1000px) {
@@ -1064,8 +1090,10 @@ body p {
     width: 70%;
     border-radius: 10%;
     margin-left: 25%;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     -webkit-box-shadow: black 2px 2px 4px;
             box-shadow: black 2px 2px 4px;
   }
@@ -1114,6 +1142,7 @@ body p {
 
 .puppy-para {
   text-align: center;
+  margin: 0 10%;
 }
 
 .puppy-para .para-right {
@@ -1622,6 +1651,12 @@ body p {
   width: 230px;
   margin: 5px 1px;
   color: beige;
+}
+
+@media all and (max-width: 1350px) {
+  #contact-main .contact-info .btn-dark {
+    height: 80px;
+  }
 }
 
 #contact-main .contact-info .btn-dark:hover {

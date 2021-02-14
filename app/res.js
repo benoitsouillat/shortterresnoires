@@ -10,6 +10,39 @@ const diMunteanu = " Corso di Munteanu";
 const caneCorso = " Cane Corso ";
 const male = " Mâle";
 const female = " Femelle";
+const dispo = "y";
+const reserv = "n";
+
+
+/* Test Classes étendues avec des nom en Francais */
+
+class chien {
+    constructor (chienName, chienBirth, chienColor, chienSex, chienDad, chienMom)
+    {
+        this.chienName = chienName;
+        this.chienBirth = chienBirth;
+        this.chienColor = chienColor;
+        this.chienSex = chienSex;
+        this.chienDad = chienDad;
+        this.chienMom = chienMom;
+
+    }
+    isMale()
+    {
+        if (this.chienSex === male)
+            return true;
+        return false;
+    }
+}
+
+class lof extends chien {
+    constructor (lofNumber, puceNumber)
+    {
+        this.lofNumber = lofNumber;
+        this.puceNumber = puceNumber;
+    }
+}
+
 
 class litter {
     constructor (puppyMom, puppyDad, puppyBirth, maleNumber, femaleNumber)
@@ -21,6 +54,9 @@ class litter {
         this.femaleNumber = femaleNumber;
     }
 }
+
+/* FIN des tests */
+
 class dog {
     constructor(dogName, dogBirth, dogBreed, dogBreeder, dogSex, dogLitter, dogLitterOne){
 
@@ -34,7 +70,7 @@ class dog {
     }
 }
 class puppy {
-    constructor ( puppyBirth, puppySex, puppyColor, puppyNecklace, puppyProfil, puppyAvailable, puppyName)
+    constructor (puppyBirth, puppySex, puppyColor, puppyNecklace, puppyProfil, puppyAvailable, puppyName)
     {
         this.puppyBirth = puppyBirth;
         this.puppySex = puppySex;
@@ -44,32 +80,37 @@ class puppy {
         this.puppyAvailable = puppyAvailable;
         this.puppyName = puppyName;
     }
+    isPuppyMale()
+    {
+        if (this.puppySex === male)
+            return true;
+        return false;
+    }
 }
 
 
-let male1 = new puppy("16 Novembre 2020", male, "Noir", "Vert", "vert4s006", "n", "Riscott");
-let male2 = new puppy("16 Novembre 2020", male, "Noir", "Rouge", "rouge001", "n", "Randy");
-let male3 = new puppy("16 Novembre 2020", male, "Noir", "Bleu Foncé", "bleuf4s001", "n", "Rod");
-let male4 = new puppy("16 Novembre 2020", male, "Noir Bringé", "Bleu Clair", "bleuc4s003", "n", "Ramsès");
-let male5 = new puppy("16 Novembre 2020", male, "Bringé", "Marron", "marron4s002", "n", "Raoul");
-let male6 = new puppy("16 Novembre 2020", male, "Noir Bringé", "Jaune", "jaune4s001","n", "Reïko");
-let male7 = new puppy("16 Novembre 2020", male, "Noir", "Beige", "beige4s002","n", "Rosko");
+let male1 = new puppy("16 Novembre 2020", male, "Noir", "Vert", "vert4s006", reserv, "Riscott");
+let male2 = new puppy("16 Novembre 2020", male, "Noir", "Rouge", "randy-joue", reserv, "Randy");
+let male3 = new puppy("16 Novembre 2020", male, "Noir", "Bleu Foncé", "bleuf4s001", reserv, "Rod");
+let male4 = new puppy("16 Novembre 2020", male, "Noir Bringé", "Bleu Clair", "bleuc4s003", reserv, "Ramsès");
+let male5 = new puppy("16 Novembre 2020", male, "Bringé", "Marron", "marron4s002", reserv, "Raoul");
+let male6 = new puppy("16 Novembre 2020", male, "Noir Bringé", "Jaune", "jaune4s001",reserv, "Reïko");
+let male7 = new puppy("16 Novembre 2020", male, "Noir", "Beige", "beige",reserv, "Rosko");
 
-let male11 = new puppy("7 Février 2021", male, "Grise", "Vert", "vert-1j", "y", "");
-let male12 = new puppy("7 Février 2021", male, "Grise", "Rouge", "rouge-1j", "y", "");
-let male13 = new puppy("7 Février 2021", male, "Noire ( Bringé )", "Bleu Clair", "bleuc-1j", "y", "");
-let male14 = new puppy("7 Février 2021", male, "Bringée", "Jaune", "jaune-1j", "y", "");
-let male15 = new puppy("7 Février 2021", male, "Fauve", "Bleu Foncé", "bleuf-1j", "y", "");
+let male11 = new puppy("7 Février 2021", male, "Grise", "Vert", "vert", dispo, "");
+let male12 = new puppy("7 Février 2021", male, "Grise", "Rouge", "rouge", dispo, "");
+let male13 = new puppy("7 Février 2021", male, "Noire ( Bringé )", "Bleu Clair", "bleuc", dispo, "");
+let male14 = new puppy("7 Février 2021", male, "Bringée", "Jaune", "jaune", dispo, "");
+let male15 = new puppy("7 Février 2021", male, "Fauve", "Bleu Foncé", "bleuf", dispo, "");
 
-let female1 = new puppy("7 Février 2021", female, "Fauve", "Violet", "violet-1j", "0", "");
-let female2 = new puppy("7 Février 2021", female, "Noire", "Orange", "orange-1j", "y", "");
-let female3 = new puppy("7 Février 2021", female, "Noire", "Rose Pâle", "rosepale-1j", "y", "");
-let female4 = new puppy("7 Février 2021", female, "Bringée", "Beige", "beige-1j", "y", "");
-let female5 = new puppy("7 Février 2021", female, "Bringée", "Marron", "marron-1j", "y", "");
-let female6 = new puppy("7 Février 2021", female, "Grise", "Noir", "noir-1j", "n", "");
-let female7 = new puppy("7 Février 2021", female, "Fauve", "Rose", "rose-1j", "y", "");
-let female8 = new puppy("7 Février 2021", female, "Fauve", "Aucun", "aucun-1j", "y", "");
-
+let female1 = new puppy("7 Février 2021", female, "Fauve", "Violet", "violet", reserv, "Safari");
+let female2 = new puppy("7 Février 2021", female, "Bringée", "Orange", "orange", dispo, "");
+let female3 = new puppy("7 Février 2021", female, "Noire", "Rose Pâle", "rosepale", 0, "");
+let female4 = new puppy("7 Février 2021", female, "Bringée", "Beige", "beige", dispo, "");
+let female5 = new puppy("7 Février 2021", female, "Bringée", "Marron", "marron", dispo, "");
+let female6 = new puppy("7 Février 2021", female, "Grise", "Noir", "noir", reserv, "");
+let female7 = new puppy("7 Février 2021", female, "Fauve", "Rose", "rose", dispo, "");
+let female8 = new puppy("7 Février 2021", female, "Fauve", "Aucun", "aucun", dispo, "");
 
 let okkainaLitterOne = [male1, male2, male3, male4, male5, male6, male7];
 let panamaLitterOne = [male11, male12, male13, male14, male15, female1, female2, female3, female4, 
@@ -97,8 +138,11 @@ let jpg = ".jpg";
 "okkainarock", "irréelle1", "nuit d'étoiles1"]; */
 
 
-/* -------------------------- News & Articles ---------------------------------- */
 
+
+
+/* -------------------------- News & Articles ---------------------------------- */
+/*
 formatDate = (value) => {
 
     let year = value.substr(6, 4);
@@ -129,12 +173,12 @@ class article {
 }
 
 
-/* Author */
+/* Author 
 let eva = " Eva Brochet. ";
 let benoit = " Benoit Souillat. ";
 let lesTerresNoires = " Les Terres Noires. ";
 
-/* Article Description */
+/* Article Description 
 
 let textRockArrived = "Nous sommes ravis de l'arrivée de Rock parmi nos loulous. \n Bienvenue parmi nous Rock. \n Le voyage fût éprouvant" + 
 " mais Rock s'est bien acclimaté et a fait connaissance avec Okkaina et Panama, nos deux autres Cane Corso, ainsi qu'avec nos Whippets et notre Jack \n" 
@@ -144,39 +188,14 @@ let textExpoDompierre20 = "Nous avons effectué l'exposition CACS de Dompierre S
 let textOkkainaMarried = "Bravo Okkaina";
 
 
-/* Creating Instance */
+/* Creating Instance 
 
 let rockArrived = new article("rock-arrivee","Arrivée de Rock", "01/06/2020", textRockArrived, benoit, rock);
 let expoDompierre20 = new article("dompierre-20","CACS Dompierre / Besbre", "13/09/2020", textExpoDompierre20, lesTerresNoires, panama);
 let okkainaMarried = new article("mariage-okkaina","Mariage d'Okkaina et Rock", "10/10/2020", textOkkainaMarried, eva, okkaina);
 
 let articles = [rockArrived, expoDompierre20, okkainaMarried];
-
-
-/* --------------------------- Generating Footer --------------------- */
-
-const generateFooter = () => {
-    let body = document.body;
-    let footer = document.createElement('footer');
-    let footerContainer = document.createElement('div');
-    let paraThanks = document.createElement('p');
-        paraThanks.id = "footer-merci";
-        paraThanks.innerHTML = "<b>Merci d'avoir visité notre site</b><br/><b>Passez une excellente journée</b>";
-    let paraCopyright = document.createElement('p');
-        paraCopyright.id = "footer-copyright";
-        paraCopyright.innerHTML = "<u>Photos : </u><br/><i>Cathy Thouvenin</i><br/><i>Eva Brochet</i><br/><i>Benoit Souillat</i><br/> <i>© Reproduction Interdite</i>";
-    let paraSign = document.createElement('p');
-        paraSign.id = "footer-signature";
-        paraSign.innerHTML = "Eva Brochet - Eleveuse Canin <br/> Titulaire du Baccalauréat : Conduite et Gestion dans le secteur élevage Canin et Félin <br/> Titulaire du Brevet Professionnel Agricole : Travaux en élevage Canin et Félin<br/> N°Eleveur : 362026 - N°Affixe : 92123 <br/><i>Textes, vidéos et photos tous droits réservés pour tous pays</i>";
-
-    body.insertAdjacentElement("beforeend", footer);
-    footer.appendChild(footerContainer);
-    footerContainer.appendChild(paraThanks);
-    footerContainer.appendChild(paraCopyright);
-    footerContainer.appendChild(paraSign);
-
-}
-
+*/
 
 /* ---------------------- FANCYBOX ---------------------------- */
 

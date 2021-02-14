@@ -56,7 +56,7 @@
                             <div class="carousel-caption opacity-4">
                                 <p>Voici toutes nos coordonnées,<br/> 
                                 N'hésitez pas à nous contacter pour plus d'informations.</p>
-                                <a href="/content/okkaina1.php" class="btn btn-primary btn__anim">Contact</a>
+                                <a href="/content/contact.php" class="btn btn-primary btn__anim">Contact</a>
                             </div>
                         </div>
                     </div>

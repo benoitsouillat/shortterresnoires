@@ -27,7 +27,7 @@ let puppyName = document.createElement("p");
 let puppySex = document.createElement("p");
     puppySex.classList.add("fa");
 
-    if (elm.puppySex === male)
+    if (elm.isPuppyMale())
     {
         maleCount++;
         puppySex.textContent = " Mâle" + " N°" + maleCount;
@@ -95,7 +95,10 @@ let puppyAvail = document.createElement("button");
     else if (elm.puppyAvailable === "n" || elm.puppyAvailable === "N")
     {
         puppyAvail.classList.add("btn-undispo");
-        puppyAvail.textContent = "Réservé";
+        if (elm.isPuppyMale())
+            puppyAvail.textContent = "Réservé";
+        else if (!(elm.isPuppyMale()))
+            puppyAvail.textContent = "Réservée";
     }
     else 
     {
@@ -107,7 +110,10 @@ let puppyAvail = document.createElement("button");
 
     puppySection.appendChild(puppyCard);
     puppyCard.appendChild(puppyCardInfo);
+    if (!(elm.puppyName === ""))
+    {
         puppyCardInfo.appendChild(puppyName);
+    }
         puppyCardInfo.appendChild(puppySex);
         puppyCardInfo.appendChild(puppyNecklace);
         puppyCardInfo.appendChild(puppyColor);

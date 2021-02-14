@@ -8,6 +8,17 @@
     box-shadow: 4px 8px 2px $colour;
     background-color: $back-colour;
 }
+#puppiesTab {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
 
 .puppy {
     &_male {
@@ -26,8 +37,6 @@
             text-align: center;
         }
         
-        @media all and (min-width: 1200px)
-        {
             border-radius: 1%;
             display: flex;
             flex-direction: row;
@@ -39,26 +48,13 @@
             margin-left: auto;
             margin-right: auto;
 
-        }
-        @media all and (min-width: 1000px) and (max-width: 1199px)
+        @media all and (max-width: 1199px)
         {
-            border-radius: 1%;
-            display: flex;
-            flex-direction: row;
+
             justify-content: center;
             align-items: center;
-            margin-top: 50px;
             flex-wrap: wrap;
-        }
-        @media all and (max-width: 999px)
-        {
-            border-radius: 1%;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin-top: 50px;
-            flex-wrap: wrap; // Soucis du Wrap - Il faut jouer avec les orders
+            height: auto;
         }
     }
 
@@ -108,6 +104,8 @@
                 padding: 10px;
                 width: 570px;
                 height: auto;
+                object-fit: cover;
+
 
 
            @media all and (max-width: 1000px)
@@ -115,8 +113,9 @@
                 width: 70%;
                 border-radius: 10%;
                 margin-left: 25%;
-                margin-top: 10%;
-                margin-bottom: 10%;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                box-sizing: border-box;
                 box-shadow: black 2px 2px 4px;
             }
             
@@ -152,6 +151,7 @@
 
 .puppy-para {
     text-align: center;
+    margin: 0 10%;
 
     .para-right {
         width: 80%;
