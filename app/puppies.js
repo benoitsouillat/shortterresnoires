@@ -50,7 +50,7 @@ let puppyNecklace = document.createElement("p");
     puppyNecklace.textContent = "Collier " + elm.puppyNecklace;
 
 let puppyCardImgLink = document.createElement("a");
-    puppyCardImgLink.href = path + litterLice + "-puppies/" + 
+    puppyCardImgLink.href = imgPath + litterLice + "-puppies/" + 
     /* elm.puppyNecklace + */ elm.puppyProfil + jpg;
     puppyCardImgLink.classList.add("puppy_img");
     puppyCardImgLink.classList.add("fancybox");
@@ -63,7 +63,7 @@ let puppyAlbumDiv = document.createElement("div");
 let puppyAlbum = document.createElement('a');
     puppyAlbum.textContent = "Son Album Photo";
     puppyAlbum.rel = elm.puppyNecklace.toLowerCase();
-    puppyAlbum.href = path + litterLice + "-puppies/" + elm.puppyProfil + jpg;
+    puppyAlbum.href = imgPath + litterLice + "-puppies/" + elm.puppyProfil + jpg;
     puppyAlbum.classList.add("fancybox");
     puppyAlbum.classList.add("btn");
     puppyAlbum.classList.add("btn-success");
@@ -73,7 +73,7 @@ let puppyAlbum = document.createElement('a');
 let puppyAlbumExt = document.createElement('a');
     puppyAlbumExt.textContent = "Photos d'extérieur";
     puppyAlbumExt.rel = "ext";
-    puppyAlbumExt.href = path + litterLice + "-puppies/groupe/Image0000" + maleCount + jpg;
+    puppyAlbumExt.href = imgPath + litterLice + "-puppies/groupe/Image0000" + maleCount + jpg;
     puppyAlbumExt.classList.add("fancybox");
     puppyAlbumExt.classList.add("btn");
     puppyAlbumExt.classList.add("btn-primary");
@@ -81,7 +81,7 @@ let puppyAlbumExt = document.createElement('a');
 */
 
 let puppyCardImg = document.createElement('img');
-    puppyCardImg.src =  path + litterLice + "-puppies/" + elm.puppyProfil + jpg;
+    puppyCardImg.src =  imgPath + litterLice + "-puppies/" + elm.puppyProfil + jpg;
 
 let puppyAvail = document.createElement("button");
     puppyAvail.classList.add("btn-avail");

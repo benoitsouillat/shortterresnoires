@@ -32,7 +32,7 @@ const createPart = (female, male, countLitter) => {
         maleImgDiv.classList.add("img-weeding")
 
     let femaleImg = document.createElement("img");
-        femaleImg.src = path + female.dogName.toLowerCase() + "-pres" + jpg;
+        femaleImg.src = imgPath + female.dogName.toLowerCase() + "-pres" + jpg;
         femaleImg.alt = female.dogName.toLowerCase();
     let femaleName = document.createElement("h3");
         femaleName.textContent = female.dogName;
@@ -42,7 +42,7 @@ const createPart = (female, male, countLitter) => {
         femaleBreeder.textContent = "Issue " + female.dogBreeder;
 
     let maleImg = document.createElement("img");
-        maleImg.src = path + male.dogName.toLowerCase() + "16-09debout3" + jpg;
+        maleImg.src = imgPath + male.dogName.toLowerCase() + "16-09debout3" + jpg;
         maleImg.alt = female.dogName.toLowerCase();
     let maleName = document.createElement("h3");
         maleName.textContent = male.dogName;

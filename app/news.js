@@ -32,7 +32,7 @@ articles.forEach(elm => {
         authorArticle.classList.add("article__author");
     let imageArticle = document.createElement("img");
         imageArticle.classList.add("article__image");
-        imageArticle.src = path + elm.artDog.dogName.toLowerCase() + "2"+ jpg;
+        imageArticle.src = imgPath + elm.artDog.dogName.toLowerCase() + "2"+ jpg;
 
 
     sectionA.insertAdjacentElement("afterbegin", asideArticle);

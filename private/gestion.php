@@ -11,22 +11,36 @@
         <link rel="stylesheet" media="screen and (min-width: 1280px)" href="../css/main.css" type="text/css" />
         <link rel="shortcut icon" type="image/ico" href="../favicon/favicon.ico" />
 
+    <script type="text/javascript" src="/app/res.js" ></script>
     </head>
     <body>
-        <h1>Page Gestion - Acces restreint</h1>
+        <h1 id="acces">Page Gestion - Acces restreint</h1>
+
+        <img src="http://localhost:8080/src/img/evapanama.jpg" alt="test" />
+
+        <script>
+            let acces = document.getElementById('acces');
+            let link = document.createElement('img');
+                link.src = "../" + imgPath + 'panama1' + jpg;
+                link.rel = " Test by script ";
+            console.log(link);
+            acces.appendChild(link);
+            
+        </script>
+
         <section class="mt-5">
             <h5 class="title">Ajouter un chien</h5>
-            <form method="post" class="ml-5" action="traitement.js">
+            <form method="post" class="ml-5" action="connexion.php">
 
             <fieldset style='border: beige 1px solid; padding: 20px' class="d-flex flex-column justify-content-end align-items-start">
                 <legend style='margin-left: 15px'> Ajouter un chien</legend>
                 <p class="form__group">
                     <label for="dogname">Nom du chien</label> :
-                    <input type="text" name="dogname" id="dogname" required />
+                    <input type="text" name="dogname" id="dogname" required/>
                 </p>
                 <p class="form__group">
                     <label for="dogbirth">Date de Naissance: 
-                        <input type="date" name="dogbirth" required />
+                        <input type="date" name="dogbirth"  />
                     </label> 
                 </p>
                 <p class="form__group">
@@ -62,25 +76,25 @@
                 </p>
                 <p>
                     <label for="dogmom">Nom de la Mère</label> : 
-                    <input type="text" name="dogmom" required />
+                    <input type="text" name="dogmom"  />
                 </p>
                 <p>
                     <label for="dogdad">Nom du Père</label> : 
-                    <input type="text" name="dogdad" required />
+                    <input type="text" name="dogdad"  />
                 </p>
                 <p>
                     <label for="dogpuce">Puce</label> : 
-                    <input type="text" name="dogpuce" required />
+                    <input type="text" name="dogpuce"  />
                 </p>
                 <p>
                     <label for="doglof">Lof</label> : 
-                    <input type="text" name="doglof" required />
+                    <input type="text" name="doglof"  />
                 </p>
             </fieldset>
                 <!-- TESTS -->
                 <p class="form__group">
                     <label for="email">EMAIL</label> : 
-                    <input type="email" name="email" required />
+                    <input type="email" name="email"  />
                 </p>
                     <button class="btn__form btn btn-sm btn-light ml-5" type="submit">Ajouter le chien</button>
                     <button class="btn__form btn btn-sm btn-light ml-5" type="reset">Tout effacer</button>

@@ -9,7 +9,7 @@
         ?>
 
     </head>
-    <body>
+    <body id="puppy-page">
         <header id="header">
             <h1 class="title">Okkaina et Rock</h1>
             <nav id="nav">

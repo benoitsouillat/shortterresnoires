@@ -295,6 +295,13 @@ body p {
   }
 }
 
+@media all and (min-width: 1000px) {
+  .center-main {
+    width: 80%;
+    margin: auto;
+  }
+}
+
 /* --------------------- Cours & Tests ---------------------------- */
 .form__group input {
   color: purple;
@@ -943,44 +950,7 @@ body p {
 }
 
 /* Mixins && Extensions */
-#puppiesTab {
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-
-.puppy_male {
-  text-shadow: 2px 2px 2px black;
-  color: lightblue;
-  -webkit-box-shadow: 4px 8px 2px lightblue;
-          box-shadow: 4px 8px 2px lightblue;
-  background-color: #235e71;
-}
-
-.puppy_female {
-  text-shadow: 2px 2px 2px black;
-  color: pink;
-  -webkit-box-shadow: 4px 8px 2px pink;
-          box-shadow: 4px 8px 2px pink;
-  background-color: #6f0b30;
-}
-
-.puppy__card {
-  border-radius: 1%;
+#puppy-page #puppiesTab {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -990,121 +960,32 @@ body p {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 50px;
-  width: 90%;
-  height: 350px;
-  margin-left: auto;
-  margin-right: auto;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 300px;
 }
 
-.puppy__card p {
-  font-weight: bold;
-  text-align: center;
+#puppy-page .puppy_male {
+  text-shadow: 2px 2px 2px black;
+  color: lightblue;
+  background-color: #235e71;
 }
 
-@media all and (max-width: 1199px) {
-  .puppy__card {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    height: auto;
-  }
+#puppy-page .puppy_female {
+  text-shadow: 2px 2px 2px black;
+  color: pink;
+  background-color: #6f0b30;
 }
 
-.puppy_info-align_dogname {
-  color: black;
-  text-shadow: none;
-  text-decoration: underline;
-  border: solid black 2px;
-  border-radius: 5%;
-  background-color: #E6BA7E;
-  width: 200px;
-}
-
-@media all and (min-width: 1200px) {
-  .puppy_info-align {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    max-width: 15%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media all and (max-width: 1199px) {
-  .puppy_info-align {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 30%;
-  }
-}
-
-@media all and (max-width: 1000px) {
-  .puppy_img {
-    width: 60%;
-  }
-}
-
-.puppy_img img {
-  border-radius: 5%;
-  padding: 10px;
-  width: 570px;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media all and (max-width: 1000px) {
-  .puppy_img img {
-    width: 70%;
-    border-radius: 10%;
-    margin-left: 25%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    -webkit-box-shadow: black 2px 2px 4px;
-            box-shadow: black 2px 2px 4px;
-  }
-}
-
-.puppy_img:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-.puppy_list-button {
+#puppy-page .puppy__card {
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 2px beige;
+          box-shadow: 2px 2px 2px beige;
+  border: solid 1px beige;
+  border-radius: 1%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1112,32 +993,133 @@ body p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  margin: auto;
-  height: 60%;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 320px;
+  max-width: 380px;
+  height: 480px;
+  padding-bottom: 10px;
+  margin: 10px;
 }
 
-@media all and (max-width: 1199px) {
-  .puppy_list-button {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+#puppy-page .puppy__card p {
+  font-weight: bold;
+}
+
+#puppy-page .puppy_info-align {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 10%;
+  width: 100%;
+  min-width: 100%;
+  min-height: 220px;
+  height: auto;
+}
+
+#puppy-page .puppy_info-align_dogname {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  color: black;
+  text-shadow: none;
+  text-decoration: underline;
+  text-align: center;
+  border: solid black 2px;
+  background-color: #E6BA7E;
+  width: 170px;
+  position: relative;
+  left: -11%;
+  margin-bottom: 0;
+}
+
+#puppy-page .puppy_info-align .btn-avail {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 3%;
+  margin-top: 3%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+#puppy-page .puppy_info-align .fa {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+#puppy-page .puppy_info-align p:nth-child(2) {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+#puppy-page .puppy_info-align p:nth-child(3) {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+
+#puppy-page .puppy_info-align p:nth-child(4) {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+}
+
+#puppy-page .puppy_img {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 100%;
+  min-width: 300px;
+  height: auto;
+  position: relative;
+  left: 0;
+  top: 0;
+  border-bottom: 3px solid black;
+}
+
+#puppy-page .puppy_img:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  border-bottom: 3px solid black;
+  margin-bottom: 1px;
+}
+
+#puppy-page .puppy_img img {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-radius: 1%;
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#puppy-page .puppy_list-button {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
 }
 
 .puppy-para {
@@ -1148,6 +1130,36 @@ body p {
 .puppy-para .para-right {
   width: 80%;
   text-align: end;
+}
+
+@media all and (max-width: 635px) {
+  #puppy-page .puppy__card {
+    width: 90%;
+    max-width: unset;
+    min-height: 500px;
+    height: auto;
+  }
+  #puppy-page .puppy__card a {
+    max-width: unset;
+  }
+  #puppy-page .puppy__card .puppy_info-align {
+    padding-left: 10%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 200px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .puppy-para {
+    margin: 0 3%;
+  }
+  .puppy-para .para-right {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 /* Page du livre des origines françaises */
@@ -1833,6 +1845,79 @@ body p {
     height: 80px;
     min-width: 160px;
   }
+}
+
+#code-rural #articles-link {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#code-rural #articles-link a {
+  margin: 5px;
+  width: 90%;
+  max-width: 330px;
+  height: 75px;
+}
+
+#code-rural #articles-link a:hover {
+  -webkit-transform: unset;
+          transform: unset;
+}
+
+#code-rural article {
+  margin: 30px 0;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid beige;
+  background-color: #121212;
+}
+
+#code-rural > h3 {
+  font-size: 1.17em;
+  width: 100%;
+}
+
+#code-rural h5 {
+  text-decoration: underline;
+  font-style: italic;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+#code-rural .indent {
+  margin-left: 20px;
+}
+
+#code-rural .indent-lg {
+  margin-left: 50px;
+}
+
+#code-rural .article-number {
+  font-style: italic;
+  margin-left: 20px;
+}
+
+#code-rural .top-page {
+  font-size: 0.8em;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  max-width: 100px;
 }
 
 /* Mixins && Extensions */

@@ -40,9 +40,9 @@ const createBlock = (name) => {
             }
             
             info.children[4].rel = elm.dogName.toLowerCase();
-            info.children[4].href = path + elm.dogName.toLowerCase() + '-pres' + jpg;
+            info.children[4].href = imgPath + elm.dogName.toLowerCase() + '-pres' + jpg;
 
-            image.src = path + elm.dogName.toLowerCase() + '-pres' + jpg;
+            image.src = imgPath + elm.dogName.toLowerCase() + '-pres' + jpg;
             image.alt = elm.dogName;
         }
     });

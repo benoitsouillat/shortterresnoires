@@ -1,0 +1,57 @@
+#code-rural {
+    #articles-link {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        a {
+            margin: 5px;
+            width: 90%;
+            max-width: 330px;
+            height: 75px;
+            &:hover {
+                transform: unset;
+            }
+        }
+    }
+    article {
+        margin: 30px 0;
+        padding: 10px;
+        padding-bottom: 20px;
+
+        border-bottom: 1px solid $text-color;
+        background-color: lighten(#000, 7);
+        
+    }
+    > h3 {
+        font-size: 1.17em;
+        width: 100%;
+    }
+    h5 {
+        text-decoration: underline;
+        font-style: italic;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    .indent {
+        margin-left: 20px;
+    }
+    .indent-lg {
+        margin-left: 50px;
+    }
+    .article-number {
+        font-style: italic;
+        margin-left: 20px;
+    }
+
+    .top-page {
+        font-size: 0.8em;
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+        max-width: 100px;
+    }
+}

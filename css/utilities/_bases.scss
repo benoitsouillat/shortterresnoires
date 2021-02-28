@@ -95,3 +95,11 @@ body p {
       right: 0;
     }
   }
+
+  @media all and (min-width: 1000px)
+{
+  .center-main {
+      width: 80%;
+      margin: auto;
+  }
+}

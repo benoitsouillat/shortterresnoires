@@ -5,149 +5,126 @@
 
 @mixin puppy-card($colour, $back-colour) {
     color: $colour;
-    box-shadow: 4px 8px 2px $colour;
     background-color: $back-colour;
 }
-#puppiesTab {
-    margin: 0;
-    padding: 0;
+#puppy-page {
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: nowrap;
-
-}
-
-.puppy {
-    &_male {
-        text-shadow: 2px 2px 2px black;
-        @include puppy-card($puppy-male, darken($puppy-male, 50));
+    #puppiesTab {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        min-width: 300px;
     }
-
-    &_female {
-        text-shadow: 2px 2px 2px black;
-        @include puppy-card($puppy-female, $puppy-female-back);
-    }
-    &__card {
-
-        p {
-            font-weight: bold;
-            text-align: center;
+    .puppy {
+        &_male {
+            text-shadow: 2px 2px 2px black;
+            @include puppy-card($puppy-male, darken($puppy-male, 50));
         }
-        
+        &_female {
+            text-shadow: 2px 2px 2px black;
+            @include puppy-card($puppy-female, $puppy-female-back);
+        }
+        &__card {
+            overflow: hidden;
+            box-shadow: 2px 2px 2px $text-color;
+            border: solid 1px beige;
             border-radius: 1%;
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            margin-top: 50px;
-            width: 90%;
-            height: 350px;
-            margin-left: auto;
-            margin-right: auto;
-
-        @media all and (max-width: 1199px)
-        {
-
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            height: auto;
-        }
-    }
-
-    &_info-align {
-        &_dogname {
-            color : black;
-            text-shadow : none;
-            text-decoration : underline;
-            border : solid black 2px;
-            border-radius : 5%;
-            background-color : #E6BA7E;
-            width : 200px;
-
-        }
-        @media all and (min-width: 1200px)
-        {
-            display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            max-width: 15%;
-            margin-left: auto;
-            margin-right: auto;
-
-
-
-        }
-        @media all and (max-width: 1199px)
-        {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            width: 30%;
-        }
-    }
-    &_img {
-
-        @media all and (max-width: 1000px)
-        {
-            width: 60%;
-        } 
-
-        img {
-                border-radius: 5%;
-                padding: 10px;
-                width: 570px;
-                height: auto;
-                object-fit: cover;
-
-
-
-           @media all and (max-width: 1000px)
-            {
-                width: 70%;
-                border-radius: 10%;
-                margin-left: 25%;
-                margin-top: 5%;
-                margin-bottom: 5%;
-                box-sizing: border-box;
-                box-shadow: black 2px 2px 4px;
+            justify-content: space-between;
+            min-width: 320px;
+            max-width: 380px;
+            height: 480px;
+            padding-bottom: 10px;
+            margin: 10px;
+            p {
+                font-weight: bold;
             }
-            
-
         }
-        &:hover {
-            transform: scale(1.05);
-        }
-    }
 
-    &_list-button {
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: stretch;
-        margin: auto;
-        height: 60%;
-        flex-wrap: nowrap;
-
-        @media all and (max-width: 1199px)
-        {
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
+        &_info-align {
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding-left: 10%;
             width: 100%;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            min-width: 100%;
+            min-height: 220px;
+            height: auto;
+
+            &_dogname {
+                order: -1;
+                color : black;
+                text-shadow: none;
+                text-decoration : underline;
+                text-align: center;
+                border : solid black 2px;
+                background-color : #E6BA7E;
+                width : 170px;
+                position: relative;
+                left: -11%;
+                margin-bottom: 0;
+            }
+            .btn-avail {
+                align-self: flex-end;
+                margin-right: 3%;
+                margin-top: 3%;
+                order: 1;
+            }
+            .fa {
+                order: 2;
+            }
+            p:nth-child(2)
+            {
+                order: 3;
+            }
+            p:nth-child(3)
+            {
+                order: 4;
+            }
+            p:nth-child(4)
+            {
+                order: 5;
+            }
+        }
+        &_img {
+            order: 1;
+            width: 100%;
+            min-width: 300px;
+            //max-width: 360px;
+            height: auto;
+            position: relative;
+            left: 0;
+            top: 0;
+            border-bottom: 3px solid black;
+
+            &:hover {
+                transform: scale(1.03);
+                border-bottom: 3px solid black;
+                margin-bottom: 1px;
+            }
+            img {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                border-radius: 1%;
+                border-bottom-left-radius: unset;
+                border-bottom-right-radius: unset;
+                object-fit: cover;
+            }
+        }
+
+        &_list-button {
+            order: 3;
+            display: flex;
+            margin: auto;
         }
     }
 }
-
 
 .puppy-para {
     text-align: center;
@@ -158,4 +135,37 @@
         text-align: end;
     }
 }
+@media all and (max-width: 635px)
+{
+    #puppy-page {
 
+        .puppy__card {
+            width: 90%;
+            max-width: unset;
+            min-height: 500px;
+            height: auto;
+            a {
+                max-width: unset;
+            }
+            .puppy_info-align {
+                padding-left: 10%;
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                height: auto;
+                min-height: 200px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 400px)
+{
+    .puppy-para {
+        margin: 0 3%;
+        .para-right {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}

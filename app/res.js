@@ -17,8 +17,7 @@ const reserv = "n";
 /* Test Classes étendues avec des nom en Francais */
 
 class chien {
-    constructor (chienName, chienBirth, chienColor, chienSex, chienDad, chienMom)
-    {
+    constructor(chienName, chienBirth, chienColor, chienSex, chienDad, chienMom) {
         this.chienName = chienName;
         this.chienBirth = chienBirth;
         this.chienColor = chienColor;
@@ -27,8 +26,7 @@ class chien {
         this.chienMom = chienMom;
 
     }
-    isMale()
-    {
+    isMale() {
         if (this.chienSex === male)
             return true;
         return false;
@@ -36,8 +34,7 @@ class chien {
 }
 
 class lof extends chien {
-    constructor (lofNumber, puceNumber)
-    {
+    constructor(lofNumber, puceNumber) {
         this.lofNumber = lofNumber;
         this.puceNumber = puceNumber;
     }
@@ -45,8 +42,7 @@ class lof extends chien {
 
 
 class litter {
-    constructor (puppyMom, puppyDad, puppyBirth, maleNumber, femaleNumber)
-    {
+    constructor(puppyMom, puppyDad, puppyBirth, maleNumber, femaleNumber) {
         this.puppyMom = puppyMom;
         this.puppyDad = puppyDad;
         this.puppyBirth = puppyBirth;
@@ -58,20 +54,19 @@ class litter {
 /* FIN des tests */
 
 class dog {
-    constructor(dogName, dogBirth, dogBreed, dogBreeder, dogSex, dogLitter, dogLitterOne){
+    constructor(dogName, dogBirth, dogBreed, dogBreeder, dogSex, dogLitter, dogLitterOne) {
 
-    this.dogName = dogName;
-    this.dogBirth = dogBirth;
-    this.dogBreed = dogBreed;
-    this.dogBreeder = dogBreeder;
-    this.dogSex = dogSex;
-    this.dogLitter = dogLitter;
-    this.dogLitterOne = dogLitterOne;
+        this.dogName = dogName;
+        this.dogBirth = dogBirth;
+        this.dogBreed = dogBreed;
+        this.dogBreeder = dogBreeder;
+        this.dogSex = dogSex;
+        this.dogLitter = dogLitter;
+        this.dogLitterOne = dogLitterOne;
     }
 }
 class puppy {
-    constructor (puppyBirth, puppySex, puppyColor, puppyNecklace, puppyProfil, puppyAvailable, puppyName)
-    {
+    constructor(puppyBirth, puppySex, puppyColor, puppyNecklace, puppyProfil, puppyAvailable, puppyName) {
         this.puppyBirth = puppyBirth;
         this.puppySex = puppySex;
         this.puppyColor = puppyColor;
@@ -80,45 +75,43 @@ class puppy {
         this.puppyAvailable = puppyAvailable;
         this.puppyName = puppyName;
     }
-    isPuppyMale()
-    {
+    isPuppyMale() {
         if (this.puppySex === male)
             return true;
         return false;
     }
 }
 
-
 let male1 = new puppy("16 Novembre 2020", male, "Noir", "Vert", "vert4s006", reserv, "Riscott");
 let male2 = new puppy("16 Novembre 2020", male, "Noir", "Rouge", "randy-joue", reserv, "Randy");
 let male3 = new puppy("16 Novembre 2020", male, "Noir", "Bleu Foncé", "bleuf4s001", reserv, "Rod");
 let male4 = new puppy("16 Novembre 2020", male, "Noir Bringé", "Bleu Clair", "bleuc4s003", reserv, "Ramsès");
 let male5 = new puppy("16 Novembre 2020", male, "Bringé", "Marron", "marron4s002", reserv, "Raoul");
-let male6 = new puppy("16 Novembre 2020", male, "Noir Bringé", "Jaune", "jaune4s001",reserv, "Reïko");
-let male7 = new puppy("16 Novembre 2020", male, "Noir", "Beige", "beige",reserv, "Rosko");
+let male6 = new puppy("16 Novembre 2020", male, "Noir Bringé", "Jaune", "jaune4s001", reserv, "Reïko");
+let male7 = new puppy("16 Novembre 2020", male, "Noir", "Beige", "beige", reserv, "Rosko");
 
-let male11 = new puppy("7 Février 2021", male, "Grise", "Vert", "vert", dispo, "");
-let male12 = new puppy("7 Février 2021", male, "Grise", "Rouge", "rouge", dispo, "");
-let male13 = new puppy("7 Février 2021", male, "Noire ( Bringé )", "Bleu Clair", "bleuc", dispo, "");
-let male14 = new puppy("7 Février 2021", male, "Bringée", "Jaune", "jaune", dispo, "");
-let male15 = new puppy("7 Février 2021", male, "Fauve", "Bleu Foncé", "bleuf", dispo, "");
+let male11 = new puppy("7 Février 2021", male, "Grise", "Vert", "vert-j21", dispo, "");
+let male12 = new puppy("7 Février 2021", male, "Grise", "Rouge", "rouge-j21", 0, "");
+let male13 = new puppy("7 Février 2021", male, "Noire ( Bringé )", "Bleu Clair", "bleuc-j21", dispo, "");
+let male14 = new puppy("7 Février 2021", male, "Bringée", "Jaune", "jaune-j21", dispo, "");
+let male15 = new puppy("7 Février 2021", male, "Fauve", "Bleu Foncé", "bleuf-j21", dispo, "");
 
-let female1 = new puppy("7 Février 2021", female, "Fauve", "Violet", "violet", reserv, "Safari");
-let female2 = new puppy("7 Février 2021", female, "Bringée", "Orange", "orange", dispo, "");
-let female3 = new puppy("7 Février 2021", female, "Noire", "Rose Pâle", "rosepale", 0, "");
-let female4 = new puppy("7 Février 2021", female, "Bringée", "Beige", "beige", dispo, "");
-let female5 = new puppy("7 Février 2021", female, "Bringée", "Marron", "marron", dispo, "");
-let female6 = new puppy("7 Février 2021", female, "Grise", "Noir", "noir", reserv, "");
-let female7 = new puppy("7 Février 2021", female, "Fauve", "Rose", "rose", dispo, "");
-let female8 = new puppy("7 Février 2021", female, "Fauve", "Aucun", "aucun", dispo, "");
+let female1 = new puppy("7 Février 2021", female, "Fauve", "Violet", "violet-j21", reserv, "Safari");
+let female2 = new puppy("7 Février 2021", female, "Bringée", "Orange", "orange-j21", reserv, "Shanelle");
+let female3 = new puppy("7 Février 2021", female, "Noire", "Rose Pâle", "rosepale-j21", reserv, "Sen");
+let female4 = new puppy("7 Février 2021", female, "Bringée", "Beige", "beige-j21", 0, "");
+let female5 = new puppy("7 Février 2021", female, "Bringée", "Marron", "marron-j21", dispo, "");
+let female6 = new puppy("7 Février 2021", female, "Grise", "Noir", "noir-j21", reserv, "Simone");
+let female7 = new puppy("7 Février 2021", female, "Fauve", "Rose", "rose-j21", reserv, "S'Bunker");
+let female8 = new puppy("7 Février 2021", female, "Fauve", "Aucun", "aucun-j21", 0, "Stella");
 
 let okkainaLitterOne = [male1, male2, male3, male4, male5, male6, male7];
-let panamaLitterOne = [male11, male12, male13, male14, male15, female1, female2, female3, female4, 
-female5, female6, female7, female8];
+let panamaLitterOne = [male11, male12, male13, male14, male15, female1, female2, female3, female4,
+    female5, female6, female7, female8];
 
-let okkaina = new dog ("Okkaina", "10 Septembre 2018", caneCorso, templeJade, female, true, okkainaLitterOne);
-let panama = new dog ("Panama", "02 Juin 2019", caneCorso, templeJade, female, true, panamaLitterOne);
-let rock = new dog ("Rock", "18 Mars 2018", caneCorso, diMunteanu, male, false, false);
+let okkaina = new dog("Okkaina", "10 Septembre 2018", caneCorso, templeJade, female, true, okkainaLitterOne);
+let panama = new dog("Panama", "02 Juin 2019", caneCorso, templeJade, female, true, panamaLitterOne);
+let rock = new dog("Rock", "18 Mars 2018", caneCorso, diMunteanu, male, false, false);
 
 let femaleClass = [okkaina, panama];
 let maleClass = [rock];
@@ -126,19 +119,8 @@ let dogClass = femaleClass.concat(maleClass);
 
 
 let path = "../src/img/";
+let imgPath = "/src/img/";
 let jpg = ".jpg";
-
-/*let images = ["okkaina1", "okkaina2", "okkaina3",
-"okkaina4", "okkaina5", "okkaina7", "okkaina8", "okkaina9",
-"okkaina10", "okkaina11",
-"panama1", "panama2","panama3", "panama4", "panama5", "panama6", "panama7",
-"panama8",
-"okkainapanama", "rock16-9couché", "rockface", "rock3", "rock4", "rock5", "rock6", "rockprofil", 
-"rockpropuls", "rocktete",
-"okkainarock", "irréelle1", "nuit d'étoiles1"]; */
-
-
-
 
 
 /* -------------------------- News & Articles ---------------------------------- */
@@ -199,7 +181,7 @@ let articles = [rockArrived, expoDompierre20, okkainaMarried];
 
 /* ---------------------- FANCYBOX ---------------------------- */
 
-$(document).ready(function() {
+$(document).ready(function () {
     $(".fancybox").fancybox({
         fitToView: false,
         beforeShow: function () {
@@ -207,8 +189,8 @@ $(document).ready(function() {
             this.height = 576;
         },
 
-        openEffect	: 'elastic',
-    	closeEffect	: 'elastic',
+        openEffect: 'elastic',
+        closeEffect: 'elastic',
 
     });
 });

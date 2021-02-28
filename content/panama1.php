@@ -9,7 +9,7 @@
         ?>
 
     </head>
-    <body>
+    <body id="puppy-page">
         <header id="header">
             <h1 class="title">Panama et Rock</h1>
             <nav id="nav">
@@ -59,7 +59,12 @@
             <a class="fancybox" rel="aucun" href="../src/img/panama-puppies/aucun/Image0008.jpg"></a>
             <a class="fancybox" rel="aucun" href="../src/img/panama-puppies/aucun/Image0009.jpg"></a>
             <a class="fancybox" rel="aucun" href="../src/img/panama-puppies/aucun/Image0010.jpg"></a>
-
+            <a class="fancybox" rel="aucun" href="../src/img/panama-puppies/aucun/Image0300.jpg"></a>
+            <a class="fancybox" rel="aucun" href="../src/img/panama-puppies/aucun/Image0301.jpg"></a>
+            <a class="fancybox" rel="aucun" href="../src/img/panama-puppies/aucun/Image0302.jpg"></a>
+            <a class="fancybox" rel="aucun" href="../src/img/panama-puppies/aucun/Image0303.jpg"></a>
+            <a class="fancybox" rel="aucun" href="../src/img/panama-puppies/aucun/Image0304.jpg"></a>
+            <a class="fancybox" rel="aucun" href="../src/img/panama-puppies/aucun/Image0305.jpg"></a>
         <section> <!-- Beige -->
             <a class="fancybox" rel="beige" href="../src/img/panama-puppies/beige/Image0001.jpg"></a>
             <a class="fancybox" rel="beige" href="../src/img/panama-puppies/beige/Image0002.jpg"></a>
@@ -70,6 +75,12 @@
             <a class="fancybox" rel="beige" href="../src/img/panama-puppies/beige/Image0007.jpg"></a>
             <a class="fancybox" rel="beige" href="../src/img/panama-puppies/beige/Image0008.jpg"></a>
             <a class="fancybox" rel="beige" href="../src/img/panama-puppies/beige/Image0009.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/panama-puppies/beige/Image0300.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/panama-puppies/beige/Image0301.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/panama-puppies/beige/Image0302.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/panama-puppies/beige/Image0303.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/panama-puppies/beige/Image0304.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/panama-puppies/beige/Image0305.jpg"></a>
         </section>
         <section> <!-- Bleu Clair -->
             <a class="fancybox" rel="bleu clair" href="../src/img/panama-puppies/bleuclair/Image0001.jpg"></a>
@@ -77,6 +88,10 @@
             <a class="fancybox" rel="bleu clair" href="../src/img/panama-puppies/bleuclair/Image0003.jpg"></a>
             <a class="fancybox" rel="bleu clair" href="../src/img/panama-puppies/bleuclair/Image0004.jpg"></a>
             <a class="fancybox" rel="bleu clair" href="../src/img/panama-puppies/bleuclair/Image0005.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/panama-puppies/bleuclair/Image0300.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/panama-puppies/bleuclair/Image0301.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/panama-puppies/bleuclair/Image0302.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/panama-puppies/bleuclair/Image0303.jpg"></a>
         </section>
         <section> <!-- Bleu Foncé -->
             <a class="fancybox" rel="bleu foncé" href="../src/img/panama-puppies/bleufoncé/Image0001.jpg"></a>
@@ -85,6 +100,13 @@
             <a class="fancybox" rel="bleu foncé" href="../src/img/panama-puppies/bleufoncé/Image0004.jpg"></a>
             <a class="fancybox" rel="bleu foncé" href="../src/img/panama-puppies/bleufoncé/Image0005.jpg"></a>
             <a class="fancybox" rel="bleu foncé" href="../src/img/panama-puppies/bleufoncé/Image0006.jpg"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/panama-puppies/bleufoncé/Image0300.jpg"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/panama-puppies/bleufoncé/Image0301.jpg"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/panama-puppies/bleufoncé/Image0302.jpg"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/panama-puppies/bleufoncé/Image0303.jpg"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/panama-puppies/bleufoncé/Image0304.jpg"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/panama-puppies/bleufoncé/Image0305.jpg"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/panama-puppies/bleufoncé/Image0306.jpg"></a>
         </section>
         <section> <!-- Jaune -->
             <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0001.jpg"></a>
@@ -92,6 +114,16 @@
             <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0003.jpg"></a>
             <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0004.jpg"></a>
             <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0005.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0300.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0301.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0302.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0303.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0304.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0305.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0306.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0307.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0308.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0309.jpg"></a>
 
         </section>
         <section> <!-- Marron -->
@@ -103,6 +135,9 @@
             <a class="fancybox" rel="marron" href="../src/img/panama-puppies/marron/Image0006.jpg"></a>
             <a class="fancybox" rel="marron" href="../src/img/panama-puppies/marron/Image0007.jpg"></a>
             <a class="fancybox" rel="marron" href="../src/img/panama-puppies/marron/Image0008.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/panama-puppies/marron/Image0300.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/panama-puppies/marron/Image0301.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/panama-puppies/marron/Image0302.jpg"></a>
         </section>
         <section> <!-- Noir -->
             <a class="fancybox" rel="noir" href="../src/img/panama-puppies/noir/Image0001.jpg"></a>
@@ -113,6 +148,14 @@
             <a class="fancybox" rel="noir" href="../src/img/panama-puppies/noir/Image0006.jpg"></a>
             <a class="fancybox" rel="noir" href="../src/img/panama-puppies/noir/Image0007.jpg"></a>
             <a class="fancybox" rel="noir" href="../src/img/panama-puppies/noir/Image0008.jpg"></a>
+            <a class="fancybox" rel="noir" href="../src/img/panama-puppies/noir/Image0300.jpg"></a>
+            <a class="fancybox" rel="noir" href="../src/img/panama-puppies/noir/Image0301.jpg"></a>
+            <a class="fancybox" rel="noir" href="../src/img/panama-puppies/noir/Image0302.jpg"></a>
+            <a class="fancybox" rel="noir" href="../src/img/panama-puppies/noir/Image0303.jpg"></a>
+            <a class="fancybox" rel="noir" href="../src/img/panama-puppies/noir/Image0304.jpg"></a>
+            <a class="fancybox" rel="noir" href="../src/img/panama-puppies/noir/Image0305.jpg"></a>
+            <a class="fancybox" rel="noir" href="../src/img/panama-puppies/noir/Image0306.jpg"></a>
+            <a class="fancybox" rel="noir" href="../src/img/panama-puppies/noir/Image0307.jpg"></a>
         </section>
         <section> <!-- Orange -->
             <a class="fancybox" rel="orange" href="../src/img/panama-puppies/orange/Image0001.jpg"></a>
@@ -121,6 +164,10 @@
             <a class="fancybox" rel="orange" href="../src/img/panama-puppies/orange/Image0004.jpg"></a>
             <a class="fancybox" rel="orange" href="../src/img/panama-puppies/orange/Image0005.jpg"></a>
             <a class="fancybox" rel="orange" href="../src/img/panama-puppies/orange/Image0006.jpg"></a>
+            <a class="fancybox" rel="orange" href="../src/img/panama-puppies/orange/Image0300.jpg"></a>
+            <a class="fancybox" rel="orange" href="../src/img/panama-puppies/orange/Image0301.jpg"></a>
+            <a class="fancybox" rel="orange" href="../src/img/panama-puppies/orange/Image0302.jpg"></a>
+            <a class="fancybox" rel="orange" href="../src/img/panama-puppies/orange/Image0303.jpg"></a>
         </section>
         <section> <!-- Rose -->            
             <a class="fancybox" rel="rose" href="../src/img/panama-puppies/rose/Image0001.jpg"></a>
@@ -131,6 +178,12 @@
             <a class="fancybox" rel="rose" href="../src/img/panama-puppies/rose/Image0006.jpg"></a>
             <a class="fancybox" rel="rose" href="../src/img/panama-puppies/rose/Image0007.jpg"></a>
             <a class="fancybox" rel="rose" href="../src/img/panama-puppies/rose/Image0008.jpg"></a>
+            <a class="fancybox" rel="rose" href="../src/img/panama-puppies/rose/Image0300.jpg"></a>
+            <a class="fancybox" rel="rose" href="../src/img/panama-puppies/rose/Image0301.jpg"></a>
+            <a class="fancybox" rel="rose" href="../src/img/panama-puppies/rose/Image0302.jpg"></a>
+            <a class="fancybox" rel="rose" href="../src/img/panama-puppies/rose/Image0303.jpg"></a>
+            <a class="fancybox" rel="rose" href="../src/img/panama-puppies/rose/Image0304.jpg"></a>
+            <a class="fancybox" rel="rose" href="../src/img/panama-puppies/rose/Image0305.jpg"></a>
 
         </section>
         <section> <!-- Rose Pâle -->
@@ -142,6 +195,11 @@
             <a class="fancybox" rel="rose pâle" href="../src/img/panama-puppies/rosepale/Image0006.jpg"></a>
             <a class="fancybox" rel="rose pâle" href="../src/img/panama-puppies/rosepale/Image0007.jpg"></a>
             <a class="fancybox" rel="rose pâle" href="../src/img/panama-puppies/rosepale/Image0008.jpg"></a>
+            <a class="fancybox" rel="rose pâle" href="../src/img/panama-puppies/rosepale/Image0300.jpg"></a>
+            <a class="fancybox" rel="rose pâle" href="../src/img/panama-puppies/rosepale/Image0301.jpg"></a>
+            <a class="fancybox" rel="rose pâle" href="../src/img/panama-puppies/rosepale/Image0302.jpg"></a>
+            <a class="fancybox" rel="rose pâle" href="../src/img/panama-puppies/rosepale/Image0303.jpg"></a>
+            <a class="fancybox" rel="rose pâle" href="../src/img/panama-puppies/rosepale/Image0304.jpg"></a>
             
         </section>
         <section> <!-- Rouge -->
@@ -152,6 +210,14 @@
             <a class="fancybox" rel="rouge" href="../src/img/panama-puppies/rouge/Image0005.jpg"></a>
             <a class="fancybox" rel="rouge" href="../src/img/panama-puppies/rouge/Image0006.jpg"></a>
             <a class="fancybox" rel="rouge" href="../src/img/panama-puppies/rouge/Image0007.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/panama-puppies/rouge/Image0300.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/panama-puppies/rouge/Image0301.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/panama-puppies/rouge/Image0302.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/panama-puppies/rouge/Image0303.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/panama-puppies/rouge/Image0304.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/panama-puppies/rouge/Image0305.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/panama-puppies/rouge/Image0306.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/panama-puppies/rouge/Image0307.jpg"></a>
 
         </section>
         <section> <!-- Vert -->
@@ -160,6 +226,13 @@
             <a class="fancybox" rel="vert" href="../src/img/panama-puppies/vert/Image0003.jpg"></a>
             <a class="fancybox" rel="vert" href="../src/img/panama-puppies/vert/Image0004.jpg"></a>
             <a class="fancybox" rel="vert" href="../src/img/panama-puppies/vert/Image0005.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/panama-puppies/vert/Image0300.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/panama-puppies/vert/Image0301.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/panama-puppies/vert/Image0302.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/panama-puppies/vert/Image0303.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/panama-puppies/vert/Image0304.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/panama-puppies/vert/Image0305.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/panama-puppies/vert/Image0306.jpg"></a>
 
         </section>
 
