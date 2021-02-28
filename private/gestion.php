@@ -16,13 +16,13 @@
     <body>
         <h1 id="acces">Page Gestion - Acces restreint</h1>
 
-        <img src="http://localhost:8080/src/img/evapanama.jpg" alt="test" />
-
         <script>
             let acces = document.getElementById('acces');
             let link = document.createElement('img');
                 link.src = "../" + imgPath + 'panama1' + jpg;
                 link.rel = " Test by script ";
+                link.style.width = "200px";
+                link.style.height = "auto";
             console.log(link);
             acces.appendChild(link);
             

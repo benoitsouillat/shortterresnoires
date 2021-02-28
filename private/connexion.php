@@ -16,7 +16,7 @@
 */
     $host = "localhost";
     //$port = "5432";
-    $username = "dev";
+    $username = "venture";
     $password = "furious";
     $canecorso = "lecanecorso";
     $dogname = $_POST['dogname'];
