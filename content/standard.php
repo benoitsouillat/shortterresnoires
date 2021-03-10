@@ -136,7 +136,6 @@
             include "./php/footer.php";
         ?>
 
-        <script src="../app/res.js" ></script>
 
     </body>
 </html>

@@ -85,25 +85,25 @@ class puppy {
 let male1 = new puppy("16 Novembre 2020", male, "Noir", "Vert", "vert4s006", reserv, "Riscott");
 let male2 = new puppy("16 Novembre 2020", male, "Noir", "Rouge", "randy-joue", reserv, "Randy");
 let male3 = new puppy("16 Novembre 2020", male, "Noir", "Bleu Foncé", "bleuf4s001", reserv, "Rod");
-let male4 = new puppy("16 Novembre 2020", male, "Noir Bringé", "Bleu Clair", "bleuc4s003", reserv, "Ramsès");
+let male4 = new puppy("16 Novembre 2020", male, "Noir Bringé", "Bleu Clair", "ramses", reserv, "Ramsès");
 let male5 = new puppy("16 Novembre 2020", male, "Bringé", "Marron", "marron4s002", reserv, "Raoul");
 let male6 = new puppy("16 Novembre 2020", male, "Noir Bringé", "Jaune", "jaune4s001", reserv, "Reïko");
 let male7 = new puppy("16 Novembre 2020", male, "Noir", "Beige", "beige", reserv, "Rosko");
 
-let male11 = new puppy("7 Février 2021", male, "Grise", "Vert", "vert-j21", dispo, "");
-let male12 = new puppy("7 Février 2021", male, "Grise", "Rouge", "rouge-j21", 0, "");
-let male13 = new puppy("7 Février 2021", male, "Noire ( Bringé )", "Bleu Clair", "bleuc-j21", dispo, "");
-let male14 = new puppy("7 Février 2021", male, "Bringée", "Jaune", "jaune-j21", dispo, "");
-let male15 = new puppy("7 Février 2021", male, "Fauve", "Bleu Foncé", "bleuf-j21", dispo, "");
+let male11 = new puppy("7 Février 2021", male, "Grise", "Vert", "vert-5s", reserv, "Djo");
+let male12 = new puppy("7 Février 2021", male, "Grise", "Rouge", "rouge-5s", reserv, "");
+let male13 = new puppy("7 Février 2021", male, "Noire ( Bringé )", "Bleu Clair", "bleuc-5s", dispo, "");
+let male14 = new puppy("7 Février 2021", male, "Bringée", "Jaune", "jaune-5s", dispo, "");
+let male15 = new puppy("7 Février 2021", male, "Fauve", "Bleu Foncé", "bleuf-5s", dispo, "");
 
-let female1 = new puppy("7 Février 2021", female, "Fauve", "Violet", "violet-j21", reserv, "Safari");
-let female2 = new puppy("7 Février 2021", female, "Bringée", "Orange", "orange-j21", reserv, "Shanelle");
-let female3 = new puppy("7 Février 2021", female, "Noire", "Rose Pâle", "rosepale-j21", reserv, "Sen");
-let female4 = new puppy("7 Février 2021", female, "Bringée", "Beige", "beige-j21", 0, "");
-let female5 = new puppy("7 Février 2021", female, "Bringée", "Marron", "marron-j21", dispo, "");
-let female6 = new puppy("7 Février 2021", female, "Grise", "Noir", "noir-j21", reserv, "Simone");
-let female7 = new puppy("7 Février 2021", female, "Fauve", "Rose", "rose-j21", reserv, "S'Bunker");
-let female8 = new puppy("7 Février 2021", female, "Fauve", "Aucun", "aucun-j21", 0, "Stella");
+let female1 = new puppy("7 Février 2021", female, "Fauve", "Violet", "violet-5s", reserv, "Safari");
+let female2 = new puppy("7 Février 2021", female, "Bringée", "Orange", "orange-5s", reserv, "Shanelle");
+let female3 = new puppy("7 Février 2021", female, "Noire", "Rose Pâle", "rosepale-5s", reserv, "Sen");
+let female4 = new puppy("7 Février 2021", female, "Bringée", "Beige", "beige-5s", dispo, "");
+let female5 = new puppy("7 Février 2021", female, "Bringée", "Marron", "marron-5s", reserv, "Schoupa");
+let female6 = new puppy("7 Février 2021", female, "Grise (Froment)", "Noir", "noir-5s", reserv, "Simone");
+let female7 = new puppy("7 Février 2021", female, "Fauve", "Rose", "rose-5s", reserv, "S'Bunker");
+let female8 = new puppy("7 Février 2021", female, "Fauve", "Aucun", "aucun-5s", reserv, "Stella");
 
 let okkainaLitterOne = [male1, male2, male3, male4, male5, male6, male7];
 let panamaLitterOne = [male11, male12, male13, male14, male15, female1, female2, female3, female4,
@@ -120,7 +120,9 @@ let dogClass = femaleClass.concat(maleClass);
 
 let path = "../src/img/";
 let imgPath = "/src/img/";
+let vidPath = "/src/vid/";
 let jpg = ".jpg";
+let mp4 = ".mp4";
 
 
 /* -------------------------- News & Articles ---------------------------------- */
@@ -191,6 +193,12 @@ $(document).ready(function () {
 
         openEffect: 'elastic',
         closeEffect: 'elastic',
+    })
 
-    });
+});
+$(document).ready(function () {
+    $(".fancyvid").fancybox({
+        type: "iframe",
+        minHeight: '90%',
+    })
 });

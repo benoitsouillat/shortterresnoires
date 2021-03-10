@@ -4,7 +4,6 @@
 </head>
 <body>
 <p>
-<img src="../src/img/evapanama.jpg" alt="test" />
 
 <?php
 /*
@@ -14,7 +13,7 @@
 
     echo "coucou" + $bdd;
 */
-    $host = "localhost";
+    $host = "127.0.1.1";
     //$port = "5432";
     $username = "venture";
     $password = "furious";

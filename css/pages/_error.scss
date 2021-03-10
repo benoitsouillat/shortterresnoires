@@ -1,0 +1,36 @@
+.main-error {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-style: italic;
+    font-weight: bold;
+    font-weight: bolder;
+    font-size: 20px;
+
+    height: auto;
+    min-height: 50vh;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    p {
+        margin: 0;
+        padding: 50px 20%;
+        border: solid beige 2px;
+        border-radius: 5%;
+        text-align: center;
+    }
+    a {
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-width: 90%;
+        &:hover {
+            transform: none;
+        }
+    }
+}
