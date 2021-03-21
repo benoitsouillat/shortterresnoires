@@ -78,6 +78,7 @@ const listingPuppy = (puppyClass, puppyLice) => {
         puppyVid.classList.add("btn__anim");
 
         let puppyCardImg = document.createElement('img');
+        puppyCardImg.alt = "L'image est en chargement - Si le problème persiste vous pouvez nous contacter";
         puppyCardImg.src = imgPath + litterLice + "-puppies/" + elm.puppyProfil + jpg;
 
         let puppyAvail = document.createElement("button");
