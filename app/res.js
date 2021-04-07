@@ -90,10 +90,10 @@ let male5 = new puppy("16 Novembre 2020", male, "Bringé", "Marron", "marron4s00
 let male6 = new puppy("16 Novembre 2020", male, "Noir Bringé", "Jaune", "jaune4s001", reserv, "Reïko");
 let male7 = new puppy("16 Novembre 2020", male, "Noir", "Beige", "beige", reserv, "Rosko");
 
-let male11 = new puppy("7 Février 2021", male, "Grise", "Vert", "vert-j45", reserv, "Djo");
-let male12 = new puppy("7 Février 2021", male, "Grise", "Rouge", "rouge-j45", reserv, "Sirius Kairos");
-let male13 = new puppy("7 Février 2021", male, "Noire ( Bringé )", "Bleu Clair", "bleuc-j45", reserv, "Scott");
-let male14 = new puppy("7 Février 2021", male, "Bringée", "Jaune", "jaune-j45", 0, "");
+let male11 = new puppy("7 Février 2021", male, "Bringé Gris", "Vert", "vert-j45", reserv, "Djo");
+let male12 = new puppy("7 Février 2021", male, "Bringé Gris", "Rouge", "rouge-j45", reserv, "Sirius Kairos");
+let male13 = new puppy("7 Février 2021", male, "Bringé Noir", "Bleu Clair", "bleuc-j45", reserv, "Scott");
+let male14 = new puppy("7 Février 2021", male, "Bringé", "Jaune", "jaune-j45", reserv, "Sköll Amiral");
 let male15 = new puppy("7 Février 2021", male, "Fauve", "Bleu Foncé", "bleuf-j45", reserv, "Socrate");
 
 let female1 = new puppy("7 Février 2021", female, "Fauve", "Violet", "violet-j45", reserv, "Safari");

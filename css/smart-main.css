@@ -1658,13 +1658,28 @@ body p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 200px;
+  padding-bottom: 160px;
   font-weight: bold;
   font-style: italic;
 }
 
 #contact-main .contact-info div {
   width: 90%;
+}
+
+#contact-main .contact-info div:nth-child(5) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #contact-main .contact-info div:nth-child(4) {
@@ -1870,7 +1885,7 @@ body p {
         -ms-flex-order: 1;
             order: 1;
   }
-  #contact-main .contact-info div:nth-child(3), #contact-main .contact-info div:nth-child(4) {
+  #contact-main .contact-info div:nth-child(3), #contact-main .contact-info div:nth-child(4), #contact-main .contact-info div:nth-child(5) {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }

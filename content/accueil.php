@@ -28,10 +28,9 @@
                     </ol>    
                     <div class="carousel-inner">
                         <div class='carousel-item active'>
-                            <img src="../src/img/panama4.jpg" alt="Annonce Gestation et Portée">
+                            <img src="../src/img/femelle4-j50.jpg" alt="Annonce Gestation et Portée">
                             <div class="carousel-caption opacity-4">
-                                <p>Nous sommes enchantés de vous annoncer la naissance des 13 chiots issus de Panama et Rock<br/>
-                                Les réservations pour cette portée sont ouvertes.</p>
+                                <p>Sahara du Domaine des Terres Noires est toujours disponible à la réservation, <br/> elle pourra rejoindre sa nouvelle famille à partir du 4 Avril 2021 </p>
                                 <a href="/content/weeding.php" class="btn btn-success btn__anim">Voir nos mariages </a>
                             </div>
                         </div>

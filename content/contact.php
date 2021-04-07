@@ -52,6 +52,10 @@
                     <a href="mailto:domainedesterresnoires@gmail.com" class="btn btn-dark"><span class="fa fa-envelope"></span> Email </a>
                     <a href="#contact-map" class="btn btn-dark"><span class="fa fa-map-marker"></span> Où sommes-nous </a>
                 </div>
+                <div>
+                    <a href="https://g.page/domaine_terres_noires" class="btn btn-dark"><span class="fa fa-star"></span> Notez-nous </a>
+                    <a href="https://wa.me/33670378113" class="btn btn-dark"><span class="fab fa-whatsapp"></span> What's App </a>
+                </div>
 
             </section>
             <div id="contact-map">
