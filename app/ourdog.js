@@ -32,7 +32,7 @@ const createBlock = (name) => {
             if (elm.dogLitter === true)
             {
                 info.children[3].classList.remove("hidden");
-                info.children[3].href = elm.dogName.toLowerCase() + '1.php';
+                info.children[3].href = elm.dogLitterPage + '.php';
             }
             else
             {

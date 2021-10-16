@@ -5,11 +5,11 @@ puppySection.id = "puppiesTab";
 
 content.appendChild(puppySection);
 
-const listingPuppy = (puppyClass, puppyLice) => {
+const listingPuppy = (puppyClass, puppyLiceLitterPage) => {
 
     let maleCount = 0;
     let femaleCount = 0;
-    let litterLice = puppyLice.toLowerCase();
+    let litterLice = puppyLiceLitterPage.toLowerCase();
 
     puppyClass.forEach(elm => {
 

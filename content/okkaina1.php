@@ -46,39 +46,39 @@
 
         <section> <!-- Vert -->
 
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/Chiotsensemble-1.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/CollierVert2s-2.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/CollierVert2s-3.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/CollierVert2s-4.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/CollierVert2s-5.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/Vert16-9.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/Chiotsensemble-3.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/vert4s001.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/vert4s002.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/vert4s003.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/vert4s004.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/vert4s005.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/vert4s007.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/vert/Image00021.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/vert/Image00022.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/vert/Image00023.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/vert/Image00024.jpg"></a>
-            <a class="fancybox" rel="vert" href="../src/img/okkaina-puppies/vert/Image00025.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/Chiotsensemble-1.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/CollierVert2s-2.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/CollierVert2s-3.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/CollierVert2s-4.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/CollierVert2s-5.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/Vert16-9.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/Chiotsensemble-3.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/vert4s001.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/vert4s002.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/vert4s003.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/vert4s004.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/vert4s005.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/vert4s007.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/vert/Image00021.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/vert/Image00022.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/vert/Image00023.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/vert/Image00024.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/okkaina1-puppies/vert/Image00025.jpg"></a>
 
 
         </section>
         <section> <!-- Rouge -->
 
             <a class="fancybox" rel="rouge" href="../src/img/randy.jpg"></a>
-            <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/Rouge.jpg"></a>
-            <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/Rouge16-9.jpg"></a>
-            <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/CollierRouge2s-2.jpg"></a>
-            <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/CollierRouge2s-3.jpg"></a>
-            <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/CollierRouge2s-4.jpg"></a>
-            <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/CollierRouge2s-5.jpg"></a>
-            <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/Chiotsensemble-1.jpg"></a>
-            <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/rouge002.jpg"></a>
-            <a class="fancybox" rel="rouge" href="../src/img/okkaina-puppies/rouge003.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/okkaina1-puppies/Rouge.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/okkaina1-puppies/Rouge16-9.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/okkaina1-puppies/CollierRouge2s-2.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/okkaina1-puppies/CollierRouge2s-3.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/okkaina1-puppies/CollierRouge2s-4.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/okkaina1-puppies/CollierRouge2s-5.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/okkaina1-puppies/Chiotsensemble-1.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/okkaina1-puppies/rouge002.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/okkaina1-puppies/rouge003.jpg"></a>
             <a class="fancybox" rel="rouge" href="../src/img/randycanape2.jpg"></a>
             <a class="fancybox" rel="rouge" href="../src/img/randyCanape.jpg"></a>
             <a class="fancybox" rel="rouge" href="../src/img/randy-izaka.jpg"></a>
@@ -89,173 +89,173 @@
         </section>
         <section> <!-- Bleu Foncé -->
 
-            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina-puppies/CollierBleuF2"></a>
-            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina-puppies/CollierBleuF"></a>
-            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina-puppies/CollierBleuF2s-2"></a>
-            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina-puppies/CollierBleuF2s-3"></a>
-            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina-puppies/CollierBleuF2s-4"></a>
-            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina-puppies/Chiotsensemble-2.jpg"></a>
-            <a class="fancybox" rel="bleu foncé"  href="../src/img/okkaina-puppies/BleuF16-9.jpg"></a>
-            <a class="fancybox" rel="bleu foncé"  href="../src/img/okkaina-puppies/bleuf4s006.jpg"></a>
-            <a class="fancybox" rel="bleu foncé"  href="../src/img/okkaina-puppies/bleuf4s005.jpg"></a>
-            <a class="fancybox" rel="bleu foncé"  href="../src/img/okkaina-puppies/bleuf4s004.jpg"></a>
-            <a class="fancybox" rel="bleu foncé"  href="../src/img/okkaina-puppies/bleuf4s003.jpg"></a>
-            <a class="fancybox" rel="bleu foncé"  href="../src/img/okkaina-puppies/bleuf4s002.jpg"></a>
-            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina-puppies/bleuf/Image00020.jpg"></a>
-            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina-puppies/bleuf/Image00021.jpg"></a>
-            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina-puppies/bleuf/Image00022.jpg"></a>
-            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina-puppies/bleuf/Image00023.jpg"></a>
-            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina-puppies/bleuf/Image00024.jpg"></a>
-            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina-puppies/bleuf/Image00025.jpg"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina1-puppies/CollierBleuF2"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina1-puppies/CollierBleuF"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina1-puppies/CollierBleuF2s-2"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina1-puppies/CollierBleuF2s-3"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina1-puppies/CollierBleuF2s-4"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina1-puppies/Chiotsensemble-2.jpg"></a>
+            <a class="fancybox" rel="bleu foncé"  href="../src/img/okkaina1-puppies/BleuF16-9.jpg"></a>
+            <a class="fancybox" rel="bleu foncé"  href="../src/img/okkaina1-puppies/bleuf4s006.jpg"></a>
+            <a class="fancybox" rel="bleu foncé"  href="../src/img/okkaina1-puppies/bleuf4s005.jpg"></a>
+            <a class="fancybox" rel="bleu foncé"  href="../src/img/okkaina1-puppies/bleuf4s004.jpg"></a>
+            <a class="fancybox" rel="bleu foncé"  href="../src/img/okkaina1-puppies/bleuf4s003.jpg"></a>
+            <a class="fancybox" rel="bleu foncé"  href="../src/img/okkaina1-puppies/bleuf4s002.jpg"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina1-puppies/bleuf/Image00020.jpg"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina1-puppies/bleuf/Image00021.jpg"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina1-puppies/bleuf/Image00022.jpg"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina1-puppies/bleuf/Image00023.jpg"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina1-puppies/bleuf/Image00024.jpg"></a>
+            <a class="fancybox" rel="bleu foncé" href="../src/img/okkaina1-puppies/bleuf/Image00025.jpg"></a>
 
 
         </section>
         <section> <!-- Bleu Clair -->
 
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/BleuC16-9.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/Chiotsensemble-2.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/CollierBleuC2s-2.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/CollierBleuC2s-3.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/CollierBleuC2s-4.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/CollierBleuC2s-5.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc4s001.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc4s002.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc4s004.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc4s005.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc4s006.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc4s007.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc4s008.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc4s009.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc/Image00031.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc/Image00032.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc/Image00033.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc/Image00034.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc/Image00035.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc/Image00036.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc/Image00037.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc/Image00038.jpg"></a>
-            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina-puppies/bleuc/Image00039.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/BleuC16-9.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/Chiotsensemble-2.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/CollierBleuC2s-2.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/CollierBleuC2s-3.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/CollierBleuC2s-4.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/CollierBleuC2s-5.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc4s001.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc4s002.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc4s004.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc4s005.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc4s006.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc4s007.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc4s008.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc4s009.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc/Image00031.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc/Image00032.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc/Image00033.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc/Image00034.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc/Image00035.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc/Image00036.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc/Image00037.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc/Image00038.jpg"></a>
+            <a class="fancybox" rel="bleu clair" href="../src/img/okkaina1-puppies/bleuc/Image00039.jpg"></a>
 
         </section>
 
         <section> <!-- Marron -->
 
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/Chiotsensemble-4.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/ColierMarron2s-2.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/ColierMarron2s-3.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/Marron16-9.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/marron4s001.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/marron4s003.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/marron4s004.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/marron4s005.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/marron4s006.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/marron4s007.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/marron4s008.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/marron/Image00028.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/marron/Image00029.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/marron/Image00030.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/marron/Image00031.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/marron/Image00032.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/marron/Image00033.jpg"></a>
-            <a class="fancybox" rel="marron" href="../src/img/okkaina-puppies/marron/Image00034.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/Chiotsensemble-4.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/ColierMarron2s-2.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/ColierMarron2s-3.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/Marron16-9.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/marron4s001.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/marron4s003.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/marron4s004.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/marron4s005.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/marron4s006.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/marron4s007.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/marron4s008.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/marron/Image00028.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/marron/Image00029.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/marron/Image00030.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/marron/Image00031.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/marron/Image00032.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/marron/Image00033.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/okkaina1-puppies/marron/Image00034.jpg"></a>
 
         </section>
         <section> <!-- Jaune -->
 
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/Chiotsensemble-3.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/Collierjaune2s-3.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/Collierjaune2s-5.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/Collierjeuna2s-2.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/Collierjeuna2s-4.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/Jaune.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/Jaune16-9.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/jaune4s002.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/jaune4s003.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/jaune4s004.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/jaune4s005.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/jaune4s006.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/jaune4s007.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/jaune4s008.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/jaune/Image00020.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/jaune/Image00021.jpg"></a>
-            <a class="fancybox" rel="jaune" href="../src/img/okkaina-puppies/jaune/Image00022.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/Chiotsensemble-3.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/Collierjaune2s-3.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/Collierjaune2s-5.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/Collierjeuna2s-2.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/Collierjeuna2s-4.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/Jaune.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/Jaune16-9.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/jaune4s002.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/jaune4s003.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/jaune4s004.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/jaune4s005.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/jaune4s006.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/jaune4s007.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/jaune4s008.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/jaune/Image00020.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/jaune/Image00021.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/okkaina1-puppies/jaune/Image00022.jpg"></a>
             
         </section>
 
         <section> <!-- Beige -->
 
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/Chiotsensemble-4.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/CollierBeige2s-2.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/CollierBeige2s-3.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/Beige16-9.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige4s001.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige4s003.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige4s004.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige4s005.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige4s006.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige4s007.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige4s008.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige4s009.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige/Image00030.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige/Image00031.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige/Image00032.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige/Image00033.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige/Image00034.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige/Image00035.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige/Image00036.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige/Image00037.jpg"></a>
-            <a class="fancybox" rel="beige" href="../src/img/okkaina-puppies/beige/Image00038.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/Chiotsensemble-4.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/CollierBeige2s-2.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/CollierBeige2s-3.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/Beige16-9.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige4s001.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige4s003.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige4s004.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige4s005.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige4s006.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige4s007.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige4s008.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige4s009.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige/Image00030.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige/Image00031.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige/Image00032.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige/Image00033.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige/Image00034.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige/Image00035.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige/Image00036.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige/Image00037.jpg"></a>
+            <a class="fancybox" rel="beige" href="../src/img/okkaina1-puppies/beige/Image00038.jpg"></a>
 
         </section>
 
         <section> <!-- GROUPE -->
 
 
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/groupe/Image00008.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/groupe/Image00009.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/groupe/Image00010.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/groupe/Image00011.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/groupe/Image00012.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/groupe/Image00013.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/groupe/Image00014.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/groupe/Image00015.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/beige/Image00030.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/beige/Image00031.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/beige/Image00032.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/beige/Image00033.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/beige/Image00034.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/beige/Image00035.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/beige/Image00036.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuc/Image00031.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuc/Image00032.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuc/Image00033.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuc/Image00034.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuc/Image00035.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuc/Image00036.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuc/Image00037.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuc/Image00038.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuc/Image00039.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuf/Image00020.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuf/Image00021.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuf/Image00022.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuf/Image00023.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuf/Image00024.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/bleuf/Image00025.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/jaune/Image00020.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/jaune/Image00021.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/jaune/Image00022.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/marron/Image00028.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/marron/Image00029.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/marron/Image00030.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/marron/Image00031.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/marron/Image00032.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/marron/Image00033.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/marron/Image00034.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/vert/Image00021.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/vert/Image00022.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/vert/Image00023.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/vert/Image00024.jpg"></a>
-            <a class="fancybox" rel="ext" href="../src/img/okkaina-puppies/vert/Image00025.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/groupe/Image00008.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/groupe/Image00009.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/groupe/Image00010.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/groupe/Image00011.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/groupe/Image00012.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/groupe/Image00013.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/groupe/Image00014.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/groupe/Image00015.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/beige/Image00030.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/beige/Image00031.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/beige/Image00032.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/beige/Image00033.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/beige/Image00034.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/beige/Image00035.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/beige/Image00036.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuc/Image00031.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuc/Image00032.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuc/Image00033.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuc/Image00034.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuc/Image00035.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuc/Image00036.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuc/Image00037.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuc/Image00038.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuc/Image00039.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuf/Image00020.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuf/Image00021.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuf/Image00022.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuf/Image00023.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuf/Image00024.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/bleuf/Image00025.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/jaune/Image00020.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/jaune/Image00021.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/jaune/Image00022.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/marron/Image00028.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/marron/Image00029.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/marron/Image00030.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/marron/Image00031.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/marron/Image00032.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/marron/Image00033.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/marron/Image00034.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/vert/Image00021.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/vert/Image00022.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/vert/Image00023.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/vert/Image00024.jpg"></a>
+            <a class="fancybox" rel="ext" href="../src/img/okkaina1-puppies/vert/Image00025.jpg"></a>
 
 
         </section>
@@ -266,7 +266,7 @@
 
     <script type="text/javascript" src="../app/puppies.js" ></script>
     <script> 
-        listingPuppy(okkainaLitterOne, okkaina.dogName);
+        listingPuppy(okkainaLitterOne, okkaina.dogLitterPage);
     </script>
 
 

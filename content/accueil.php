@@ -30,8 +30,8 @@
                         <div class='carousel-item active'>
                             <img src="../src/img/femelle4-j50.jpg" alt="Annonce Gestation et Portée">
                             <div class="carousel-caption opacity-4">
-                                <p>Sahara du Domaine des Terres Noires est toujours disponible à la réservation, <br/> elle pourra rejoindre sa nouvelle famille à partir du 4 Avril 2021 </p>
-                                <a href="/content/weeding.php" class="btn btn-success btn__anim">Voir nos mariages </a>
+                                <p>Nous sommes ravis de vous annoncer la naissance des 9 magnifiques bébés de Panama et de Rock<br/> Les chiots sont disponibles à la réservation </p>
+                                <a href="/content/panama2.php" class="btn btn-success btn__anim">Voir les bébés </a>
                             </div>
                         </div>
                         <div class='carousel-item'>

@@ -125,8 +125,11 @@
             color: $font-color;
             transition: transform 300ms;
             &:hover {
-                transform: translateY(7px);
+              //  transform: translateY(7px);
+                animation-name: btn-contact-bounce;
+                animation-duration: 1000ms;
                 color: $font-color;
+                transform: scale(1) translateY(5px);
             }
         }
         .btn-dark {

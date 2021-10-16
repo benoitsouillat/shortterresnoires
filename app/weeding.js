@@ -102,5 +102,5 @@ const createPart = (female, male, countLitter) => {
 
 }
 
-createPart(panama, rock, 'panama1');
+createPart(panama, rock, 'panama2');
 createPart(okkaina, rock, 'okkaina1');
