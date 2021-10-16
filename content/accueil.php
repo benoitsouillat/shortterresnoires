@@ -69,6 +69,15 @@
                     </a>
                 </div>
             </section>
+            <section class="accueil-section-p d-flex flex-column justify-content-center align-items-center">
+                <h4>Le Domaine des Terres Noires</h4>
+                <h6>Elevage sélection de Cane Corso </h6>
+                <p class="accueil-p w-75">Le Domaine des Terres Noires est un jeune élevage de Cane Corso situé en Haute-Vienne. <br/>
+                    Ma priorité est une sélection sérieuse pour l'amélioration de cette race que nous aimons tellement. 
+                    Nous recherchons de futurs propriétaires bienveillants pour nos chiots et leur offrir une magnifique vie avec beaucoup tout l'amour et l'affection 
+                    dont ils sont capables.
+                </p>
+            </section>
         </main>
 
         <?php 

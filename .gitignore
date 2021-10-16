@@ -1,0 +1,6 @@
+./private/*
+./content/testversion/*
+./content/oldversion/*
+/.deploy
+/.env
+
