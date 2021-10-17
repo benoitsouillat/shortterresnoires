@@ -1,1 +1,7 @@
 ErrorDocument 404 /content/error/404.php
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(js)$">
+    Header set Cache-Control "max-age=86000, private"
+    </FilesMatch>
+</IfModule>

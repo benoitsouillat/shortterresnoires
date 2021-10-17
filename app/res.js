@@ -112,16 +112,16 @@ let female8 = new puppy("7 Février 2021", female, "Fauve", "Aucun", "aucun-j45"
 
 /* Panama 2 */
 
-let male16 = new puppy("14 Octobre 2021", male, "Bringé Noir", "Marron", "bleuc-j45", dispo, " ");      /* Male 1 */
-let male17 = new puppy("14 Octobre 2021", male, "Bringé Gris", "Bleu Foncé", "bleuf", 0, " ");                /* Male 2 */
-let male18 = new puppy("14 Octobre 2021", male, "Fauve", "Vert", "bleuf-j45", dispo, " ");            /* Male 3 */
+let male16 = new puppy("14 Octobre 2021", male, "Bringé Noir", "Jaune", "jaune", dispo, " ");            /* Male 1 */
+let male17 = new puppy("14 Octobre 2021", male, "Bringé Gris", "Bleu", "bleu", 0, " ");                  /* Male 2 */
+let male18 = new puppy("14 Octobre 2021", male, "Fauve", "Vert", "vert", dispo, " ");                    /* Male 3 */
 
-let female9 = new puppy("14 Octobre 2021", female, "Fauve", "Violet", "violet-j45", dispo, " ");              /* Femelle 1 */
-let female10 = new puppy("14 Octobre 2021", female, "Bringée Grise", "Noir", "orange-j45", dispo, " ");           /* Femelle 2 */
-let female11 = new puppy("14 Octobre 2021", female, "Bringée Noire", "Orange", "rosepale-j45", dispo, " ");        /* Femelle 3 */
-let female12 = new puppy("14 Octobre 2021", female, "Bringée", "Beige", "beige-j45", dispo, " ");             /* Femelle 4 */
-let female13 = new puppy("14 Octobre 2021", female, "Bringée", "Marron", "marron-j45", dispo, " ");           /* Femelle 5 */
-let female14 = new puppy("14 Octobre 2021", female, "Grise (Froment)", "Noir", "noir-j45", dispo, " ");       /* Femelle 6 */
+let female9 = new puppy("14 Octobre 2021", female, "Fauve", "Violet", "violet", dispo, " ");           /* Femelle 1 */
+let female10 = new puppy("14 Octobre 2021", female, "Bringée Noire", "Rose", "rose", dispo, " ");      /* Femelle 2 */
+let female11 = new puppy("14 Octobre 2021", female, "Bringée Noire", "Orange", "orange", dispo, " ");  /* Femelle 3 */
+let female12 = new puppy("14 Octobre 2021", female, "Bringée Grise", "Noire", "noir", dispo, " ");     /* Femelle 4 */
+let female13 = new puppy("14 Octobre 2021", female, "Bringée Noire", "Marron", "marron", dispo, " ");  /* Femelle 5 */
+let female14 = new puppy("14 Octobre 2021", female, "Bringée Grise", "Aucun", "aucun", dispo, " ");    /* Femelle 6 */
 
 
 let okkainaLitterOne = [male1, male2, male3, male4, male5, male6, male7];

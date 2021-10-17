@@ -61,7 +61,7 @@ const listingPuppy = (puppyClass, puppyLiceLitterPage) => {
         let puppyAlbum = document.createElement('a');
         puppyAlbum.textContent = "Son Album Photo";
         puppyAlbum.rel = elm.puppyNecklace.toLowerCase();
-        puppyAlbum.href = imgPath + litterLice + "-puppies/" + elm.puppyNecklace.toLowerCase() + "/Image0001" + jpg;
+        puppyAlbum.href = imgPath + litterLice + "-puppies/" + elm.puppyNecklace.toLowerCase() + "/Image001" + jpg;
         puppyAlbum.classList.add("fancybox");
         puppyAlbum.classList.add("btn");
         puppyAlbum.classList.add("btn-xs");

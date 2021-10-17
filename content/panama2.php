@@ -21,7 +21,7 @@
 
         <section class="puppy-para">
             <p><i>Portée née le : 14 Octobre 2021<br/>
-                N° Portée : LOF - 2021000903-2021-1 </i>
+                N° Portée : LOF - 2021040728-2021-2 </i>
             </p>
             <p> Nous sommes ravis et très fiers de vous présenter nos 9 chiots issus de Panama et de Rock,
              6 Femelles et 3 Mâles ont vu le jour ce Jeudi 14 Octobre 2021. <br/>
@@ -50,72 +50,62 @@
 
 
         <section> <!-- Aucun -->
-            <a class="fancybox" rel="aucun" href="../src/img/panama-puppies/aucun/Image0300.jpg"></a>
+            <a class="fancybox" rel="aucun" href="../src/img/panama2-puppies/aucun/Image005.jpg"></a>
+            <a class="fancybox" rel="aucun" href="../src/img/panama2-puppies/aucun/Image002.jpg"></a>
+            <a class="fancybox" rel="aucun" href="../src/img/panama2-puppies/aucun/Image003.jpg"></a>
+            <a class="fancybox" rel="aucun" href="../src/img/panama2-puppies/aucun/Image004.jpg"></a>
 
 
-        <section> <!-- Beige -->
-            <a class="fancybox" rel="beige" href="../src/img/panama-puppies/beige/Image0300.jpg"></a>
-
-
-        </section>
-        <section> <!-- Bleu Clair -->
-            <a class="fancybox" rel="bleu clair" href="../src/img/panama-puppies/bleuclair/Image0300.jpg"></a>
- 
-        </section>
-        <section> <!-- Bleu Foncé -->
-            <a class="fancybox" rel="bleu foncé" href="../src/img/panama-puppies/bleufoncé/Image0300.jpg"></a>
-
-
-        </section>
         <section> <!-- Jaune -->
-            <a class="fancybox" rel="jaune" href="../src/img/panama-puppies/jaune/Image0300.jpg"></a>
-  
-
-
-        </section>
-        <section> <!-- Marron -->
-            <a class="fancybox" rel="marron" href="../src/img/panama-puppies/marron/Image0300.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/panama2-puppies/jaune/Image002.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/panama2-puppies/jaune/Image003.jpg"></a>
+            <a class="fancybox" rel="jaune" href="../src/img/panama2-puppies/jaune/Image004.jpg"></a>
 
         </section>
-        <section> <!-- Noir -->
-            <a class="fancybox" rel="noir" href="../src/img/panama-puppies/noir/Image0300.jpg"></a>
-
+        <section> <!-- bleu -->
+            <a class="fancybox" rel="bleu" href="../src/img/panama2-puppies/bleu/Image002.jpg"></a>
+            <a class="fancybox" rel="bleu" href="../src/img/panama2-puppies/bleu/Image003.jpg"></a>
 
         </section>
-        <section> <!-- Orange -->
-            <a class="fancybox" rel="orange" href="../src/img/panama-puppies/orange/Image0300.jpg"></a>
- 
+        <section> <!-- vert -->
+            <a class="fancybox" rel="vert" href="../src/img/panama2-puppies/vert/Image002.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/panama2-puppies/vert/Image003.jpg"></a>
+            <a class="fancybox" rel="vert" href="../src/img/panama2-puppies/vert/Image004.jpg"></a>
+
+        </section>
+        <section> <!-- violet -->
+            <a class="fancybox" rel="violet" href="../src/img/panama2-puppies/violet/Image005.jpg"></a>
+            <a class="fancybox" rel="violet" href="../src/img/panama2-puppies/violet/Image002.jpg"></a>
+            <a class="fancybox" rel="violet" href="../src/img/panama2-puppies/violet/Image003.jpg"></a>
+            <a class="fancybox" rel="violet" href="../src/img/panama2-puppies/violet/Image004.jpg"></a>
 
         </section>
         <section> <!-- Rose -->            
-            <a class="fancybox" rel="rose" href="../src/img/panama-puppies/rose/Image0300.jpg"></a>
-
-
-        </section>
-        <section> <!-- Rose Pâle -->
-            <a class="fancybox" rel="rose pâle" href="../src/img/panama-puppies/rosepale/Image0300.jpg"></a>
-
-
-            
-        </section>
-        <section> <!-- Rouge -->
-            <a class="fancybox" rel="rouge" href="../src/img/panama-puppies/rouge/Image0300.jpg"></a>
-
-
+            <a class="fancybox" rel="rose" href="../src/img/panama2-puppies/rose/Image002.jpg"></a>
+            <a class="fancybox" rel="rose" href="../src/img/panama2-puppies/rose/Image003.jpg"></a>
+            <a class="fancybox" rel="rose" href="../src/img/panama2-puppies/rose/Image004.jpg"></a>
 
         </section>
-        <section> <!-- Vert -->
-            <a class="fancybox" rel="vert" href="../src/img/panama-puppies/vert/Image0300.jpg"></a>
+        <section> <!-- orange -->
+            <a class="fancybox" rel="orange" href="../src/img/panama2-puppies/orange/Image002.jpg"></a>
+            <a class="fancybox" rel="orange" href="../src/img/panama2-puppies/orange/Image003.jpg"></a>
+            <a class="fancybox" rel="orange" href="../src/img/panama2-puppies/orange/Image004.jpg"></a>
 
+        </section>
+        <section> <!-- Noir -->
+            <a class="fancybox" rel="rouge" href="../src/img/panama2-puppies/noir/Image002.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/panama2-puppies/noir/Image003.jpg"></a>
+            <a class="fancybox" rel="rouge" href="../src/img/panama2-puppies/noir/Image004.jpg"></a>
 
+        </section>
+        <section> <!-- marron -->
+            <a class="fancybox" rel="marron" href="../src/img/panama2-puppies/marron/Image005.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/panama2-puppies/marron/Image002.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/panama2-puppies/marron/Image003.jpg"></a>
+            <a class="fancybox" rel="marron" href="../src/img/panama2-puppies/marron/Image004.jpg"></a>
 
         </section>
 
-        <section> <!-- Violet -->
-            <a class="fancybox" rel="violet" href="../src/img/panama-puppies/violet/Image0002.jpg"></a>
-   
-
-        </section>
 
         <?php 
             include "./php/footer.php";
