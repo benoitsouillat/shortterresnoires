@@ -28,7 +28,7 @@
                     </ol>    
                     <div class="carousel-inner">
                         <div class='carousel-item active'>
-                            <img src="../src/img/panama8.jpg" alt="Annonce Gestation et Portée">
+                            <img src="../src/img/panama2-puppies/annonce.jpg" alt="Annonce Gestation et Portée">
                             <div class="carousel-caption opacity-4">
                                 <p>Nous sommes ravis de vous annoncer la naissance des 9 magnifiques bébés de Panama et de Rock<br/> Les chiots sont disponibles à la réservation </p>
                                 <a href="/content/panama2.php" class="btn btn-success btn__anim">Voir les bébés </a>
