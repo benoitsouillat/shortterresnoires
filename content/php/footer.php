@@ -25,7 +25,8 @@
 </footer>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../app/res.js" ></script>
+    <!-- <script type="text/javascript" src="../app/res.js" ></script> -->
+    <script>document.write('<script src="../app/res.js?dev=' + Math.floor(Math.random() * 10) + '"\><\/script>');</script> <!-- To force uncached data in res.js-->
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 

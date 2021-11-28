@@ -21,7 +21,8 @@
 
         <section class="puppy-para">
             <p><i>Portée née le : 7 Février 2021<br/>
-                N° Portée : LOF - 2021000903-2021-1 </i>
+                N° Portée : LOF - 2021000903-2021-1 <br/>
+                Insert de la mère : 250268712820566</i>
             </p>
             <p> Nous sommes ravis et très fiers de vous présenter nos 13 chiots issus de Panama et de Rock,
              8 Femelles et 5 Mâles ont vu le jour ce Dimanche 7 Février 2021. <br/>

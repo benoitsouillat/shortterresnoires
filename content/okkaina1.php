@@ -20,7 +20,8 @@
         </header>
         <section class="puppy-para">
             <p><i>Portée née le : 16 Novembre 2020<br/>
-                N° Portée : LOF-2020042381-2020-1 </i>
+                N° Portée : LOF-2020042381-2020-1 <br/>
+                Insert de la mère : 250268712756528 </i>
             </p>
             <p> Nos 7 magnifiques mâles ont bien grandi, ils ouvrent enfin les yeux, nous en sommes enchantés. <br/> 
                 Okkaina s'en occupe merveilleusement bien et
