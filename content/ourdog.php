@@ -86,6 +86,14 @@
                             </figcaption>
                         </figure>
                     </a>
+                    <a href="#dog-card" class="vignet-dog" id="nixon">
+                        <figure>
+                            <img src="../src/img/nixon2.jpg" alt="nixon du temple de jade" />
+                            <figcaption>
+                                <h6>Nixon</h6>
+                            </figcaption>
+                        </figure>
+                    </a> 
                 </div>
             </section>
             <section id="dog-card" class="card-hidden">
@@ -130,6 +138,10 @@
                 <a class="fancybox" rel="raia" href="../src/img/raia1.jpg"></a>
                 <a class="fancybox" rel="raia" href="../src/img/raia2.jpg"></a>
                 <a class="fancybox" rel="raia" href="../src/img/raia3.jpg"></a>
+
+                <a class="fancybox" rel="nixon" href="../src/img/nixon1.jpg"></a>
+                <a class="fancybox" rel="nixon" href="../src/img/nixon2.jpg"></a>
+                <a class="fancybox" rel="nixon" href="../src/img/nixon3.jpg"></a>
 
 
                 <a class="fancybox" rel="safari" href="../src/img/safari2.jpg"></a>

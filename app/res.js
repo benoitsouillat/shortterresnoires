@@ -156,7 +156,7 @@ let thelma = new dog("Thelma", "06 Juillet 2022", caneCorso, templeJade, female,
 let paco = new dog("Paco", "22 Juillet 2019", caneCorso, 0, male, false, false, false);
 
 let femaleClass = [okkaina, panama, raia, safari, tornade, tsunami, thelma];
-let maleClass = [tonnerre];
+let maleClass = [tonnerre, nixon];
 let dogClass = femaleClass.concat(maleClass);
 
 
