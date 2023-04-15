@@ -28,9 +28,9 @@
                     </ol>    
                     <div class="carousel-inner">
                         <div class='carousel-item active'>
-                            <img src="../src/img/okkaina2-puppies/violet.jpg" alt="Annonce Gestation et Portée">
+                            <img src="../src/img/tsunami-pres.jpg" alt="Annonce Gestation et Portée">
                             <div class="carousel-caption opacity-4">
-                                <p>Okkaïna et Paco sont fièrs de nous présenter leurs 13 bébés nés le 22 avril 2022<br/> Plus que quelques chiots disponibles à la réservation </p>
+                                <p>Tsunami du domaine des Terres Noires, <br> issue du mariage de Paco et Okkaina </p>
                                 <a href="/content/okkaina2.php" class="btn btn-success btn__anim">Voir les bébés </a>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                         <div class='carousel-item'>
-                            <img src="../src/img/rock16-9couché.jpg" alt="Rock Corso di Munteanu">
+                            <img src="../src/img/raia-pres.jpg" alt="Raia du temple de jade">
                             <div class="carousel-caption opacity-4">
                                 <p>Nos Cane Corso sont très sociables, <br/>
                                 cependant ils savent parfaitement faire leur boulot de gardien.</p>

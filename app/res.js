@@ -32,15 +32,12 @@ class chien {
         return false;
     }
 }
-
 class lof extends chien {
     constructor(lofNumber, puceNumber) {
         this.lofNumber = lofNumber;
         this.puceNumber = puceNumber;
     }
 }
-
-
 class litter {
     constructor(puppyMom, puppyDad, puppyBirth, maleNumber, femaleNumber) {
         this.puppyMom = puppyMom;

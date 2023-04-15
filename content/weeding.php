@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-fr">
+<html lang="FR-fr">
     <head>
         <title>Les Mariages du domaine des Terres Noires</title>
         <?php 

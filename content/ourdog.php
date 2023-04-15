@@ -128,6 +128,8 @@
                 <a class="fancybox" rel="rock" href="../src/img/rockprofil.jpg"></a> -->
 
                 <a class="fancybox" rel="raia" href="../src/img/raia1.jpg"></a>
+                <a class="fancybox" rel="raia" href="../src/img/raia2.jpg"></a>
+                <a class="fancybox" rel="raia" href="../src/img/raia3.jpg"></a>
 
 
                 <a class="fancybox" rel="safari" href="../src/img/safari2.jpg"></a>
@@ -139,7 +141,8 @@
                 <a class="fancybox" rel="tornade" href="../src/img/tornade2.jpg"></a>
                 <a class="fancybox" rel="tornade" href="../src/img/tornade3.jpg"></a>
 
-                <a class="fancybox" rel="tsunami" href="../src/img/tsunami.jpg"></a>
+                <a class="fancybox" rel="tsunami" href="../src/img/tsunami1.jpg"></a>
+                <a class="fancybox" rel="tsunami" href="../src/img/tsunami2.jpg"></a>
 
                 <a class="fancybox" rel="tonnerre" href="../src/img/tonnerre2.jpg"></a>
                 <a class="fancybox" rel="tonnerre" href="../src/img/tonnerre3.jpg"></a>

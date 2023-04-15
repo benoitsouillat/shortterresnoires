@@ -1,6 +1,6 @@
 let content = document.getElementById("weedings");
 
-const createPart = (female, male, countLitter) => {
+const createPart = (female, male, countLitter, arrayLitter) => {
 
 
     let litterDate = document.createElement("h5");
@@ -9,11 +9,11 @@ const createPart = (female, male, countLitter) => {
 
     if (female.dogLitter === true)
     {
-        litterDate.textContent = "Chiots nés le " + female.dogLitterOne[0].puppyBirth ;
+        litterDate.textContent = "Chiots nés le " + arrayLitter[0].puppyBirth ;
     }
     else 
     {
-        litterDate.textContent = "Portée prévue le " + female.dogLitterOne[0];
+        litterDate.textContent = "Portée prévue le " + arrayLitter;
     }
         
     let weedingPart = document.createElement("div");
@@ -109,6 +109,7 @@ const createPart = (female, male, countLitter) => {
 
 }
 
-createPart(okkaina, paco, 'okkaina2');
-createPart(panama, rock, 'panama2');
-createPart(okkaina, rock, 'okkaina1');
+//createPart(safari, nixon, 'safari1', "15 Mai 2023");
+createPart(okkaina, paco, 'okkaina2', okkainaLitterTwo);
+createPart(panama, rock, 'panama2', panamaLitterTwo);
+createPart(okkaina, rock, 'okkaina1', okkainaLitterOne);

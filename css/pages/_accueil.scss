@@ -53,6 +53,8 @@
     .carousel-inner .carousel-item img {
         width: 75%;
         align-self: center;
+        aspect-ratio: 16/9;
+        object-fit: cover;
     }
 
     .carousel-button-prevnext {
@@ -73,6 +75,8 @@
 @media all and (max-width: 1000px) {
     #accueil-page .carousel-inner .carousel-item img {
         width: 90%;
+        aspect-ratio: 16/9;
+
     }
     #accueil-page .carousel-inner .carousel-caption {
         width: 90%;
@@ -87,6 +91,10 @@
 @media all and (max-width: 600px) {
     #accueil-page .carousel-inner .carousel-item img {
         width: 96%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+
+
     }
     #accueil-page .carousel-inner .carousel-caption {
         width: 96%;
