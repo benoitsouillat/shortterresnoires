@@ -116,7 +116,7 @@ const listingPuppy = (puppyClass, puppyLiceLitterPage) => {
         puppyCardImgLink.appendChild(puppyCardImg);
         puppyCard.appendChild(puppyAlbumDiv);
         puppyAlbumDiv.appendChild(puppyAlbum);
-        puppyAlbumDiv.appendChild(puppyVid);
+       // puppyAlbumDiv.appendChild(puppyVid);
 
     });
 

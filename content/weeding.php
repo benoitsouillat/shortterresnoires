@@ -24,8 +24,8 @@
         <?php 
             include "./php/footer.php";
         ?>
+        <script> document.write('<script type="text/javascript" src="../app/weeding.js?dev=' + Math.floor(Math.random() * 10) +  '"\><\/script>' ) </script>
         
-        <script src="../app/weeding.js" ></script>
 
     </body>
 </html>

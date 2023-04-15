@@ -267,7 +267,7 @@
 
     <script type="text/javascript" src="../app/puppies.js" ></script>
     <script> 
-        listingPuppy(okkainaLitterOne, okkaina.dogLitterPage);
+        listingPuppy(okkainaLitterOne, "okkaina1");
     </script>
 
 

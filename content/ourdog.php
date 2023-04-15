@@ -38,11 +38,51 @@
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="#dog-card" class="vignet-dog" id="rock">
+                    <a href="#dog-card" class="vignet-dog" id="raia">
                         <figure>
-                            <img src="../src/img/rock 16-9debout 2.jpg" alt="rock corso di munteanu" />
+                            <img src="../src/img/raia1.jpg" alt="raia du temple de jade" />
                             <figcaption>
-                                <h6>Rock</h6>
+                                <h6>Raïa</h6>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="#dog-card" class="vignet-dog" id="safari">
+                        <figure>
+                            <img src="../src/img/safari1.jpg" alt="safari du domaine des terres noires" />
+                            <figcaption>
+                                <h6>Safari</h6>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="#dog-card" class="vignet-dog" id="tornade">
+                        <figure>
+                            <img src="../src/img/tornade1.jpg" alt="tornade du domaine des terres noires" />
+                            <figcaption>
+                                <h6>Tornade</h6>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="#dog-card" class="vignet-dog" id="tsunami">
+                        <figure>
+                            <img src="../src/img/tsunami1.jpg" alt="tsunami du domaine des terres noires" />
+                            <figcaption>
+                                <h6>Tsunami</h6>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <a href="#dog-card" class="vignet-dog" id="thelma">
+                        <figure>
+                            <img src="../src/img/thelma1.jpg" alt="thelma du temple de jade" />
+                            <figcaption>
+                                <h6>Thelma</h6>
+                            </figcaption>
+                        </figure>
+                    </a>                    
+                    <a href="#dog-card" class="vignet-dog" id="tonnerre">
+                        <figure>
+                            <img src="../src/img/tonnerre1.jpg" alt="tonnerre du domaine des terres noires" />
+                            <figcaption>
+                                <h6>Tonnerre</h6>
                             </figcaption>
                         </figure>
                     </a>
@@ -70,6 +110,7 @@
                 <a class="fancybox" rel="okkaina" href="../src/img/okkaina8.jpg"></a>
                 <a class="fancybox" rel="okkaina" href="../src/img/okkaina9.jpg"></a>
                 <a class="fancybox" rel="okkaina" href="../src/img/okkaina10.jpg"></a>
+                <a class="fancybox" rel="okkaina" href="../src/img/okkaina13.jpg"></a>
 
                 <a class="fancybox" rel="panama" href="../src/img/panama1.jpg"></a>
                 <a class="fancybox" rel="panama" href="../src/img/panama3.jpg"></a>
@@ -79,15 +120,35 @@
                 <a class="fancybox" rel="panama" href="../src/img/panama8.jpg"></a>
                 <a class="fancybox" rel="panama" href="../src/img/okkainapanama.jpg"></a>
 
-                <a class="fancybox" rel="rock" href="../src/img/rock1.jpg"></a>
+<!--                 <a class="fancybox" rel="rock" href="../src/img/rock1.jpg"></a>
                 <a class="fancybox" rel="rock" href="../src/img/rock2.jpg"></a>
                 <a class="fancybox" rel="rock" href="../src/img/rock3.jpg"></a>
                 <a class="fancybox" rel="rock" href="../src/img/rock4.jpg"></a>
                 <a class="fancybox" rel="rock" href="../src/img/rockpropuls.jpg"></a>
-                <a class="fancybox" rel="rock" href="../src/img/rockprofil.jpg"></a>
+                <a class="fancybox" rel="rock" href="../src/img/rockprofil.jpg"></a> -->
+
+                <a class="fancybox" rel="raia" href="../src/img/raia1.jpg"></a>
 
 
-                
+                <a class="fancybox" rel="safari" href="../src/img/safari2.jpg"></a>
+                <a class="fancybox" rel="safari" href="../src/img/safari3.jpg"></a>
+                <a class="fancybox" rel="safari" href="../src/img/safari4.jpg"></a>
+                <a class="fancybox" rel="safari" href="../src/img/safari5.jpg"></a>
+                <a class="fancybox" rel="safari" href="../src/img/safariandco.jpg"></a>
+
+                <a class="fancybox" rel="tornade" href="../src/img/tornade2.jpg"></a>
+                <a class="fancybox" rel="tornade" href="../src/img/tornade3.jpg"></a>
+
+                <a class="fancybox" rel="tsunami" href="../src/img/tsunami.jpg"></a>
+
+                <a class="fancybox" rel="tonnerre" href="../src/img/tonnerre2.jpg"></a>
+                <a class="fancybox" rel="tonnerre" href="../src/img/tonnerre3.jpg"></a>
+                <a class="fancybox" rel="tonnerre" href="../src/img/tonnerre4.jpg"></a>
+                <a class="fancybox" rel="tonnerre" href="../src/img/tonnerre5.jpg"></a>
+
+                <a class="fancybox" rel="thelma" href="../src/img/thelma2.jpg"></a>
+                <a class="fancybox" rel="thelma" href="../src/img/thelma3.jpg"></a>
+
             </div>
         </main>
         <?php 

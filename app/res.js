@@ -1,7 +1,7 @@
 
 const breederNumber = "362026";
 const affixeNumber = "92123";
-const siretNumber = "";
+const siretNumber = "871460644 00018";
 const capacityNumber = "";
 const breedName = "Le Domaine des Terres Noires";
 const terresNoires = " du Domaine des Terres Noires";
@@ -112,34 +112,59 @@ let female8 = new puppy("7 Février 2021", female, "Fauve", "Aucun", "aucun-j45"
 
 /* Panama 2 */
 
-let male16 = new puppy("14 Octobre 2021", male, "Bringé Noir", "Jaune", "jaune", dispo, " . ");            /* Male 1 */
-let male17 = new puppy("14 Octobre 2021", male, "Bringé Gris", "Bleu", "bleu", reserv, " Stark ");       /* Male 2 */
-let male18 = new puppy("14 Octobre 2021", male, "Fauve", "Vert", "vert", dispo, " . ");                    /* Male 3 */
+let male16 = new puppy("14 Octobre 2021", male, "Bringé Noir", "Jaune", "jaune", reserv , " Skar ");                
+let male17 = new puppy("14 Octobre 2021", male, "Froment", "Bleu", "bleu", reserv, " Stark ");                      
+let male18 = new puppy("14 Octobre 2021", male, "Fauve", "Vert", "vert", reserv , " Soan ");                        
+let female9 = new puppy("14 Octobre 2021", female, "Fauve", "Violet", "violet", reserv , " Selva ");                
+let female10 = new puppy("14 Octobre 2021", female, "Bringée Noire", "Rose", "rose", reserv, " Stone ");            
+let female11 = new puppy("14 Octobre 2021", female, "Bringée Noire", "Orange", "orange", reserv, " Samouraï ");     
+let female12 = new puppy("14 Octobre 2021", female, "Froment", "Noir", "noir", reserv, " Shadow ");                 
+let female13 = new puppy("14 Octobre 2021", female, "Bringée Noire", "Marron", "marron", reserv, " Sakura ");       
+let female14 = new puppy("14 Octobre 2021", female, "Bringée Grise", "Aucun", "aucun", reserv  , " Shelby ");       
 
-let female9 = new puppy("14 Octobre 2021", female, "Fauve", "Violet", "violet", dispo, " . ");           /* Femelle 1 */
-let female10 = new puppy("14 Octobre 2021", female, "Bringée Noire", "Rose", "rose", dispo, " . ");      /* Femelle 2 */
-let female11 = new puppy("14 Octobre 2021", female, "Bringée Noire", "Orange", "orange", dispo, " . ");  /* Femelle 3 */
-let female12 = new puppy("14 Octobre 2021", female, "Grise ( Froment )", "Noir", "noir", dispo, " . ");  /* Femelle 4 */
-let female13 = new puppy("14 Octobre 2021", female, "Bringée Noire", "Marron", "marron", dispo, " . ");  /* Femelle 5 */
-let female14 = new puppy("14 Octobre 2021", female, "Bringée Grise", "Aucun", "aucun", dispo, " . ");    /* Femelle 6 */
+
+/* Okkaina 2 */
+
+let male19 = new puppy("22 Avril 2022", male, "Bringé Noir", "Vert", "vert", reserv, "Tango");
+let male20 = new puppy("22 Avril 2022", male, "Noir", "Cyan", "cyan", reserv, "Torx");
+let male21 = new puppy("22 Avril 2022", male, "Noir", "Bleu", "bleu", reserv, "Tonnerre des Vents");
+let male22 = new puppy("22 Avril 2022", male, "Noir", "Marron", "marron", reserv, "Toxic");
+let male23 = new puppy("22 Avril 2022", male, "Bringé Noir", "Citron", "citron", reserv, "Thaï");
+let male24 = new puppy("22 Avril 2022", male, "Bringé Noir", "Aucun", "aucun", reserv, "Tex");
+let male25 = new puppy("22 Avril 2022", male, "Noir", "Rouge", "rouge", reserv, "Texas");
+let female15 = new puppy("22 Avril 2022", female, "Noire", "Rose", "rose", reserv, "Tosca II");
+let female16 = new puppy("22 Avril 2022", female, "Noire", "Orange", "orange", reserv, "Tsunami");
+let female17 = new puppy("22 Avril 2022", female, "Noire", "violet", "violet", reserv, "Talisman");
+let female18 = new puppy("22 Avril 2022", female, "Noire", "Fuschia", "fuschia", reserv, "Tornade de succès");
+let female19 = new puppy("22 Avril 2022", female, "Noire", "Bordeaux", "bordeaux", reserv, "Tayka");
+let female20 = new puppy("22 Avril 2022", female, "Noire", "Jaune", "jaune", reserv, "Tosca");
+
 
 
 let okkainaLitterOne = [male1, male2, male3, male4, male5, male6, male7];
-let panamaLitterOne = [male11, male12, male13, male14, male15, female1, female2, female3, female4,
-    female5, female6, female7, female8];
+let panamaLitterOne = [male11, male12, male13, male14, male15, female1, female2, female3, female4, female5, female6, female7, female8];
 let panamaLitterTwo = [male16, male17, male18, female9, female10, female11, female12, female13, female14];
+let okkainaLitterTwo = [male25, male24, male21, male22, male23, male19, male20, female15, female16, female17, female18, female19, female20];
 
-let okkaina = new dog("Okkaina", "10 Septembre 2018", caneCorso, templeJade, female, true, okkainaLitterOne, "okkaina1");
+let okkaina = new dog("Okkaina", "10 Septembre 2018", caneCorso, templeJade, female, true, okkainaLitterTwo, "okkaina2");
 let panama = new dog("Panama", "02 Juin 2019", caneCorso, templeJade, female, true, panamaLitterTwo, "panama2");
+let raia = new dog("Raia", "28 Septembre 2020", caneCorso, templeJade, female, false, false, false);
+let nixon = new dog("Nixon", "22 Août 2017", caneCorso, templeJade, male, false, false, false);
 let rock = new dog("Rock", "18 Mars 2018", caneCorso, diMunteanu, male, false, false, false);
+let safari = new dog("Safari", "7 Février 2021", caneCorso, terresNoires, female, false, false, false);
+let tornade = new dog("Tornade", "22 Avril 2022", caneCorso, terresNoires, female, false, false, false);
+let tsunami = new dog("Tsunami", "22 Avril 2022", caneCorso, terresNoires, female, false, false, false);
+let tonnerre = new dog("Tonnerre", "22 Avril 2022", caneCorso, terresNoires, male, false, false, false);
+let thelma = new dog("Thelma", "06 Juillet 2022", caneCorso, templeJade, female, false, false, false);
+let paco = new dog("Paco", "22 Juillet 2019", caneCorso, 0, male, false, false, false);
 
-let femaleClass = [okkaina, panama];
-let maleClass = [rock];
+let femaleClass = [okkaina, panama, raia, safari, tornade, tsunami, thelma];
+let maleClass = [tonnerre];
 let dogClass = femaleClass.concat(maleClass);
 
 
 let path = "../src/img/";
-let imgPath = "/src/img/";
+let imgPath = "../src/img/";
 let vidPath = "/src/vid/";
 let jpg = ".jpg";
 let mp4 = ".mp4";

@@ -66,6 +66,9 @@
         right: 10%;
     }
 }
+#accueil-page > .accueil-section-p {
+    display: none!important;
+}
 
 @media all and (max-width: 1000px) {
     #accueil-page .carousel-inner .carousel-item img {

@@ -68,6 +68,7 @@
             <a class="fancybox" rel="aucun" href="../src/img/panama-puppies/aucun/Image0504.jpg"></a>
             <a class="fancybox" rel="aucun" href="../src/img/panama-puppies/aucun/Image0505.jpg"></a>
             <a class="fancybox" rel="aucun" href="../src/img/panama-puppies/aucun/Image0506.jpg"></a>
+            <a class="fancybox" rel="aucun" href="../src/img/panama-puppies/aucun/stella.jpg"></a>
 
         <section> <!-- Beige -->
             <a class="fancybox" rel="beige" href="../src/img/panama-puppies/beige/Image0300.jpg"></a>

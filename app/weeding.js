@@ -98,9 +98,17 @@ const createPart = (female, male, countLitter) => {
         maleImgDiv.appendChild(maleImg);
         maleTxtDiv.appendChild(maleName);
         maleTxtDiv.appendChild(maleBirth);
-        maleTxtDiv.appendChild(maleBreeder);
+        if (male.dogBreeder != 0)
+        {
+            maleTxtDiv.appendChild(maleBreeder);
+        }
+        else {
+            maleBreeder.textContent = "Multi-Champion de Beauté";
+            maleTxtDiv.appendChild(maleBreeder);
+        }
 
 }
 
+createPart(okkaina, paco, 'okkaina2');
 createPart(panama, rock, 'panama2');
 createPart(okkaina, rock, 'okkaina1');
