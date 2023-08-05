@@ -621,7 +621,10 @@ body p {
   max-width: 20rem;
   height: auto;
   margin-bottom: 3rem;
-  box-shadow: 4px 4px 6px grey;
+  box-shadow: 4px 4px 6px #ffdae0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 3/2;
 }
 .female-weeding h3 {
   position: relative;
@@ -650,7 +653,10 @@ body p {
   max-width: 20rem;
   height: auto;
   margin-bottom: 3rem;
-  box-shadow: 4px 4px 6px grey;
+  box-shadow: 4px 4px 6px lightblue;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 3/2;
 }
 .male-weeding h3 {
   position: relative;
@@ -686,7 +692,9 @@ body p {
   #weeding-page {
     width: 100%;
   }
-  #weeding-page header, #weeding-page main, #weeding-page footer {
+  #weeding-page header,
+  #weeding-page main,
+  #weeding-page footer {
     width: 100%;
   }
   #weedings {
@@ -822,6 +830,7 @@ body p {
   flex-direction: column;
   justify-content: space-between;
   min-width: 320px;
+  width: 100%;
   max-width: 380px;
   height: 500px;
   padding-bottom: 10px;
