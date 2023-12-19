@@ -1,11 +1,12 @@
 
 const breederNumber = "362026";
 const affixeNumber = "92123";
-const siretNumber = "871460644 00018";
+const siretNumber = "871460644 00026";
 const capacityNumber = "";
 const breedName = "Le Domaine des Terres Noires";
 const terresNoires = " du Domaine des Terres Noires";
 const templeJade = " du Temple de Jade";
+const deessetemple = " des Déesses du Temple";
 const diMunteanu = " Corso di Munteanu";
 const caneCorso = " Cane Corso ";
 const male = " Mâle";
@@ -78,6 +79,16 @@ class puppy {
             return true;
         return false;
     }
+    getNecklaceColor() {
+        let necklacesColor = ['rose', 'violet', 'rouge', 'bordeaux', 'orange', 'jaune', 'bleu', 'vert', 'noir', 'blanc', 'marron', 'cyan'];
+        necklacesColor.forEach(color => {
+            if (this.puppyNecklace.match(color)) {
+                console.log("Je vais retourner " + color);
+                return ("Collier " + color);
+            }
+        }
+        )
+    }
 }
 
 /* Okkaina 1 */
@@ -139,10 +150,42 @@ let female20 = new puppy("22 Avril 2022", female, "Noire", "Jaune", "jaune", res
 
 /* Raia 1 */
 
-let female21 = new puppy("31 Juillet 2023", female, "Gris", "violet", "violet", dispo, "");
-let female22 = new puppy("31 Juillet 2023", female, "Gris", "rose", "rose", dispo, "");
-let male26 = new puppy("31 Juillet 2023", male, "Gris", "noir", "noir", dispo, "");
+let female21 = new puppy("31 Juillet 2023", female, "Gris", "violet", "violet", reserv, "Uranie");
+let female22 = new puppy("31 Juillet 2023", female, "Gris", "rose", "rose", reserv, "Une sacrée revanche");
+let male26 = new puppy("31 Juillet 2023", male, "Gris", "noir", "noir", reserv, "Uhtred");
 
+/* Panama 3 */
+
+let female23 = new puppy("13 Août 2023", female, "Noire", "rose", "rose", reserv, "Ubysse");
+let female24 = new puppy("13 Août 2023", female, "Froment", "femfro", "femfro", reserv, "Unité dites Ulka");
+let female25 = new puppy("13 Août 2023", female, "Grise", "violet", "violet", reserv, "Urkane");
+let female26 = new puppy("13 Août 2023", female, "Grise", "bordeaux", "bordeaux", reserv, "Uma");
+
+let male27 = new puppy("13 Août 2023", male, "Fauve", "fauve", "fauve", reserv, "Ulk");
+let male28 = new puppy("13 Août 2023", male, "Froment", "malfro", "malfro", reserv, "Ulky");
+let male29 = new puppy("13 Août 2023", male, "Noir", "vert", "vert", reserv, "Urkov");
+let male30 = new puppy("13 Août 2023", male, "Gris Bringé", "noir", "noir", reserv, "U'Bruce");
+let male31 = new puppy("13 Août 2023", male, "Gris", "jaune", "jaune", reserv, "Un Optimus Prime");
+let male32 = new puppy("13 Août 2023", male, "Gris", "bleu", "bleu", reserv, "Uppercut");
+let male33 = new puppy("13 Août 2023", male, "Gris Bringé", "orange", "orange", reserv, "Ulysse");
+
+
+/* Safari 1 */
+
+let female27 = new puppy("26 Novembre 2023", female, "Noire", "jaune", "jaune", dispo, "");
+let female28 = new puppy("26 Novembre 2023", female, "Bringée Noire", "violet", "violet", dispo, "");
+let female29 = new puppy("26 Novembre 2023", female, "Grise", "rose", "rose", dispo, "");
+let female30 = new puppy("26 Novembre 2023", female, "Bringée Rouge-Cerf", "orange", "orange", dispo, "");
+let female31 = new puppy("26 Novembre 2023", female, "Grise", "bordeaux", "bordeaux", reserv, "Utopie");
+let female32 = new puppy("26 Novembre 2023", female, "Noire", "marron", "marron", dispo, "");
+let female33 = new puppy("26 Novembre 2023", female, "Noire", "femaucun", "femaucun", 0, "");
+let female34 = new puppy("26 Novembre 2023", female, "Grise", "noir", "noir", reserv, "Unity");
+
+let male34 = new puppy("26 Novembre 2023", male, "Noir", "vert", "vert", reserv, "");
+let male35 = new puppy("26 Novembre 2023", male, "Bringé Noir", "malaucun", "malaucun", dispo, "");
+let male36 = new puppy("26 Novembre 2023", male, "Bringé Noir", "bleu", "bleu", dispo, "");
+let male37 = new puppy("26 Novembre 2023", male, "Bringé Noir", "rouge", "rouge", dispo, "");
+let male38 = new puppy("26 Novembre 2023", male, "Bringé Noir", "blanc", "blanc", dispo, "");
 
 
 
@@ -151,20 +194,23 @@ let panamaLitterOne = [male11, male12, male13, male14, male15, female1, female2,
 let panamaLitterTwo = [male16, male17, male18, female9, female10, female11, female12, female13, female14];
 let okkainaLitterTwo = [male25, male24, male21, male22, male23, male19, male20, female15, female16, female17, female18, female19, female20];
 let raiaLitterOne = [female21, female22, male26];
+let panamaLitterThree = [female23, female24, female25, female26, male27, male28, male29, male30, male31, male32, male33];
+let safariLitterOne = [male34, male35, male36, male37, male38, female27, female28, female29, female30, female31, female32, female33, female34];
 
 let okkaina = new dog("Okkaina", "10 Septembre 2018", caneCorso, templeJade, female, true, okkainaLitterTwo, "okkaina2");
-let panama = new dog("Panama", "02 Juin 2019", caneCorso, templeJade, female, true, panamaLitterTwo, "panama2");
+let panama = new dog("Panama", "02 Juin 2019", caneCorso, templeJade, female, true, panamaLitterThree, "panama3");
 let raia = new dog("Raia", "28 Septembre 2020", caneCorso, templeJade, female, true, raiaLitterOne, "raia1");
 let nixon = new dog("Nixon", "22 Août 2017", caneCorso, templeJade, male, false, false, false);
 let rock = new dog("Rock", "18 Mars 2018", caneCorso, diMunteanu, male, false, false, false);
-let safari = new dog("Safari", "7 Février 2021", caneCorso, terresNoires, female, false, false, false);
+let safari = new dog("Safari", "7 Février 2021", caneCorso, terresNoires, female, true, safariLitterOne, "safari1");
 let tornade = new dog("Tornade", "22 Avril 2022", caneCorso, terresNoires, female, false, false, false);
 let tsunami = new dog("Tsunami", "22 Avril 2022", caneCorso, terresNoires, female, false, false, false);
 let tonnerre = new dog("Tonnerre", "22 Avril 2022", caneCorso, terresNoires, male, false, false, false);
-let thelma = new dog("Thelma", "06 Juillet 2022", caneCorso, templeJade, female, false, false, false);
+//let thelma = new dog("Thelma", "06 Juillet 2022", caneCorso, templeJade, female, false, false, false);
 let paco = new dog("Paco", "22 Juillet 2019", caneCorso, 0, male, false, false, false);
+let poyel = new dog("Poyel", "07 Août 2019", caneCorso, deessetemple, male, false, false, false);
 
-let femaleClass = [okkaina, panama, raia, safari, tornade, tsunami, thelma];
+let femaleClass = [okkaina, panama, raia, safari, tornade, tsunami];
 let maleClass = [tonnerre, nixon];
 let dogClass = femaleClass.concat(maleClass);
 
@@ -174,63 +220,6 @@ let imgPath = "../src/img/";
 let vidPath = "/src/vid/";
 let jpg = ".jpg";
 let mp4 = ".mp4";
-
-
-/* -------------------------- News & Articles ---------------------------------- */
-/*
-formatDate = (value) => {
-
-    let year = value.substr(6, 4);
-    let month = value.substr(3, 2);
-    let day = value.substr(0, 2);
-    month--;
-
-    let date = new Date(year, month, day);
-    let dateReturn = date.toLocaleString('fr-FR', {
-        weekday: 'long',
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric'
-    });
-    return dateReturn;
-}
-
-class article {
-    constructor(artId, artTitle, artDate, artDescription, artAuthor, artDog)
-    {
-        this.artId = artId;
-        this.artTitle = artTitle;
-        this.artDate = formatDate(artDate);
-        this.artDescription = artDescription;
-        this.artAuthor = artAuthor;
-        this.artDog = artDog;
-    }
-}
-
-
-/* Author 
-let eva = " Eva Brochet. ";
-let benoit = " Benoit Souillat. ";
-let lesTerresNoires = " Les Terres Noires. ";
-
-/* Article Description 
-
-let textRockArrived = "Nous sommes ravis de l'arrivée de Rock parmi nos loulous. \n Bienvenue parmi nous Rock. \n Le voyage fût éprouvant" + 
-" mais Rock s'est bien acclimaté et a fait connaissance avec Okkaina et Panama, nos deux autres Cane Corso, ainsi qu'avec nos Whippets et notre Jack \n" 
-+ " Ce chien est un amour, et tout se passe très bien.";
-let textExpoDompierre20 = "Nous avons effectué l'exposition CACS de Dompierre Sur Besbre 2020 ce " + formatDate("13/09/2020") + ". \n" + 
-" Voici les résultats de l'exposition : ";
-let textOkkainaMarried = "Bravo Okkaina";
-
-
-/* Creating Instance 
-
-let rockArrived = new article("rock-arrivee","Arrivée de Rock", "01/06/2020", textRockArrived, benoit, rock);
-let expoDompierre20 = new article("dompierre-20","CACS Dompierre / Besbre", "13/09/2020", textExpoDompierre20, lesTerresNoires, panama);
-let okkainaMarried = new article("mariage-okkaina","Mariage d'Okkaina et Rock", "10/10/2020", textOkkainaMarried, eva, okkaina);
-
-let articles = [rockArrived, expoDompierre20, okkainaMarried];
-*/
 
 /* ---------------------- FANCYBOX ---------------------------- */
 

@@ -45,11 +45,16 @@ const listingPuppy = (puppyClass, puppyLiceLitterPage) => {
         puppyColor.textContent = "Couleur : " + elm.puppyColor;
 
         let puppyNecklace = document.createElement("p");
-        puppyNecklace.textContent = "Collier " + elm.puppyNecklace;
+        puppyNecklace.textContent = "Sans collier ";
+        let necklacesColor = ['rose', 'violet', 'rouge', 'bordeaux', 'orange', 'jaune', 'bleu', 'vert', 'noir', 'blanc', 'marron', 'cyan'];
+        necklacesColor.forEach(color => {
+            if (elm.puppyNecklace.match(color)) {
+                puppyNecklace.textContent = "Collier " + color;
+            }
+        });
 
         let puppyCardImgLink = document.createElement("a");
-        puppyCardImgLink.href = imgPath + litterLice + "-puppies/" +
-    /* elm.puppyNecklace + */ elm.puppyProfil + jpg;
+        puppyCardImgLink.href = imgPath + litterLice + "-puppies/" + elm.puppyProfil + jpg;
         puppyCardImgLink.classList.add("puppy_img");
         puppyCardImgLink.classList.add("fancybox");
 
@@ -116,7 +121,7 @@ const listingPuppy = (puppyClass, puppyLiceLitterPage) => {
         puppyCardImgLink.appendChild(puppyCardImg);
         puppyCard.appendChild(puppyAlbumDiv);
         puppyAlbumDiv.appendChild(puppyAlbum);
-       // puppyAlbumDiv.appendChild(puppyVid);
+        // puppyAlbumDiv.appendChild(puppyVid);
 
     });
 

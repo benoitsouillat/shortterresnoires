@@ -104,7 +104,9 @@ const createPart = (female, male, countLitter, arrayLitter) => {
 
 }
 
-//createPart(safari, nixon, 'safari1', "15 Mai 2023");
+// createPart(safari, tonnerre, 'safari1', "15 Mai 2023");
+createPart(safari, tonnerre, 'safari1', safariLitterOne);
+createPart(panama, poyel, 'panama3', panamaLitterThree);
 createPart(raia, nixon, 'raia1', raiaLitterOne);
 createPart(okkaina, paco, 'okkaina2', okkainaLitterTwo);
 createPart(panama, rock, 'panama2', panamaLitterTwo);
