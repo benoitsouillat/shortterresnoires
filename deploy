@@ -1,2 +1,0 @@
-#!/bin/sh
-rsync -av ./ q4115_benoit@playdogs.eu:~/lecanecorso --exclude-from=.gitignore --exclude=".*"
