@@ -1,0 +1,107 @@
+body {
+  background-color: #03040E;
+  color: #C7C7C7;
+  text-align: center;
+}
+body h1 {
+  text-align: center;
+  padding-bottom: 30px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #C7C7C7;
+}
+body .repro-line {
+  margin: 2px 20px;
+  padding: 5px;
+  height: 9vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #C7C7C7;
+  margin-bottom: 10px;
+}
+body .repro-line .image-space {
+  width: 200px;
+  max-width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .repro-line a,
+body .repro-line p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #C7C7C7;
+}
+body .repro-line a:hover,
+body .repro-line p:hover {
+  color: purple;
+}
+body .repro-line img {
+  max-height: 8vh;
+}
+body .section-repro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+}
+body .infos-repro {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body .infos-repro img {
+  width: 80%;
+  min-width: 200px;
+  max-width: 400px;
+  margin: 10px;
+}
+body .infos-repro h4,
+body .infos-repro h5,
+body .infos-repro p {
+  margin-left: 10px;
+}
+body .repro-form-container {
+  flex-grow: 2;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 2;
+}
+body .repro-form-container .repro-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+body .repro-form-container .repro-form input {
+  border: solid 2px beige;
+  padding: 2px;
+  margin: 5px;
+  background: #e7e7e7;
+  border-radius: 5px;
+  width: 60%;
+}
+body .repro-form-container .repro-form input[type=radio] {
+  width: unset;
+}
+body .repro-form-container .repro-form fieldset {
+  width: 60%;
+}
+body .repro-form-container .repro-form label,
+body .repro-form-container .repro-form legend {
+  margin-left: 5px;
+  font-size: 20px;
+}/*# sourceMappingURL=main.css.map */

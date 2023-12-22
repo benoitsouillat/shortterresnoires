@@ -32,7 +32,7 @@ class Repro
     }
     public function fillFromStdClass(stdClass $data): void
     {
-        $this->setId($data->id);
+        $this->setId($data->id ?? 0);
         $this->setName($data->name);
         $this->setSex($data->sex);
         $this->setBirthdate(new DateTime($data->birthdate ?? "2020-01-01"));

@@ -1,0 +1,126 @@
+body {
+    background-color: #03040E;
+    color: #C7C7C7;
+    text-align: center;
+
+    h1 {
+        text-align: center;
+        padding-bottom: 30px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #C7C7C7;
+
+    }
+
+    .repro-line {
+        margin: 2px 20px;
+        padding: 5px;
+        height: 9vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #C7C7C7;
+        margin-bottom: 10px;
+
+        .image-space {
+            width: 200px;
+            max-width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a,
+        p {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: #C7C7C7;
+
+            &:hover {
+                color: purple;
+            }
+        }
+
+
+        img {
+            max-height: 8vh;
+        }
+    }
+
+    .section-repro {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+
+        padding: 10px;
+        margin: 10px;
+        width: 100%;
+
+    }
+
+    .infos-repro {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        img {
+            width: 80%;
+            min-width: 200px;
+            max-width: 400px;
+            margin: 10px;
+        }
+
+        h4,
+        h5,
+        p {
+            margin-left: 10px;
+        }
+    }
+
+    .repro-form-container {
+        flex-grow: 2;
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-grow: 2;
+
+        .repro-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%;
+
+            input {
+                border: solid 2px beige;
+                padding: 2px;
+                margin: 5px;
+                background: #e7e7e7;
+                border-radius: 5px;
+                width: 60%;
+            }
+
+            input[type="radio"] {
+                width: unset;
+            }
+
+            fieldset {
+                width: 60%;
+            }
+
+            label,
+            legend {
+                margin-left: 5px;
+                font-size: 20px;
+            }
+        }
+    }
+}

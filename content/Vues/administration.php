@@ -17,6 +17,10 @@ $user->fillFromSession($_SESSION);
 <body>
     <section>
         <h1 class="text-center">Bienvenue Administrateur <?php echo $user->getUsername(); ?></h1>
+
+        <div>
+            <a href="./repros.php" class="btn btn-info">Gérer les reproducteurs</a>
+        </div>
     </section>
 
 </body>
