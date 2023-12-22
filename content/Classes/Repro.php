@@ -42,6 +42,23 @@ class Repro
         $this->setMainImg($data->mainImg ?? self::DEFAULT_IMG);
     }
 
+    public static function fetchFromDatabase(PDO $conn, int $reproId): ?Repro
+    {
+        $stmt = $conn->prepare("SELECT * FROM `repros` WHERE id = :reproId");
+        $stmt->bindParam(':reproId', $reproId, PDO::PARAM_INT);
+        $stmt->execute();
+        $data = $stmt->fetch(PDO::FETCH_OBJ);
+
+        if (!$data) {
+            return null; // Aucun objet Repro trouvé avec cet identifiant
+        }
+
+        $repro = new Repro();
+        $repro->fillFromStdClass($data);
+
+        return $repro;
+    }
+
     /**
      * Get the value of id
      */
