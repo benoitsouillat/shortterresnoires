@@ -58,32 +58,35 @@ $females = $stmtFemales->fetchAll(PDO::FETCH_ASSOC);
 
     <section class="section-repro">
         <?php if ($litter->getMother() != NULL) {
-        ?>
-            <div class="infos-repro">
-                <h3>Infos de la portée en ligne : </h3>
-                <?php echo "<h4> Portée de {$litter->getMother()->getName()} et {$litter->getFather()->getName()}, née le {$litter->getBirthdate()->format('d-m-Y')} .</h1>" ?>
 
-                <div class="parents-container">
-                    <div class="mother-container">
-                        <?php echo "<img src='{$litter->getMother()->getMainImg()}' alt='{$litter->getMother()->getName()}'" ?>
-                        <?php echo "<p> {$litter->getMother()->getName()}</p>" ?>
-                    </div>
-                    <div class="father-container">
-                        <?php echo "<img src='{$litter->getFather()->getMainImg()}' alt='{$litter->getFather()->getName()}'" ?>
-                        <?php echo "<p> {$litter->getFather()->getName()}</p>" ?>
-                    </div>
+        ?>
+        <div class="infos-repro">
+            <h3>Infos de la portée en ligne : </h3>
+            <?php echo "<h4> Portée de {$litter->getMother()->getName()} et {$litter->getFather()->getName()}, née le {$litter->getBirthdate()->format('d-m-Y')} .</h1>" ?>
+
+            <div class="parents-container">
+                <div class="mother-container">
+                    <?php echo "<img src='{$litter->getMother()->getMainImg()}' alt='{$litter->getMother()->getName()}'" ?>
+                    <?php echo "<p> {$litter->getMother()->getName()}</p>" ?>
                 </div>
-                <div class="litter-infos-container">
-                    <?php echo "<p>{$litter->getNumberOfFemales()} femelle(s) et {$litter->getNumberOfMales()} mâle(s)</p>"; ?>
-                    <?php echo "<p>{$litter->getNumberOfPuppies()} chiot(s) né(s) le {$litter->getBirthdate()->format('d-m-Y')} </p>"; ?>
-                </div>
-                <div class="w-100 mt-5 d-flex justify-content-center align-items-center">
-                    <button onClick="confirmDeleteLitter(<?php echo $litter->getId() ?>)" class="btn btn-danger">Supprimer
-                        cette portée</button>
+                <div class="father-container">
+                    <?php echo "<img src='{$litter->getFather()->getMainImg()}' alt='{$litter->getFather()->getName()}'" ?>
+                    <?php echo "<p> {$litter->getFather()->getName()}</p>" ?>
                 </div>
             </div>
+            <div class="litter-infos-container">
+                <?php echo "<p>{$litter->getNumberOfFemales()} femelle(s) et {$litter->getNumberOfMales()} mâle(s)</p>"; ?>
+                <?php echo "<p>{$litter->getNumberOfPuppies()} chiot(s) né(s) le {$litter->getBirthdate()->format('d-m-Y')} </p>"; ?>
+            </div>
+            <div class="w-100 mt-5 d-flex justify-content-center align-items-center">
+                <button onClick="confirmDeleteLitter(<?php echo $litter->getId() ?>)" class="btn btn-danger">Supprimer
+                    cette portée</button>
+            </div>
+        </div>
         <?php
+
         };
+
         ?>
 
         <div class="repro-form-container">
@@ -95,11 +98,24 @@ $females = $stmtFemales->fetchAll(PDO::FETCH_ASSOC);
                     <select name='mother'>
                         <?php
                         foreach ($females as $female) {
-                            echo "<option value='{$female['id']}'>{$female['name']}</option>";
+                            if ($litter->getMother() !== NULL) {
+                                echo "<option value='" . $female['id'] . "' " .
+                                    (($litter->getMother()->getId() === $female['id']) ? 'selected' : '') .
+                                    ">{$female['name']}</option>";
+                            } else {
+                                echo "<option value='{$female['id']}'>{$female['name']}</option>";
+                            }
                         }
+
                         echo "</select> et de <select name='father'>";
                         foreach ($males as $male) {
-                            echo "<option value='{$male['id']}'>{$male['name']}</option>";
+                            if ($litter->getFather() !== NULL) {
+                                echo "<option value='" . $male['id'] . "' " .
+                                    (($litter->getFather()->getId() === $male['id']) ? 'selected' : '') .
+                                    ">{$male['name']}</option>";
+                            } else {
+                                echo "<option value='{$male['id']}'>{$male['name']}</option>";
+                            }
                         }
                         ?>
                     </select>
@@ -107,7 +123,8 @@ $females = $stmtFemales->fetchAll(PDO::FETCH_ASSOC);
 
 
                 <label for="birthdate">Date de naissance</label>
-                <input type="date" name="birthdate" id="birthdate" value="<?php echo $litter->getBirthdate()->format('Y-m-d') ?>">
+                <input type="date" name="birthdate" id="birthdate"
+                    value="<?php echo $litter->getBirthdate()->format('Y-m-d') ?>">
 
                 <label for="numberLof">Numéro de portée</label>
                 <input type="text" name="numberLof" id="numberLof" value="<?php echo $litter->getNumberLof() ?>">
@@ -117,12 +134,15 @@ $females = $stmtFemales->fetchAll(PDO::FETCH_ASSOC);
                             déjà
                             existantes)</i></legend>
                     <label for="numberOfPuppies">Nombre de chiots : </label>
-                    <input name="numberOfPuppies" id="numberOfPuppies" type="number" value="<?php echo $litter->getNumberOfPuppies() ?>">
+                    <input name="numberOfPuppies" id="numberOfPuppies" type="number"
+                        value="<?php echo $litter->getNumberOfPuppies() ?>">
                     <fieldset>
                         <label for="numberOfPuppies">Mâles : </label>
-                        <input name="numberOfMales" id="numberOfMales" type="number" value="<?php echo $litter->getNumberOfMales() ?>">
+                        <input name="numberOfMales" id="numberOfMales" type="number"
+                            value="<?php echo $litter->getNumberOfMales() ?>">
                         <label for="numberOfPuppies">Femelles : </label>
-                        <input name="numberOfFemales" id="numberOfFemales" type="number" value="<?php echo $litter->getNumberOfFemales() ?>">
+                        <input name="numberOfFemales" id="numberOfFemales" type="number"
+                            value="<?php echo $litter->getNumberOfFemales() ?>">
                     </fieldset>
                 </fieldset>
 

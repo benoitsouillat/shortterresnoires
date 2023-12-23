@@ -27,6 +27,15 @@ body .repro-line .image-space {
   justify-content: center;
   align-items: center;
 }
+body .repro-line .image-space a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+body .repro-line .image-space a img {
+  margin: auto 5px;
+}
 body .repro-line a,
 body .repro-line p {
   font-size: 2rem;

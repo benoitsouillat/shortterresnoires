@@ -28,6 +28,17 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            a {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+
+                img {
+                    margin: auto 5px;
+                }
+            }
         }
 
         a,

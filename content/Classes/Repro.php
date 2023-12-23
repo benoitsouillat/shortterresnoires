@@ -32,6 +32,18 @@ class Repro
         $this->adn = $adn;
         $this->mainImg = $mainImg;
     }
+    public function fillFromForm(array $post)
+    {
+        if (isset($post['reproID']) && $post['reproID'] != NULL) {
+            $this->setId($post['reproID']);
+            $this->setMainImg($post['mainImg']);
+        }
+        $this->setName($post['reproName']);
+        $this->setSex($post['reproSex']);
+        $this->setBirthdate($post['reproBirthdate']);
+        $this->setInsert($post['reproInsert']);
+        $this->setBreeder($post['reproBreeder']);
+    }
     public function fillFromStdClass(stdClass $data): void
     {
         $this->setId($data->id ?? 0);

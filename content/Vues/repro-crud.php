@@ -53,8 +53,6 @@ if (isset($_GET['error'])) {
         echo "<div class='error-div w-100 p-5 m-2'><p class='w-100 text-center'>{$errorMessage}</p></div>
         ";
     }
-
-
     ?>
     <section class="section-repro">
         <div class="infos-repro">

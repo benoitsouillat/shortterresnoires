@@ -41,7 +41,10 @@ if ($user->checkRole() === false) {
         echo "            
         <div class='repro-line'>
             <div class='image-space'>
-                <a href='./litter-crud.php?litterID={$litter->getId()}'><img src=../{$litter->getMother()->getMainImg()} alt={$litter->getMother()->getName()}></a>
+                <a href='./litter-crud.php?litterID={$litter->getId()}'>
+                <img src=../{$litter->getMother()->getMainImg()} alt={$litter->getMother()->getName()}>
+                <img src=../{$litter->getFather()->getMainImg()} alt={$litter->getFather()->getName()}>
+                </a>
             </div>
             <a href='./litter-crud.php?litterID={$litter->getId()}'><span class='fa'> {$litter->getMother()->getName()} et {$litter->getFather()->getName()}</span></a>
             <p>Nés le : {$litter->getBirthdate()->format('d-m-Y')}</p></div>";

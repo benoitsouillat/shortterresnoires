@@ -13,9 +13,7 @@ if (isset($_GET['delete']) && [$_GET['delete'] == true]) {
         $stmt->execute();
         header('Location:../Vues/repros.php');
     } catch (PDOException $e) {
-        if ($e->getCode() == 23000) {
-            header('Location:../Vues/repro-crud.php?reproID=' . $_GET['reproID'] . '&error=23000');
-        }
+        header('Location:../Vues/repro-crud.php?reproID=' . $_GET['reproID'] . '&error=' . $e->getCode());
     }
 }
 
@@ -26,6 +24,7 @@ if (isset($_POST['reproID']) && $_POST['reproID'] > 0) {
 } else {
     $stmt = $conn->prepare(createRepro());
 }
+$repro->fillFromForm($_POST);
 $stmt->bindValue(':name', $_POST['reproName']);
 $stmt->bindValue(':sex', $_POST['reproSex']);
 $stmt->bindValue(':birthdate', $_POST['reproBirthdate']);
