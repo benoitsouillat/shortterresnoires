@@ -1,5 +1,7 @@
 <?php
 
+include_once('../Models/sql/repro_request.php');
+
 class Repro
 {
     const DEFAULT_IMG = "../../src/img/repro-default.jpg";
@@ -44,18 +46,15 @@ class Repro
 
     public static function fetchFromDatabase(PDO $conn, int $reproId): ?Repro
     {
-        $stmt = $conn->prepare("SELECT * FROM `repros` WHERE id = :reproId");
-        $stmt->bindParam(':reproId', $reproId, PDO::PARAM_INT);
+        $stmt = $conn->prepare(getReproFromID());
+        $stmt->bindParam(':reproID', $reproId);
         $stmt->execute();
         $data = $stmt->fetch(PDO::FETCH_OBJ);
-
         if (!$data) {
             return null; // Aucun objet Repro trouvé avec cet identifiant
         }
-
         $repro = new Repro();
         $repro->fillFromStdClass($data);
-
         return $repro;
     }
 

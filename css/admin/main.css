@@ -64,16 +64,20 @@ body .infos-repro img {
   max-width: 400px;
   margin: 10px;
 }
+body .infos-repro h3,
+body .infos-repro h4 {
+  width: 100%;
+  text-align: center;
+}
 body .infos-repro h4,
 body .infos-repro h5,
 body .infos-repro p {
   margin-left: 10px;
 }
 body .repro-form-container {
-  flex-grow: 2;
   width: 60%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -85,6 +89,14 @@ body .repro-form-container .repro-form {
   justify-content: space-between;
   align-items: center;
   width: 60%;
+}
+body .repro-form-container .repro-form option,
+body .repro-form-container .repro-form select {
+  border: solid 2px beige;
+  background: #e7e7e7;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 5px;
 }
 body .repro-form-container .repro-form input {
   border: solid 2px beige;
@@ -104,4 +116,56 @@ body .repro-form-container .repro-form label,
 body .repro-form-container .repro-form legend {
   margin-left: 5px;
   font-size: 20px;
+}
+
+.parents-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
+}
+.parents-container .mother-container,
+.parents-container .father-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.parents-container h3,
+.parents-container h4,
+.parents-container h5 {
+  width: 100%;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.litter-infos-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.repro-form .litter-infos-puppies {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.repro-form .litter-infos-puppies i {
+  font-size: 0.8em;
+}
+.repro-form .litter-infos-puppies legend {
+  width: 100%;
+}
+.repro-form .litter-infos-puppies input {
+  max-width: 40px;
 }/*# sourceMappingURL=main.css.map */

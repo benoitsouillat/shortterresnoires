@@ -1,6 +1,7 @@
 <?php
 
-require_once "./Repro.php";
+require_once(__DIR__ . "/Repro.php");
+require_once(__DIR__ . "/../Models/sql/repro_request.php");
 
 class Litter
 {
@@ -12,7 +13,7 @@ class Litter
     private $numberOfMales = 0;
     private $numberOfFemales = 0;
     private $numberLof = "";
-    private $birthdate = "01012000";
+    private $birthdate = "2020-01-01";
     private $display = true;
 
     public function __construct(
@@ -21,7 +22,7 @@ class Litter
         int $numberOfMales = 0,
         int $numberOfFemales = 0,
         string $numberLof = "",
-        DateTime $birthdate,
+        DateTime $birthdate = new DateTime('now'),
         bool $display = true
     ) {
         $this->mother = $mother;
@@ -33,22 +34,30 @@ class Litter
         $this->birthdate = $birthdate;
         $this->display = $display;
     }
+
     public function fillFromStdClass(stdClass $data): void
     {
-        $mother = new Repro();
-        $mother->fillFromStdClass($data->mother); // Supposez que $data->mother est un objet stdClass
-        $this->setMother($mother);
-
-        $father = new Repro();
-        $father->fillFromStdClass($data->father); // Supposez que $data->father est un objet stdClass
-        $this->setFather($father);
+        $this->setId($data->litterId);
+        $this->setMother($data->mother);
+        $this->setFather($data->father);
+        $this->setBirthdate($data->birthdate);
 
         $this->setNumberOfPuppies($data->numberOfPuppies);
-        $this->setNumberOfMales($data->numberOfMales);
-        $this->setNumberOfFemales($data->numberOfFemales);
-        $this->setNumberLof($data->numberLof);
-        $this->setBirthdate($data->birthdate);
+        $this->setNumberOfMales($data->numberOfMales ?? 0);
+        $this->setNumberOfFemales($data->numberOfFemales ?? 0);
+        $this->setNumberLof($data->numberLOF ?? 'En cours d\'acquisition.');
         $this->setDisplay($data->display);
+    }
+    public function fillFromForm(array $post)
+    {
+        $this->setMother($post['mother']);
+        $this->setFather($post['father']);
+        $this->setBirthdate($post['birthdate']);
+        $this->setNumberOfPuppies($post['numberOfPuppies']);
+        $this->setNumberOfMales($post['numberOfMales']);
+        $this->setNumberOfFemales($post['numberOfFemales']);
+        $this->setNumberLof($post['numberLof']);
+        $this->setDisplay(1);
     }
 
 
@@ -131,8 +140,7 @@ class Litter
 
     public function setBirthdate($birthdate)
     {
-        $this->birthdate = $birthdate;
-
+        $this->birthdate = new DateTime($birthdate);
         return $this;
     }
 
@@ -143,6 +151,19 @@ class Litter
     public function setDisplay($display)
     {
         $this->display = $display;
+
+        return $this;
+    }
+
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
 
         return $this;
     }

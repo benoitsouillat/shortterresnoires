@@ -18,9 +18,8 @@ $user->fillFromSession($_SESSION);
     <section>
         <h1 class="text-center">Bienvenue Administrateur <?php echo $user->getUsername(); ?></h1>
 
-        <div>
-            <a href="./repros.php" class="btn btn-info">Gérer les reproducteurs</a>
-        </div>
+        <?php include_once('../Vues/admin_nav.php'); ?>
+
     </section>
 
 </body>

@@ -6,7 +6,7 @@ function getAllRepros()
 }
 function getReproFromID()
 {
-    return "SELECT * FROM `repros` WHERE id = `:reproId`";
+    return "SELECT * FROM `repros` WHERE id = :reproID";
 }
 function createRepro()
 {
@@ -37,4 +37,13 @@ function manageRepro()
     breeder = :breeder,
     adn = :adn,
     mainImg = :mainImg WHERE id = :reproID";
+}
+
+function getAllMalesRepro()
+{
+    return "SELECT * FROM `repros` WHERE sex = 'Male'";
+}
+function getAllFemalesRepro()
+{
+    return "SELECT * FROM `repros` WHERE sex = 'Female'";
 }

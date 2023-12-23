@@ -1,0 +1,60 @@
+.parents-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
+
+    .mother-container,
+    .father-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    h3,
+    h4,
+    h5 {
+        width: 100%;
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+    }
+}
+
+.litter-infos-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.repro-form {
+
+    .litter-infos-puppies {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+
+        i {
+            font-size: .8em;
+        }
+
+        legend {
+            width: 100%;
+        }
+
+        input {
+            max-width: 40px;
+        }
+    }
+}

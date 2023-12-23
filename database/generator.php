@@ -26,6 +26,23 @@ $table_users = "CREATE TABLE IF NOT EXISTS `terresnoires`.`users` (
     )
 ENGINE = InnoDB;";
 
+$table_litters = "CREATE TABLE IF NOT EXISTS `terresnoires`.`litters` (
+    `litterId` INT NOT NULL AUTO_INCREMENT,
+    `mother` INT NOT NULL DEFAULT 1,
+    `father` INT NOT NULL DEFAULT 1,
+    `birthdate` DATE NOT NULL DEFAULT '2020-01-01',
+    `numberOfPuppies` INT NOT NULL DEFAULT 1,
+    `numberOfMales` INT,
+    `numberOfFemales` INT,
+    `numberLOF` VARCHAR(40) NOT NULL DEFAULT 'En cours d\'acquisition',
+    `display` TINYINT DEFAULT 1,
+    PRIMARY KEY(`litterId`),
+    FOREIGN KEY (`mother`) REFERENCES repros(id),
+    FOREIGN KEY (`father`) REFERENCES repros(id)
+    )
+ENGINE = InnoDB;";
+
 $conn->exec($databaseCreator);
 $conn->exec($table_repros);
-$conn->exec($table_users);
+// $conn->exec($table_users);
+$conn->exec($table_litters);
