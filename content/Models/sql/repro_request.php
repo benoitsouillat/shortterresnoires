@@ -47,3 +47,7 @@ function getAllFemalesRepro()
 {
     return "SELECT * FROM `repros` WHERE sex = 'Female'";
 }
+function deleteReproFromId()
+{
+    return "DELETE FROM `repros` WHERE id = :reproID";
+}

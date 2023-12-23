@@ -48,6 +48,13 @@ body {
         }
     }
 
+    .error-div {
+        background-color: rgb(211, 98, 98);
+        color: #FFF;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
     .section-repro {
         display: flex;
         flex-direction: row;

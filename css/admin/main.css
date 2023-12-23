@@ -41,6 +41,12 @@ body .repro-line p:hover {
 body .repro-line img {
   max-height: 8vh;
 }
+body .error-div {
+  background-color: rgb(211, 98, 98);
+  color: #FFF;
+  font-size: 1.2em;
+  font-weight: bold;
+}
 body .section-repro {
   display: flex;
   flex-direction: row;

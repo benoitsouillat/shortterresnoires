@@ -6,6 +6,19 @@ include_once('../Models/sql/repro_request.php');
 
 $repro = new Repro();
 
+if (isset($_GET['delete']) && [$_GET['delete'] == true]) {
+    $stmt = $conn->prepare(deleteReproFromId());
+    $stmt->bindValue(':reproID', $_GET['reproID']);
+    try {
+        $stmt->execute();
+        header('Location:../Vues/repros.php');
+    } catch (PDOException $e) {
+        if ($e->getCode() == 23000) {
+            header('Location:../Vues/repro-crud.php?reproID=' . $_GET['reproID'] . '&error=23000');
+        }
+    }
+}
+
 if (isset($_POST['reproID']) && $_POST['reproID'] > 0) {
     $repro->setId($_POST['reproID']);
     $stmt = $conn->prepare(manageRepro());
