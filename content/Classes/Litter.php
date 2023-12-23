@@ -42,7 +42,7 @@ class Litter
         $this->setFather($data->father);
         $this->setBirthdate($data->birthdate);
 
-        $this->setNumberOfPuppies($data->numberOfPuppies);
+        $this->setNumberOfPuppies($data->numberOfMales, $data->numberOfFemales);
         $this->setNumberOfMales($data->numberOfMales ?? 0);
         $this->setNumberOfFemales($data->numberOfFemales ?? 0);
         $this->setNumberLof($data->numberLOF ?? 'En cours d\'acquisition.');
@@ -53,7 +53,7 @@ class Litter
         $this->setMother($post['mother']);
         $this->setFather($post['father']);
         $this->setBirthdate($post['birthdate']);
-        $this->setNumberOfPuppies($post['numberOfPuppies']);
+        $this->setNumberOfPuppies($post['numberOfMales'], $post['numberOfFemales']);
         $this->setNumberOfMales($post['numberOfMales']);
         $this->setNumberOfFemales($post['numberOfFemales']);
         $this->setNumberLof($post['numberLof']);
@@ -116,9 +116,9 @@ class Litter
     {
         return $this->numberOfPuppies;
     }
-    public function setNumberOfPuppies($numberOfPuppies)
+    public function setNumberOfPuppies($numberOfFemales, $numberOfMales)
     {
-        $this->numberOfPuppies = $numberOfPuppies;
+        $this->numberOfPuppies = $numberOfFemales + $numberOfMales;
 
         return $this;
     }
