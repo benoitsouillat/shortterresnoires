@@ -1,17 +1,18 @@
 <?php
-require_once('../../conn/conn.php');
 require_once('../Classes/User.php');
 require_once('../Classes/Repro.php');
+require_once('../Classes/RequestPDO.php');
 session_start();
 
 $user = new User();
 $user->fillFromSession($_SESSION);
 $user->checkRole();
 
+$pdo = new RequestPDO();
 
 $repro = new Repro();
 if (isset($_GET['reproID']) && $_GET['reproID'] != null) {
-    $stmt = $conn->prepare('SELECT * FROM repros WHERE id = :reproID');
+    $stmt = $pdo->connect()->prepare('SELECT * FROM repros WHERE id = :reproID');
     $stmt->bindParam(':reproID', $_GET['reproID']);
     $stmt->execute();
     $datas = $stmt->fetch(PDO::FETCH_OBJ);
@@ -27,8 +28,6 @@ if (isset($_GET['error'])) {
     else
         $errorMessage = "Une erreur s'est produite ...";
 }
-
-
 ?>
 
 <html lang="FR-fr">

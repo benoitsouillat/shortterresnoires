@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #03040E;
   color: #C7C7C7;
@@ -212,13 +213,13 @@ body .repro-form-container .repro-form legend {
   padding: 10px 20px;
   margin: 2px;
 }
-.puppies-container .puppy-litter-container .puppy-card .card-top .available {
+.puppies-container .puppy-litter-container .puppy-card .card-top .disponible {
   color: rgb(2, 58, 2);
 }
 .puppies-container .puppy-litter-container .puppy-card .card-top .option {
   color: rgb(120, 79, 3);
 }
-.puppies-container .puppy-litter-container .puppy-card .card-top .reserved {
+.puppies-container .puppy-litter-container .puppy-card .card-top .reservé {
   color: rgb(108, 3, 3);
 }
 .puppies-container .puppy-litter-container .puppy-card .card-info {

@@ -1,6 +1,6 @@
 <?php
 
-require_once('./RequestPDO.php');
+require_once(__DIR__ . '/RequestPDO.php');
 
 class User
 {
@@ -35,7 +35,7 @@ class User
         $this->setEmail($std->email ?? "unknown");
         $this->setPassword($std->password);
         $this->setAvatar($std->avatar);
-        $this->setRole($std->role);
+        $this->setRole($std->role ?? 'user');
     }
 
     public function fillFromSession(array $session)
@@ -89,7 +89,6 @@ class User
         $stmt->execute();
         if ($stmt->fetch(PDO::FETCH_ASSOC)) {
             echo "Erreur : L'email existe déjà";
-            session_start();
             $_SESSION = [];
             header("Location:../login.php?error=badlog");
         } else {

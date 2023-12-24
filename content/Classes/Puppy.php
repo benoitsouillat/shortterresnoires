@@ -13,6 +13,7 @@ class Puppy
     private $necklace = '';
     private $mainImg = "../../src/img/puppy-default.jpg";
     private $display = true;
+    private $pdo = null;
 
     public function __construct(
         string $name = "",
@@ -22,7 +23,8 @@ class Puppy
         string $necklace = '',
         string $available = "Disponible",
         string $mainImg = "../../src/img/puppy-default.jpg",
-        bool $display = true
+        bool $display = true,
+        RequestPDO $pdo = null
     ) {
         $this->name = $name;
         $this->litter = $litter;
@@ -32,23 +34,37 @@ class Puppy
         $this->available = $available;
         $this->mainImg = $mainImg;
         $this->display = $display;
+        $this->pdo = $pdo ?? new RequestPDO();
     }
 
     public function fillFromStdClass(stdClass $data)
     {
+        $stmt = $this->pdo->connect()->prepare(getLitterFromId());
+        $stmt->bindValue(':litterId', $data->litter);
+        $stmt->execute();
+        $litter = new Litter();
+        $dataLitter = $stmt->fetch(PDO::FETCH_OBJ);
+        $litter->fillFromStdClass($dataLitter);
+        $this->setLitter($litter);
+        $this->setId($data->id);
+        $this->setName($data->name);
+        $this->setSex($data->sex);
+        $this->setColor($data->color);
+        $this->setAvailable($data->available);
+        $this->setNecklace($data->necklace);
+        $this->setDisplay($data->display);
+        $this->setMainImg($data->mainImg);
     }
 
     public function fillFromFetchAssoc(array $array)
     {
-        $conn = new RequestPDO();
-        $stmt = $conn->connect()->prepare(getLitterFromId());
+        $stmt = $this->pdo->connect()->prepare(getLitterFromId());
         $stmt->bindValue(':litterId', $array['litter']);
         $stmt->execute();
         $litter = new Litter();
         $dataLitter = $stmt->fetch(PDO::FETCH_OBJ);
         $litter->fillFromStdClass($dataLitter);
         $this->setLitter($litter);
-
         $this->setId($array['puppyID']);
         $this->setName($array['name']);
         $this->setSex($array['sex']);

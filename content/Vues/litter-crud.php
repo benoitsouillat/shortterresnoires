@@ -1,5 +1,4 @@
 <?php
-require_once('../../conn/conn.php');
 require_once('../Classes/RequestPDO.php');
 require_once('../Classes/User.php');
 require_once('../Classes/Litter.php');
@@ -9,7 +8,6 @@ session_start();
 $user = new User();
 $user->fillFromSession($_SESSION);
 $user->checkRole();
-
 
 $litter = new litter();
 $pdo = new RequestPDO();

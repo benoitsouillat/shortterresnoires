@@ -1,7 +1,8 @@
 <?php
-include_once(__DIR__ . '/../../conn/conn.php');
+include_once(__DIR__ . '/../Classes/RequestPDO.php');
 include_once(__DIR__ . '/sql/repro_request.php');
 
-$stmt = $conn->prepare(getAllRepros());
+$pdo = new RequestPDO();
+$stmt = $pdo->connect()->prepare(getAllRepros());
 $stmt->execute();
 $repros = $stmt->fetchAll(PDO::FETCH_OBJ);
