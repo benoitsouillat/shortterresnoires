@@ -5,10 +5,8 @@ session_start();
 
 $user = new User();
 $user->fillFromSession($_SESSION);
-if ($user->checkRole() === false) {
-    echo 'Pas le bon role !!';
-    header('Location:./logout.php');
-}
+$user->checkRole();
+
 ?>
 <html lang="FR-fr">
 

@@ -1,5 +1,6 @@
 <?php
 require_once('../../conn/conn.php');
+require_once('../Classes/RequestPDO.php');
 require_once('../Classes/User.php');
 require_once('../Classes/Litter.php');
 require_once('../Models/sql/litter_request.php');
@@ -7,34 +8,27 @@ session_start();
 
 $user = new User();
 $user->fillFromSession($_SESSION);
-if ($user->checkRole() === false) {
-    echo 'Pas le bon role !!';
-    header('Location:./logout.php');
-}
+$user->checkRole();
+
 
 $litter = new litter();
+$pdo = new RequestPDO();
 if (isset($_GET['litterID']) && $_GET['litterID'] != null) {
-    $stmt = $conn->prepare(getLitterFromId());
+    $stmt = $pdo->connect()->prepare(getLitterFromId());
     $stmt->bindParam(':litterId', $_GET['litterID']);
     $stmt->execute();
     $datas = $stmt->fetch(PDO::FETCH_OBJ);
-
-    $mother = new Repro();
-    $datas->mother = $mother->fetchFromDatabase($conn, $datas->mother);
-    $father = new Repro();
-    $datas->father = $father->fetchFromDatabase($conn, $datas->father);
-
     $litter->fillFromStdClass($datas);
     $litter->setId($_GET['litterID']);
 } else {
     $litter->setId(0);
 }
 
-$stmtMales = $conn->prepare(getAllMalesRepro());
+$stmtMales = $pdo->connect()->prepare(getAllMalesRepro());
 $stmtMales->execute();
 $males = $stmtMales->fetchAll(PDO::FETCH_ASSOC);
 
-$stmtFemales = $conn->prepare(getAllFemalesRepro());
+$stmtFemales = $pdo->connect()->prepare(getAllFemalesRepro());
 $stmtFemales->execute();
 $females = $stmtFemales->fetchAll(PDO::FETCH_ASSOC);
 

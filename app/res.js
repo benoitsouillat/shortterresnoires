@@ -183,7 +183,7 @@ let female34 = new puppy("26 Novembre 2023", female, "Grise", "noir", "noir", re
 
 let male34 = new puppy("26 Novembre 2023", male, "Noir", "vert", "vert", reserv, "");
 let male35 = new puppy("26 Novembre 2023", male, "Bringé Noir", "malaucun", "malaucun", dispo, "");
-let male36 = new puppy("26 Novembre 2023", male, "Bringé Noir", "bleu", "bleu", dispo, "");
+let male36 = new puppy("26 Novembre 2023", male, "Bringé Noir", "bleu", "bleu", reserv, "");
 let male37 = new puppy("26 Novembre 2023", male, "Bringé Noir", "rouge", "rouge", dispo, "");
 let male38 = new puppy("26 Novembre 2023", male, "Bringé Noir", "blanc", "blanc", dispo, "");
 

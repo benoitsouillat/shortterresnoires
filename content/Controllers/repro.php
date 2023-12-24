@@ -1,13 +1,14 @@
 <?php
 
-include_once('../../conn/conn.php');
+include_once('../Classes/RequestPDO.php');
 include_once('../Classes/Repro.php');
 include_once('../Models/sql/repro_request.php');
 
 $repro = new Repro();
+$pdo = new RequestPDO();
 
 if (isset($_GET['delete']) && [$_GET['delete'] == true]) {
-    $stmt = $conn->prepare(deleteReproFromId());
+    $stmt = $pdo->connect()->prepare(deleteReproFromId());
     $stmt->bindValue(':reproID', $_GET['reproID']);
     try {
         $stmt->execute();
@@ -19,10 +20,10 @@ if (isset($_GET['delete']) && [$_GET['delete'] == true]) {
 
 if (isset($_POST['reproID']) && $_POST['reproID'] > 0) {
     $repro->setId($_POST['reproID']);
-    $stmt = $conn->prepare(manageRepro());
+    $stmt = $pdo->connect()->prepare(manageRepro());
     $stmt->bindValue(':reproID', $repro->getId());
 } else {
-    $stmt = $conn->prepare(createRepro());
+    $stmt = $pdo->connect()->prepare(createRepro());
 }
 $repro->fillFromForm($_POST);
 $stmt->bindValue(':name', $_POST['reproName']);

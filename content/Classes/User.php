@@ -1,5 +1,7 @@
 <?php
 
+require_once('./RequestPDO.php');
+
 class User
 {
     private $userID = 0;
@@ -8,19 +10,22 @@ class User
     private $password = "";
     private $avatar = "";
     private $role = "user";
+    private $pdo = null;
 
     public function __construct(
         string $username = "",
         string $email = "",
         string $password = "",
         string $avatar = "../../src/img/user-default.jpg",
-        string $role = 'user'
+        string $role = 'user',
+        RequestPDO $pdo = null
     ) {
         $this->username = $username;
         $this->email = $email;
         $this->password = $password;
         $this->avatar = $avatar;
         $this->role = $role;
+        $this->pdo = $pdo ?? new RequestPDO();
     }
 
     public function fillFromStdClass(stdClass $std)
@@ -41,9 +46,9 @@ class User
         $this->setRole($session['role']);
     }
 
-    public function connect(PDO $conn, string $email, string $password)
+    public function connect(string $email, string $password)
     {
-        $stmt = $conn->prepare("SELECT * FROM `users` WHERE `email` = :email");
+        $stmt = $this->pdo->connect()->prepare("SELECT * FROM `users` WHERE `email` = :email");
         $stmt->bindParam(':email', $email);
 
         try {
@@ -73,14 +78,13 @@ class User
         }
     }
 
-    public function register(PDO $conn, string $username, string $email, string $password)
+    public function register(string $username, string $email, string $password)
     {
-
         $this->setUsername($username);
         $this->setEmail($email);
         $this->setPassword(password_hash($password, PASSWORD_BCRYPT));
 
-        $stmt = $conn->prepare("SELECT * FROM `users` WHERE `email` = :email");
+        $stmt = $this->pdo->connect()->prepare("SELECT * FROM `users` WHERE `email` = :email");
         $stmt->bindValue(':email', $this->email);
         $stmt->execute();
         if ($stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -89,7 +93,7 @@ class User
             $_SESSION = [];
             header("Location:../login.php?error=badlog");
         } else {
-            $stmt = $conn->prepare("INSERT INTO `Users` (username, email, password, avatar) VALUES (:username, :email, :password, :avatar)");
+            $stmt = $this->pdo->connect()->prepare("INSERT INTO `Users` (username, email, password, avatar) VALUES (:username, :email, :password, :avatar)");
             $stmt->bindValue(':username', $this->username);
             $stmt->bindValue(':email', $this->email);
             $stmt->bindValue(':password', $this->password);
@@ -107,6 +111,7 @@ class User
         if ($this->role === 'Admin') {
             return true;
         } else {
+            header('Location:./logout.php');
             return false;
         }
     }

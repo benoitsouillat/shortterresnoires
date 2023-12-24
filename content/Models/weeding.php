@@ -1,10 +1,7 @@
 <?php
-require_once('../../conn/conn.php');
+require_once('../Classes/RequestPDO.php');
+$pdo = new RequestPDO();
 
-$stmt = $conn->prepare("SELECT * FROM Litters WHERE display = 1");
+$stmt = $pdo->connect()->prepare("SELECT * FROM Litters WHERE display = 1");
 $stmt->execute();
 $datas = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-// foreach ($datas as $data) {
-//     var_dump($data);
-// }

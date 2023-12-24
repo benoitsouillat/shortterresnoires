@@ -29,7 +29,7 @@ function manageLitter()
     numberOfMales = :numberOfMales,
     numberOfFemales = :numberOfFemales,
     numberLOF = :numberLof,
-    display = :display WHERE litterId = :litterID";
+    display = :display WHERE litterId = :litterId";
 }
 function deleteLitterFromId()
 {

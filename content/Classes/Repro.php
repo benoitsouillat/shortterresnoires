@@ -1,6 +1,8 @@
 <?php
 
 include_once('../Models/sql/repro_request.php');
+require_once(__DIR__ . "/RequestPDO.php");
+
 
 class Repro
 {
@@ -14,6 +16,7 @@ class Repro
     private $breeder = "";
     private $adn = true;
     private $mainImg = "";
+    private $pdo = null;
 
     public function __construct(
         string $name = "",
@@ -22,7 +25,8 @@ class Repro
         string $insert = "",
         string $breeder = "du Domaine des Terres Noires",
         bool $adn = true,
-        string $mainImg = self::DEFAULT_IMG
+        string $mainImg = self::DEFAULT_IMG,
+        RequestPDO $pdo = null
     ) {
         $this->name = $name;
         $this->sex = $sex;
@@ -31,6 +35,7 @@ class Repro
         $this->breeder = $breeder;
         $this->adn = $adn;
         $this->mainImg = $mainImg;
+        $this->pdo = $pdo ?? new RequestPDO();
     }
     public function fillFromForm(array $post)
     {
@@ -56,18 +61,16 @@ class Repro
         $this->setMainImg($data->mainImg ?? self::DEFAULT_IMG);
     }
 
-    public static function fetchFromDatabase(PDO $conn, int $reproId): ?Repro
+    public function fetchFromDatabase(int $reproId)
     {
-        $stmt = $conn->prepare(getReproFromID());
+        $stmt = $this->pdo->connect()->prepare(getReproFromID());
         $stmt->bindParam(':reproID', $reproId);
         $stmt->execute();
         $data = $stmt->fetch(PDO::FETCH_OBJ);
         if (!$data) {
-            return null; // Aucun objet Repro trouvé avec cet identifiant
+            return null;
         }
-        $repro = new Repro();
-        $repro->fillFromStdClass($data);
-        return $repro;
+        $this->fillFromStdClass($data);
     }
 
     /**

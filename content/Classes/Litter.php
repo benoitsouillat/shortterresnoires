@@ -1,7 +1,11 @@
 <?php
 
 require_once(__DIR__ . "/Repro.php");
+require_once(__DIR__ . "/Puppy.php");
 require_once(__DIR__ . "/../Models/sql/repro_request.php");
+require_once(__DIR__ . "/../Models/sql/litter_request.php");
+require_once(__DIR__ . "/../Models/sql/puppy_request.php");
+require_once(__DIR__ . "/RequestPDO.php");
 
 class Litter
 {
@@ -15,6 +19,7 @@ class Litter
     private $numberLof = "";
     private $birthdate = "2020-01-01";
     private $display = true;
+    private $pdo = null;
 
     public function __construct(
         Repro $mother = null,
@@ -22,26 +27,27 @@ class Litter
         int $numberOfMales = 0,
         int $numberOfFemales = 0,
         string $numberLof = "",
-        DateTime $birthdate = new DateTime('now'),
-        bool $display = true
+        DateTime $birthdate = null,
+        bool $display = true,
+        RequestPDO $pdo = null
     ) {
-        $this->mother = $mother;
-        $this->father = $father;
+        $this->mother = $mother ?? new Repro();
+        $this->father = $father ?? new Repro();
         $this->numberOfMales = $numberOfMales;
         $this->numberOfFemales = $numberOfFemales;
         $this->numberOfPuppies = $numberOfFemales + $numberOfMales;
         $this->numberLof = $numberLof;
-        $this->birthdate = $birthdate;
+        $this->birthdate = $birthdate ?? new DateTime('now');
         $this->display = $display;
+        $this->pdo = $pdo ?? new RequestPDO();
     }
 
     public function fillFromStdClass(stdClass $data): void
     {
+        $this->mother->fetchFromDatabase($data->mother);
+        $this->father->fetchFromDatabase($data->father);
         $this->setId($data->litterId);
-        $this->setMother($data->mother);
-        $this->setFather($data->father);
         $this->setBirthdate($data->birthdate);
-
         $this->setNumberOfPuppies($data->numberOfMales, $data->numberOfFemales);
         $this->setNumberOfMales($data->numberOfMales ?? 0);
         $this->setNumberOfFemales($data->numberOfFemales ?? 0);
@@ -50,14 +56,79 @@ class Litter
     }
     public function fillFromForm(array $post)
     {
-        $this->setMother($post['mother']);
-        $this->setFather($post['father']);
+        if (isset($post['litterID']) && $post['litterID'] != NULL) {
+            $this->setId($post['litterID']);
+        }
+        $this->mother->fetchFromDatabase($post['mother']);
+        $this->father->fetchFromDatabase($post['father']);
         $this->setBirthdate($post['birthdate']);
         $this->setNumberOfPuppies($post['numberOfMales'], $post['numberOfFemales']);
         $this->setNumberOfMales($post['numberOfMales']);
         $this->setNumberOfFemales($post['numberOfFemales']);
         $this->setNumberLof($post['numberLof']);
         $this->setDisplay(1);
+    }
+
+    public function countIds()
+    {
+        $stmt = $this->pdo->connect()->prepare(getAllLitters());
+        $stmt->execute();
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return end($data)['litterId'];
+    }
+
+    public function generatePuppiesMales()
+    {
+        for ($i = 0; $i < $this->getNumberOfMales(); $i++) {
+            $puppy = new Puppy("Mâle N°" . $i + 1);
+            $litterStmt = $this->pdo->connect()->prepare(getLitterFromId());
+            $litterStmt->bindValue(':litterId', $this->countIds());
+            $litterStmt->execute();
+            $litterData = $litterStmt->fetch(PDO::FETCH_OBJ);
+            $this->setId($litterData->litterId);
+            $puppy->setLitter($this);
+            $puppy->setSex('Male');
+            $stmt = $this->pdo->connect()->prepare(createPuppy());
+            $stmt->bindValue(':name', $puppy->getName());
+            if ($this->getId() > 0) {
+                $stmt->bindValue(':litter', $this->getId());
+            }
+
+            $stmt->bindValue(':sex', $puppy->getSex());
+            $stmt->bindValue(':color', $puppy->getColor());
+            $stmt->bindValue(':available', $puppy->getAvailable());
+            $stmt->bindValue(':mainImg', $puppy->getMainImg());
+            $stmt->bindValue(':display', $puppy->getDisplay());
+
+            $stmt->execute();
+        }
+    }
+
+    public function generatePuppiesFemales()
+    {
+        // Détruire tous les chiots femelles de cette portée
+
+        for ($i = 0; $i < $this->getNumberOfFemales(); $i++) {
+            $puppy = new Puppy("Femelle N°" . $i + 1);
+            $litterStmt = $this->pdo->connect()->prepare(getLitterFromId());
+            $litterStmt->bindValue(':litterId', $this->countIds());
+            $litterStmt->execute();
+            $litterData = $litterStmt->fetch(PDO::FETCH_OBJ);
+            $this->setId($litterData->litterId);
+            $puppy->setLitter($this);
+            $puppy->setSex('Female');
+            $stmt = $this->pdo->connect()->prepare(createPuppy());
+            $stmt->bindValue(':name', $puppy->getName());
+            if ($this->getId() > 0) {
+                $stmt->bindValue(':litter', $this->getId());
+            }
+            $stmt->bindValue(':sex', $puppy->getSex());
+            $stmt->bindValue(':color', $puppy->getColor());
+            $stmt->bindValue(':available', $puppy->getAvailable());
+            $stmt->bindValue(':mainImg', $puppy->getMainImg());
+            $stmt->bindValue(':display', $puppy->getDisplay());
+            $stmt->execute();
+        }
     }
 
 
@@ -91,11 +162,10 @@ class Litter
     }
     public function setNumberOfMales($numberOfMales)
     {
-        if ($numberOfMales >= 0)
+        if ($numberOfMales >= 0) {
             $this->numberOfMales = $numberOfMales;
-        else
+        } else
             throw new InvalidArgumentException("Le Nombre de Mâle ne peut pas être négatif");
-
         return $this;
     }
 
@@ -105,11 +175,10 @@ class Litter
     }
     public function setNumberOfFemales($numberOfFemales)
     {
-        if ($numberOfFemales >= 0)
+        if ($numberOfFemales >= 0) {
             $this->numberOfFemales = $numberOfFemales;
-        else
+        } else
             throw new InvalidArgumentException("Le Nombre de femelle ne peut pas être négatif");
-
         return $this;
     }
     public function getNumberOfPuppies()

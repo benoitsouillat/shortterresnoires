@@ -1,5 +1,4 @@
 <?php
-// require_once('../../conn/conn.php');
 require_once('../Classes/User.php');
 require_once('../Classes/Repro.php');
 require_once('../Classes/Litter.php');
@@ -7,10 +6,7 @@ session_start();
 
 $user = new User();
 $user->fillFromSession($_SESSION);
-if ($user->checkRole() === false) {
-    echo 'Pas le bon role !!';
-    header('Location:./logout.php');
-}
+$user->checkRole();
 ?>
 <html lang="FR-fr">
 
@@ -30,13 +26,7 @@ if ($user->checkRole() === false) {
     include_once('../Models/litters.php');
     foreach ($litters as $data) {
         $litter = new Litter();
-        $mother = new Repro();
-        $data->mother = $mother->fetchFromDatabase($conn, $data->mother);
-        $father = new Repro();
-        $data->father = $father->fetchFromDatabase($conn, $data->father);
-
         $litter->fillFromStdClass($data);
-
 
         echo "            
         <div class='repro-line'>

@@ -1,0 +1,53 @@
+.puppies-container {
+    width: 100%;
+
+    .puppy-litter-container {
+        .puppy-card {
+            border: solid 1px beige;
+            max-width: 30%;
+            padding: 10px;
+            margin: 5px;
+
+            .card-top {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-start;
+                flex-wrap: nowrap;
+
+                h4 {
+                    padding: 10px;
+                    margin: 2px;
+                }
+
+                .avail-zone {
+                    background-color: beige;
+                    font-weight: bold;
+                    padding: 10px 20px;
+                    margin: 2px;
+                }
+
+                .available {
+                    color: rgb(2, 58, 2);
+                }
+
+                .option {
+                    color: rgb(120, 79, 3);
+                }
+
+                .reserved {
+                    color: rgb(108, 3, 3);
+                }
+            }
+
+            .card-info {
+                margin: 2px;
+                padding: 10px;
+
+                img {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

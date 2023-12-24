@@ -42,7 +42,22 @@ $table_litters = "CREATE TABLE IF NOT EXISTS `terresnoires`.`litters` (
     )
 ENGINE = InnoDB;";
 
+$table_puppies = "CREATE TABLE IF NOT EXISTS `terresnoires`.`puppies` (
+    `puppyID` INT NOT NULL AUTO_INCREMENT,
+    `litter` INT NOT NULL,
+    `name` VARCHAR(20) NOT NULL,
+    `sex` VARCHAR(10) NOT NULL,
+    `color` VARCHAR(50) NOT NULL DEFAULT 'Noir', 
+    `necklace` VARCHAR(20) NOT NULL DEFAULT '',
+    `available` VARCHAR(20) NOT NULL DEFAULT 'Disponible',
+    `mainImg` VARCHAR(255) NOT NULL DEFAULT '../src/img/puppy-default.jpg',
+    `display` TINYINT(1) DEFAULT 1,
+    PRIMARY KEY(`puppyID`),
+    FOREIGN KEY(`litter`) REFERENCES litters(litterId)
+)
+ENGINE = InnoDB;";
 $conn->exec($databaseCreator);
 $conn->exec($table_repros);
-// $conn->exec($table_users);
+$conn->exec($table_users);
 $conn->exec($table_litters);
+$conn->exec($table_puppies);

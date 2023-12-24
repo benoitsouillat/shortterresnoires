@@ -112,6 +112,7 @@ body .repro-form-container .repro-form select {
   border-radius: 5px;
   padding: 2px;
   margin: 5px;
+  width: 35%;
 }
 body .repro-form-container .repro-form input {
   border: solid 2px beige;
@@ -183,4 +184,47 @@ body .repro-form-container .repro-form legend {
 }
 .repro-form .litter-infos-puppies input {
   max-width: 40px;
+}
+
+.puppies-container {
+  width: 100%;
+}
+.puppies-container .puppy-litter-container .puppy-card {
+  border: solid 1px beige;
+  max-width: 30%;
+  padding: 10px;
+  margin: 5px;
+}
+.puppies-container .puppy-litter-container .puppy-card .card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.puppies-container .puppy-litter-container .puppy-card .card-top h4 {
+  padding: 10px;
+  margin: 2px;
+}
+.puppies-container .puppy-litter-container .puppy-card .card-top .avail-zone {
+  background-color: beige;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 2px;
+}
+.puppies-container .puppy-litter-container .puppy-card .card-top .available {
+  color: rgb(2, 58, 2);
+}
+.puppies-container .puppy-litter-container .puppy-card .card-top .option {
+  color: rgb(120, 79, 3);
+}
+.puppies-container .puppy-litter-container .puppy-card .card-top .reserved {
+  color: rgb(108, 3, 3);
+}
+.puppies-container .puppy-litter-container .puppy-card .card-info {
+  margin: 2px;
+  padding: 10px;
+}
+.puppies-container .puppy-litter-container .puppy-card .card-info img {
+  width: 90%;
 }/*# sourceMappingURL=main.css.map */
