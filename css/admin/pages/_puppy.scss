@@ -1,6 +1,16 @@
 .puppies-container {
     width: 100%;
 
+    .cards-container {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
     .puppy-litter-container {
         .puppy-card {
             border: solid 1px beige;

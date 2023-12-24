@@ -190,6 +190,15 @@ body .repro-form-container .repro-form legend {
 .puppies-container {
   width: 100%;
 }
+.puppies-container .cards-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .puppies-container .puppy-litter-container .puppy-card {
   border: solid 1px beige;
   max-width: 30%;

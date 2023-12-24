@@ -83,7 +83,6 @@ class puppy {
         let necklacesColor = ['rose', 'violet', 'rouge', 'bordeaux', 'orange', 'jaune', 'bleu', 'vert', 'noir', 'blanc', 'marron', 'cyan'];
         necklacesColor.forEach(color => {
             if (this.puppyNecklace.match(color)) {
-                console.log("Je vais retourner " + color);
                 return ("Collier " + color);
             }
         }

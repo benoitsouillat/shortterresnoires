@@ -8,6 +8,10 @@ function getAllPuppiesOrderLitter()
 {
     return "SELECT * FROM `puppies` ORDER BY `litter` DESC";
 }
+function getAllPuppiesFromLitter()
+{
+    return "SELECT * FROM `puppies` WHERE litter = :litterID ORDER BY `litter` DESC";
+}
 function createPuppy()
 {
     return "INSERT INTO `puppies` 
