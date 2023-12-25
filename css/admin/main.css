@@ -215,6 +215,10 @@ body .repro-form-container .repro-form legend {
 .puppies-container .puppy-litter-container .puppy-card .card-top h4 {
   padding: 10px;
   margin: 2px;
+  color: beige;
+}
+.puppies-container .puppy-litter-container .puppy-card .card-top h4 a {
+  color: beige;
 }
 .puppies-container .puppy-litter-container .puppy-card .card-top .avail-zone {
   background-color: beige;

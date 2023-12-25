@@ -12,6 +12,10 @@ function getAllPuppiesFromLitter()
 {
     return "SELECT * FROM `puppies` WHERE litter = :litterID ORDER BY `litter` DESC";
 }
+function getPuppyFromId()
+{
+    return "SELECT * FROM `puppies` WHERE puppyID = :puppyID";
+}
 function createPuppy()
 {
     return "INSERT INTO `puppies` 
@@ -20,5 +24,5 @@ function createPuppy()
 }
 function managePuppy()
 {
-    return "UPDATE `puppies` WHERE puppyID = :puppyID";
+    return "UPDATE `puppies` SET name = :name, litter = :litter, sex = :sex, color = :color, available = :available, mainImg = :mainImg, display = :display WHERE puppyID = :puppyID";
 }

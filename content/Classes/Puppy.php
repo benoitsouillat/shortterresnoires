@@ -37,15 +37,31 @@ class Puppy
         $this->pdo = $pdo ?? new RequestPDO();
     }
 
-    public function fillFromStdClass(stdClass $data)
+    private function fillLitter(int $litterId)
     {
         $stmt = $this->pdo->connect()->prepare(getLitterFromId());
-        $stmt->bindValue(':litterId', $data->litter);
+        $stmt->bindValue(':litterId', $litterId);
         $stmt->execute();
         $litter = new Litter();
         $dataLitter = $stmt->fetch(PDO::FETCH_OBJ);
         $litter->fillFromStdClass($dataLitter);
         $this->setLitter($litter);
+    }
+
+    public function fillFromPost(array $post)
+    {
+        $this->fillLitter($post['litter']);
+        $this->setId($post['puppyID']);
+        $this->setName($post['puppyName']);
+        $this->setColor($post['puppyColor']);
+        $this->setAvailable($post['puppyAvailable']);
+        $this->setMainImg($post['mainImg']);
+        // $this->setDisplay($post['puppyDisplay']);
+    }
+
+    public function fillFromStdClass(stdClass $data)
+    {
+        $this->fillLitter($data->litter);
         $this->setId($data->id);
         $this->setName($data->name);
         $this->setSex($data->sex);
@@ -58,13 +74,7 @@ class Puppy
 
     public function fillFromFetchAssoc(array $array)
     {
-        $stmt = $this->pdo->connect()->prepare(getLitterFromId());
-        $stmt->bindValue(':litterId', $array['litter']);
-        $stmt->execute();
-        $litter = new Litter();
-        $dataLitter = $stmt->fetch(PDO::FETCH_OBJ);
-        $litter->fillFromStdClass($dataLitter);
-        $this->setLitter($litter);
+        $this->fillLitter($array['litter']);
         $this->setId($array['puppyID']);
         $this->setName($array['name']);
         $this->setSex($array['sex']);
@@ -73,6 +83,41 @@ class Puppy
         $this->setNecklace($array['necklace']);
         $this->setDisplay($array['display']);
         $this->setMainImg($array['mainImg']);
+    }
+
+    public function fetchFromDatabase($puppyID)
+    {
+        $stmt = $this->pdo->connect()->prepare(getPuppyFromId());
+        $stmt->bindParam(':puppyID', $puppyID);
+        $stmt->execute();
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        $this->fillFromFetchAssoc($data);
+    }
+
+    public function fetchToDatabase()
+    {
+        $stmt = $this->pdo->connect()->prepare(managePuppy());
+        $stmt->bindValue(':puppyID', $this->getId());
+        $stmt->bindValue(':name', $this->getName());
+        $stmt->bindValue(':litter', $this->getLitter()->getId());
+        $stmt->bindValue(':sex', $this->getSex());
+        $stmt->bindValue(':color', $this->getColor());
+        $stmt->bindValue(':available', $this->getAvailable());
+        $stmt->bindValue(':mainImg', $this->getMainImg());
+        $stmt->bindValue(':display', $this->getDisplay());
+        $stmt->execute();
+    }
+    public function createToDatabase()
+    {
+        $stmt = $this->pdo->connect()->prepare(createPuppy());
+        $stmt->bindValue(':name', $this->getName());
+        $stmt->bindValue(':litter', $this->getLitter()->getId());
+        $stmt->bindValue(':sex', $this->getSex());
+        $stmt->bindValue(':color', $this->getColor());
+        $stmt->bindValue(':available', $this->getAvailable());
+        $stmt->bindValue(':mainImg', $this->getMainImg());
+        $stmt->bindValue(':display', $this->getDisplay());
+        $stmt->execute();
     }
 
     /**
