@@ -34,14 +34,14 @@ $user->checkRole();
                 echo "
                     <div class='puppy-card'>
                         <div class='card-top'>
-                            <h4><a href='../Vues/repro-crud.php?puppyID={$puppy->getId()}'>{$puppy->getName()}</a></h4>
+                            <h4><a href='../Vues/puppy-crud.php?puppyID={$puppy->getId()}'>{$puppy->getName()}</a></h4>
                             <div>
                                 <p class='avail-zone {$puppy->getAvailable()}'>{$puppy->getAvailable()}</p>
                                 <p class='necklace'>{$puppy->getNecklace()}</p>
                             </div>
                         </div>
                         <div class='card-info'>
-                        <a href='../Vues/repro-crud.php?puppyID={$puppy->getId()}'><img src='{$puppy->getMainImg()}' alt='{$puppy->getName()}'></a>
+                        <a href='../Vues/puppy-crud.php?puppyID={$puppy->getId()}'><img src='{$puppy->getMainImg()}' alt='{$puppy->getName()}'></a>
                         </div>
                         <div class='button-zone'>
                             <a href='../Vues/puppy-crud.php?puppyID={$puppy->getId()}' class='btn btn-primary'>Modifier</a>

@@ -110,7 +110,7 @@ class User
         if ($this->role === 'Admin') {
             return true;
         } else {
-            header('Location:./logout.php');
+            header('Location:../Controllers/logout.php');
             return false;
         }
     }

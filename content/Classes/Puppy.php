@@ -53,6 +53,7 @@ class Puppy
         $this->fillLitter($post['litter']);
         $this->setId($post['puppyID']);
         $this->setName($post['puppyName']);
+        $this->setSex($post['puppySex']);
         $this->setColor($post['puppyColor']);
         $this->setAvailable($post['puppyAvailable']);
         $this->setMainImg($post['mainImg']);

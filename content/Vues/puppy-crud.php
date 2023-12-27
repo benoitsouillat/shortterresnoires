@@ -67,6 +67,7 @@ if (isset($_GET['puppyID']) && $_GET['puppyID'] > 0) {
                 if (isset($_GET['puppyID']) && $_GET['puppyID'] != null) {
                     echo "<input type='hidden' id='puppyID' name='puppyID' value='{$puppy->getId()}'>";
                     echo "<input type='hidden' id='mainImg' name='mainImg' value='{$puppy->getMainImg()}'>";
+                    echo "<input type='hidden' id='puppySex' name='puppySex' value='{$puppy->getSex()}'>";
                     echo "<input type='hidden' id='litter' name='litter' value='{$puppy->getlitter()->getId()}'>";
                 }
                 ?>
