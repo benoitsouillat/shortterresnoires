@@ -37,7 +37,7 @@ $user->checkRole();
                             <h4><a href='../Vues/puppy-crud.php?puppyID={$puppy->getId()}'>{$puppy->getName()}</a></h4>
                             <div>
                                 <p class='avail-zone {$puppy->getAvailable()}'>{$puppy->getAvailable()}</p>
-                                <p class='necklace'>{$puppy->getNecklace()}</p>
+                                <p class='necklace'>Collier {$puppy->getNecklace()}</p>
                             </div>
                         </div>
                         <div class='card-info'>

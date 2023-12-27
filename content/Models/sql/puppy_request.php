@@ -19,12 +19,12 @@ function getPuppyFromId()
 function createPuppy()
 {
     return "INSERT INTO `puppies` 
-    (name, litter, sex, color, available, mainImg, display) 
-    VALUES (:name, :litter, :sex, :color, :available, :mainImg, :display)";
+    (name, litter, sex, color, necklace, available, mainImg, display) 
+    VALUES (:name, :litter, :sex, :color, :necklace, :available, :mainImg, :display)";
 }
 function managePuppy()
 {
-    return "UPDATE `puppies` SET name = :name, litter = :litter, sex = :sex, color = :color, available = :available, mainImg = :mainImg, display = :display WHERE puppyID = :puppyID";
+    return "UPDATE `puppies` SET name = :name, litter = :litter, sex = :sex, color = :color, necklace = :necklace, available = :available, mainImg = :mainImg, display = :display WHERE puppyID = :puppyID";
 }
 
 function savePuppyDiapo()

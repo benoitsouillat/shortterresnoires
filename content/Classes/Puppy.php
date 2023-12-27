@@ -56,6 +56,7 @@ class Puppy
         $this->setName($_POST['puppyName']);
         $this->setSex($_POST['puppySex']);
         $this->setColor($_POST['puppyColor']);
+        $this->setNecklace($_POST['puppyNecklace']);
         $this->setAvailable($_POST['puppyAvailable']);
         $this->setMainImg($_POST['mainImg']);
         // $this->setDisplay($_POST['puppyDisplay']);
@@ -104,6 +105,7 @@ class Puppy
         $stmt->bindValue(':litter', $this->getLitter()->getId());
         $stmt->bindValue(':sex', $this->getSex());
         $stmt->bindValue(':color', $this->getColor());
+        $stmt->bindValue(':necklace', $this->getNecklace());
         $stmt->bindValue(':available', $this->getAvailable());
         $stmt->bindValue(':mainImg', $this->getMainImg());
         $stmt->bindValue(':display', $this->getDisplay());
@@ -116,6 +118,7 @@ class Puppy
         $stmt->bindValue(':litter', $this->getLitter()->getId());
         $stmt->bindValue(':sex', $this->getSex());
         $stmt->bindValue(':color', $this->getColor());
+        $stmt->bindValue(':necklace', $this->getNecklace());
         $stmt->bindValue(':available', $this->getAvailable());
         $stmt->bindValue(':mainImg', $this->getMainImg());
         $stmt->bindValue(':display', $this->getDisplay());
