@@ -3,6 +3,7 @@
 ./content/oldversion/*
 /.deploy
 /.env
+*.jpg
 
 /conn/conn.php
 /conn/connn.php
