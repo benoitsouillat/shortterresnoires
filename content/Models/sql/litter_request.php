@@ -2,7 +2,7 @@
 
 function getAllLitters()
 {
-    return "SELECT * FROM `litters` ORDER BY birthdate DESC";
+    return "SELECT * FROM `litters` ORDER BY birthdate ASC";
 }
 function getAllActiveLitters()
 {

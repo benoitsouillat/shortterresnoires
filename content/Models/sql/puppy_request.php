@@ -31,3 +31,12 @@ function savePuppyDiapo()
 {
     return "INSERT INTO `diapos` (path, puppyID) VALUES (:path, :puppyID)";
 }
+function deletePuppyMales()
+{
+    return "DELETE FROM `puppies` WHERE litter = :litterID AND sex = 'Male'";
+}
+
+function deletePuppyFemales()
+{
+    return "DELETE FROM `puppies` WHERE litter = :litterID AND sex = 'Female'";
+}

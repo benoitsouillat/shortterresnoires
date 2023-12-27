@@ -54,18 +54,18 @@ class Litter
         $this->setNumberLof($data->numberLOF ?? 'En cours d\'acquisition.');
         $this->setDisplay($data->display);
     }
-    public function fillFromForm(array $post)
+    public function fillFromForm()
     {
-        if (isset($post['litterID']) && $post['litterID'] != NULL) {
-            $this->setId($post['litterID']);
+        if (isset($_POST['litterID']) && $_POST['litterID'] != NULL) {
+            $this->setId($_POST['litterID']);
         }
-        $this->mother->fetchFromDatabase($post['mother']);
-        $this->father->fetchFromDatabase($post['father']);
-        $this->setBirthdate($post['birthdate']);
-        $this->setNumberOfPuppies($post['numberOfMales'], $post['numberOfFemales']);
-        $this->setNumberOfMales($post['numberOfMales']);
-        $this->setNumberOfFemales($post['numberOfFemales']);
-        $this->setNumberLof($post['numberLof']);
+        $this->mother->fetchFromDatabase($_POST['mother']);
+        $this->father->fetchFromDatabase($_POST['father']);
+        $this->setBirthdate($_POST['birthdate']);
+        $this->setNumberOfPuppies($_POST['numberOfMales'], $_POST['numberOfFemales']);
+        $this->setNumberOfMales($_POST['numberOfMales']);
+        $this->setNumberOfFemales($_POST['numberOfFemales']);
+        $this->setNumberLof($_POST['numberLof']);
         $this->setDisplay(1);
     }
 
@@ -79,10 +79,18 @@ class Litter
 
     public function generatePuppiesMales()
     {
+        $pdo = new RequestPDO();
+        $stmt = $pdo->connect()->prepare(deletePuppyMales());
+        $stmt->bindValue(':litterID', $this->getId());
+        $stmt->execute();
         for ($i = 0; $i < $this->getNumberOfMales(); $i++) {
             $puppy = new Puppy("Mâle N°" . $i + 1);
             $litterStmt = $this->pdo->connect()->prepare(getLitterFromId());
-            $litterStmt->bindValue(':litterId', $this->countIds());
+            if (isset($_POST['litterID']) && $_POST['litterID'] > 0) {
+                $litterStmt->bindValue(':litterId', $this->getId());
+            } else {
+                $litterStmt->bindValue(':litterId', $this->countIds());
+            }
             $litterStmt->execute();
             $litterData = $litterStmt->fetch(PDO::FETCH_OBJ);
             $this->setId($litterData->litterId);
@@ -106,12 +114,19 @@ class Litter
 
     public function generatePuppiesFemales()
     {
-        // Détruire tous les chiots femelles de cette portée
+        $pdo = new RequestPDO();
+        $stmt = $pdo->connect()->prepare(deletePuppyFemales());
+        $stmt->bindValue(':litterID', $this->getId());
+        $stmt->execute();
 
         for ($i = 0; $i < $this->getNumberOfFemales(); $i++) {
             $puppy = new Puppy("Femelle N°" . $i + 1);
             $litterStmt = $this->pdo->connect()->prepare(getLitterFromId());
-            $litterStmt->bindValue(':litterId', $this->countIds());
+            if (isset($_POST['litterID']) && $_POST['litterID'] > 0) {
+                $litterStmt->bindValue(':litterId', $_POST['litterID']);
+            } else {
+                $litterStmt->bindValue(':litterId', $this->countIds());
+            }
             $litterStmt->execute();
             $litterData = $litterStmt->fetch(PDO::FETCH_OBJ);
             $this->setId($litterData->litterId);

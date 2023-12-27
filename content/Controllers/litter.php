@@ -38,7 +38,7 @@ if (isset($_GET['litterID']) && $_GET['litterID'] != null) {
         }
     }
 
-    $litter->fillFromForm($_POST);
+    $litter->fillFromForm();
     if (isset($_POST['litterID']) && $_POST['litterID'] != NULL && $_POST['litterID'] > 0) {
 
         // MODIFICATION 

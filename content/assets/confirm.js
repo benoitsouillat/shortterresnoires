@@ -1,6 +1,6 @@
 const confirmDeleteLitter = (id) => {
-    if (confirm(`Vous allez supprimer la portée, en êtes-vous sûr ??`)) {
-        location.assign('../Controllers/litter.php?litterID=' + id + "&delete=true");
+    if (confirm(`Vous allez supprimer une portée, en êtes-vous sûr ??`)) {
+        location.assign('../Vues/delete_litter.php?litterID=' + id);
     }
 }
 const confirmDeleteRepro = (id) => {
