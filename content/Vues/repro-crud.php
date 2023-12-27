@@ -90,14 +90,17 @@ if (isset($_GET['error'])) {
                 <input type="text" id="reproName" name="reproName" value="<?php echo $repro->getName() ?>">
 
                 <fieldset>
-                    <input type='radio' id='Female' name='reproSex' value='Female' <?php echo ($repro->getSex() === 'Female') ? 'checked' : NULL ?>>
+                    <input type='radio' id='Female' name='reproSex' value='Female'
+                        <?php echo ($repro->getSex() === 'Female') ? 'checked' : NULL ?>>
                     <label for='Female'> Femelle </label>
-                    <input type='radio' id='Male' name='reproSex' value='Male' <?php echo ($repro->getSex() === 'Male') ? 'checked' : NULL ?>>
+                    <input type='radio' id='Male' name='reproSex' value='Male'
+                        <?php echo ($repro->getSex() === 'Male') ? 'checked' : NULL ?>>
                     <label for="Male"> Mâle </label>
                 </fieldset>
 
                 <label for='reproBirthdate'>Date de Naissance : </label>
-                <input type='date' value="<?php echo $repro->getBirthdate()->format('Y-m-d') ?>" id='reproBirthdate' name='reproBirthdate'>
+                <input type='date' value="<?php echo $repro->getBirthdate()->format('Y-m-d') ?>" id='reproBirthdate'
+                    name='reproBirthdate'>
 
                 <label for='reproInsert'>Puce Electronique : </label>
                 <input type="text" id="reproInsert" name="reproInsert" value="<?php echo $repro->getInsert() ?>">
@@ -106,14 +109,19 @@ if (isset($_GET['error'])) {
                 <input type="text" id="reproBreeder" name="reproBreeder" value="<?php echo $repro->getBreeder() ?>">
 
                 <fieldset>ADN effectué ?
-                    <input type="radio" id="ADNyes" name="reproADN" value="1" <?php echo ($repro->getAdn() == true) ? 'checked' : NULL ?>>
+                    <input type="radio" id="ADNyes" name="reproADN" value="1"
+                        <?php echo ($repro->getAdn() == true) ? 'checked' : NULL ?>>
                     <label for="ADNyes"> Oui </label>
-                    <input type="radio" id="ADNno" name="reproADN" value="0" <?php echo ($repro->getAdn() == false) ? 'checked' : NULL ?>>
+                    <input type="radio" id="ADNno" name="reproADN" value="0"
+                        <?php echo ($repro->getAdn() == false) ? 'checked' : NULL ?>>
                     <label for="ADNno"> Non </label>
                 </fieldset>
 
                 <label for="mainImg">Image Principale : </label>
                 <input type="file" name="mainImg" id="mainImg" value="<?php echo $repro->getMainImg() ?>">
+
+                <label for="diapoImg[]">Ajouter au diaporama</label>
+                <input type="file" name="diapoImg[]" id="diapoImg" multiple>
 
                 <div class="text-center d-flex flex-row justify-content-center w-75 mt-2">
                     <button type="submit" class="btn btn-success">Enregistrer</button>

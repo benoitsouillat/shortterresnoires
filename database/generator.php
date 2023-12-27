@@ -58,8 +58,20 @@ $table_puppies = "CREATE TABLE IF NOT EXISTS `terresnoires`.`puppies` (
     FOREIGN KEY(`litter`) REFERENCES litters(litterId)
 )
 ENGINE = InnoDB;";
+
+$table_diapos = "CREATE TABLE IF NOT EXISTS `terresnoires`.`diapos` (
+    `diapoID` INT NOT NULL AUTO_INCREMENT,
+    `path` VARCHAR(100) NOT NULL,
+    `reproID` INT,
+    `puppyID` INT,
+    PRIMARY KEY(`diapoID`),
+    FOREIGN KEY(`reproID`) REFERENCES repros(id),
+    FOREIGN KEY(`puppyID`) REFERENCES puppies(puppyID)
+)
+ENGINE = InnoDB;";
 $conn->connect()->exec($databaseCreator);
 $conn->connect()->exec($table_repros);
 $conn->connect()->exec($table_users);
 $conn->connect()->exec($table_litters);
 $conn->connect()->exec($table_puppies);
+$conn->connect()->exec($table_diapos);

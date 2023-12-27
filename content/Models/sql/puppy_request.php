@@ -26,3 +26,8 @@ function managePuppy()
 {
     return "UPDATE `puppies` SET name = :name, litter = :litter, sex = :sex, color = :color, available = :available, mainImg = :mainImg, display = :display WHERE puppyID = :puppyID";
 }
+
+function savePuppyDiapo()
+{
+    return "INSERT INTO `diapos` (path, puppyID) VALUES (:path, :puppyID)";
+}

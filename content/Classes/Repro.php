@@ -2,6 +2,7 @@
 
 include_once('../Models/sql/repro_request.php');
 require_once(__DIR__ . "/RequestPDO.php");
+require_once(__DIR__ . "/Image.php");
 
 
 class Repro
@@ -71,6 +72,39 @@ class Repro
             return null;
         }
         $this->fillFromStdClass($data);
+    }
+    public function checkMainImg()
+    {
+        if (isset($_FILES['mainImg']) && $_FILES['mainImg']['name'] != NULL && $_FILES['mainImg']['size'] > 0) {
+
+            if (isset($_POST['reproID']) && $_POST['reproID'] > 0) {
+                $fileName = $this->getName() . '-' . $this->getId();
+            } else {
+                $fileName = $this->getName() . '-0';
+            }
+            $file_tmp = $_FILES['mainImg']['tmp_name'];
+            $file_destination = '../../src/img/repros/' . $fileName . '.jpg';
+            move_uploaded_file($file_tmp, $file_destination);
+            $this->setMainImg($file_destination);
+        } else {
+            $this->setMainImg($_POST['mainImg']);
+        }
+    }
+
+    public function saveDiapoImg()
+    {
+        if (isset($_FILES['diapoImg']) && $_FILES['diapoImg']['name'][0] != null) {
+            $images = $_FILES['diapoImg']['tmp_name'];
+            foreach ($images as $image) {
+                $prefix = substr($image, -8, -4);
+                $destination = '../../src/img/diapos/repros/' . $this->getId() . '-' . $prefix . '.jpg';
+                move_uploaded_file($image, $destination);
+                $diapo = new Image();
+                $diapo->setPath($destination);
+                $diapo->setReproId($_POST['reproID']);
+                $diapo->fetchToDatabase();
+            }
+        }
     }
 
     /**

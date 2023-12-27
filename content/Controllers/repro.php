@@ -26,30 +26,14 @@ if (isset($_POST['reproID']) && $_POST['reproID'] > 0) {
     $stmt = $pdo->connect()->prepare(createRepro());
 }
 $repro->fillFromForm($_POST);
+$repro->checkMainImg();
+$repro->saveDiapoImg();
 $stmt->bindValue(':name', $_POST['reproName']);
 $stmt->bindValue(':sex', $_POST['reproSex']);
 $stmt->bindValue(':birthdate', $_POST['reproBirthdate']);
 $stmt->bindValue(':insert', $_POST['reproInsert']);
 $stmt->bindValue(':breeder', $_POST['reproBreeder']);
 $stmt->bindValue(':adn', $_POST['reproADN']);
-
-if (isset($_FILES['mainImg']) && $_FILES['mainImg']['name'] != NULL && $_FILES['mainImg']['size'] > 0) {
-
-    if (isset($_POST['reproID']) && $_POST['reproID'] > 0) {
-        $fileName = $repro->getName() . '-' . $repro->getId();
-    } else {
-        $fileName = $repro->getName() . '-0';
-    }
-
-    $file_tmp = $_FILES['mainImg']['tmp_name'];
-    $file_destination = '../../src/img/repros/' . $fileName . '.jpg';
-    move_uploaded_file($file_tmp, $file_destination);
-    $stmt->bindValue(':mainImg', $file_destination);
-    $repro->setMainImg($file_destination);
-} else {
-    $repro->setMainImg($_POST['mainImg']);
-}
-
 $stmt->bindValue(':mainImg', $repro->getMainImg());
 try {
     $stmt->execute();

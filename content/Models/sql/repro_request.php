@@ -51,3 +51,7 @@ function deleteReproFromId()
 {
     return "DELETE FROM `repros` WHERE id = :reproID";
 }
+function saveReproDiapo()
+{
+    return "INSERT INTO `diapos` (path, reproID) VALUES (:path, :reproID)";
+}

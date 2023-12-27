@@ -88,6 +88,9 @@ if (isset($_GET['puppyID']) && $_GET['puppyID'] > 0) {
                 <label for="mainImg">Image Principale : </label>
                 <input type="file" name="mainImg" id="mainImg" value="<?php echo $puppy->getMainImg() ?>">
 
+                <label for="diapoImg[]">Ajouter au diaporama</label>
+                <input type="file" name="diapoImg[]" id="diapoImg" multiple>
+
                 <div class="text-center d-flex flex-row justify-content-center w-75 mt-2">
                     <button type="submit" class="btn btn-success">Enregistrer</button>
                 </div>

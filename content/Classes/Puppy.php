@@ -2,6 +2,7 @@
 
 require_once('../Classes/RequestPDO.php');
 require_once('../Classes/Litter.php');
+require_once('../Classes/Image.php');
 class Puppy
 {
     private $id = 0;
@@ -48,16 +49,16 @@ class Puppy
         $this->setLitter($litter);
     }
 
-    public function fillFromPost(array $post)
+    public function fillFromPost()
     {
-        $this->fillLitter($post['litter']);
-        $this->setId($post['puppyID']);
-        $this->setName($post['puppyName']);
-        $this->setSex($post['puppySex']);
-        $this->setColor($post['puppyColor']);
-        $this->setAvailable($post['puppyAvailable']);
-        $this->setMainImg($post['mainImg']);
-        // $this->setDisplay($post['puppyDisplay']);
+        $this->fillLitter($_POST['litter']);
+        $this->setId($_POST['puppyID']);
+        $this->setName($_POST['puppyName']);
+        $this->setSex($_POST['puppySex']);
+        $this->setColor($_POST['puppyColor']);
+        $this->setAvailable($_POST['puppyAvailable']);
+        $this->setMainImg($_POST['mainImg']);
+        // $this->setDisplay($_POST['puppyDisplay']);
     }
 
     public function fillFromStdClass(stdClass $data)
@@ -119,6 +120,35 @@ class Puppy
         $stmt->bindValue(':mainImg', $this->getMainImg());
         $stmt->bindValue(':display', $this->getDisplay());
         $stmt->execute();
+    }
+
+    public function checkMainImg()
+    {
+        if (isset($_FILES['mainImg']) && $_FILES['mainImg']['name'] != NULL && $_FILES['mainImg']['size'] > 0) {
+            if (isset($_POST['puppyID']) && $_POST['puppyID'] > 0) {
+                $fileName = $this->getName() . '-' . $this->getId();
+            }
+            $file_tmp = $_FILES['mainImg']['tmp_name'];
+            $file_destination = '../../src/img/puppies/' . $fileName . '.jpg';
+            move_uploaded_file($file_tmp, $file_destination);
+            $this->setMainImg($file_destination);
+        }
+    }
+
+    public function saveDiapoImg()
+    {
+        if (isset($_FILES['diapoImg']) && $_FILES['diapoImg']['name'][0] != null) {
+            $images = $_FILES['diapoImg']['tmp_name'];
+            foreach ($images as $image) {
+                $prefix = substr($image, -8, -4);
+                $destination = '../../src/img/diapos/puppies/' . $this->getId() . '-' . $prefix . '.jpg';
+                move_uploaded_file($image, $destination);
+                $diapo = new Image();
+                $diapo->setPath($destination);
+                $diapo->setPuppyId($_POST['puppyID']);
+                $diapo->fetchToDatabase();
+            }
+        }
     }
 
     /**
