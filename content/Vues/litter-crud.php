@@ -54,7 +54,7 @@ $females = $stmtFemales->fetchAll(PDO::FETCH_ASSOC);
         ?>
             <div class="infos-repro">
                 <h3>Infos de la portée en ligne : </h3>
-                <?php echo "<h4> Portée de {$litter->getMother()->getName()} et {$litter->getFather()->getName()}, née le {$litter->getBirthdate()->format('d-m-Y')} .</h1>" ?>
+                <?php echo "<h4> Portée de {$litter->getMother()->getName()} et {$litter->getFather()->getName()} <br> née le " . trad_month($litter->getBirthdate()->format(' d F Y ')) . "</h1>" ?>
 
                 <div class="parents-container">
                     <div class="mother-container">
@@ -68,7 +68,7 @@ $females = $stmtFemales->fetchAll(PDO::FETCH_ASSOC);
                 </div>
                 <div class="litter-infos-container">
                     <?php echo "<p>{$litter->getNumberOfFemales()} femelle(s) et {$litter->getNumberOfMales()} mâle(s)</p>"; ?>
-                    <?php echo "<p>{$litter->getNumberOfPuppies()} chiot(s) né(s) le {$litter->getBirthdate()->format('d-m-Y')} </p>"; ?>
+                    <?php echo "<p>{$litter->getNumberOfPuppies()} chiot(s) né(s) le " . trad_month($litter->getBirthdate()->format(' d F Y ')) . " </p>"; ?>
                 </div>
                 <div class="w-100 mt-5 d-flex justify-content-center align-items-center">
                     <button onClick="confirmDeleteLitter(<?php echo $litter->getId() ?>)" class="btn btn-danger">Supprimer

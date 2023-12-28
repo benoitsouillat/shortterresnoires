@@ -1,3 +1,5 @@
+@import "variables";
+
 body {
     background-color: #03040E;
     color: #C7C7C7;
@@ -21,6 +23,15 @@ body {
         align-items: center;
         border-bottom: 2px solid #C7C7C7;
         margin-bottom: 10px;
+
+        @media all and (max-width: $md) {
+
+            a,
+            p {
+
+                font-size: 1.5rem;
+            }
+        }
 
         .image-space {
             width: 200px;

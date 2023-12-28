@@ -1,7 +1,9 @@
 <?php
-require_once('../Classes/User.php');
-require_once('../Classes/Repro.php');
-require_once('../Classes/Litter.php');
+require_once(__DIR__ . '/../Classes/User.php');
+require_once(__DIR__ . '/../Classes/Repro.php');
+require_once(__DIR__ . '/../Classes/Litter.php');
+require_once(__DIR__ . '/../Controllers/function.php');
+
 session_start();
 
 $user = new User();
@@ -37,7 +39,7 @@ $user->checkRole();
                 </a>
             </div>
             <a href='./litter-crud.php?litterID={$litter->getId()}'><span class='fa'> {$litter->getMother()->getName()} et {$litter->getFather()->getName()}</span></a>
-            <p>Nés le : {$litter->getBirthdate()->format('d-m-Y')}</p></div>";
+            <p>Nés le : " . trad_month($litter->getBirthdate()->format(' d F Y ')) . "</p></div>";
     }
     ?>
     </div>

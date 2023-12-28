@@ -104,6 +104,7 @@ class Litter
 
             $stmt->bindValue(':sex', $puppy->getSex());
             $stmt->bindValue(':color', $puppy->getColor());
+            $stmt->bindValue(':necklace', $puppy->getNecklace());
             $stmt->bindValue(':available', $puppy->getAvailable());
             $stmt->bindValue(':mainImg', $puppy->getMainImg());
             $stmt->bindValue(':display', $puppy->getDisplay());
@@ -139,6 +140,7 @@ class Litter
             }
             $stmt->bindValue(':sex', $puppy->getSex());
             $stmt->bindValue(':color', $puppy->getColor());
+            $stmt->bindValue(':necklace', $puppy->getNecklace());
             $stmt->bindValue(':available', $puppy->getAvailable());
             $stmt->bindValue(':mainImg', $puppy->getMainImg());
             $stmt->bindValue(':display', $puppy->getDisplay());

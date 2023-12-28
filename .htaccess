@@ -1,4 +1,4 @@
-ErrorDocument 404 /content/error/404.php
+ErrorDocument 404 /content/Vues/404.php
 
 <IfModule mod_headers.c>
     <FilesMatch "\.(js)$">

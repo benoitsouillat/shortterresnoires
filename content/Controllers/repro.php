@@ -25,7 +25,7 @@ if (isset($_POST['reproID']) && $_POST['reproID'] > 0) {
 } else {
     $stmt = $pdo->connect()->prepare(createRepro());
 }
-$repro->fillFromForm($_POST);
+$repro->fillFromForm();
 $repro->checkMainImg();
 $repro->saveDiapoImg();
 $stmt->bindValue(':name', $_POST['reproName']);

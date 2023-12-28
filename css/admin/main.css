@@ -21,6 +21,12 @@ body .repro-line {
   border-bottom: 2px solid #C7C7C7;
   margin-bottom: 10px;
 }
+@media all and (max-width: 768px) {
+  body .repro-line a,
+  body .repro-line p {
+    font-size: 1.5rem;
+  }
+}
 body .repro-line .image-space {
   width: 200px;
   max-width: 20%;

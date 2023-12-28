@@ -7,10 +7,12 @@
     <title>Les Terres Noires</title>
 
     <?php
-    include_once(__DIR__ . "/../php/head.php");
+    include_once(__DIR__ . '/../php/head.php');
     require_once(__DIR__ . '/../Classes/RequestPDO.php');
     require_once(__DIR__ . '/../Classes/Litter.php');
+    require_once(__DIR__ . '/../Controllers/function.php');
     require_once(__DIR__ . '/../Classes/Puppy.php');
+
     $pdo = new RequestPDO();
     $stmt = $pdo->connect()->prepare(getLitterFromId());
     $stmt->bindValue(':litterId', $_GET['litterID']);
@@ -40,12 +42,12 @@
     <main>
         <section class="puppy-para">
             <?php
-            echo "        <p><i>Portée née le : {$litter->getBirthdate()->format('d-m-Y')}<br>
+            echo "        <p><i>Portée née le :" . trad_month($litter->getBirthdate()->format(' d F Y ')) . "<br>
         N° Portée : {$litter->getNumberLof()} <br>
         Insert de la mère : {$litter->getMother()->getInsert()} </i></p>";
             ?>
             <p class="para-right">
-                <a class="btn btn-dark btn-sm" href="../content/ourdog.php" style="margin-right: 15px;">Voir les
+                <a class="btn btn-dark btn-sm" href="/content/ourdog.php" style="margin-right: 15px;">Voir les
                     parents</a>
                 <a class="btn btn-info btn-sm" href="#price" alt="Prix des chiots">Voir les prix</a>
             </p>

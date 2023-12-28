@@ -17,6 +17,8 @@
             include_once(__DIR__ . "/../php/navbar.php");
             require_once(__DIR__ . '/../Classes/RequestPDO.php');
             require_once(__DIR__ . '/../Classes/Litter.php');
+            require_once(__DIR__ . '/../Controllers/function.php');
+
             $pdo = new RequestPDO();
             $stmt = $pdo->connect()->prepare(getAllActiveLitters());
             $stmt->execute();
@@ -35,7 +37,7 @@
                 <section class='female-weeding'>
                     <div class='txt-weeding'>
                         <h3>{$litter->getMother()->getName()}</h3>
-                        <p>née le : {$litter->getMother()->getBirthdate()->format('d-m-Y')}</p>
+                        <p>née le : " . trad_month($litter->getMother()->getBirthdate()->format(' d F Y ')) . "</p>
                         <p>Issue {$litter->getMother()->getBreeder()}</p>
                     </div>
                     <div class='img-weeding'><img src={$litter->getMother()->getMainImg()} alt='{$litter->getMother()->getName()}'></div>
@@ -43,7 +45,7 @@
                 <section class='male-weeding'>
                 <div class='txt-weeding'>
                     <h3>{$litter->getFather()->getName()}</h3>
-                    <p>né le : {$litter->getFather()->getBirthdate()->format('d-m-Y')}</p>
+                    <p>né le : " . trad_month($litter->getFather()->getBirthdate()->format(' d F Y ')) . "</p>
                     <p>Issu {$litter->getFather()->getBreeder()}</p>
                 </div>
                 <div class='img-weeding'><img src='{$litter->getFather()->getMainImg()}' alt='{$litter->getFather()->getName()}'></div>
@@ -53,11 +55,10 @@
             <div class='weeding-baby'>
             <a href='weeding_litter.php?litterID={$litter->getId()}' role='button' class='btn btn-beige btn-lg btn__anim'>Voir les bébés</a>
             </div>
-            <h5 class='date-weeding'>Chiots nés le {$litter->getBirthdate()->format('d-m-Y')}</h5>
+            <h5 class='date-weeding'>Chiots nés le " . trad_month($litter->getBirthdate()->format(' d F Y ')) . "</h5>
             <hr class='separate-weeding'>
                 ";
             }
-
             ?>
         </section>
     </main>

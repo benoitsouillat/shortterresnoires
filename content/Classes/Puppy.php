@@ -1,5 +1,6 @@
 <?php
 
+require_once(__DIR__ . "/../Controllers/function.php");
 require_once('../Classes/RequestPDO.php');
 require_once('../Classes/Litter.php');
 require_once('../Classes/Image.php');
@@ -10,8 +11,8 @@ class Puppy
     private $litter = null;
     private $sex = 'Female';
     private $color = 'Noir';
-    private $available = 'Disponible';
     private $necklace = '';
+    private $available = 'Disponible';
     private $mainImg = "../../src/img/puppy-default.jpg";
     private $display = true;
     private $pdo = null;
@@ -130,6 +131,7 @@ class Puppy
         if (isset($_FILES['mainImg']) && $_FILES['mainImg']['name'] != NULL && $_FILES['mainImg']['size'] > 0) {
             if (isset($_POST['puppyID']) && $_POST['puppyID'] > 0) {
                 $fileName = $this->getName() . '-' . $this->getId();
+                $fileName = replace_reunion_char(replace_blank(replace_accent($fileName)));
             }
             $file_tmp = $_FILES['mainImg']['tmp_name'];
             $file_destination = '../../src/img/puppies/' . $fileName . '.jpg';

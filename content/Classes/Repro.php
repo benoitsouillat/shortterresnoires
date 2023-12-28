@@ -1,6 +1,7 @@
 <?php
 
 include_once('../Models/sql/repro_request.php');
+require_once(__DIR__ . "/../Controllers/function.php");
 require_once(__DIR__ . "/RequestPDO.php");
 require_once(__DIR__ . "/Image.php");
 
@@ -38,17 +39,18 @@ class Repro
         $this->mainImg = $mainImg;
         $this->pdo = $pdo ?? new RequestPDO();
     }
-    public function fillFromForm(array $post)
+    public function fillFromForm(): void
     {
-        if (isset($post['reproID']) && $post['reproID'] != NULL) {
-            $this->setId($post['reproID']);
-            $this->setMainImg($post['mainImg']);
+        if (isset($_POST['reproID']) && $_POST['reproID'] != NULL) {
+            $this->setId($_POST['reproID']);
+            $this->setMainImg($_POST['mainImg']);
         }
-        $this->setName($post['reproName']);
-        $this->setSex($post['reproSex']);
-        $this->setBirthdate($post['reproBirthdate']);
-        $this->setInsert($post['reproInsert']);
-        $this->setBreeder($post['reproBreeder']);
+        $this->setName($_POST['reproName']);
+        $this->setSex($_POST['reproSex']);
+        $this->setBirthdate($_POST['reproBirthdate']);
+        $this->setInsert($_POST['reproInsert']);
+        $this->setAdn($_POST['reproAdn']);
+        $this->setBreeder($_POST['reproBreeder']);
     }
     public function fillFromStdClass(stdClass $data): void
     {
@@ -57,11 +59,10 @@ class Repro
         $this->setSex($data->sex);
         $this->setBirthdate(new DateTime($data->birthdate ?? "2020-01-01"));
         $this->setInsert($data->insert);
-        $this->setBreeder($data->breeder ?? "du Domaine des Terres Noires");
         $this->setAdn($data->adn ?? true);
+        $this->setBreeder($data->breeder ?? "du Domaine des Terres Noires");
         $this->setMainImg($data->mainImg ?? self::DEFAULT_IMG);
     }
-
     public function fetchFromDatabase(int $reproId)
     {
         $stmt = $this->pdo->connect()->prepare(getReproFromID());
@@ -79,8 +80,10 @@ class Repro
 
             if (isset($_POST['reproID']) && $_POST['reproID'] > 0) {
                 $fileName = $this->getName() . '-' . $this->getId();
+                $fileName = replace_reunion_char(replace_blank(replace_accent($fileName)));
             } else {
                 $fileName = $this->getName() . '-0';
+                $fileName = replace_reunion_char(replace_blank(replace_accent($fileName)));
             }
             $file_tmp = $_FILES['mainImg']['tmp_name'];
             $file_destination = '../../src/img/repros/' . $fileName . '.jpg';
@@ -90,7 +93,6 @@ class Repro
             $this->setMainImg($_POST['mainImg']);
         }
     }
-
     public function saveDiapoImg()
     {
         if (isset($_FILES['diapoImg']) && $_FILES['diapoImg']['name'][0] != null) {
@@ -107,19 +109,11 @@ class Repro
         }
     }
 
-    /**
-     * Get the value of id
-     */
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * Set the value of id
-     *
-     * @return  self
-     */
     public function setId($id)
     {
         $this->id = $id;
