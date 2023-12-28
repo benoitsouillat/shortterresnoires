@@ -26,6 +26,11 @@
     $puppiesData = $stmt->fetchAll(PDO::FETCH_OBJ);
 
     ?>
+
+    <!-- Favicon Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- fontAwesome Icon -->
+    <script src="https://kit.fontawesome.com/5944b63bf2.js" crossorigin="anonymous"></script>
     <script src="/content/assets/slider.js" crossorigin="anonymous"></script>
 
 </head>
@@ -85,19 +90,29 @@
 
                     echo "
                 </div>
-                <div class='puppy_img'> ";
+                <div class='diapo-container' data-dog-id={$puppy->getId()}> 
+                <div class='diapo diapo-{$puppy->getId()}'>
+                <img src='{$puppy->getMainImg()}' alt='Chiot Cane Corso {$puppy->getName()}'>";
                     if ($imagesData != false) {
                         // Arrow Left
                         foreach ($imagesData as $data) {
                             echo "<img src='{$data->path}' alt='Image Cane Corso' loading='lazy'>";
                         }
+
+                        echo "<img src='{$puppy->getMainImg()}' alt='Chiot Cane Corso {$puppy->getName()}'></div></div>";
                         //Arrow Right
+                        echo "<div class='arrow-div'>
+                                <button class='left-arrow bg-transparent'>
+                                    <span class='bi bi-caret-left bi-caret-left-{$puppy->getId()} text-light'></span>
+                                </button>
+                                <button class='right-arrow bg-transparent'>
+                                    <span class='bi bi-caret-right bi-caret-right-{$puppy->getId()} text-light'></span>
+                                </button>
+                            </div>";
+                    } else {
+                        echo "</div></div>";
                     }
                     echo "
-                    <img alt='L'image est en chargement - Si le problème persiste vous pouvez nous contacter' src='{$puppy->getMainImg()}'>
-
-
-                </div>
             </div>
                 ";
                 }

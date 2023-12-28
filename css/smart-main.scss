@@ -4,6 +4,7 @@
 @import "utilities/menu";
 @import "utilities/bases";
 @import "utilities/form";
+@import "utilities/slider";
 
 /* Importation Identifiant par page */
 
@@ -27,26 +28,25 @@
 
 
 
-#breed-info 
-{
+#breed-info {
     aside {
         width: 100%;
 
         div {
             justify-content: space-around;
 
-            @media (max-width: 970px)
-            {
+            @media (max-width: 970px) {
                 flex-direction: column;
                 padding-top: 1rem;
                 padding-bottom: 1rem;
             }
         }
-        @media (max-width: 970px)
-        {
+
+        @media (max-width: 970px) {
             padding-bottom: 0;
         }
     }
+
     img {
 
         align-self: center;
@@ -56,10 +56,12 @@
         box-shadow: white 3px 5px 3px;
     }
 }
+
 .puppy__card {
     width: 90%;
 }
- /**/ 
+
+/**/
 
 .align-para-img {
 
@@ -93,6 +95,7 @@
         transform: scale(1.0);
     }
 }
+
 .list-style {
     list-style: none;
     text-align: justify;
@@ -103,14 +106,15 @@
     flex-direction: column;
 
 }
+
 .repro-info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 50px;
 }
-@media all and (min-width: 840px)
-{
+
+@media all and (min-width: 840px) {
     .dog-info {
         padding-right: 50px;
         font-size: 1.4rem;
@@ -118,16 +122,18 @@
         line-height: 150%;
         //text-shadow: white 1px 1px 2px;
         color: $text-color;
+
         p {
             font-size: 1.2rem;
         }
+
         h2 {
             font-size: 1.5rem;
         }
     }
 }
-@media all and (max-width: 840px)
-{
+
+@media all and (max-width: 840px) {
     .dog-info {
         padding-right: 50px;
         font-size: 1.0rem;
@@ -139,13 +145,14 @@
         p {
             font-size: 1.0rem;
         }
+
         h2 {
             font-size: 1.4rem;
         }
     }
 }
-@media all and (min-width: 840px)
-{
+
+@media all and (min-width: 840px) {
     .diapo-dog {
 
         display: flex;
@@ -155,8 +162,8 @@
         width: 500px;
     }
 }
-@media all and (max-width: 840px)
-{
+
+@media all and (max-width: 840px) {
     .diapo-dog {
 
         display: flex;
@@ -189,18 +196,18 @@
 .article {
     margin: auto;
 
-    @media (min-width: 992px) and (max-width: 1280px)
-    {
+    @media (min-width: 992px) and (max-width: 1280px) {
         width: 960px;
     }
-    @media (min-width: 768px) and (max-width: 992px)
-    {
+
+    @media (min-width: 768px) and (max-width: 992px) {
         width: 720px;
     }
-    @media (max-width: 767px)
-    {
+
+    @media (max-width: 767px) {
         width: 90%;
     }
+
     border: white 1px solid;
     display: flex;
     flex-direction: column;
@@ -214,6 +221,7 @@
             text-decoration: underline $link-hover;
         }
     }
+
     &__content {
         display: flex;
         justify-content: space-evenly;
@@ -223,16 +231,19 @@
             padding: 20px;
             line-height: 1.5rem;
         }
+
         .article__image {
             max-width: 300px;
         }
     }
+
     &__foot {
         align-self: flex-end;
 
         .article__date {
             text-decoration: underline;
         }
+
         .article__author {
             font-style: italic;
         }
@@ -244,4 +255,3 @@
 p {
     font-size: 0.9rem;
 }
-

@@ -4,6 +4,7 @@
 @import "utilities/menu";
 @import "utilities/bases";
 @import "utilities/form";
+@import "utilities/slider";
 
 /* Importation Identifiant par page */
 
@@ -60,6 +61,7 @@
 
     padding-bottom: 30px;
 }
+
 .no-a {
     color: $text-color;
     font-weight: bold;
@@ -76,12 +78,14 @@
     font-weight: bold;
     line-height: 2.8em;
 }
+
 .repro-info {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 50px;
 }
+
 .dog-info {
     padding-left: 100px;
     text-align: center;
@@ -92,6 +96,7 @@
     h2 {
         font-size: 1.8rem;
     }
+
     p {
         font-size: 1.3rem;
     }
@@ -114,6 +119,7 @@
             text-decoration: underline $link-hover;
         }
     }
+
     &__content {
         display: flex;
         justify-content: space-evenly;
@@ -123,16 +129,19 @@
             padding: 20px;
             line-height: 1.5rem;
         }
+
         .article__image {
             max-width: 300px;
         }
     }
+
     &__foot {
         align-self: flex-end;
 
         .article__date {
             text-decoration: underline;
         }
+
         .article__author {
             font-style: italic;
         }
