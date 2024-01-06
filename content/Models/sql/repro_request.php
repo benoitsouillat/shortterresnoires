@@ -8,6 +8,10 @@ function getReproFromID()
 {
     return "SELECT * FROM `repros` WHERE id = :reproID";
 }
+function getReprosWithPuppies()
+{
+    return "SELECT repros.* FROM `repros` JOIN litters ON repros.id = litters.mother WHERE repros.sex = 'Female' AND litters.display = 1";
+}
 function createRepro()
 {
     return "INSERT INTO `repros` (

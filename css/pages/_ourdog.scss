@@ -37,12 +37,13 @@
         box-shadow: 2px 2px 2px white;
         border-radius: 5%;
         padding: 2px;
-    
+
         min-width: 242px;
         max-width: 350px;
         max-height: 250px;
         margin: 0 20px;
         margin-bottom: 25px;
+
         img {
             object-fit: cover;
             max-width: 100%;
@@ -53,6 +54,7 @@
             aspect-ratio: 16 / 9;
         }
     }
+
     figcaption {
         padding-top: 15px;
         height: 50px;
@@ -66,20 +68,23 @@
     max-width: 350px;
 }
 
-#ourdog div>a {
+#ourdog div>a,
+#ourdor div>button {
     min-width: 242px;
     max-width: 350px;
     width: 28%;
     transform: none;
 }
 
-#ourdog a:hover figure {
+#ourdog a:hover figure,
+#ourdog button:hover {
     border: 5px solid violet;
     box-sizing: border-box;
     background-color: violet;
 }
 
-#ourdog a:hover figcaption {
+#ourdog a:hover figcaption,
+#ourdog button:hover figcaption {
     background-color: beige;
     color: black;
     font-weight: bold;
@@ -232,4 +237,66 @@
         max-width: 100%;
     }
 
+}
+
+#modal-diapos {
+    border: solid 2px beige;
+    z-index: 100;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    background-color: #000;
+    width: 90%;
+    height: 85vh;
+
+    overflow: hidden; // A vérifier pour overflow uniquement la fenêtre et ne pas voir les images du diaporama
+
+
+    #close {
+        border: 0;
+        z-index: 101;
+        position: relative;
+        right: -45%;
+        top: 20px;
+        color: beige;
+        background-color: transparent;
+
+
+        &:hover {
+            background-color: transparent;
+            border: unset;
+            box-sizing: border-box;
+        }
+
+        &:focus {
+            border: unset;
+            outline: unset;
+        }
+    }
+
+    #img-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-shrink: 1;
+        flex-grow: 1;
+        max-height: 100%;
+        height: 100%;
+
+
+
+        .img-div {
+            min-width: unset;
+            max-width: unset;
+            max-width: 100%;
+            width: 100%;
+
+            img {
+                max-width: 90%;
+            }
+        }
+
+    }
 }

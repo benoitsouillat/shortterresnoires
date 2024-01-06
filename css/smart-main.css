@@ -1184,20 +1184,23 @@ body p {
   max-width: 350px;
 }
 
-#ourdog div > a {
+#ourdog div > a,
+#ourdor div > button {
   min-width: 242px;
   max-width: 350px;
   width: 28%;
   transform: none;
 }
 
-#ourdog a:hover figure {
+#ourdog a:hover figure,
+#ourdog button:hover {
   border: 5px solid violet;
   box-sizing: border-box;
   background-color: violet;
 }
 
-#ourdog a:hover figcaption {
+#ourdog a:hover figcaption,
+#ourdog button:hover figcaption {
   background-color: beige;
   color: black;
   font-weight: bold;
@@ -1332,6 +1335,56 @@ body p {
     max-width: 100%;
   }
 }
+#modal-diapos {
+  border: solid 2px beige;
+  z-index: 100;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  background-color: #000;
+  width: 90%;
+  height: 85vh;
+  overflow: hidden;
+}
+#modal-diapos #close {
+  border: 0;
+  z-index: 101;
+  position: relative;
+  right: -45%;
+  top: 20px;
+  color: beige;
+  background-color: transparent;
+}
+#modal-diapos #close:hover {
+  background-color: transparent;
+  border: unset;
+  box-sizing: border-box;
+}
+#modal-diapos #close:focus {
+  border: unset;
+  outline: unset;
+}
+#modal-diapos #img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
+  flex-grow: 1;
+  max-height: 100%;
+  height: 100%;
+}
+#modal-diapos #img-container .img-div {
+  min-width: unset;
+  max-width: unset;
+  max-width: 100%;
+  width: 100%;
+}
+#modal-diapos #img-container .img-div img {
+  max-width: 90%;
+}
+
 @keyframes btn-contact-bounce {
   0% {
     transform: translateY(7px);

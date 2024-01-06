@@ -1,6 +1,6 @@
 <?php
 
-require_once('../Classes/RequestPDO.php');
+require_once(__DIR__ . '/RequestPDO.php');
 
 class Image
 {

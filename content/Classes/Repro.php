@@ -1,6 +1,6 @@
 <?php
 
-include_once('../Models/sql/repro_request.php');
+include_once(__DIR__ . "/../Models/sql/repro_request.php");
 require_once(__DIR__ . "/../Controllers/function.php");
 require_once(__DIR__ . "/RequestPDO.php");
 require_once(__DIR__ . "/Image.php");

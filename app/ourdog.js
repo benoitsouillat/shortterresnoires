@@ -1,66 +1,133 @@
-let fiche = document.getElementById("dog-card");
-let image = document.getElementById("dog-card-img");
-let info = document.getElementById("dog-info");
+document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.vignet-dog');
 
-let figures = document.getElementsByClassName('vignet-dog');
+    cards.forEach(card => {
+        card.addEventListener('click', function () {
+            const id = this.dataset.reproid;
+            showReproCard(id);
+        });
+    });
+});
 
-const createBlock = (name) => {
+let reproData = '';
+let reprosWithPuppies = [];
+let littersActive = [];
+let reproImages = [];
 
-    dogClass.forEach(elm => {
-        if (elm.dogName.toLowerCase() === name)
+const fetchRepro = (reproID, callback) => {
+    fetch('../content/API/repros.php',
         {
-            fiche.classList.remove('card-hidden');
-            info.children[0].textContent = ' ' + elm.dogName + '  ' + elm.dogBreeder;
-            if (elm.dogSex === male)
-            {
-                info.children[1].textContent = " Né le " + elm.dogBirth;
-                info.children[2].classList.add("fa-mars");
-                info.children[2].classList.remove("fa-venus");
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                'reproID': reproID
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            reproData = data.reproData;
+            reprosWithPuppies = data.reprosWithPuppies;
+            littersActive = data.littersActive;
+            reproImages = data.reproImages;
+            callback();
+        })
+        .catch(error => {
+            console.error('Erreur lors de la requète fetch ' + error);
+        })
+}
 
-            }
-            else 
-            {
-                info.children[1].textContent = " Née le " + elm.dogBirth;
-                info.children[2].classList.add("fa-venus");
-                info.children[2].classList.remove("fa-mars");
+const showReproCard = (id) => {
+    fetchRepro(id, () => {
+        let card = document.getElementById("dog-card");
+        card.classList.remove('card-hidden');
+        document.getElementById("dog-card-img").src = reproData.mainImg;
+        document.getElementById("dog-card-img").alt = reproData.name;
+        document.getElementById("dog-card-name").innerText = ' ' + reproData.name + ' ' + reproData.breeder;
+        let birthdate = new Date(reproData.birthdate);
 
-            }
-            info.children[0].classList.add("fa-paw");
-            info.children[1].classList.add("fa-calendar-check");
-            info.children[2].textContent = elm.dogSex;
-            
-            if (elm.dogLitter === true)
-            {
-                info.children[3].classList.remove("hidden");
-                info.children[3].href = elm.dogLitterPage + '.php';
-            }
-            else
-            {
-                info.children[3].classList.add("hidden");
-            }
-            
-            info.children[4].rel = elm.dogName.toLowerCase();
-            info.children[4].href = imgPath + elm.dogName.toLowerCase() + '-pres' + jpg;
+        document.getElementById("dog-card-birth").innerText = ' Né le : ' + birthdate.toLocaleString('fr-FR', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
 
-            image.src = imgPath + elm.dogName.toLowerCase() + '-pres' + jpg;
-            image.alt = elm.dogName;
+        // Définir si la carte est femelle ou mâle et affiche
+        if (reproData.sex === 'Female') {
+            document.getElementById("dog-card-sex").innerText = ' Femelle ';
+            document.getElementById("dog-card-sex").classList.add('fa-venus');
+            document.getElementById("dog-card-sex").classList.remove('fa-mars');
         }
+        else {
+            document.getElementById("dog-card-sex").innerText = ' Mâle ';
+            document.getElementById("dog-card-sex").classList.remove('fa-venus');
+            document.getElementById("dog-card-sex").classList.add('fa-mars');
+        }
+
+
+        reprosWithPuppies.forEach(repro => {
+            if (repro.id === reproData.id) {
+                document.getElementById("baby-link").classList.remove('hidden');
+                littersActive.forEach(litter => {
+                    if (litter.mother === reproData.id) {
+                        document.getElementById("baby-link").href = '/content/Vues/weeding_litter.php?litterID=' + litter.litterId;
+                    }
+                });
+            }
+        });
+        albumButton = document.getElementById('album-photo');
+        modalDiapo = document.getElementById('modal-diapos');
+        imgContainer = document.getElementById('img-container');
+
+
+        // Style pour adapté la longueur aux nombres d'images
+        imgContainer.style.width = (reproImages.length * 100) + "%";
+
+        // Affichage du bouton uniquement s'il y a des images et fonction d'affichage de la modale
+        if (reproImages != 0) {
+            albumButton.classList.remove('hidden');
+            albumButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                modalDiapo.classList.remove('hidden');
+            });
+
+            // Suppresion de toutes les images qui ont pu être générées pour un autre Repro
+            while (imgContainer.hasChildNodes()) {
+                imgContainer.removeChild(imgContainer.firstChild);
+            }
+
+            // Génération des div contenant les images pour le diaporama
+            reproImages.forEach(image => {
+                div = document.createElement('div');
+                div.classList.add('img-div')
+                el = document.createElement('img');
+                el.src = image.path;
+                el.alt = "repro " + image.reproID;
+                div.appendChild(el);
+                imgContainer.appendChild(div);
+            });
+
+
+            //         echo "<div class='arrow-div'>
+            //             < button class='left-arrow bg-transparent' >
+            //                 <span class='bi bi-caret-left bi-caret-left-{$puppy->getId()} text-light'></span>
+            //         </button >
+            // <button class='right-arrow bg-transparent'>
+            //     <span class='bi bi-caret-right bi-caret-right-{$puppy->getId()} text-light'></span>
+            // </button>
+            //     </div > ";
+        }
+        else {
+            albumButton.classList.add('hidden');
+        }
+
+
     });
 }
 
-const checkName = (name) => {
-    dogClass.forEach(elm => {
-        if (elm.dogName.toLowerCase() === name)
-            createBlock(name);
-    });
-}
 
-const figureIdCatch = (e) => {
-    let figureId = e.target.closest('a').id;
-        checkName(figureId);
-}
-
-for (let i = 0; i < figures.length; i++)
-{
-    figures[i].addEventListener("click", figureIdCatch);
+const hideModal = () => {
+    modal = document.getElementById('modal-diapos');
+    modal.classList.add('hidden');
 }

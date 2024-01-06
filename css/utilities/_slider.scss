@@ -102,7 +102,9 @@
             text-align: center;
             background-color: transparent;
             left: unset !important;
+            // object-fit: cover;
             object-fit: contain;
+            // aspect-ratio: 16/9;
         }
     }
 
