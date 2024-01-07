@@ -1,11 +1,11 @@
 
-window.onload = () => {
+
+const slider = () => {
     const diapos = document.querySelectorAll('.diapo-container');
     diapos.forEach((diapo) => {
-        let compteur = 0, dogId = 0, elements, slides, timer, speed;
+        let compteur = 0, dogId = 0, elements, slides;
         dogId = diapo.dataset.dogId;
         elements = document.querySelector('.diapo-' + dogId);
-        console.log(elements.children);
         slides = Array.from(elements.children);
 
         let next = document.querySelector('.bi-caret-right-' + dogId);
@@ -14,10 +14,6 @@ window.onload = () => {
             next.addEventListener('click', slideNext);
             before.addEventListener('click', slideBefore);
         }
-        // speed = diapo.dataset.speed;
-        //timer = setInterval(slideNext, speed);
-        // diapo.addEventListener('mouseover', autoSlideStop);
-        // diapo.addEventListener('mouseout', autoSlideStart);
         function slideNext() {
             compteur++;
             let decal = -100 * compteur;
@@ -48,8 +44,13 @@ window.onload = () => {
             elements.style.transform = `translateX(${decal}%)`;
         }
     });
-
 }
+
+// speed = diapo.dataset.speed;
+// timer = setInterval(slideNext, speed);
+// diapo.addEventListener('mouseover', autoSlideStop);
+// diapo.addEventListener('mouseout', autoSlideStart);
+
 function autoSlideStart() {
     setInterval(slideNext, speed);
 }

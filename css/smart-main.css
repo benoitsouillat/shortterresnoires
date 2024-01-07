@@ -1335,36 +1335,85 @@ body p {
     max-width: 100%;
   }
 }
-#modal-diapos {
-  border: solid 2px beige;
+#diapo-div {
+  max-width: 90% !important;
+  min-width: 90% !important;
+  width: 90%;
   z-index: 100;
   position: absolute;
-  top: 40%;
+  top: 20%;
   left: 5%;
+}
+#diapo-div #arrow-div {
+  z-index: 102;
+  position: absolute;
+  top: 50%;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  width: 100%;
+}
+#diapo-div #arrow-div #left-arrow,
+#diapo-div #arrow-div #right-arrow {
+  min-height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: 0;
+}
+#diapo-div #arrow-div #left-arrow {
+  position: relative;
+  left: -46%;
+}
+#diapo-div #arrow-div #right-arrow {
+  position: relative;
+  left: 46%;
+}
+#diapo-div #arrow-div .bi {
+  color: white;
+  width: 30px;
+  height: 30px;
+}
+#diapo-div #modal-diapos {
+  border: solid 2px beige;
   background-color: #000;
-  width: 90%;
+  width: 100%;
   height: 85vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  justify-content: center !important;
 }
-#modal-diapos #close {
+#diapo-div #modal-diapos .img-div {
+  width: 100% !important;
+  min-width: 100% !important;
+}
+#diapo-div #modal-diapos .img-div img {
+  width: 100%;
+  max-width: 90vw;
+  min-width: 100%;
+  max-height: 50vh;
+}
+#diapo-div #modal-diapos #close {
   border: 0;
-  z-index: 101;
-  position: relative;
-  right: -45%;
+  z-index: 103;
+  position: absolute;
+  right: 2%;
   top: 20px;
   color: beige;
+  text-shadow: black 2px 2px 2px;
   background-color: transparent;
 }
-#modal-diapos #close:hover {
+#diapo-div #modal-diapos #close:hover {
   background-color: transparent;
   border: unset;
   box-sizing: border-box;
 }
-#modal-diapos #close:focus {
+#diapo-div #modal-diapos #close:focus {
   border: unset;
   outline: unset;
 }
-#modal-diapos #img-container {
+#diapo-div #modal-diapos #img-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1375,35 +1424,14 @@ body p {
   max-height: 100%;
   height: 100%;
 }
-#modal-diapos #img-container .img-div {
+#diapo-div #modal-diapos #img-container .img-div {
   min-width: unset;
   max-width: unset;
   max-width: 100%;
   width: 100%;
 }
-#modal-diapos #img-container .img-div img {
+#diapo-div #modal-diapos #img-container .img-div img {
   max-width: 90%;
-}
-#modal-diapos .arrow-div {
-  z-index: 102;
-  position: relative;
-  top: -50%;
-  width: 100%;
-}
-#modal-diapos .arrow-div .left-arrow,
-#modal-diapos .arrow-div .right-arrow {
-  min-height: 30px;
-  width: 30px;
-  background-color: transparent;
-  border: 0;
-}
-#modal-diapos .arrow-div .left-arrow {
-  position: relative;
-  left: -45%;
-}
-#modal-diapos .arrow-div .right-arrow {
-  position: relative;
-  left: 45%;
 }
 
 @keyframes btn-contact-bounce {

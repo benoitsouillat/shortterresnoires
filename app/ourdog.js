@@ -76,25 +76,25 @@ const showReproCard = (id) => {
                 });
             }
         });
-
-        albumButton = document.getElementById('album-photo');
-        modalDiapo = document.getElementById('modal-diapos');
+        var albumButton = document.getElementById('album-photo');
+        var modalDiapo = document.getElementById('modal-diapos');
         modalDiapo.dataset.dogId = id;
-        imgContainer = document.getElementById('img-container');
-        imgContainer.classList.add('diapo')
-        imgContainer.classList.add('diapo-' + id)
+
+        var leftArrow = document.getElementById('left-arrow');
+        var rightArrow = document.getElementById('right-arrow');
+
+        var diapoDiv = document.getElementById('diapo-div');
+        var imgContainer = document.getElementById('img-container');
+        imgContainer.removeAttribute('class');
+        imgContainer.classList.add('diapo', 'diapo-' + id)
 
 
         // Style pour adapté la longueur aux nombres d'images
         imgContainer.style.width = (reproImages.length * 100) + "%";
 
         // Affichage du bouton uniquement s'il y a des images et fonction d'affichage de la modale
-        if (reproImages != 0) {
+        if (reproImages.length !== 0) {
             albumButton.classList.remove('hidden');
-            albumButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                modalDiapo.classList.remove('hidden');
-            });
 
             // Suppresion de toutes les images qui ont pu être générées pour un autre Repro
             while (imgContainer.hasChildNodes()) {
@@ -112,24 +112,21 @@ const showReproCard = (id) => {
                 imgContainer.appendChild(div);
             });
 
-            if (reproImages.length > 1) {
-                let arrowDiv = document.createElement('div');
-                arrowDiv.classList.add('arrow-div');
-                let leftButton = document.createElement('button');
-                let rightButton = document.createElement('button');
-                leftButton.classList.add('left-arrow');
-                rightButton.classList.add('right-arrow');
-                let leftSpan = document.createElement('span');
-                let rightSpan = document.createElement('span');
-                leftSpan.classList.add('bi', 'bi-caret-left', 'bi-caret-left-' + id, 'text-light');
-                rightSpan.classList.add('bi', 'bi-caret-left', 'bi-caret-left-' + id, 'text-light');
+            leftArrow.children[0].classList.remove(leftArrow.children[0].classList[2]);
+            rightArrow.children[0].classList.remove(rightArrow.children[0].classList[2]);
+            leftArrow.children[0].classList.add('bi-caret-left-' + id);
+            rightArrow.children[0].classList.add('bi-caret-right-' + id);
 
-                leftButton.appendChild(leftSpan);
-                rightButton.appendChild(rightSpan);
-                arrowDiv.appendChild(leftButton);
-                arrowDiv.appendChild(rightButton);
-                modalDiapo.appendChild(arrowDiv);
-            }
+            albumButton.addEventListener('click', (e) => {
+                // e.preventDefault();
+                diapoDiv.classList.remove('hidden');
+                modalDiapo.classList.remove('hidden');
+                leftArrow.classList.remove('hidden');
+                rightArrow.classList.remove('hidden');
+
+            });
+            slider();
+
         }
         else {
             albumButton.classList.add('hidden');
@@ -141,6 +138,12 @@ const showReproCard = (id) => {
 
 
 const hideModal = () => {
+    diapoDiv = document.getElementById('diapo-div');
+    diapoDiv.classList.add('hidden');
     modal = document.getElementById('modal-diapos');
     modal.classList.add('hidden');
+    leftArrow = document.getElementById('left-arrow');
+    leftArrow.classList.add('hidden');
+    rightArrow = document.getElementById('right-arrow');
+    rightArrow.classList.add('hidden');
 }

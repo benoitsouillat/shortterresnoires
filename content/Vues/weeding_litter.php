@@ -32,6 +32,11 @@
     <!-- fontAwesome Icon -->
     <script src="https://kit.fontawesome.com/5944b63bf2.js" crossorigin="anonymous"></script>
     <script src="/content/assets/slider.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = () => {
+            slider()
+        };
+    </script>
 
 </head>
 
