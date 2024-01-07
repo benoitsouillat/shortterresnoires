@@ -5,6 +5,7 @@ window.onload = () => {
         let compteur = 0, dogId = 0, elements, slides, timer, speed;
         dogId = diapo.dataset.dogId;
         elements = document.querySelector('.diapo-' + dogId);
+        console.log(elements.children);
         slides = Array.from(elements.children);
 
         let next = document.querySelector('.bi-caret-right-' + dogId);

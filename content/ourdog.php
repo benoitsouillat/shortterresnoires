@@ -16,7 +16,7 @@
     $stmt->execute();
     $reprosData = $stmt->fetchAll(PDO::FETCH_OBJ);
     ?>
-    <!-- <script src="/app/ourdog.js" type="text/javascript"></script> -->
+    <script src="/content/assets/slider.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="repro-page">
@@ -66,8 +66,8 @@
                         </div>
                     </div>
                 </section>
-                <aside id="modal-diapos" class="hidden">
-                    <button id="close" onclick="hideModal()">X</button>
+                <aside id="modal-diapos" class="hidden diapo-container" data-speed="3500" data-dog-id="1">
+                    <!-- <button id="close" onclick="hideModal()">X</button> -->
                     <div id="img-container">
                     </div>
                 </aside>

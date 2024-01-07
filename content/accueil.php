@@ -5,6 +5,13 @@
     <title>Les Terres Noires - Bienvenue</title>
     <?php
     include "./php/head.php";
+
+    require_once(__DIR__ . '/../vendor/autoload.php');
+
+    use Imagine\Image\Box;
+    use Imagine\Image\ImageInterface;
+    use Imagine\Imagick\Imagine;
+
     ?>
 </head>
 
@@ -20,8 +27,7 @@
     <main id="accueil-page">
         <section>
             <h2 class="hidden">Le Cane Corso Elevage Passion</h2>
-            <div class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="6000"
-                id="option">
+            <div class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="6000" id="option">
                 <ol class="carousel-indicators">
                     <li data-target="#option" data-slide-to="0" class="active btn__anim"></li>
                     <li data-target="#option" data-slide-to="1" class="btn__anim"></li>
@@ -31,8 +37,7 @@
 
                 <div class="carousel-inner">
                     <div class='carousel-item active'>
-                        <img src="../src/img/safari1-puppies/accueil_safari.jpg"
-                            alt="Le standard du Cane Corso et chiots disponibles">
+                        <img src="../src/img/safari1-puppies/accueil_safari.jpg" alt="Le standard du Cane Corso et chiots disponibles">
                         <div class="carousel-caption opacity-4">
                             <p>Retrouvez nos chiots disponibles de Safari et Tonnerre</p>
                             <a href="./weeding.php" class="btn btn-info btn__anim">Nos chiots disponibles</a>
@@ -54,8 +59,7 @@
                         </div>
                     </div>
                     <div class='carousel-item'>
-                        <img style="background-color: lightblue" src="../src/img/IMG_2672.jpg"
-                            alt="domaine des terres noires - elevage cane corso">
+                        <img style="background-color: lightblue" src="../src/img/IMG_2672.jpg" alt="domaine des terres noires - elevage cane corso">
                         <div class="carousel-caption opacity-4">
                             <p>Voici toutes nos coordonnées,<br />
                                 N'hésitez pas à nous contacter pour plus d'informations.</p>
@@ -64,13 +68,11 @@
                     </div>
 
                 </div>
-                <a class="carousel-control-prev carousel-button-prevnext carousel-control-prev-btn" href="#option"
-                    data-slide="prev">
+                <a class="carousel-control-prev carousel-button-prevnext carousel-control-prev-btn" href="#option" data-slide="prev">
                     <span class="btn btn-warning font-weight-bold">&lt;&lt;</span>
                     <span class="sr-only"> Précédent </span>
                 </a>
-                <a class="carousel-control-next carousel-button-prevnext carousel-control-next-btn" href="#option"
-                    data-slide="next">
+                <a class="carousel-control-next carousel-button-prevnext carousel-control-next-btn" href="#option" data-slide="next">
                     <span class="btn btn-warning font-weight-bold">&gt;&gt;</span>
                     <span class="sr-only"> Suivant </span>
                 </a>

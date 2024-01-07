@@ -299,4 +299,31 @@
         }
 
     }
+
+    .arrow-div {
+        z-index: 102;
+        position: relative;
+        top: -50%;
+        width: 100%;
+
+        .left-arrow,
+        .right-arrow {
+            min-height: 30px;
+            width: 30px;
+            background-color: transparent;
+            border: 0;
+        }
+
+        .left-arrow {
+            position: relative;
+            left: -45%;
+        }
+
+        .right-arrow {
+            position: relative;
+            left: 45%;
+        }
+
+        ;
+    }
 }

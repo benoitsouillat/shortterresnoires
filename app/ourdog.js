@@ -65,7 +65,7 @@ const showReproCard = (id) => {
             document.getElementById("dog-card-sex").classList.add('fa-mars');
         }
 
-
+        // Affichage du bouton voir les chiots
         reprosWithPuppies.forEach(repro => {
             if (repro.id === reproData.id) {
                 document.getElementById("baby-link").classList.remove('hidden');
@@ -76,9 +76,13 @@ const showReproCard = (id) => {
                 });
             }
         });
+
         albumButton = document.getElementById('album-photo');
         modalDiapo = document.getElementById('modal-diapos');
+        modalDiapo.dataset.dogId = id;
         imgContainer = document.getElementById('img-container');
+        imgContainer.classList.add('diapo')
+        imgContainer.classList.add('diapo-' + id)
 
 
         // Style pour adapté la longueur aux nombres d'images
@@ -108,15 +112,24 @@ const showReproCard = (id) => {
                 imgContainer.appendChild(div);
             });
 
+            if (reproImages.length > 1) {
+                let arrowDiv = document.createElement('div');
+                arrowDiv.classList.add('arrow-div');
+                let leftButton = document.createElement('button');
+                let rightButton = document.createElement('button');
+                leftButton.classList.add('left-arrow');
+                rightButton.classList.add('right-arrow');
+                let leftSpan = document.createElement('span');
+                let rightSpan = document.createElement('span');
+                leftSpan.classList.add('bi', 'bi-caret-left', 'bi-caret-left-' + id, 'text-light');
+                rightSpan.classList.add('bi', 'bi-caret-left', 'bi-caret-left-' + id, 'text-light');
 
-            //         echo "<div class='arrow-div'>
-            //             < button class='left-arrow bg-transparent' >
-            //                 <span class='bi bi-caret-left bi-caret-left-{$puppy->getId()} text-light'></span>
-            //         </button >
-            // <button class='right-arrow bg-transparent'>
-            //     <span class='bi bi-caret-right bi-caret-right-{$puppy->getId()} text-light'></span>
-            // </button>
-            //     </div > ";
+                leftButton.appendChild(leftSpan);
+                rightButton.appendChild(rightSpan);
+                arrowDiv.appendChild(leftButton);
+                arrowDiv.appendChild(rightButton);
+                modalDiapo.appendChild(arrowDiv);
+            }
         }
         else {
             albumButton.classList.add('hidden');

@@ -1384,6 +1384,27 @@ body p {
 #modal-diapos #img-container .img-div img {
   max-width: 90%;
 }
+#modal-diapos .arrow-div {
+  z-index: 102;
+  position: relative;
+  top: -50%;
+  width: 100%;
+}
+#modal-diapos .arrow-div .left-arrow,
+#modal-diapos .arrow-div .right-arrow {
+  min-height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: 0;
+}
+#modal-diapos .arrow-div .left-arrow {
+  position: relative;
+  left: -45%;
+}
+#modal-diapos .arrow-div .right-arrow {
+  position: relative;
+  left: 45%;
+}
 
 @keyframes btn-contact-bounce {
   0% {
