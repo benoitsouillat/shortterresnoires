@@ -18,6 +18,7 @@ class Repro
     private $breeder = "";
     private $adn = true;
     private $mainImg = "";
+    private $notMyDog = false;
     private $pdo = null;
 
     public function __construct(
@@ -27,6 +28,7 @@ class Repro
         string $insert = "",
         string $breeder = "du Domaine des Terres Noires",
         bool $adn = true,
+        bool $notMyDog = false,
         string $mainImg = self::DEFAULT_IMG,
         RequestPDO $pdo = null
     ) {
@@ -36,6 +38,7 @@ class Repro
         $this->insert = $insert;
         $this->breeder = $breeder;
         $this->adn = $adn;
+        $this->notMyDog = $notMyDog;
         $this->mainImg = $mainImg;
         $this->pdo = $pdo ?? new RequestPDO();
     }
@@ -50,6 +53,7 @@ class Repro
         $this->setBirthdate($_POST['reproBirthdate']);
         $this->setInsert($_POST['reproInsert']);
         $this->setAdn($_POST['reproAdn']);
+        $this->setAdn($_POST['notMyDog']);
         $this->setBreeder($_POST['reproBreeder']);
     }
     public function fillFromStdClass(stdClass $data): void
@@ -60,6 +64,7 @@ class Repro
         $this->setBirthdate(new DateTime($data->birthdate ?? "2020-01-01"));
         $this->setInsert($data->insert);
         $this->setAdn($data->adn ?? true);
+        $this->setNotMyDog($data->notMyDog ?? false);
         $this->setBreeder($data->breeder ?? "du Domaine des Terres Noires");
         $this->setMainImg($data->mainImg ?? self::DEFAULT_IMG);
     }
@@ -260,6 +265,26 @@ class Repro
             $this->sex = $sex;
         else
             throw new InvalidArgumentException("Le sexe doit être Male ou Female !!");
+        return $this;
+    }
+
+    /**
+     * Get the value of notMyDog
+     */
+    public function getNotMyDog()
+    {
+        return $this->notMyDog;
+    }
+
+    /**
+     * Set the value of notMyDog
+     *
+     * @return  self
+     */
+    public function setNotMyDog($notMyDog)
+    {
+        $this->notMyDog = $notMyDog;
+
         return $this;
     }
 }

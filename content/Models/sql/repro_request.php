@@ -4,6 +4,10 @@ function getAllRepros()
 {
     return "SELECT * FROM `repros`";
 }
+function getAllReprosAreMyDogs()
+{
+    return "SELECT * FROM `repros` WHERE notMyDog = false";
+}
 function getReproFromID()
 {
     return "SELECT * FROM `repros` WHERE id = :reproID";
@@ -20,7 +24,8 @@ function createRepro()
         birthdate, 
         `insert`, 
         breeder, 
-        adn, 
+        adn,
+        notMyDog,
         mainImg) 
         VALUES (
             :name, 
@@ -29,6 +34,7 @@ function createRepro()
             :insert, 
             :breeder, 
             :adn, 
+            :notMyDog,
             :mainImg)";
 }
 function manageRepro()
@@ -40,6 +46,7 @@ function manageRepro()
     `insert` = :insert,
     breeder = :breeder,
     adn = :adn,
+    notMyDog = :notMyDog,
     mainImg = :mainImg WHERE id = :reproID";
 }
 

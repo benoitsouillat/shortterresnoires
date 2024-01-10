@@ -9,7 +9,7 @@
     require_once(__DIR__ . "/Classes/RequestPDO.php");
 
     $pdo = new RequestPDO();
-    $stmt = $pdo->connect()->prepare(getAllRepros());
+    $stmt = $pdo->connect()->prepare(getAllReprosAreMyDogs());
     $stmt->execute();
     $reprosData = $stmt->fetchAll(PDO::FETCH_OBJ);
     ?>

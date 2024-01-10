@@ -117,6 +117,15 @@ if (isset($_GET['error'])) {
                     <label for="ADNno"> Non </label>
                 </fieldset>
 
+                <fieldset>Ce n'est pas mon chien :
+                    <input type="radio" id="notmydogYes" name="notMyDog" value="1"
+                        <?php echo ($repro->getNotMyDog() == true) ? 'checked' : NULL ?>>
+                    <label for="notmydogYes"> Oui </label>
+                    <input type="radio" id="notmydogNo" name="notMyDog" value="0"
+                        <?php echo ($repro->getNotMyDog() == false) ? 'checked' : NULL ?>>
+                    <label for="notmydogNo"> Non (si) </label>
+                </fieldset>
+
                 <label for="mainImg">Image Principale : </label>
                 <input type="file" name="mainImg" id="mainImg" value="<?php echo $repro->getMainImg() ?>">
 

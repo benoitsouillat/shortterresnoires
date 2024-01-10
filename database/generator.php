@@ -11,6 +11,7 @@ $table_repros = "CREATE TABLE IF NOT EXISTS `terresnoires`.`repros` (
     `sex` VARCHAR(10) NOT NULL,
     `birthdate` DATE NOT NULL,
     `insert` VARCHAR(50),
+    `notmydog` TINYINT(1) NOT NULL DEFAULT FALSE,
     `breeder` VARCHAR(255) NOT NULL DEFAULT 'du Domaine des Terres Noires',
     `adn` TINYINT(1) DEFAULT 1,
     `mainImg` VARCHAR(255) NOT NULL DEFAULT '../src/img/repro-default.jpg',

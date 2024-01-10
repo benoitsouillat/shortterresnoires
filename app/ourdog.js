@@ -111,6 +111,14 @@ const showReproCard = (id) => {
                 div.appendChild(el);
                 imgContainer.appendChild(div);
             });
+            // Ajout de la dernière image équivalente à la première
+            lastImgDiv = document.createElement('div');
+            lastImgDiv.classList.add('img-div');
+            lastImg = document.createElement('img');
+            lastImg.src = reproImages[0].path;
+            lastImg.alt = reproData.name + ' ' + reproData.breeder;
+            lastImgDiv.appendChild(lastImg);
+            imgContainer.appendChild(lastImgDiv);
 
             leftArrow.children[0].classList.remove(leftArrow.children[0].classList[2]);
             rightArrow.children[0].classList.remove(rightArrow.children[0].classList[2]);
@@ -126,16 +134,12 @@ const showReproCard = (id) => {
 
             });
             slider();
-
         }
         else {
             albumButton.classList.add('hidden');
         }
-
-
     });
 }
-
 
 const hideModal = () => {
     diapoDiv = document.getElementById('diapo-div');
