@@ -5,11 +5,13 @@
 /.env
 ./vendor/
 *.jpg
+*.JPG
 
-/conn/conn.php
-/conn/connn.php
-/src/img
+./src/img/*
 !/src/img/user-default.jpg
 !/src/img/puppy-default.jpg
 !/src/img/repro-default.jpg
 
+
+/conn/conn.php
+/conn/connn.php
