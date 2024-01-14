@@ -92,7 +92,7 @@ class User
             $_SESSION = [];
             header("Location:../login.php?error=badlog");
         } else {
-            $stmt = $this->pdo->connect()->prepare("INSERT INTO `Users` (username, email, password, avatar) VALUES (:username, :email, :password, :avatar)");
+            $stmt = $this->pdo->connect()->prepare("INSERT INTO `users` (username, email, password, avatar) VALUES (:username, :email, :password, :avatar)");
             $stmt->bindValue(':username', $this->username);
             $stmt->bindValue(':email', $this->email);
             $stmt->bindValue(':password', $this->password);

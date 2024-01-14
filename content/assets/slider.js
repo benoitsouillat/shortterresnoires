@@ -26,6 +26,7 @@ const slider = () => {
                     elements.style.transform = 'translateX(0)';
                 }
             }, 1000);
+
         }
 
         function slideBefore() {

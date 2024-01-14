@@ -8,7 +8,11 @@ class RequestPDO
 
     public function connect()
     {
-        $pdo = new PDO($this->dsn, $this->username, $this->password);
-        return $pdo;
+        try {
+            $pdo = new PDO($this->dsn, $this->username, $this->password);
+            return $pdo;
+        } catch (PDOException $e) {
+            echo "Une erreur de connexion PDO s'est produite !";
+        }
     }
 }

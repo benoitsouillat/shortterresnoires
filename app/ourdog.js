@@ -66,6 +66,7 @@ const showReproCard = (id) => {
         }
 
         // Affichage du bouton voir les chiots
+        document.getElementById('baby-link').classList.add('hidden');
         reprosWithPuppies.forEach(repro => {
             if (repro.id === reproData.id) {
                 document.getElementById("baby-link").classList.remove('hidden');
@@ -131,6 +132,8 @@ const showReproCard = (id) => {
                 modalDiapo.classList.remove('hidden');
                 leftArrow.classList.remove('hidden');
                 rightArrow.classList.remove('hidden');
+                document.getElementById('grey-bg').classList.remove('hidden');
+
 
             });
             slider();
@@ -142,12 +145,9 @@ const showReproCard = (id) => {
 }
 
 const hideModal = () => {
-    diapoDiv = document.getElementById('diapo-div');
-    diapoDiv.classList.add('hidden');
-    modal = document.getElementById('modal-diapos');
-    modal.classList.add('hidden');
-    leftArrow = document.getElementById('left-arrow');
-    leftArrow.classList.add('hidden');
-    rightArrow = document.getElementById('right-arrow');
-    rightArrow.classList.add('hidden');
+    document.getElementById('diapo-div').classList.add('hidden');
+    document.getElementById('modal-diapos').classList.add('hidden');
+    document.getElementById('left-arrow').classList.add('hidden');
+    document.getElementById('right-arrow').classList.add('hidden');
+    document.getElementById('grey-bg').classList.add('hidden');
 }

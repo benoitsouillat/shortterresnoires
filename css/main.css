@@ -726,7 +726,6 @@ body p {
 .female-weeding img {
   max-width: 20rem;
   height: auto;
-  margin-bottom: 3rem;
   box-shadow: 4px 4px 6px #ffdae0;
   -o-object-fit: cover;
      object-fit: cover;
@@ -758,7 +757,6 @@ body p {
 .male-weeding img {
   max-width: 20rem;
   height: auto;
-  margin-bottom: 3rem;
   box-shadow: 4px 4px 6px lightblue;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1134,24 +1132,47 @@ body p {
 }
 #ourdog h2 {
   width: 100%;
-  margin-bottom: 25px;
+  padding-bottom: 10px;
+  margin: 25px 0 30px 0;
 }
 #ourdog h3 {
   margin-bottom: 50px;
 }
-#ourdog > section {
+#ourdog .ourdog-container {
   margin: auto;
-  min-width: 95%;
-  max-width: 98%;
-  padding-top: 0;
+  padding-top: 20px;
+  box-sizing: border-box;
 }
-#ourdog > section > div {
+#ourdog .ourdog-container .dog-list {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
-#ourdog figure {
+#ourdog .ourdog-container .dog-list .vignet-dog {
+  min-width: 242px;
+  max-width: 370px;
+  width: 28%;
+  transform: none;
+}
+#ourdog .ourdog-container .dog-list .vignet-dog:hover {
+  box-sizing: border-box;
+}
+#ourdog .ourdog-container .dog-list .vignet-dog:hover figure {
+  box-sizing: border-box;
+  border: 3px solid violet;
+  background-color: violet;
+  box-shadow: 1px 1px 18px white;
+}
+#ourdog .ourdog-container .dog-list .vignet-dog:hover figcaption {
+  background-color: beige;
+  color: black;
+  font-weight: bold;
+  border-top: black solid 2px;
+  text-decoration: underline;
+}
+#ourdog .ourdog-container .dog-list .vignet-dog figure {
   border: 2px solid beige;
   box-shadow: 2px 2px 2px white;
   border-radius: 5%;
@@ -1159,10 +1180,10 @@ body p {
   min-width: 242px;
   max-width: 350px;
   max-height: 250px;
-  margin: 0 20px;
   margin-bottom: 25px;
+  box-sizing: border-box;
 }
-#ourdog figure img {
+#ourdog .ourdog-container .dog-list .vignet-dog figure img {
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 100%;
@@ -1172,53 +1193,23 @@ body p {
   border-radius: 5%;
   aspect-ratio: 16/9;
 }
-#ourdog figcaption {
+#ourdog .ourdog-container .dog-list .vignet-dog figcaption {
   padding-top: 15px;
   height: 50px;
   border-bottom-left-radius: 5%;
   border-bottom-right-radius: 5%;
 }
-
-#ourdog div > div {
-  min-width: 242px;
-  max-width: 350px;
-}
-
-#ourdog div > a,
-#ourdor div > button {
-  min-width: 242px;
-  max-width: 350px;
-  width: 28%;
-  transform: none;
-}
-
-#ourdog a:hover figure,
-#ourdog button:hover {
-  border: 5px solid violet;
+#ourdog .ourdog-container #dog-card {
   box-sizing: border-box;
-  background-color: violet;
-}
-
-#ourdog a:hover figcaption,
-#ourdog button:hover figcaption {
-  background-color: beige;
-  color: black;
-  font-weight: bold;
-  border-top: black solid 2px;
-  text-decoration: underline;
-}
-
-#ourdog #dog-card {
-  width: 100%;
+  width: 95%;
   max-width: 100%;
   border: beige 5px solid;
   border-radius: 1%;
   box-shadow: 2px 2px 5px beige;
-  margin: 50px;
+  margin: 50px auto;
   padding: 50px;
 }
-
-#dog-card > div {
+#ourdog .ourdog-container #dog-card > div {
   width: 90%;
   margin: auto;
   display: flex;
@@ -1226,13 +1217,11 @@ body p {
   justify-content: space-around;
   align-items: center;
 }
-
-#dog-card img {
+#ourdog .ourdog-container #dog-card > div img {
   max-width: 35%;
   box-shadow: beige 1px 1px 20px;
 }
-
-#dog-card img:hover {
+#ourdog .ourdog-container #dog-card > div img:hover {
   transform: scale(1.1);
 }
 
@@ -1243,24 +1232,9 @@ body p {
   justify-content: center;
   margin-top: 25px;
 }
-
 #dog-info a {
   margin-bottom: 20px;
   transform: none;
-}
-
-#repro-page .fancybox-inner {
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#repro-page .fancybox-image {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  align-self: center;
 }
 
 #repro-page nav {
@@ -1272,38 +1246,27 @@ body p {
   display: none;
 }
 
-#ourdog .card-visible {
-  display: visible;
-}
-
 .hidden {
   display: none;
 }
 
 @media all and (max-width: 990px) {
-  #ourdog > section > div {
-    flex-wrap: wrap;
-  }
-  #ourdog div > a {
+  #ourdog .ourdog-container .vignet-dog {
     max-width: 250px;
     margin-top: 25px;
+  }
+  #ourdog #dog-card > div {
+    flex-wrap: wrap;
   }
   #repro-page nav {
     width: 100%;
   }
 }
-@media all and (min-width: 680px) and (max-width: 750px) {
-  #ourdog > section {
-    min-width: 45%;
-    max-width: 45%;
-  }
-  #ourdog h3 {
-    width: 200%;
-  }
-  #ourdog > section > div {
+@media all and (max-width: 750px) {
+  #ourdog .ourdog-container .dog-list {
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
   }
   #ourdog #dog-card {
     max-width: 49%;
@@ -1314,20 +1277,19 @@ body p {
   #ourdog #dog-card img {
     max-width: 100%;
   }
+  #ourdog #dog-card #dog-info {
+    min-width: 70%;
+  }
 }
 @media all and (max-width: 679px) {
-  #ourdog section:first-child {
-    order: 3;
-  }
-  #ourdog > section {
-    min-width: 95%;
-    max-width: 95%;
+  #ourdog .ourdog-container {
+    flex-direction: column;
     margin: auto;
   }
-  #ourdog > section {
-    flex-direction: column;
+  #ourdog .ourdog-container:first-child {
+    order: 3;
   }
-  #ourdog div > a {
+  #ourdog .dog-list .vignet-dog {
     max-width: 350px;
     margin-top: 25px;
   }
@@ -1336,21 +1298,22 @@ body p {
   }
 }
 #diapo-div {
-  max-width: 90% !important;
-  min-width: 90% !important;
-  width: 90%;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  width: 100%;
   z-index: 100;
   position: absolute;
   top: 20%;
-  left: 5%;
+  left: 0;
 }
 #diapo-div #arrow-div {
   z-index: 102;
   position: absolute;
   top: 50%;
-  max-width: 100% !important;
-  min-width: 100% !important;
-  width: 100%;
+  left: 5%;
+  max-width: 90% !important;
+  min-width: 90% !important;
+  width: 90%;
 }
 #diapo-div #arrow-div #left-arrow,
 #diapo-div #arrow-div #right-arrow {
@@ -1362,25 +1325,41 @@ body p {
   position: relative;
   left: -44%;
 }
+@media all and (max-width: 576px) {
+  #diapo-div #arrow-div #left-arrow {
+    left: -40%;
+  }
+}
 #diapo-div #arrow-div #right-arrow {
   position: relative;
   left: 44%;
+}
+@media all and (max-width: 576px) {
+  #diapo-div #arrow-div #right-arrow {
+    left: 40%;
+  }
 }
 #diapo-div #arrow-div .bi {
   color: white;
   width: 30px;
   height: 30px;
 }
+@media all and (max-width: 576px) {
+  #diapo-div #arrow-div {
+    top: 65%;
+  }
+}
 #diapo-div #modal-diapos {
   border: solid 2px beige;
   background-color: #000;
-  width: 100%;
+  width: 90%;
   height: 85vh;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center !important;
   margin: 0 auto;
+  margin-top: 5vh;
   overflow: hidden;
 }
 #diapo-div #modal-diapos .img-div {
@@ -1391,8 +1370,8 @@ body p {
   border: 0;
   z-index: 103;
   position: absolute;
-  right: 2%;
-  top: 20px;
+  right: 8%;
+  top: 8vh;
   color: beige;
   text-shadow: black 2px 2px 2px;
   background-color: transparent;
@@ -1424,7 +1403,32 @@ body p {
   width: 100%;
 }
 #diapo-div #modal-diapos #img-container .img-div img {
-  max-width: 90%;
+  width: 90%;
+  max-width: 900px;
+}
+@media all and (max-width: 576px) {
+  #diapo-div #modal-diapos {
+    margin-top: 20vh;
+    height: 50vh;
+  }
+  #diapo-div #modal-diapos #close {
+    top: 35%;
+  }
+}
+
+#grey-bg {
+  z-index: 0;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  width: 100%;
+  background-color: grey;
+  height: 300vh;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  margin: 0;
 }
 
 @keyframes btn-contact-bounce {

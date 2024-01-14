@@ -11,7 +11,12 @@ $passverif = $_POST['passverif'];
 if ($passverif !== $password) {
     header("Location:../../../Vues/register.php?error=notsamepass");
 } else {
-    $user = new User();
-    $user->register($username, $email, $password);
-    echo "<p>Enregistrement réussi : <a href='../login.php'>Retour à la connexion !</a></p>";
+    try {
+
+        $user = new User();
+        $user->register($username, $email, $password);
+        echo "<p>Enregistrement réussi : <a href='../login.php'>Retour à la connexion !</a></p>";
+    } catch (PDOException $e) {
+        echo 'Une erreur s\'est produite dans l\'enregistrement dans la base de donnée User';
+    }
 }

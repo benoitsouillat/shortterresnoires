@@ -11,7 +11,7 @@
 
 <body id="weeding-page">
     <header id="header">
-        <h1 class="title">Nos Mariages</h1>
+        <h1 class="title">Le Domaine des Terres Noires</h1>
         <nav id="nav">
             <?php
             include_once(__DIR__ . "/../php/navbar.php");
@@ -27,6 +27,7 @@
         </nav>
     </header>
     <main>
+        <h2 class="title">Nos Mariages</h2>
         <section id="weedings">
             <?php
             foreach ($littersData as $data) {
@@ -37,7 +38,7 @@
                 <section class='female-weeding'>
                     <div class='txt-weeding'>
                         <h3>{$litter->getMother()->getName()}</h3>
-                        <p>née le : " . trad_month($litter->getMother()->getBirthdate()->format(' d F Y ')) . "</p>
+                        <p>Née le : " . trad_month($litter->getMother()->getBirthdate()->format(' d F Y ')) . "</p>
                         <p>Issue {$litter->getMother()->getBreeder()}</p>
                     </div>
                     <div class='img-weeding'><img src={$litter->getMother()->getMainImg()} alt='{$litter->getMother()->getName()}'></div>
@@ -45,7 +46,7 @@
                 <section class='male-weeding'>
                 <div class='txt-weeding'>
                     <h3>{$litter->getFather()->getName()}</h3>
-                    <p>né le : " . trad_month($litter->getFather()->getBirthdate()->format(' d F Y ')) . "</p>
+                    <p>Né le : " . trad_month($litter->getFather()->getBirthdate()->format(' d F Y ')) . "</p>
                     <p>Issu {$litter->getFather()->getBreeder()}</p>
                 </div>
                 <div class='img-weeding'><img src='{$litter->getFather()->getMainImg()}' alt='{$litter->getFather()->getName()}'></div>
