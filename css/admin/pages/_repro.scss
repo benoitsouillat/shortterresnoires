@@ -5,6 +5,22 @@ body {
     color: #C7C7C7;
     text-align: center;
 
+    .admin-nav {
+        width: 100%;
+        margin: 1.5rem auto;
+        text-align: center;
+
+        a {
+            margin: 2px;
+            transition: $main-transition;
+
+            &:hover {
+                transform: scale(1.04);
+                text-decoration: underline;
+            }
+        }
+    }
+
     h1 {
         text-align: center;
         padding-bottom: 30px;
@@ -24,12 +40,60 @@ body {
         border-bottom: 2px solid #C7C7C7;
         margin-bottom: 10px;
 
+
+        a,
+        p {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: #C7C7C7;
+
+            &:hover {
+                color: purple;
+                transform: unset;
+            }
+
+            &.btn {
+                font-size: 1.2rem;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+
+        @media all and (max-width: $lg) {
+
+            a,
+            p {
+
+                font-size: 1.3rem;
+
+                &.btn {
+                    font-size: 1rem;
+                }
+            }
+        }
+
         @media all and (max-width: $md) {
 
             a,
             p {
 
-                font-size: 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media all and (max-width: $sm) {
+
+            a,
+            p {
+
+                font-size: .9rem;
+
+                &.btn {
+                    font-size: .8rem;
+                }
             }
         }
 
@@ -52,17 +116,6 @@ body {
             }
         }
 
-        a,
-        p {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-weight: bold;
-            color: #C7C7C7;
-
-            &:hover {
-                color: purple;
-            }
-        }
 
 
         img {
@@ -95,7 +148,23 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
+        min-height: 100vh;
+
+        .button-zone {
+            width: 100%;
+            margin-top: 2.2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            transition: $main-transition;
+
+            &:hover {
+                transform: scale(1.06);
+            }
+        }
 
         img {
             width: 80%;
@@ -108,6 +177,8 @@ body {
         h4 {
             width: 100%;
             text-align: center;
+            margin: 1.7rem auto;
+            font-size: 1.5rem;
         }
 
         h4,
@@ -126,12 +197,19 @@ body {
         flex-wrap: wrap;
         flex-grow: 2;
 
+        h2 {
+            width: 100%;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
         .repro-form {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            width: 60%;
+            width: 85%;
+
 
 
             option,
@@ -154,7 +232,18 @@ body {
             }
 
             input[type="radio"] {
-                width: unset;
+                width: 20px;
+                height: 20px;
+                margin-bottom: 0;
+                margin-left: 30px;
+
+                &#Female {
+                    accent-color: $female;
+                }
+
+                &#Male {
+                    accent-color: rgb(53, 202, 252);
+                }
             }
 
             fieldset {
@@ -163,8 +252,25 @@ body {
 
             label,
             legend {
-                margin-left: 5px;
                 font-size: 20px;
+            }
+
+            .notmydog-field,
+            .adn-field {
+                width: 60%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: nowrap;
+                margin: 5px auto;
+
+                input {
+                    margin-top: 0;
+                    margin-left: 20px;
+                    height: 20px;
+                    width: 20px;
+                }
             }
         }
     }

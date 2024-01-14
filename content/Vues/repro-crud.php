@@ -1,7 +1,7 @@
 <?php
-require_once('../Classes/User.php');
-require_once('../Classes/Repro.php');
-require_once('../Classes/RequestPDO.php');
+require_once(__DIR__ . '/../Classes/User.php');
+require_once(__DIR__ . '/../Classes/Repro.php');
+// require_once('../Classes/RequestPDO.php');
 session_start();
 
 $user = new User();
@@ -53,23 +53,26 @@ if (isset($_GET['error'])) {
     ?>
     <section class="section-repro">
         <div class="infos-repro">
-            <h3 class="w-100 text-center mt-5 mb-5">Infos en ligne :</h3><br>
+            <h3>Infos en ligne :</h3><br>
             <img src="../<?php echo $repro->getMainImg() ?>">
             <h4><?php echo $repro->getName() . ' ' . $repro->getSex() ?></h4>
             <h5><?php echo $repro->getBreeder() ?></h5>
             <p>Né(e) le :
-                <?php echo $repro->getBirthdate()->format('d-m-Y') . " - ";
+                <?php echo $repro->getBirthdate()->format('d-m-Y') . " <br>";
                 if ($repro->getAdn()) {
-                    echo "ADN Vérifiée ";
+                    echo "<br>ADN Vérifiée ";
+                }
+                if ($repro->getNotMyDog() == true) {
+                    echo "<br>Reproducteur extérieur";
                 }
                 ?></p>
-            <div class="w-100 mt-5 d-flex justify-content-center align-items-center">
+            <div class="button-zone">
                 <button onClick="confirmDeleteRepro(<?php echo $repro->getId() ?>)" class="btn btn-danger">Supprimer
                     ce reproducteur</button>
             </div>
         </div>
         <div class="repro-form-container">
-            <h2 class='mb-4 w-100'>
+            <h2>
                 <?php
                 if ($repro->getName() != null) {
                     echo "Modifier les informations de {$repro->getName()}";
@@ -90,14 +93,17 @@ if (isset($_GET['error'])) {
                 <input type="text" id="reproName" name="reproName" value="<?php echo $repro->getName() ?>">
 
                 <fieldset>
-                    <input type='radio' id='Female' name='reproSex' value='Female' <?php echo ($repro->getSex() === 'Female') ? 'checked' : NULL ?>>
+                    <input type='radio' id='Female' name='reproSex' value='Female'
+                        <?php echo ($repro->getSex() === 'Female') ? 'checked' : NULL ?>>
                     <label for='Female'> Femelle </label>
-                    <input type='radio' id='Male' name='reproSex' value='Male' <?php echo ($repro->getSex() === 'Male') ? 'checked' : NULL ?>>
+                    <input type='radio' id='Male' name='reproSex' value='Male'
+                        <?php echo ($repro->getSex() === 'Male') ? 'checked' : NULL ?>>
                     <label for="Male"> Mâle </label>
                 </fieldset>
 
                 <label for='reproBirthdate'>Date de Naissance : </label>
-                <input type='date' value="<?php echo $repro->getBirthdate()->format('Y-m-d') ?>" id='reproBirthdate' name='reproBirthdate'>
+                <input type='date' value="<?php echo $repro->getBirthdate()->format('Y-m-d') ?>" id='reproBirthdate'
+                    name='reproBirthdate'>
 
                 <label for='reproInsert'>Puce Electronique : </label>
                 <input type="text" id="reproInsert" name="reproInsert" value="<?php echo $repro->getInsert() ?>">
@@ -105,18 +111,16 @@ if (isset($_GET['error'])) {
                 <label for="reproBreeder">Nom de l'affixe : </label>
                 <input type="text" id="reproBreeder" name="reproBreeder" value="<?php echo $repro->getBreeder() ?>">
 
-                <fieldset>ADN effectué ?
-                    <input type="radio" id="ADNyes" name="reproADN" value="1" <?php echo ($repro->getAdn() == true) ? 'checked' : NULL ?>>
-                    <label for="ADNyes"> Oui </label>
-                    <input type="radio" id="ADNno" name="reproADN" value="0" <?php echo ($repro->getAdn() == false) ? 'checked' : NULL ?>>
-                    <label for="ADNno"> Non </label>
+                <fieldset class="adn-field">
+                    <label for="reproADN"> ADN effectuée </label>
+                    <input type="checkbox" id="reproADN" name="reproADN" value="1"
+                        <?php echo ($repro->getAdn() == true) ? 'checked' : NULL ?>>
                 </fieldset>
 
-                <fieldset>Ce n'est pas mon chien :
-                    <input type="radio" id="notmydogYes" name="notMyDog" value="1" <?php echo ($repro->getNotMyDog() == true) ? 'checked' : NULL ?>>
-                    <label for="notmydogYes"> Non </label>
-                    <input type="radio" id="notmydogNo" name="notMyDog" value="0" <?php echo ($repro->getNotMyDog() == false) ? 'checked' : NULL ?>>
-                    <label for="notmydogNo"> Si </label>
+                <fieldset class="notmydog-field">
+                    <label for="notmydog"> Reproducteur extérieur </label>
+                    <input type="checkbox" id="notmydog" name="notMyDog" value="1"
+                        <?php echo ($repro->getNotMyDog() == true) ? 'checked' : NULL ?>>
                 </fieldset>
 
                 <label for="mainImg">Image Principale : </label>

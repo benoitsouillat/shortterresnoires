@@ -4,6 +4,19 @@ body {
   color: #C7C7C7;
   text-align: center;
 }
+body .admin-nav {
+  width: 100%;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+body .admin-nav a {
+  margin: 2px;
+  transition: all 0.8s 0.1s;
+}
+body .admin-nav a:hover {
+  transform: scale(1.04);
+  text-decoration: underline;
+}
 body h1 {
   text-align: center;
   padding-bottom: 30px;
@@ -21,10 +34,50 @@ body .repro-line {
   border-bottom: 2px solid #C7C7C7;
   margin-bottom: 10px;
 }
+body .repro-line a,
+body .repro-line p {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #C7C7C7;
+}
+body .repro-line a:hover,
+body .repro-line p:hover {
+  color: purple;
+  transform: unset;
+}
+body .repro-line a.btn,
+body .repro-line p.btn {
+  font-size: 1.2rem;
+}
+body .repro-line a.btn:hover,
+body .repro-line p.btn:hover {
+  color: white;
+}
+@media all and (max-width: 992px) {
+  body .repro-line a,
+  body .repro-line p {
+    font-size: 1.3rem;
+  }
+  body .repro-line a.btn,
+  body .repro-line p.btn {
+    font-size: 1rem;
+  }
+}
 @media all and (max-width: 768px) {
   body .repro-line a,
   body .repro-line p {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 576px) {
+  body .repro-line a,
+  body .repro-line p {
+    font-size: 0.9rem;
+  }
+  body .repro-line a.btn,
+  body .repro-line p.btn {
+    font-size: 0.8rem;
   }
 }
 body .repro-line .image-space {
@@ -42,17 +95,6 @@ body .repro-line .image-space a {
 }
 body .repro-line .image-space a img {
   margin: auto 5px;
-}
-body .repro-line a,
-body .repro-line p {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  color: #C7C7C7;
-}
-body .repro-line a:hover,
-body .repro-line p:hover {
-  color: purple;
 }
 body .repro-line img {
   max-height: 8vh;
@@ -78,7 +120,20 @@ body .infos-repro {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
+  min-height: 100vh;
+}
+body .infos-repro .button-zone {
+  width: 100%;
+  margin-top: 2.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.8s 0.1s;
+}
+body .infos-repro .button-zone:hover {
+  transform: scale(1.06);
 }
 body .infos-repro img {
   width: 80%;
@@ -90,6 +145,8 @@ body .infos-repro h3,
 body .infos-repro h4 {
   width: 100%;
   text-align: center;
+  margin: 1.7rem auto;
+  font-size: 1.5rem;
 }
 body .infos-repro h4,
 body .infos-repro h5,
@@ -105,12 +162,17 @@ body .repro-form-container {
   flex-wrap: wrap;
   flex-grow: 2;
 }
+body .repro-form-container h2 {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
 body .repro-form-container .repro-form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
+  width: 85%;
 }
 body .repro-form-container .repro-form option,
 body .repro-form-container .repro-form select {
@@ -130,15 +192,40 @@ body .repro-form-container .repro-form input {
   width: 60%;
 }
 body .repro-form-container .repro-form input[type=radio] {
-  width: unset;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 0;
+  margin-left: 30px;
+}
+body .repro-form-container .repro-form input[type=radio]#Female {
+  accent-color: pink;
+}
+body .repro-form-container .repro-form input[type=radio]#Male {
+  accent-color: rgb(53, 202, 252);
 }
 body .repro-form-container .repro-form fieldset {
   width: 60%;
 }
 body .repro-form-container .repro-form label,
 body .repro-form-container .repro-form legend {
-  margin-left: 5px;
   font-size: 20px;
+}
+body .repro-form-container .repro-form .notmydog-field,
+body .repro-form-container .repro-form .adn-field {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 5px auto;
+}
+body .repro-form-container .repro-form .notmydog-field input,
+body .repro-form-container .repro-form .adn-field input {
+  margin-top: 0;
+  margin-left: 20px;
+  height: 20px;
+  width: 20px;
 }
 
 .parents-container {
