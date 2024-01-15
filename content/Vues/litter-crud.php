@@ -52,29 +52,29 @@ $females = $stmtFemales->fetchAll(PDO::FETCH_ASSOC);
         <?php if ($litter->getMother() != NULL) {
 
         ?>
-            <div class="infos-repro">
-                <h3>Infos de la portée en ligne : </h3>
-                <?php echo "<h4> Portée de {$litter->getMother()->getName()} et {$litter->getFather()->getName()} <br> née le " . trad_month($litter->getBirthdate()->format(' d F Y ')) . "</h1>" ?>
+        <div class="infos-repro">
+            <h3>Infos de la portée en ligne : </h3>
+            <?php echo "<h4> Portée de {$litter->getMother()->getName()} et {$litter->getFather()->getName()} <br> née le " . trad_month($litter->getBirthdate()->format(' d F Y ')) . "</h1>" ?>
 
-                <div class="parents-container">
-                    <div class="mother-container">
-                        <?php echo "<img src='{$litter->getMother()->getMainImg()}' alt='{$litter->getMother()->getName()}'" ?>
-                        <?php echo "<p> {$litter->getMother()->getName()}</p>" ?>
-                    </div>
-                    <div class="father-container">
-                        <?php echo "<img src='{$litter->getFather()->getMainImg()}' alt='{$litter->getFather()->getName()}'" ?>
-                        <?php echo "<p> {$litter->getFather()->getName()}</p>" ?>
-                    </div>
+            <div class="parents-container">
+                <div class="mother-container">
+                    <?php echo "<img src='{$litter->getMother()->getMainImg()}' alt='{$litter->getMother()->getName()}'" ?>
+                    <?php echo "<p> {$litter->getMother()->getName()}</p>" ?>
                 </div>
-                <div class="litter-infos-container">
-                    <?php echo "<p>{$litter->getNumberOfFemales()} femelle(s) et {$litter->getNumberOfMales()} mâle(s)</p>"; ?>
-                    <?php echo "<p>{$litter->getNumberOfPuppies()} chiot(s) né(s) le " . trad_month($litter->getBirthdate()->format(' d F Y ')) . " </p>"; ?>
-                </div>
-                <div class="w-100 mt-5 d-flex justify-content-center align-items-center">
-                    <button onClick="confirmDeleteLitter(<?php echo $litter->getId() ?>)" class="btn btn-danger">Supprimer
-                        cette portée</button>
+                <div class="father-container">
+                    <?php echo "<img src='{$litter->getFather()->getMainImg()}' alt='{$litter->getFather()->getName()}'" ?>
+                    <?php echo "<p> {$litter->getFather()->getName()}</p>" ?>
                 </div>
             </div>
+            <div class="litter-infos-container">
+                <?php echo "<p>{$litter->getNumberOfFemales()} femelle(s) et {$litter->getNumberOfMales()} mâle(s)</p>"; ?>
+                <?php echo "<p>{$litter->getNumberOfPuppies()} chiot(s) né(s) le " . trad_month($litter->getBirthdate()->format(' d F Y ')) . " </p>"; ?>
+            </div>
+            <div class="w-100 mt-5 d-flex justify-content-center align-items-center">
+                <button onClick="confirmDeleteLitter(<?php echo $litter->getId() ?>)" class="btn btn-danger">Supprimer
+                    cette portée</button>
+            </div>
+        </div>
         <?php
 
         };
@@ -114,10 +114,12 @@ $females = $stmtFemales->fetchAll(PDO::FETCH_ASSOC);
 
 
                 <label for="birthdate">Date de naissance</label>
-                <input type="date" name="birthdate" id="birthdate" value="<?php echo $litter->getBirthdate()->format('Y-m-d') ?>">
+                <input type="date" name="birthdate" id="birthdate"
+                    value="<?php echo $litter->getBirthdate()->format('Y-m-d') ?>">
 
                 <label for="numberLof">Numéro de portée</label>
-                <input type="text" name="numberLof" id="numberLof" value="<?php echo $litter->getNumberLof() ?>">
+                <input type="text" name="numberLof" id="numberLof" value="<?php echo $litter->getNumberLof() ?>"
+                    required>
 
                 <fieldset class="litter-infos-puppies">
                     <legend>Infos sur les chiots <br><i>(Modifier cette valeur peut entraîner un effacement des données
@@ -129,9 +131,11 @@ $females = $stmtFemales->fetchAll(PDO::FETCH_ASSOC);
                     "> -->
                     <fieldset>
                         <label for="numberOfPuppies">Mâles : </label>
-                        <input name="numberOfMales" id="numberOfMales" type="number" value="<?php echo $litter->getNumberOfMales() ?>">
+                        <input name="numberOfMales" id="numberOfMales" type="number"
+                            value="<?php echo $litter->getNumberOfMales() ?>">
                         <label for="numberOfPuppies">Femelles : </label>
-                        <input name="numberOfFemales" id="numberOfFemales" type="number" value="<?php echo $litter->getNumberOfFemales() ?>">
+                        <input name="numberOfFemales" id="numberOfFemales" type="number"
+                            value="<?php echo $litter->getNumberOfFemales() ?>">
                     </fieldset>
                 </fieldset>
 

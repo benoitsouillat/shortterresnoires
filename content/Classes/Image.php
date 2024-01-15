@@ -38,6 +38,14 @@ class Image
         }
     }
 
+    public function fillFromStdClass(stdClass $data)
+    {
+        $this->setImageId($data->diapoID ?? null);
+        $this->setPath($data->path);
+        $this->setReproId($data->reproID ?? null);
+        $this->setReproId($data->puppyID ?? null);
+    }
+
     /**
      * Get the value of puppyId
      */

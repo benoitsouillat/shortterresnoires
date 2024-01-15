@@ -72,17 +72,16 @@ if (isset($_GET['puppyID']) && $_GET['puppyID'] > 0) {
                 }
                 ?>
                 <label for="puppyName">Nom du chiot :</label>
-                <input type="text" id="puppyName" name="puppyName" value="<?php echo $puppy->getName() ?>">
+                <input type="text" id="puppyName" name="puppyName" value="<?php echo $puppy->getName() ?>" required>
 
                 <label for="puppyColor">Couleur du chiot :</label>
-                <input type="text" id="puppyColor" name="puppyColor" value="<?php echo $puppy->getColor() ?>">
+                <input type="text" id="puppyColor" name="puppyColor" value="<?php echo $puppy->getColor() ?>" required>
 
                 <label for="puppyNecklace">Couleur du collier :</label>
                 <input type="text" id="puppyNecklace" name="puppyNecklace" value="<?php echo $puppy->getNecklace() ?>">
 
                 <select id="puppyAvailable" name="puppyAvailable">
-                    <option value="Disponible"
-                        <?php echo ($puppy->getAvailable() === 'Disponible' ? 'selected' : '') ?>>Disponible</option>
+                    <option value="Disponible" <?php echo ($puppy->getAvailable() === 'Disponible' ? 'selected' : '') ?>>Disponible</option>
                     <option value="Option" <?php echo ($puppy->getAvailable() === 'Option' ? 'selected' : '') ?>>Option
                     </option>
                     <option value="Réservé" <?php echo ($puppy->getAvailable() === 'Réservé' ? 'selected' : '') ?>>

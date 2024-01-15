@@ -38,7 +38,7 @@ class Repro
         $this->insert = $insert;
         $this->breeder = $breeder;
         $this->adn = $adn;
-        $this->notMyDog = $notMyDog;
+        $this->notMyDog = $notMyDog ?? false;
         $this->mainImg = $mainImg;
         $this->pdo = $pdo ?? new RequestPDO();
     }
@@ -52,8 +52,8 @@ class Repro
         $this->setSex($_POST['reproSex']);
         $this->setBirthdate($_POST['reproBirthdate']);
         $this->setInsert($_POST['reproInsert']);
-        $this->setAdn($_POST['reproAdn']);
-        $this->setAdn($_POST['notMyDog']);
+        $this->setAdn($_POST['reproADN']);
+        $this->setAdn(isset($_POST['notMyDog']) ? 1 : 0);
         $this->setBreeder($_POST['reproBreeder']);
     }
     public function fillFromStdClass(stdClass $data): void
@@ -95,7 +95,7 @@ class Repro
             move_uploaded_file($file_tmp, $file_destination);
             $this->setMainImg($file_destination);
         } else {
-            $this->setMainImg($_POST['mainImg']);
+            $this->setMainImg(isset($_POST['mainImg']) ? $_POST['mainImg'] : '../../src/img/repro-default.jpg');
         }
     }
     public function saveDiapoImg()

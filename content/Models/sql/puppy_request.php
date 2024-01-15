@@ -12,20 +12,19 @@ function getAllPuppiesFromLitter()
 {
     return "SELECT * FROM `puppies` WHERE litter = :litterID ORDER BY `litter` DESC";
 }
+function getAllPuppiesOrderLitterMales()
+{
+    return "SELECT * FROM `puppies` WHERE litter = :litterID ORDER BY `litter` DESC, `sex` DESC";
+}
+function getAllPuppiesOrderLitterFemales()
+{
+    return "SELECT * FROM `puppies` WHERE litter = :litterID ORDER BY `litter` DESC, `sex` ASC";
+}
 function getPuppyFromId()
 {
     return "SELECT * FROM `puppies` WHERE puppyID = :puppyID";
 }
-function createPuppy()
-{
-    return "INSERT INTO `puppies` 
-    (name, litter, sex, color, necklace, available, mainImg, display) 
-    VALUES (:name, :litter, :sex, :color, :necklace, :available, :mainImg, :display)";
-}
-function managePuppy()
-{
-    return "UPDATE `puppies` SET name = :name, litter = :litter, sex = :sex, color = :color, necklace = :necklace, available = :available, mainImg = :mainImg, display = :display WHERE puppyID = :puppyID";
-}
+
 
 function savePuppyDiapo()
 {
@@ -39,4 +38,14 @@ function deletePuppyMales()
 function deletePuppyFemales()
 {
     return "DELETE FROM `puppies` WHERE litter = :litterID AND sex = 'Female'";
+}
+function createPuppy()
+{
+    return "INSERT INTO `puppies` 
+    (name, litter, sex, color, necklace, available, mainImg, display) 
+    VALUES (:name, :litter, :sex, :color, :necklace, :available, :mainImg, :display)";
+}
+function managePuppy()
+{
+    return "UPDATE `puppies` SET name = :name, litter = :litter, sex = :sex, color = :color, necklace = :necklace, available = :available, mainImg = :mainImg, display = :display WHERE puppyID = :puppyID";
 }

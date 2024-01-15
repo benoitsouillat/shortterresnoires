@@ -23,6 +23,14 @@ $user->checkRole();
     <section>
         <?php include_once('../Vues/admin_nav.php'); ?>
         <h1>Liste des Reproducteurs</h1>
+
+        <div class="order-container">
+            <a href="?order=malefirst" class="btn-sm btn-beige">Trier par Mâles</a>
+            <a href="?order=femalefirst" class="btn-sm btn-beige">Trier par Femelles</a>
+            <a href="?order=maleonly" class="btn-sm btn-beige">Voir les Mâles</a>
+            <a href="?order=femaleonly" class="btn-sm btn-beige">Voir les Femelles</a>
+        </div>
+
         <?php
         include_once('../Models/repros.php');
         foreach ($repros as $data) {
@@ -33,7 +41,14 @@ $user->checkRole();
             <div class='image-space'>
             <a href='./repro-crud.php?reproID={$repro->getId()}'><img src=../{$repro->getMainImg()} alt={$repro->getName()}></a>
             </div>
-            <a href='./repro-crud.php?reproID={$repro->getId()}'><span class='fa'> {$repro->getName()}</span></a>
+            <a href='./repro-crud.php?reproID={$repro->getId()}'><span  ";
+            if ($repro->getSex() == 'Male') {
+                echo "class='male-color'";
+            } else {
+                echo "class='female-color'";
+            }
+
+            echo "> {$repro->getName()}</span></a>
             <p>{$repro->getBreeder()}</p>
             <p>";
             $today = date('Y-m-d');

@@ -1,7 +1,8 @@
 <?php
 require_once(__DIR__ . '/../Classes/User.php');
 require_once(__DIR__ . '/../Classes/Repro.php');
-// require_once('../Classes/RequestPDO.php');
+require_once(__DIR__ . '/../Classes/Image.php');
+require_once(__DIR__ . '/../Models/sql/images_request.php');
 session_start();
 
 $user = new User();
@@ -9,8 +10,8 @@ $user->fillFromSession($_SESSION);
 $user->checkRole();
 
 $pdo = new RequestPDO();
-
 $repro = new Repro();
+
 if (isset($_GET['reproID']) && $_GET['reproID'] != null) {
     $stmt = $pdo->connect()->prepare('SELECT * FROM repros WHERE id = :reproID');
     $stmt->bindParam(':reproID', $_GET['reproID']);
@@ -66,6 +67,23 @@ if (isset($_GET['error'])) {
                     echo "<br>Reproducteur extérieur";
                 }
                 ?></p>
+            <div class="diapo-img-container">
+                <?php
+                $pdo = new RequestPDO();
+                $stmt = $pdo->connect()->prepare(getAllImagesFromReproId());
+                $stmt->bindValue(':reproID', $repro->getId());
+                $stmt->execute();
+                $diapoData = $stmt->fetchAll(PDO::FETCH_OBJ);
+                foreach ($diapoData as $diapo) {
+                    $image = new Image();
+                    $image->fillFromStdClass($diapo);
+
+                    echo "<img src={$image->getPath()} alt={$repro->getName()} >";
+                }
+
+                ?>
+
+            </div>
             <div class="button-zone">
                 <button onClick="confirmDeleteRepro(<?php echo $repro->getId() ?>)" class="btn btn-danger">Supprimer
                     ce reproducteur</button>
@@ -90,7 +108,7 @@ if (isset($_GET['error'])) {
                 }
                 ?>
                 <label for="reproName">Nom du chien :</label>
-                <input type="text" id="reproName" name="reproName" value="<?php echo $repro->getName() ?>">
+                <input type="text" id="reproName" name="reproName" value="<?php echo $repro->getName() ?>" required>
 
                 <fieldset>
                     <input type='radio' id='Female' name='reproSex' value='Female'
@@ -103,10 +121,11 @@ if (isset($_GET['error'])) {
 
                 <label for='reproBirthdate'>Date de Naissance : </label>
                 <input type='date' value="<?php echo $repro->getBirthdate()->format('Y-m-d') ?>" id='reproBirthdate'
-                    name='reproBirthdate'>
+                    name='reproBirthdate' required>
 
                 <label for='reproInsert'>Puce Electronique : </label>
-                <input type="text" id="reproInsert" name="reproInsert" value="<?php echo $repro->getInsert() ?>">
+                <input type="text" id="reproInsert" name="reproInsert" value="<?php echo $repro->getInsert() ?>"
+                    required>
 
                 <label for="reproBreeder">Nom de l'affixe : </label>
                 <input type="text" id="reproBreeder" name="reproBreeder" value="<?php echo $repro->getBreeder() ?>">
@@ -118,8 +137,8 @@ if (isset($_GET['error'])) {
                 </fieldset>
 
                 <fieldset class="notmydog-field">
-                    <label for="notmydog"> Reproducteur extérieur </label>
-                    <input type="checkbox" id="notmydog" name="notMyDog" value="1"
+                    <label for="notMyDog"> Reproducteur extérieur </label>
+                    <input type="checkbox" id="notMyDog" name="notMyDog" value="1"
                         <?php echo ($repro->getNotMyDog() == true) ? 'checked' : NULL ?>>
                 </fieldset>
 

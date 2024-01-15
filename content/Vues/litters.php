@@ -24,6 +24,7 @@ $user->checkRole();
 <body>
     <?php include_once('../Vues/admin_nav.php'); ?>
     <h1>Les portées</h1>
+
     <?php
     include_once('../Models/litters.php');
     foreach ($litters as $data) {

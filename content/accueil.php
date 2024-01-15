@@ -6,12 +6,6 @@
     <?php
     include "./php/head.php";
 
-    require_once(__DIR__ . '/../vendor/autoload.php');
-
-    use Imagine\Image\Box;
-    use Imagine\Image\ImageInterface;
-    use Imagine\Imagick\Imagine;
-
     ?>
 </head>
 

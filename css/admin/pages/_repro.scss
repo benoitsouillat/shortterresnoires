@@ -5,6 +5,14 @@ body {
     color: #C7C7C7;
     text-align: center;
 
+    .male-color {
+        color: $male;
+    }
+
+    .female-color {
+        color: $female;
+    }
+
     .admin-nav {
         width: 100%;
         margin: 1.5rem auto;
@@ -18,6 +26,17 @@ body {
                 transform: scale(1.04);
                 text-decoration: underline;
             }
+        }
+    }
+
+    .order-container {
+        border-top: solid beige 1px;
+        border-bottom: solid beige 1px;
+        padding: 10px;
+
+        .btn {
+            transition: unset;
+            transform: unset;
         }
     }
 
@@ -144,7 +163,7 @@ body {
     }
 
     .infos-repro {
-        flex-grow: 1;
+        flex: 0 1 39%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -186,6 +205,20 @@ body {
         p {
             margin-left: 10px;
         }
+
+        .diapo-img-container {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+
+            img {
+                max-width: 22%;
+            }
+        }
     }
 
     .repro-form-container {
@@ -195,7 +228,7 @@ body {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        flex-grow: 2;
+        flex: 2 0 60%;
 
         h2 {
             width: 100%;
@@ -253,6 +286,10 @@ body {
             label,
             legend {
                 font-size: 20px;
+            }
+
+            .notmydog-field input[type="checkbox"] {
+                accent-color: red;
             }
 
             .notmydog-field,

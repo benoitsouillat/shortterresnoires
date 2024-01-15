@@ -8,6 +8,7 @@ function getAllActiveLitters()
 {
     return "SELECT * FROM `litters` WHERE display = 1 ORDER BY birthdate DESC";
 }
+
 function getLitterFromId()
 {
     return "SELECT * FROM `litters` WHERE litterId = :litterId";

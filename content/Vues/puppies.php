@@ -23,6 +23,10 @@ $user->checkRole();
     <?php include_once('../Models/puppies.php'); ?>
     <?php include_once('../Classes/RequestPDO.php'); ?>
     <section class="puppies-container">
+        <div class="order-container">
+            <a href="?order=malefirst" class="btn-sm btn-beige">Trier par Mâles</a>
+            <a href="?order=femalefirst" class="btn-sm btn-beige">Trier par Femelles</a>
+        </div>
         <?php
 
         foreach ($puppiesShow as $puppies) {

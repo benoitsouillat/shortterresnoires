@@ -2,7 +2,7 @@
 
 function getAllRepros()
 {
-    return "SELECT * FROM `repros`";
+    return "SELECT * FROM `repros` ORDER BY `sex` ASC, `birthdate` ASC";
 }
 function getAllReprosAreMyDogs()
 {
@@ -15,6 +15,31 @@ function getReproFromID()
 function getReprosWithPuppies()
 {
     return "SELECT repros.* FROM `repros` JOIN litters ON repros.id = litters.mother WHERE repros.sex = 'Female' AND litters.display = 1";
+}
+function getAllMalesRepro()
+{
+    return "SELECT * FROM `repros` WHERE sex = 'Male'";
+}
+function getAllFemalesRepro()
+{
+    return "SELECT * FROM `repros` WHERE sex = 'Female'";
+}
+function getAllReprosOrderMale()
+{
+    return "SELECT * FROM `repros` ORDER BY sex DESC";
+}
+function getAllReprosOrderFemale()
+{
+    return "SELECT * FROM `repros` ORDER BY sex ASC";
+}
+
+function deleteReproFromId()
+{
+    return "DELETE FROM `repros` WHERE id = :reproID";
+}
+function saveReproDiapo()
+{
+    return "INSERT INTO `diapos` (path, reproID) VALUES (:path, :reproID)";
 }
 function createRepro()
 {
@@ -48,21 +73,4 @@ function manageRepro()
     adn = :adn,
     notMyDog = :notMyDog,
     mainImg = :mainImg WHERE id = :reproID";
-}
-
-function getAllMalesRepro()
-{
-    return "SELECT * FROM `repros` WHERE sex = 'Male'";
-}
-function getAllFemalesRepro()
-{
-    return "SELECT * FROM `repros` WHERE sex = 'Female'";
-}
-function deleteReproFromId()
-{
-    return "DELETE FROM `repros` WHERE id = :reproID";
-}
-function saveReproDiapo()
-{
-    return "INSERT INTO `diapos` (path, reproID) VALUES (:path, :reproID)";
 }
