@@ -25,6 +25,7 @@ if (isset($_GET['litterID']) && $_GET['litterID'] != null) {
         $stmt->execute();
         $data = $stmt->fetch(PDO::FETCH_OBJ);
         $litter->fillFromStdClass($data);
+
         $nbmales = $data->numberOfMales;
         $nbfemales = $data->numberOfFemales;
 
@@ -37,6 +38,7 @@ if (isset($_GET['litterID']) && $_GET['litterID'] != null) {
             $litter->generatePuppiesFemales();
         }
     }
+
 
     $litter->fillFromForm();
     if (isset($_POST['litterID']) && $_POST['litterID'] != NULL && $_POST['litterID'] > 0) {

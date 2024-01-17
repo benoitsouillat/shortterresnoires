@@ -101,7 +101,6 @@ class Litter
             if ($this->getId() > 0) {
                 $stmt->bindValue(':litter', $this->getId());
             }
-
             $stmt->bindValue(':sex', $puppy->getSex());
             $stmt->bindValue(':color', $puppy->getColor());
             $stmt->bindValue(':necklace', $puppy->getNecklace());

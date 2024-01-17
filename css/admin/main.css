@@ -24,9 +24,9 @@ body .admin-nav a:hover {
   text-decoration: underline;
 }
 body .order-container {
-  border-top: solid beige 1px;
   border-bottom: solid beige 1px;
   padding: 10px;
+  margin-bottom: 12px;
 }
 body .order-container .btn {
   transition: unset;

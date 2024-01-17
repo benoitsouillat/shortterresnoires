@@ -940,6 +940,9 @@ body p {
   padding-bottom: 10px;
   margin: 10px;
 }
+#puppy-page .puppy__card .diapo {
+  padding-top: 10px;
+}
 #puppy-page .puppy__card p {
   font-weight: bold;
 }

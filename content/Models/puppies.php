@@ -19,18 +19,18 @@ foreach ($littersData as $data) {
             $stmtPuppy = $pdo->connect()->prepare(getAllPuppiesOrderLitterMales());
         } elseif ($_GET['order'] === 'femalefirst') {
             $stmtPuppy = $pdo->connect()->prepare(getAllPuppiesOrderLitterFemales());
-        } else {
-            $stmtPuppy = $pdo->connect()->prepare(getAllPuppiesFromLitter());
         }
-        $stmtPuppy->bindParam(':litterID', $data->litterId);
-        $stmtPuppy->execute();
-        $puppiesData = $stmtPuppy->fetchAll(PDO::FETCH_ASSOC);
-        $puppies = [];
-        foreach ($puppiesData as $puppyData) {
-            $puppy = new Puppy();
-            $puppy->fillFromFetchAssoc($puppyData);
-            $puppies[] = $puppy;
-        }
-        $puppiesShow[] = $puppies;
+    } else {
+        $stmtPuppy = $pdo->connect()->prepare(getAllPuppiesFromLitter());
     }
+    $stmtPuppy->bindParam(':litterID', $data->litterId);
+    $stmtPuppy->execute();
+    $puppiesData = $stmtPuppy->fetchAll(PDO::FETCH_ASSOC);
+    $puppies = [];
+    foreach ($puppiesData as $puppyData) {
+        $puppy = new Puppy();
+        $puppy->fillFromFetchAssoc($puppyData);
+        $puppies[] = $puppy;
+    }
+    $puppiesShow[] = $puppies;
 }

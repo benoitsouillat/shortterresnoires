@@ -13,7 +13,7 @@ $user->checkRole();
 <head>
     <title>Reproducteurs</title>
     <?php
-    include_once "../php/head.php";
+    include_once(__DIR__ . "/../php/head.php");
 
     ?>
     <link rel="stylesheet" type="text/css" href="../../css/admin/main.css">
@@ -25,10 +25,19 @@ $user->checkRole();
         <h1>Liste des Reproducteurs</h1>
 
         <div class="order-container">
+            <a href="./repro-crud.php" class="btn-sm btn-primary">Créer un Reproducteur</a>
             <a href="?order=malefirst" class="btn-sm btn-beige">Trier par Mâles</a>
             <a href="?order=femalefirst" class="btn-sm btn-beige">Trier par Femelles</a>
-            <a href="?order=maleonly" class="btn-sm btn-beige">Voir les Mâles</a>
-            <a href="?order=femaleonly" class="btn-sm btn-beige">Voir les Femelles</a>
+            <!-- <a href="?order=maleonly" class="btn-sm btn-beige">Voir les Mâles</a>
+            <a href="?order=femaleonly" class="btn-sm btn-beige">Voir les Femelles</a> -->
+            <?php
+            if (isset($_GET['order']) && ($_GET['order'] == 'mydog')) {
+                echo "<a href='?order=femalefirst' class='btn-sm btn-beige'>Voir tous les chiens</a>";
+            } else {
+                echo " <a href='?order=mydog' class='btn-sm btn-beige'>Voir mes chiens</a>";
+            }
+            ?>
+
         </div>
 
         <?php
@@ -43,12 +52,15 @@ $user->checkRole();
             </div>
             <a href='./repro-crud.php?reproID={$repro->getId()}'><span  ";
             if ($repro->getSex() == 'Male') {
-                echo "class='male-color'";
+                echo "class='male-color";
             } else {
-                echo "class='female-color'";
+                echo "class='female-color";
+            }
+            if ($repro->getNotMyDog() == true) {
+                echo " bi bi-caret-left "; // Mettre un icone pour les chiens hors elevage voir Bootstrap
             }
 
-            echo "> {$repro->getName()}</span></a>
+            echo "'> {$repro->getName()}</span></a>
             <p>{$repro->getBreeder()}</p>
             <p>";
             $today = date('Y-m-d');
@@ -59,7 +71,6 @@ $user->checkRole();
         }
         ?>
     </section>
-    <div><a href="./repro-crud.php" class="btn btn-primary">Créer un Reproducteur</a></div>
 </body>
 
 </html>
