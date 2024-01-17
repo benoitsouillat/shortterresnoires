@@ -28,7 +28,7 @@ class Image
             $stmt->bindValue(':path', $this->path);
             $stmt->bindValue(':puppyID', $this->puppyId);
             $stmt->execute();
-        } elseif (($this->reproId > 0) && (isset($_POST['reproID']))) {
+        } elseif (($this->reproId > 0)) {
             $stmt = $pdo->connect()->prepare(saveReproDiapo());
             $stmt->bindValue(':path', $this->path);
             $stmt->bindValue(':reproID', $this->reproId);

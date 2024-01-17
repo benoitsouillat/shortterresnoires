@@ -53,7 +53,7 @@ class Repro
         $this->setBirthdate($_POST['reproBirthdate']);
         $this->setInsert($_POST['reproInsert']);
         $this->setAdn($_POST['reproADN']);
-        $this->setAdn(isset($_POST['notMyDog']) ? 1 : 0);
+        $this->setNotMyDog(isset($_POST['notMyDog']) ? 1 : 0);
         $this->setBreeder($_POST['reproBreeder']);
     }
     public function fillFromStdClass(stdClass $data): void
@@ -102,13 +102,22 @@ class Repro
     {
         if (isset($_FILES['diapoImg']) && $_FILES['diapoImg']['name'][0] != null) {
             $images = $_FILES['diapoImg']['tmp_name'];
+            $pdo = new RequestPDO();
+            $stmt = $pdo->connect()->prepare(getAllRepros());
+            $stmt->execute();
+            $dataRepros = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $lastID = end($dataRepros)['id'];
             foreach ($images as $image) {
                 $prefix = substr($image, -8, -4);
                 $destination = '../../src/img/diapos/repros/' . $this->getId() . '-' . $prefix . '.jpg';
                 move_uploaded_file($image, $destination);
                 $diapo = new Image();
                 $diapo->setPath($destination);
-                $diapo->setReproId($_POST['reproID']);
+                if (isset($_POST['reproID']) && $_POST['reproID'] > 0) {
+                    $diapo->setReproId($_POST['reproID']); // En cas de modification mais il faut prévoir le cas pour une création
+                } else {
+                    $diapo->setReproId($lastID); // Erreur inscrit sur le dernier chien créé et non pas sur le chien en création
+                }
                 $diapo->fetchToDatabase();
             }
         }
