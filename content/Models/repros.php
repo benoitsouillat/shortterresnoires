@@ -13,6 +13,8 @@ if (isset($_GET['order'])) {
         $stmt = $pdo->connect()->prepare(getAllFemalesRepro());
     } elseif ($_GET['order'] === 'maleonly') {
         $stmt = $pdo->connect()->prepare(getAllMalesRepro());
+    } elseif ($_GET['order'] === 'mydog') {
+        $stmt = $pdo->connect()->prepare(getAllMyRepros());
     }
 } else {
     $stmt = $pdo->connect()->prepare(getAllRepros());

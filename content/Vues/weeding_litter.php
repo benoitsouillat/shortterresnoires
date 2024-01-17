@@ -20,7 +20,7 @@
     $data = $stmt->fetch(PDO::FETCH_OBJ);
     $litter = new Litter();
     $litter->fillFromStdClass($data);
-    $stmt = $pdo->connect()->prepare(getAllPuppiesFromLitter());
+    $stmt = $pdo->connect()->prepare(getAllPuppiesOrderLitterMales());
     $stmt->bindValue(':litterID', $_GET['litterID']);
     $stmt->execute();
     $puppiesData = $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -97,14 +97,14 @@
                 </div>
                 <div class='diapo-container' data-dog-id={$puppy->getId()}> 
                 <div class='diapo diapo-{$puppy->getId()}'>
-                <img src='{$puppy->getMainImg()}' alt='Chiot Cane Corso {$puppy->getName()}'>";
+                <img src='{$puppy->getMainImg()}' alt='Chiot Cane Corso {$puppy->getName()}' loading='lazy'>";
                     if ($imagesData != false) {
                         // Arrow Left
                         foreach ($imagesData as $data) {
                             echo "<img src='{$data->path}' alt='Image Cane Corso' loading='lazy'>";
                         }
 
-                        echo "<img src='{$puppy->getMainImg()}' alt='Chiot Cane Corso {$puppy->getName()}'></div></div>";
+                        echo "<img src='{$puppy->getMainImg()}' alt='Chiot Cane Corso {$puppy->getName()}' loading='lazy'></div></div>";
                         //Arrow Right
                         echo "<div class='arrow-div'>
                                 <button class='left-arrow bg-transparent'>

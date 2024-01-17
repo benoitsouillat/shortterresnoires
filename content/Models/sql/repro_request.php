@@ -6,7 +6,7 @@ function getAllRepros()
 }
 function getAllReprosAreMyDogs()
 {
-    return "SELECT * FROM `repros` WHERE notMyDog = false";
+    return "SELECT * FROM `repros` WHERE notMyDog = false ORDER BY `birthdate` ASC";
 }
 function getReproFromID()
 {
@@ -15,6 +15,10 @@ function getReproFromID()
 function getReprosWithPuppies()
 {
     return "SELECT repros.* FROM `repros` JOIN litters ON repros.id = litters.mother WHERE repros.sex = 'Female' AND litters.display = 1";
+}
+function getAllMyRepros()
+{
+    return "SELECT * FROM `repros` WHERE notMyDog = false ORDER BY sex ASC, birthdate ASC ";
 }
 function getAllMalesRepro()
 {
@@ -26,11 +30,11 @@ function getAllFemalesRepro()
 }
 function getAllReprosOrderMale()
 {
-    return "SELECT * FROM `repros` ORDER BY sex DESC";
+    return "SELECT * FROM `repros` ORDER BY sex DESC, birthdate ASC";
 }
 function getAllReprosOrderFemale()
 {
-    return "SELECT * FROM `repros` ORDER BY sex ASC";
+    return "SELECT * FROM `repros` ORDER BY sex ASC, birthdate ASC";
 }
 
 function deleteReproFromId()
