@@ -56,7 +56,8 @@
             </div>
             <div>
                 <!--                     <a href="https://g.page/domaine_terres_noires" class="btn btn-dark"><span class="fa fa-star"></span> Notez-nous </a> -->
-                <a href="https://wa.me/33670378113" class="btn btn-dark"><span class="fab fa-whatsapp"></span> What's App </a>
+                <a href="https://wa.me/33670378113" class="btn btn-dark"><span class="fab fa-whatsapp"></span> What's
+                    App </a>
             </div>
 
         </section>
@@ -67,6 +68,10 @@
         </div>
         <br />
         <section id="adress-friend">
+            <img src="/src/img/evapanama.jpg" alt="Remerciement du Domaine des Terres Noires" />
+        </section>
+
+        <!-- <section id="adress-friend">
             <h3> Nos adresses conseils :</h3><br />
             <div>
                 <div>
@@ -76,23 +81,12 @@
                     </p>
                 </div>
             </div>
-            <div>
-                <div>
-                    <a href="https://www.le-temple-de-jade.com/" target="blank_" class="menu-anim"><b>Le Temple de Jade</b></a><br />
-                    <p>Elevage de Cane Corso dans l'Indre, un éleveur talentueux que j'ai eu la chance de rencontrer
-                        et qui m'apprendra toujours tant sur cette race que j'adore !<br />
-                        <b>Merci Régis et Cathy.</b>
-                    </p>
-                </div>
-            </div>
-            <img src="/src/img/evapanama.jpg" alt="Remerciement du Domaine des Terres Noires" />
-        </section>
+        </section> -->
     </main>
 
     <?php
     include "./php/footer.php";
     ?>
-
 </body>
 
 </html>
