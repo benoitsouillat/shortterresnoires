@@ -1,24 +1,33 @@
 @import "../utilities/variables";
 
+.carousel-item {
+    img {
+        object-fit: cover;
+        aspect-ratio: 16/9;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+}
+
 #accueil-page {
 
     .carousel-inner .carousel-caption {
-        background-color: #343a40!important;
+        background-color: #343a40 !important;
         align-self: center;
-        border-radius: 0.25rem!important;
+        border-radius: 0.25rem !important;
 
-        @media all and (max-width: 1279px)
-        {
+        @media all and (max-width: 1279px) {
             position: static;
             width: 75%;
         }
-        @media all and (min-width: 1280px)
-        {
+
+        @media all and (min-width: 1280px) {
             bottom: 10%;
             right: 20%;
             left: 20%;
         }
     }
+
     @media all and (max-width:1280px) {
 
         .carousel-indicators {
@@ -50,6 +59,7 @@
         display: flex;
         flex-direction: column;
     }
+
     .carousel-inner .carousel-item img {
         width: 75%;
         align-self: center;
@@ -61,15 +71,18 @@
         top: 20%;
         bottom: 20%;
     }
+
     .carousel-control-prev-btn {
         left: 10%;
     }
+
     .carousel-control-next-btn {
         right: 10%;
     }
 }
-#accueil-page > .accueil-section-p {
-    display: none!important;
+
+#accueil-page>.accueil-section-p {
+    display: none !important;
 }
 
 @media all and (max-width: 1000px) {
@@ -78,6 +91,7 @@
         aspect-ratio: 16/9;
 
     }
+
     #accueil-page .carousel-inner .carousel-caption {
         width: 90%;
     }
@@ -88,6 +102,7 @@
         display: none;
     }
 }
+
 @media all and (max-width: 600px) {
     #accueil-page .carousel-inner .carousel-item img {
         width: 96%;
@@ -96,9 +111,11 @@
 
 
     }
+
     #accueil-page .carousel-inner .carousel-caption {
         width: 96%;
     }
+
     #accueil-page .carousel-indicators {
         left: unset;
         right: unset;

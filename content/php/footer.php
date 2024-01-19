@@ -22,9 +22,5 @@
         </p>
     </div>
 </footer>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer>
-</script>
-
 <script src="/app/anim.js" defer></script>
 <script src="https://kit.fontawesome.com/5944b63bf2.js" defer></script>

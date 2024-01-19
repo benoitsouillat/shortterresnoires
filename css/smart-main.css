@@ -497,6 +497,14 @@ body p {
     transform: translateY(5px);
   }
 }
+.carousel-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 16/9;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
 #accueil-page .carousel-inner .carousel-caption {
   background-color: #343a40 !important;
   align-self: center;
