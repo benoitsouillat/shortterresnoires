@@ -5,3 +5,12 @@ ErrorDocument 404 /content/Vues/404.php
     Header set Cache-Control "max-age=86000, private"
     </FilesMatch>
 </IfModule>
+<IfModule mod_expires.c>
+    ExpiresByType image/jpg "access plus 2 hours"
+    ExpiresByType image/jpeg "access plus 2 hours"
+    ExpiresByType image/gif "access plus 2 hours"
+    ExpiresByType image/png "access plus 2 hours"
+    ExpiresByType text/css "access plus 20 minutes"
+    ExpiresByType text/x-javascript "access plus 30 seconds"
+    ExpiresDefault "access plus 3 days"
+</IfModule>

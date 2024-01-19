@@ -56,7 +56,7 @@
             <section id="dog-card" class="card-hidden">
                 <h3 class="hidden">Nos Cane Corsos</h3>
                 <div>
-                    <img id="dog-card-img" src="../src/img/okkaina 16-9.jpg" alt="okkaina" loading="lazy">
+                    <img id="dog-card-img" src="../src/img/repro-default.jpg" alt="okkaina" loading="lazy">
                     <div id="dog-info">
                         <p class="fa fa-paw" id="dog-card-name"> </p>
                         <p class="fa fa-calendar-check" id="dog-card-birth"></p>
