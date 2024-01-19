@@ -34,14 +34,15 @@
                         <img src="../src/img/safari1-puppies/accueil_safari.jpg" alt="Le standard du Cane Corso et chiots disponibles">
                         <div class="carousel-caption opacity-4">
                             <p>Retrouvez nos chiots disponibles de Safari et Tonnerre</p>
-                            <a href="./weeding.php" class="btn btn-info btn__anim">Nos chiots disponibles</a>
+                            <a href="/content/Vues/weeding.php" class="btn btn-info btn__anim">Nos chiots
+                                disponibles</a>
                         </div>
                     </div>
                     <div class='carousel-item'>
                         <img src="../src/img/bebe_raia3j.jpg" alt="Annonce Gestation et Portée">
                         <div class="carousel-caption opacity-4">
                             <p>De magnifiques bébés sont nés ce Dimanche 26 Novembre<br></p>
-                            <a href="./safari1.php" class="btn btn-success btn__anim">Voir les bébés </a>
+                            <a href="/content/Vues/weeding.php" class="btn btn-success btn__anim">Voir les bébés </a>
                         </div>
                     </div>
                     <div class='carousel-item'>
@@ -49,7 +50,7 @@
                         <div class="carousel-caption opacity-4">
                             <p>Nos Cane Corso sont très sociables, <br />
                                 cependant ils savent parfaitement faire leur boulot de gardien.</p>
-                            <a href="./ourdog.php" class="btn btn-warning btn__anim">Voir les photos</a>
+                            <a href="/content/ourdog.php" class="btn btn-warning btn__anim">Voir les photos</a>
                         </div>
                     </div>
                     <div class='carousel-item'>
@@ -57,7 +58,7 @@
                         <div class="carousel-caption opacity-4">
                             <p>Voici toutes nos coordonnées,<br />
                                 N'hésitez pas à nous contacter pour plus d'informations.</p>
-                            <a href="./contact.php" class="btn btn-primary btn__anim">Contact</a>
+                            <a href="/content/contact.php" class="btn btn-primary btn__anim">Contact</a>
                         </div>
                     </div>
 
