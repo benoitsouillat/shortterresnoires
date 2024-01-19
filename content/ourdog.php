@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="FR-fr">
 
 <head>
@@ -7,6 +8,7 @@
     include_once(__DIR__ . "/php/head.php");
     require_once(__DIR__ . "/Classes/Repro.php");
     require_once(__DIR__ . "/Classes/RequestPDO.php");
+    require_once(__DIR__ . "/Controllers/function.php");
 
 
     $pdo = new RequestPDO();
@@ -14,9 +16,6 @@
     $stmt->execute();
     $reprosData = $stmt->fetchAll(PDO::FETCH_OBJ);
     ?>
-    <script src="https://kit.fontawesome.com/5944b63bf2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" media="all" href="/css/main.css" type="text/css" />
-
 </head>
 
 <body id="repro-page">
@@ -37,12 +36,12 @@
                 foreach ($reprosData as $data) {
                     $repro = new Repro();
                     $repro->fillFromStdClass($data);
-                    $name = strtolower($repro->getName());
+                    $name = replace_reunion_char(replace_blank(strtolower($repro->getName())));
                     echo "
                 <a href='#dog-card' class='vignet-dog' id='{$name}' 
                     data-reproId='{$repro->getId()}'>
                     <figure>
-                        <img src='{$repro->getMainImg()}' alt='{$name} {$repro->getBreeder()}' />
+                        <img src='{$repro->getMainImg()}' alt='{$name} {$repro->getBreeder()}' loading='lazy'>
                         <figcaption>
                             <h6>{$repro->getName()}</h6>
                         </figcaption>
@@ -56,7 +55,7 @@
             <section id="dog-card" class="card-hidden">
                 <h3 class="hidden">Nos Cane Corsos</h3>
                 <div>
-                    <img id="dog-card-img" src="../src/img/repro-default.jpg" alt="okkaina" loading="lazy">
+                    <img id="dog-card-img" src="../src/img/repro-default.jpg" alt="Nos reproducteurs Cane Corso" loading="lazy">
                     <div id="dog-info">
                         <p class="fa fa-paw" id="dog-card-name"> </p>
                         <p class="fa fa-calendar-check" id="dog-card-birth"></p>
@@ -89,12 +88,8 @@
     include_once(__DIR__ . "/php/footer.php");
     ?>
 
-
-    <script type="text/javascript" src="/app/ourdog.js"></script>
-    <script src="/content/assets/slider.js" crossorigin="anonymous"></script>
-
+    <script src="/app/ourdog.js"></script>
+    <script src="/content/assets/slider.js" crossorigin="anonymous" defer></script>
 </body>
-
-
 
 </html>

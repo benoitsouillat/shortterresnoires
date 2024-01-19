@@ -11,7 +11,7 @@
 
     <!-- Icons CDN -->
     <link rel="shortcut icon" type="image/ico" href="/favicon/favicon.ico">
-    <script src="https://kit.fontawesome.com/5944b63bf2.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5944b63bf2.js" crossorigin="anonymous" defer></script>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -21,7 +21,7 @@
     <link rel="stylesheet" media="all" href="/css/main.css" type="text/css">
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6N041LZVP"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6N041LZVP" defer></script>
     <script>
 window.dataLayer = window.dataLayer || [];
 
