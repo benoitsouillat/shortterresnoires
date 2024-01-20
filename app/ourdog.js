@@ -1,13 +1,12 @@
-document.addEventListener('DOMContentLoaded', function () {
+window.onload = function () {
     const cards = document.querySelectorAll('.vignet-dog');
-
     cards.forEach(card => {
         card.addEventListener('click', function () {
             const id = this.dataset.reproid;
             showReproCard(id);
         });
     });
-});
+};
 
 let reproData = '';
 let reprosWithPuppies = [];
@@ -41,38 +40,44 @@ const fetchRepro = (reproID, callback) => {
 const showReproCard = (id) => {
     fetchRepro(id, () => {
         let card = document.getElementById("dog-card");
-        card.classList.remove('card-hidden');
-        document.getElementById("dog-card-img").src = reproData.mainImg;
-        document.getElementById("dog-card-img").alt = reproData.name;
-        document.getElementById("dog-card-name").innerText = ' ' + reproData.name + ' ' + reproData.breeder;
-        let birthdate = new Date(reproData.birthdate);
+        let cardImg = document.getElementById("dog-card-img");
+        let cardDogName = document.getElementById("dog-card-name");
+        let cardDogBirth = document.getElementById("dog-card-birth");
+        let cardDogSex = document.getElementById("dog-card-sex");
+        let cardDogBabyLink = document.getElementById('baby-link');
 
-        document.getElementById("dog-card-birth").innerText = ' Né le : ' + birthdate.toLocaleString('fr-FR', {
+        let birthdate = new Date(reproData.birthdate);
+        // Retirer la classe qui camoufle la carte
+        card.classList.remove('card-hidden');
+        //Entrer les données du chien dans la carte
+        cardImg.src = reproData.mainImg;
+        cardImg.alt = reproData.name;
+        cardDogName.innerText = ' ' + reproData.name + ' ' + reproData.breeder;
+        cardDogBirth.innerText = ' Né le : ' + birthdate.toLocaleString('fr-FR', {
             day: 'numeric',
             month: 'long',
             year: 'numeric'
         });
-
         // Définir si la carte est femelle ou mâle et affiche
         if (reproData.sex === 'Female') {
-            document.getElementById("dog-card-sex").innerText = ' Femelle ';
-            document.getElementById("dog-card-sex").classList.add('fa-venus');
-            document.getElementById("dog-card-sex").classList.remove('fa-mars');
+            cardDogSex.innerText = ' Femelle ';
+            cardDogSex.classList.add('fa-venus');
+            cardDogSex.classList.remove('fa-mars');
         }
         else {
-            document.getElementById("dog-card-sex").innerText = ' Mâle ';
-            document.getElementById("dog-card-sex").classList.remove('fa-venus');
-            document.getElementById("dog-card-sex").classList.add('fa-mars');
+            cardDogSex.innerText = ' Mâle ';
+            cardDogSex.classList.remove('fa-venus');
+            cardDogSex.classList.add('fa-mars');
         }
 
         // Affichage du bouton voir les chiots
-        document.getElementById('baby-link').classList.add('hidden');
+        cardDogBabyLink.classList.add('hidden');
         reprosWithPuppies.forEach(repro => {
             if (repro.id === reproData.id) {
-                document.getElementById("baby-link").classList.remove('hidden');
+                cardDogBabyLink.classList.remove('hidden');
                 littersActive.forEach(litter => {
                     if (litter.mother === reproData.id) {
-                        document.getElementById("baby-link").href = '/content/Vues/weeding_litter.php?litterID=' + litter.litterId;
+                        cardDogBabyLink.href = '/content/Vues/weeding_litter.php?litterID=' + litter.litterId;
                     }
                 });
             }
@@ -133,8 +138,6 @@ const showReproCard = (id) => {
                 leftArrow.classList.remove('hidden');
                 rightArrow.classList.remove('hidden');
                 document.getElementById('grey-bg').classList.remove('hidden');
-
-
             });
             slider();
         }
