@@ -148,8 +148,10 @@ class Puppy
             $images = $_FILES['diapoImg']['tmp_name'];
             foreach ($images as $image) {
                 $prefix = substr($image, -8, -4);
-                $destination = '../../src/img/diapos/puppies/' . $this->getId() . '-' . $prefix . '.jpg';
+                $name =  $this->getId() . '-' . $prefix;
+                $destination = '../../src/img/diapos/puppies/' . $name . '.jpg';
                 move_uploaded_file($image, $destination);
+                resizeimage($destination,  $name, '/../../src/img/diapos/puppies/');
                 $diapo = new Image();
                 $diapo->setPath($destination);
                 $diapo->setPuppyId($_POST['puppyID']);
