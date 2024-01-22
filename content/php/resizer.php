@@ -18,7 +18,7 @@ function resizeimage($picture, $destination_name = null, $destination_folder = n
         $destination_folder = __DIR__ . $destination_folder;
     }
     if ($destination_name === null) {
-        $destination_name = substr($picture, -10, 10);
+        $destination_name = substr($picture, -10, 10) . 'rez';
         $new_image_name = $destination_folder . $destination_name;
     } else {
         $new_image_name = $destination_folder . $destination_name . '.jpg';
@@ -56,27 +56,30 @@ function resizeimage($picture, $destination_name = null, $destination_folder = n
         imagecopyresampled($new_image, $image, 0, 0, 0, 0, $new_width, $new_height, $infos[0], $infos[1]);
 
         // On enregistre la nouvelle image à l'emplacement prévu
-        imagejpeg($new_image, $new_image_name);
-
-        switch ($infos['mime']) {
-            case 'image/png':
-                imagepng($new_image, $new_image_name);
-                break;
-            case 'image/jpeg':
-                imagejpeg($new_image, $new_image_name);
-                break;
-            case 'image/webp':
-                imagewebp($new_image, $new_image_name);
-                break;
-            case 'image/wbmp':
-                imagewbmp($new_image, $new_image_name);
-                break;
-            case 'image/avif':
-                imageavif($new_image, $new_image_name);
-                break;
-            default;
-                echo "Une erreur s'est produite, le format d'image n'est pas compatible !";
-                break;
+        try {
+            switch ($infos['mime']) {
+                case 'image/png':
+                    imagepng($new_image, $new_image_name);
+                    break;
+                case 'image/jpeg':
+                    imagejpeg($new_image, $new_image_name);
+                    break;
+                case 'image/webp':
+                    imagewebp($new_image, $new_image_name);
+                    break;
+                case 'image/wbmp':
+                    imagewbmp($new_image, $new_image_name);
+                    break;
+                case 'image/avif':
+                    imageavif($new_image, $new_image_name);
+                    break;
+                default;
+                    echo "Une erreur s'est produite, le format d'image n'est pas compatible !";
+                    break;
+            }
+        } catch (Error $e) {
+            echo "Une erreur s'est produite pendant l'enregistrement de l\'image : " . $e;
+            die();
         }
 
         $new_image_size = filesize($new_image_name);
