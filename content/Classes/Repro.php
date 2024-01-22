@@ -4,6 +4,8 @@ include_once(__DIR__ . "/../Models/sql/repro_request.php");
 require_once(__DIR__ . "/../Controllers/function.php");
 require_once(__DIR__ . "/RequestPDO.php");
 require_once(__DIR__ . "/Image.php");
+require_once(__DIR__ . "/../php/resizer.php");
+
 
 
 class Repro
@@ -81,8 +83,7 @@ class Repro
     }
     public function checkMainImg()
     {
-        if (isset($_FILES['mainImg']) && $_FILES['mainImg']['name'] != NULL && $_FILES['mainImg']['size'] > 0) {
-
+        if (isset($_FILES['mainImg']) && !empty($_FILES['mainImg']) && $_FILES['mainImg']['size'] > 0) {
             if (isset($_POST['reproID']) && $_POST['reproID'] > 0) {
                 $fileName = $this->getName() . '-' . $this->getId();
                 $fileName = replace_reunion_char(replace_blank(replace_accent($fileName)));
@@ -93,6 +94,7 @@ class Repro
             $file_tmp = $_FILES['mainImg']['tmp_name'];
             $file_destination = '../../src/img/repros/' . $fileName . '.jpg';
             move_uploaded_file($file_tmp, $file_destination);
+            resizeimage($file_destination, $fileName, '/../../src/img/repros/');
             $this->setMainImg($file_destination);
         } else {
             $this->setMainImg(isset($_POST['mainImg']) ? $_POST['mainImg'] : '../../src/img/repro-default.jpg');
@@ -109,8 +111,10 @@ class Repro
             $lastID = end($dataRepros)['id'];
             foreach ($images as $image) {
                 $prefix = substr($image, -8, -4);
-                $destination = '../../src/img/diapos/repros/' . $this->getId() . '-' . $prefix . '.jpg';
+                $name = $this->getId() . '-' . $prefix;
+                $destination = '../../src/img/diapos/repros/' . $name . '.jpg';
                 move_uploaded_file($image, $destination);
+                resizeimage($destination, $name, '/../../src/img/diapos/repros/');
                 $diapo = new Image();
                 $diapo->setPath($destination);
                 if (isset($_POST['reproID']) && $_POST['reproID'] > 0) {
