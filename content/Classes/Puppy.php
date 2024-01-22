@@ -4,6 +4,7 @@ require_once(__DIR__ . "/../Controllers/function.php");
 require_once('../Classes/RequestPDO.php');
 require_once('../Classes/Litter.php');
 require_once('../Classes/Image.php');
+require_once('../php/resizer.php');
 class Puppy
 {
     private $id = 0;
@@ -128,13 +129,14 @@ class Puppy
 
     public function checkMainImg()
     {
-        if (isset($_FILES['mainImg']) && $_FILES['mainImg']['name'] != NULL && $_FILES['mainImg']['size'] > 0) {
+        if (isset($_FILES['mainImg']) && !empty($_FILES['mainImg']) && $_FILES['mainImg']['size'] > 0) {
             if (isset($_POST['puppyID']) && $_POST['puppyID'] > 0) {
                 $fileName = $this->getName() . '-' . $this->getId();
                 $fileName = replace_reunion_char(replace_blank(replace_accent($fileName)));
             }
             $file_tmp = $_FILES['mainImg']['tmp_name'];
             $file_destination = '../../src/img/puppies/' . $fileName . '.jpg';
+            resizeimage($file_tmp, $fileName);
             move_uploaded_file($file_tmp, $file_destination);
             $this->setMainImg($file_destination);
         }
