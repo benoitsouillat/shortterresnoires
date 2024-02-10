@@ -1525,7 +1525,6 @@ body p {
   left: calc(100% - 230px);
 }
 #contact-main .contact-info {
-  width: 35%;
   background-color: beige;
   color: #000000;
   display: flex;

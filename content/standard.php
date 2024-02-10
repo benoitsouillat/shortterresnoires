@@ -9,12 +9,9 @@
 </head>
 
 <body>
-    <header id="header">
-        <h1 class="title">Le Standard du Cane Corso</h1>
-        <nav id="nav">
-            <?php include "./php/navbar.php"; ?>
-        </nav>
-    </header>
+    <?php
+    include_once "../content/php/header.php";
+    ?>
 
     <section>
         <aside id="standard">

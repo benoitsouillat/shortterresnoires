@@ -10,22 +10,17 @@
 </head>
 
 <body id="weeding-page">
-    <header id="header">
-        <h1 class="title">Le Domaine des Terres Noires</h1>
-        <nav id="nav">
-            <?php
-            include_once(__DIR__ . "/../php/navbar.php");
-            require_once(__DIR__ . '/../Classes/RequestPDO.php');
-            require_once(__DIR__ . '/../Classes/Litter.php');
-            require_once(__DIR__ . '/../Controllers/function.php');
+    <?php
+    include_once __DIR__ . '/../php/header.php';
+    require_once(__DIR__ . '/../Classes/RequestPDO.php');
+    require_once(__DIR__ . '/../Classes/Litter.php');
+    require_once(__DIR__ . '/../Controllers/function.php');
 
-            $pdo = new RequestPDO();
-            $stmt = $pdo->connect()->prepare(getAllActiveLitters());
-            $stmt->execute();
-            $littersData = $stmt->fetchAll(PDO::FETCH_OBJ);
-            ?>
-        </nav>
-    </header>
+    $pdo = new RequestPDO();
+    $stmt = $pdo->connect()->prepare(getAllActiveLitters());
+    $stmt->execute();
+    $littersData = $stmt->fetchAll(PDO::FETCH_OBJ);
+    ?>
     <main>
         <h2 class="title">Nos Mariages</h2>
         <section id="weedings">

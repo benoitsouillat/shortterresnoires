@@ -10,14 +10,9 @@
 </head>
 
 <body class="container-fluid">
-    <header id="header">
-        <h1 id="title" class="title">Le Domaine des Terres Noires</h1>
-        <nav id="nav">
-            <?php
-            include "./php/navbar.php";
-            ?>
-        </nav>
-    </header>
+    <?php
+    include_once "../content/php/header.php";
+    ?>
     <main id="accueil-page">
         <section>
             <h2 class="hidden">Le Cane Corso Elevage Passion</h2>

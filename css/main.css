@@ -1525,7 +1525,6 @@ body p {
   left: calc(100% - 230px);
 }
 #contact-main .contact-info {
-  width: 35%;
   background-color: beige;
   color: #000000;
   display: flex;
@@ -1793,6 +1792,19 @@ body p {
 }
 
 /*-------------------------------Classes-------------------------------------*/
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+#header #logo-title {
+  max-height: 250px;
+}
+
 .carousel-indicators-review {
   left: unset;
   top: 2%;
@@ -1863,43 +1875,4 @@ body p {
 }
 .dog-info p {
   font-size: 1.3rem;
-}
-
-/*--------------------- Page News -------------------------------*/
-.article {
-  border: white 1px solid;
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  width: 90%;
-  margin: auto;
-  margin-bottom: 20px;
-}
-.article__head {
-  text-align: center;
-}
-.article__head .article__title {
-  -webkit-text-decoration: underline #6032AA;
-          text-decoration: underline #6032AA;
-}
-.article__content {
-  display: flex;
-  justify-content: space-evenly;
-}
-.article__content .article__description {
-  text-align: justify;
-  padding: 20px;
-  line-height: 1.5rem;
-}
-.article__content .article__image {
-  max-width: 300px;
-}
-.article__foot {
-  align-self: flex-end;
-}
-.article__foot .article__date {
-  text-decoration: underline;
-}
-.article__foot .article__author {
-  font-style: italic;
 }/*# sourceMappingURL=main.css.map */

@@ -19,14 +19,9 @@
 </head>
 
 <body id="repro-page">
-    <header>
-        <h1 id="title" class="title"> Elevage du Domaine des Terres Noires </h1>
-        <nav id="nav">
-            <?php
-            include_once(__DIR__ . "/php/navbar.php");
-            ?>
-        </nav>
-    </header>
+    <?php
+    include_once __DIR__ . "/php/header.php";
+    ?>
     <main id="ourdog">
         <h2>Nos Reproducteurs</h2>
         <section class="ourdog-container">
@@ -55,7 +50,8 @@
             <section id="dog-card" class="card-hidden">
                 <h3 class="hidden">Nos Cane Corsos</h3>
                 <div>
-                    <img id="dog-card-img" src="../src/img/repro-default.jpg" alt="Nos reproducteurs Cane Corso" loading="lazy">
+                    <img id="dog-card-img" src="../src/img/repro-default.jpg" alt="Nos reproducteurs Cane Corso"
+                        loading="lazy">
                     <div id="dog-info">
                         <p class="fa fa-paw" id="dog-card-name"> </p>
                         <p class="fa fa-calendar-check" id="dog-card-birth"></p>

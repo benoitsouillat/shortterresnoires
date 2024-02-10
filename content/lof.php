@@ -9,14 +9,9 @@
 </head>
 
 <body class="container-fluid" id="lof-page">
-    <header id="header">
-        <h1 id="title" class="title">Le Domaine des Terres Noires</h1>
-        <nav id="nav">
-            <?php
-            include "./php/navbar.php";
-            ?>
-        </nav>
-    </header>
+    <?php
+    include_once "../content/php/header.php";
+    ?>
     <main>
         <section>
             <h4 class="title">Qu'est-ce que le LOF ?</h4>
