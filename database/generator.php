@@ -70,9 +70,14 @@ $table_diapos = "CREATE TABLE IF NOT EXISTS `terresnoires`.`diapos` (
     FOREIGN KEY(`puppyID`) REFERENCES puppies(puppyID)
 )
 ENGINE = InnoDB;";
-$conn->connect()->exec($databaseCreator);
-$conn->connect()->exec($table_repros);
-$conn->connect()->exec($table_users);
-$conn->connect()->exec($table_litters);
-$conn->connect()->exec($table_puppies);
-$conn->connect()->exec($table_diapos);
+
+if ($pdo = $conn->connect()) {
+    $pdo->exec($databaseCreator);
+    $pdo->exec($table_repros);
+    $pdo->exec($table_users);
+    $pdo->exec($table_litters);
+    $pdo->exec($table_puppies);
+    $pdo->exec($table_diapos);
+} else {
+    echo "Impossible de se connecter à la base de données";
+}

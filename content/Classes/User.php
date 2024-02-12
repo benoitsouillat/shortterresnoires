@@ -104,7 +104,6 @@ class User
             }
         }
     }
-
     public function checkRole()
     {
         if ($this->role === 'Admin') {

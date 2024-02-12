@@ -14,7 +14,7 @@ function getAllPuppiesFromLitter()
 }
 function getAllPuppiesOrderLitterMales()
 {
-    return "SELECT * FROM `puppies` WHERE litter = :litterID ORDER BY `litter` DESC, `sex` DESC";
+    return "SELECT * FROM `puppies` WHERE litter = :litterID ORDER BY `litter` DESC,`available` ASC, `sex` DESC";
 }
 function getAllPuppiesOrderLitterFemales()
 {

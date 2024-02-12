@@ -1,10 +1,10 @@
 <?php
 
 require_once(__DIR__ . "/../Controllers/function.php");
-require_once('../Classes/RequestPDO.php');
-require_once('../Classes/Litter.php');
-require_once('../Classes/Image.php');
-require_once('../php/resizer.php');
+require_once(__DIR__ . '/../Classes/RequestPDO.php');
+require_once(__DIR__ . '/../Classes/Litter.php');
+require_once(__DIR__ . '/../Classes/Image.php');
+require_once(__DIR__ . '/../php/resizer.php');
 class Puppy
 {
     private $id = 0;
