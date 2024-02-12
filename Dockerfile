@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Installez les extensions PHP nécessaires pour votre application
-RUN docker-php-ext-install mysqli pdo pdo_mysql gd
+RUN docker-php-ext-install mysqli pdo pdo_mysql gd fileinfo
 
 # Activation de l'extension GD
 RUN docker-php-ext-enable gd
@@ -30,9 +30,17 @@ WORKDIR ${APACHE_DOCUMENT_ROOT}
 
 # Copiez les fichiers de votre application dans le conteneur
 COPY . ${APACHE_DOCUMENT_ROOT}
+RUN mkdir -p /var/www/html/src/img/repros && \
+    mkdir -p /var/www/html/src/img/puppies && \
+    mkdir -p /var/www/html/src/img/diapos/repros && \
+    mkdir -p /var/www/html/src/img/diapos/tmp && \
+    mkdir -p /var/www/html/src/img/diapos/puppies && \
+    chown -R www-data:www-data /var/www/html/src/img
 
 # Exposez le port 80 pour le serveur web Apache
 EXPOSE 80
 
 # Commande par défaut pour démarrer le serveur web Apache
 CMD ["/usr/local/bin/docker-php-entrypoint.sh"]
+
+RUN php -m
