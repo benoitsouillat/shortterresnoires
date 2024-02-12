@@ -1,11 +1,11 @@
-<html lang="FR-fr">
-
 <?php
 session_start();
 if (isset($_SESSION) && isset($_SESSION['username']) && $_SESSION['username'] != null) {
     echo "<span class='label label-info m-3 p-3'>Connecté en tant que {$_SESSION['username']}</span>";
 }
 ?>
+
+<html lang="FR-fr">
 
 <head>
     <title>Se Connecter</title>

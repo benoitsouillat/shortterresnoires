@@ -11,8 +11,8 @@ $mother = new Repro('Josette', 'Female', new DateTime(), "250267257257257", "du 
 $father = new Repro('Gérard', 'Male', new DateTime(), "250267255255255", 'du Joux de Thor');
 $litter = new Litter($mother, $father, 3, 5, 'LOF-2560-25-556', new DateTime());
 
-$password_crypt = password_hash('password', PASSWORD_BCRYPT);
-$user->register('admin', 'admin@email.fr', $password_crypt);
+// $password_crypt = password_hash('password', PASSWORD_BCRYPT);
+$user->register('admin', 'admin@email.fr', 'password');
 
 
 
