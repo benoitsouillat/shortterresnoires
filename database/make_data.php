@@ -9,6 +9,7 @@ $conn = new RequestPDO();
 $user = new User();
 $mother = new Repro('Josette', 'Female', new DateTime(), "250267257257257", "du Domaine des Terres Noires");
 $father = new Repro('Gérard', 'Male', new DateTime(), "250267255255255", 'du Joux de Thor');
+$jeanne = new Repro('Jeanne', 'Female', new DateTime(), "2502672572110110", "de la Romance des Damoiseaux");
 $litter = new Litter($mother, $father, 3, 5, 'LOF-2560-25-556', new DateTime());
 
 // $password_crypt = password_hash('password', PASSWORD_BCRYPT);
@@ -42,6 +43,18 @@ if ($pdo = $conn->connect()) {
     $stmt->bindValue(':adn', $father->getAdn());
     $stmt->bindValue(':notMyDog', 0);
     $stmt->bindValue(':mainImg', '../../src/img/rock16-09debout3.jpg');
+    $stmt->execute();
+
+    // Création d'une autre femelle
+    $stmt = $pdo->prepare(createRepro());
+    $stmt->bindValue(':name', $jeanne->getName());
+    $stmt->bindValue(':sex', $jeanne->getSex());
+    $stmt->bindValue(':birthdate', '2010-10-28');
+    $stmt->bindValue(':insert', $jeanne->getInsert());
+    $stmt->bindValue(':breeder', $jeanne->getBreeder());
+    $stmt->bindValue(':adn', $jeanne->getAdn());
+    $stmt->bindValue(':notMyDog', 0);
+    $stmt->bindValue(':mainImg', '../../src/img/evapanama.jpg');
     $stmt->execute();
 
     // Création de la portée

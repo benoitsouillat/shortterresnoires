@@ -20,6 +20,9 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql gd fileinfo
 
 # Activation de l'extension GD
 RUN docker-php-ext-enable gd
+# RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
+# RUN docker-php-ext-install -j$(nproc) gd
+
 
 # Configuration d'Apache
 ENV APACHE_DOCUMENT_ROOT /var/www/html
