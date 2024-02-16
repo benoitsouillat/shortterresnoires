@@ -8,6 +8,7 @@ RUN chmod +x /usr/local/bin/docker-php-entrypoint.sh
 # Installation d'Apache et des dépendances
 RUN apt-get update && apt-get install -y \
     apache2 \
+    libgd-dev \
     zlib1g-dev \
     libpng-dev \
     libjpeg-dev \
@@ -19,9 +20,11 @@ RUN apt-get update && apt-get install -y \
 RUN docker-php-ext-install mysqli pdo pdo_mysql gd fileinfo
 
 # Activation de l'extension GD
-RUN docker-php-ext-enable gd
-# RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
-# RUN docker-php-ext-install -j$(nproc) gd
+RUN docker-php-ext-configure gd \
+    --with-freetype=/usr/include/ \ 
+    --with-jpeg=/usr/include/ \
+    && docker-php-ext-install -j$(nproc) gd \
+    && docker-php-ext-enable gd
 
 
 # Configuration d'Apache
@@ -45,5 +48,3 @@ EXPOSE 80
 
 # Commande par défaut pour démarrer le serveur web Apache
 CMD ["/usr/local/bin/docker-php-entrypoint.sh"]
-
-RUN php -m

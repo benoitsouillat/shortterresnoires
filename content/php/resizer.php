@@ -47,8 +47,9 @@ function resizeimage($picture, $destination_name = null, $destination_folder = n
     }
     do {
         // On multiplie par x(step)% pour réduire au fur et à mesure
-        $new_width *= $witdh_step;
-        $new_height *= $height_step;
+        $new_width = (int) ($infos[0] * $witdh_step);
+        $new_height = (int) ($infos[1] * $height_step);
+
         // On créé l'image vierge
         $new_image = imagecreatetruecolor($new_width, $new_height);
 
