@@ -39,7 +39,7 @@ $user->checkRole();
             }
             foreach ($puppies as $puppy) {
                 echo "
-                    <div class='puppy-card'>
+                    <div class='puppy-card border-{$puppy->getAvailable()}'>
                         <div class='card-top'>
                             <h4><a href='../Vues/puppy-crud.php?puppyID={$puppy->getId()}'>{$puppy->getName()}</a></h4>
                             <div>

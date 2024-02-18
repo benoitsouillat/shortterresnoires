@@ -13,9 +13,9 @@
 
     .puppy-litter-container {
         .puppy-card {
-            border: solid 1px beige;
             width: 30%;
             max-width: 380px;
+            max-height: 440px;
             padding: 10px;
             margin: 5px;
 
@@ -73,9 +73,60 @@
                 padding: 10px;
 
                 img {
-                    width: 90%;
+                    max-width: 90%;
+                    max-height: 240px;
+                    width: auto;
                 }
             }
         }
     }
+}
+
+.Disponible,
+.disponible {
+    color: $available;
+}
+
+.Option,
+.option {
+    color: $en-option;
+}
+
+.Réservé,
+.réservé {
+    color: $reserved;
+}
+
+.border-Disponible,
+.border-disponible {
+    border: 2px solid $available;
+
+}
+
+.border-Option,
+.border-option {
+    border: 2px solid $en-option;
+}
+
+.border-Réservé,
+.border-réservé {
+    border: 2px solid $reserved;
+
+}
+
+.bg-Disponible,
+.bg-disponible {
+    background-color: $available;
+
+}
+
+.bg-Option,
+.bg-option {
+    background-color: $en-option;
+}
+
+.bg-Réservé,
+.bg-réservé {
+    background-color: $reserved;
+
 }

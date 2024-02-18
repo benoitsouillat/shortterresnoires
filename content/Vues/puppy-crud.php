@@ -38,13 +38,15 @@ if (isset($_GET['puppyID']) && $_GET['puppyID'] > 0) {
     <section class="section-repro">
         <div class="infos-repro">
             <h3 class="w-100 text-center mt-5 mb-5">Infos en ligne :</h3><br>
-            <img src="../<?php echo $puppy->getMainImg() ?>">
+            <img class="<?php echo 'border-' . $puppy->getAvailable(); ?>" src="../<?php echo $puppy->getMainImg() ?>">
             <h4 class="text-center"><?php echo $puppy->getName() . ' -  ' . $puppy->getSex() ?></h4>
             <p class="text-center">Né(e) le :
                 <?php echo $puppy->getLitter()->getBirthdate()->format('d-m-Y');
                 ?></p>
-            <p><?php echo $puppy->getAvailable() ?></p>
-            <p class="text-center">
+            <p class="<?php echo $puppy->getAvailable(); ?>">
+                <?php echo $puppy->getAvailable(); ?>
+            </p>
+            <p class=" text-center">
                 <?php echo "Issu de {$puppy->getLitter()->getMother()->getName()} et de {$puppy->getLitter()->getFather()->getName()}"; ?>
             </p>
             <!-- <div class="w-100 mt-5 d-flex justify-content-center align-items-center">
@@ -75,7 +77,7 @@ if (isset($_GET['puppyID']) && $_GET['puppyID'] > 0) {
             </div>
         </div>
         <div class="repro-form-container">
-            <h2 class='mb-4 w-100'>
+            <h2 class=' mb-4 w-100'>
                 <?php
                 if ($puppy->getName() != null) {
                     echo "Modifier les informations de {$puppy->getName()}";
@@ -104,11 +106,15 @@ if (isset($_GET['puppyID']) && $_GET['puppyID'] > 0) {
                 <input type="text" id="puppyNecklace" name="puppyNecklace" value="<?php echo $puppy->getNecklace() ?>">
 
                 <select id="puppyAvailable" name="puppyAvailable">
-                    <option value="Disponible" <?php echo ($puppy->getAvailable() === 'Disponible' ? 'selected' : '') ?>>Disponible</option>
-                    <option value="Option" <?php echo ($puppy->getAvailable() === 'Option' ? 'selected' : '') ?>>Option
+                    <option value="Disponible" class="disponible"
+                        <?php echo ($puppy->getAvailable() === 'Disponible' ? 'selected' : '') ?>>Disponible --
                     </option>
-                    <option value="Réservé" <?php echo ($puppy->getAvailable() === 'Réservé' ? 'selected' : '') ?>>
-                        Réservé</option>
+                    <option value="Option" class="option"
+                        <?php echo ($puppy->getAvailable() === 'Option' ? 'selected' : '') ?>>Option --
+                    </option>
+                    <option value="Réservé" class="réservé"
+                        <?php echo ($puppy->getAvailable() === 'Réservé' ? 'selected' : '') ?>>
+                        Réservé --</option>
                 </select>
 
                 <label for="mainImg">Image Principale : </label>
