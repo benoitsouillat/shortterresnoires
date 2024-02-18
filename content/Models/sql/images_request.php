@@ -12,3 +12,7 @@ function getAllImagesFromPuppyId()
 {
     return "SELECT * FROM `diapos` WHERE puppyID = :puppyID";
 }
+function deleteImageFromDiapoId()
+{
+    return "DELETE FROM `diapos` WHERE diapoID = :diapoID";
+}

@@ -186,8 +186,22 @@ body .infos-repro .diapo-img-container {
   align-items: center;
   flex-wrap: wrap;
 }
-body .infos-repro .diapo-img-container img {
-  max-width: 22%;
+body .infos-repro .diapo-img-container .diapo-elm {
+  max-width: 30%;
+  text-align: left;
+}
+body .infos-repro .diapo-img-container .diapo-elm img {
+  min-width: unset;
+  width: 90%;
+  max-width: 90%;
+}
+body .infos-repro .diapo-img-container .diapo-elm a.deleteDiapo {
+  z-index: 1000;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: -20px;
+  left: 5px;
 }
 body .repro-form-container {
   width: 60%;

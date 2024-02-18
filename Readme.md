@@ -10,3 +10,6 @@
     email : admin@email.fr
     password: password
  
+    localhost:8282
+    nickname: root
+    password: 
