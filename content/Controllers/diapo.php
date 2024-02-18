@@ -15,6 +15,6 @@ if (isset($_GET['delete']) && $_GET['delete'] == true) {
     if ($_GET['type'] === 'repro') {
         header('Location:../Vues/repro-crud.php?reproID=' . $_GET['id']);
     } elseif ($_GET['type'] === 'puppy') {
-        header('Location:../Vues/repro-crud.php?puppyID=' . $_GET['id']);
+        header('Location:../Vues/puppy-crud.php?puppyID=' . $_GET['id']);
     }
 }
