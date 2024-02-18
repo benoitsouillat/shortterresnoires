@@ -147,6 +147,11 @@ body .infos-repro {
   align-items: center;
   min-height: 100vh;
 }
+@media all and (max-width: 768px) {
+  body .infos-repro {
+    flex: 0 1 90%;
+  }
+}
 body .infos-repro .button-zone {
   width: 100%;
   margin-top: 2.2rem;
@@ -189,6 +194,11 @@ body .infos-repro .diapo-img-container {
 body .infos-repro .diapo-img-container .diapo-elm {
   max-width: 30%;
   text-align: left;
+}
+@media all and (max-width: 768px) {
+  body .infos-repro .diapo-img-container .diapo-elm {
+    max-width: 50%;
+  }
 }
 body .infos-repro .diapo-img-container .diapo-elm img {
   min-width: unset;
@@ -444,7 +454,7 @@ body .repro-form-container .repro-form .adn-field input {
 
 .border-Disponible,
 .border-disponible {
-  border: 2px solid #198c19;
+  border: 2px solid #90eb90;
 }
 
 .border-Option,

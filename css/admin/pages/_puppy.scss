@@ -99,7 +99,7 @@
 
 .border-Disponible,
 .border-disponible {
-    border: 2px solid $available;
+    border: 2px solid lighten($available, 42);
 
 }
 
