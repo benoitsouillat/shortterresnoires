@@ -25,7 +25,7 @@ $user->checkRole();
         <h1>Liste des Reproducteurs</h1>
 
         <div class="order-container">
-            <a href="./repro-crud.php" class="btn-sm btn-primary">Créer un Reproducteur</a>
+            <a href="./repro-crud.php" class="btn-sm btn-primary">Créer un Reproducteur</a><br>
             <a href="?order=malefirst" class="btn-sm btn-beige">Trier par Mâles</a>
             <a href="?order=femalefirst" class="btn-sm btn-beige">Trier par Femelles</a>
             <!-- <a href="?order=maleonly" class="btn-sm btn-beige">Voir les Mâles</a>

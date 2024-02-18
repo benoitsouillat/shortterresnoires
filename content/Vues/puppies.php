@@ -25,7 +25,10 @@ $user->checkRole();
     <section class="puppies-container">
         <div class="order-container">
             <a href="?order=malefirst" class="btn-sm btn-beige">Trier par Mâles</a>
-            <a href="?order=femalefirst" class="btn-sm btn-beige">Trier par Femelles</a>
+            <a href="?order=femalefirst" class="btn-sm btn-beige">Trier par Femelles</a><br>
+            <a href="?order=dispo" class="btn-sm btn-outline-success">Disponibles</a>
+            <a href="?order=option" class="btn-sm btn-outline-warning">Options</a>
+            <a href="?order=reserv" class="btn-sm btn-outline-danger">Réservés</a>
         </div>
         <?php
 

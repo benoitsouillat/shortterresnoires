@@ -19,6 +19,12 @@ foreach ($littersData as $data) {
             $stmtPuppy = $pdo->connect()->prepare(getAllPuppiesOrderLitterMales());
         } elseif ($_GET['order'] === 'femalefirst') {
             $stmtPuppy = $pdo->connect()->prepare(getAllPuppiesOrderLitterFemales());
+        } elseif ($_GET['order'] === 'dispo') {
+            $stmtPuppy = $pdo->connect()->prepare(getAllPuppiesOrderLitterDispos());
+        } elseif ($_GET['order'] === 'option') {
+            $stmtPuppy = $pdo->connect()->prepare(getAllPuppiesOrderLitterOptions());
+        } elseif ($_GET['order'] === 'reserv') {
+            $stmtPuppy = $pdo->connect()->prepare(getAllPuppiesOrderLitterReserv());
         }
     } else {
         $stmtPuppy = $pdo->connect()->prepare(getAllPuppiesFromLitter());

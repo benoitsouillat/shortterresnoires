@@ -20,11 +20,25 @@ function getAllPuppiesOrderLitterFemales()
 {
     return "SELECT * FROM `puppies` WHERE litter = :litterID ORDER BY `litter` DESC, `sex` ASC";
 }
+function getAllPuppiesOrderLitterDispos()
+{
+    return "SELECT * FROM `puppies` WHERE litter = :litterID AND available = 'Disponible' ORDER BY `litter` DESC, `sex` ASC";
+}
+function getAllPuppiesOrderLitterOptions()
+{
+    return "SELECT * FROM `puppies` WHERE litter = :litterID AND available = 'Option' ORDER BY `litter` DESC, `sex` ASC";
+}
+function getAllPuppiesOrderLitterReserv()
+{
+    return "SELECT * FROM `puppies` WHERE litter = :litterID AND available = 'Réservé' ORDER BY `litter` DESC, `sex` ASC";
+}
 function getPuppyFromId()
 {
     return "SELECT * FROM `puppies` WHERE puppyID = :puppyID";
 }
 
+
+// CRUD
 
 function savePuppyDiapo()
 {
