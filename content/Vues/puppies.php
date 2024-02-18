@@ -1,12 +1,12 @@
 <?php
-require_once('../Classes/User.php');
 session_start();
+require_once('../Classes/User.php');
 
 $user = new User();
 $user->fillFromSession($_SESSION);
 $user->checkRole();
-
 ?>
+<!DOCTYPE html>
 <html lang="FR-fr">
 
 <head>

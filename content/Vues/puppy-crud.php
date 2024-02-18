@@ -1,8 +1,8 @@
 <?php
+session_start();
 require_once('../Classes/User.php');
 require_once('../Classes/Puppy.php');
 require_once('../Classes/RequestPDO.php');
-session_start();
 $user = new User();
 $user->fillFromSession($_SESSION);
 $user->checkRole();

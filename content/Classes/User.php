@@ -1,5 +1,4 @@
 <?php
-
 require_once(__DIR__ . '/RequestPDO.php');
 
 class User

@@ -8,12 +8,6 @@ do
 done
   echo "Mysql démarré"
 
-# Exécution des scripts PHP
-# echo "Exécution du script generator.php"
-# docker exec php_serveur_php php ./database/generator.php
-# echo "Exécution du script make_data.php"
-# docker exec php_serveur_php php ./database/make_data.php
-
 # Démarrer Apache
 apache2-foreground &
 

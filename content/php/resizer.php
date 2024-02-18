@@ -1,10 +1,14 @@
 <?php
-
-extension_loaded('gd') or die('GD extension not available');
+// extension_loaded('gd') or die('GD extension not available');
 function resizeimage($picture, $destination_name = null, $destination_folder = null)
 {
-    $infos = getimagesize($picture);
     $max_size = 500000; // 500 Ko
+    try {
+        $infos = getimagesize($picture);
+    } catch (ErrorException $e) {
+        var_dump('Impossible de récupérer les informations de l\'image');
+        die();
+    }
 
     $new_width = $infos[0]; // On récupère la width et la height de l'image
     $new_height = $infos[1];
@@ -32,6 +36,9 @@ function resizeimage($picture, $destination_name = null, $destination_folder = n
         case 'image/jpeg':
             $image = imagecreatefromjpeg($picture);
             break;
+        case 'image/jpg':
+            $image = imagecreatefromjpeg($picture);
+            break;
         case 'image/webp':
             $image = imagecreatefromwebp($picture);
             break;
@@ -47,8 +54,12 @@ function resizeimage($picture, $destination_name = null, $destination_folder = n
     }
     do {
         // On multiplie par x(step)% pour réduire au fur et à mesure
-        $new_width = (int) ($infos[0] * $witdh_step);
-        $new_height = (int) ($infos[1] * $height_step);
+        $new_width *= $witdh_step;
+        $new_height *= $height_step;
+
+        // On passe la valeur en INT si elle est float
+        $new_width = intval($new_width, 10);
+        $new_height = intval($new_height, 10);
 
         // On créé l'image vierge
         $new_image = imagecreatetruecolor($new_width, $new_height);
@@ -57,13 +68,16 @@ function resizeimage($picture, $destination_name = null, $destination_folder = n
         imagecopyresampled($new_image, $image, 0, 0, 0, 0, $new_width, $new_height, $infos[0], $infos[1]);
 
         // On enregistre la nouvelle image à l'emplacement prévu
-        imagejpeg($new_image, $new_image_name);
+        //imagejpeg($new_image, $new_image_name);
 
         switch ($infos['mime']) {
             case 'image/png':
                 imagepng($new_image, $new_image_name);
                 break;
             case 'image/jpeg':
+                imagejpeg($new_image, $new_image_name);
+                break;
+            case 'image/jpg':
                 imagejpeg($new_image, $new_image_name);
                 break;
             case 'image/webp':
@@ -79,7 +93,6 @@ function resizeimage($picture, $destination_name = null, $destination_folder = n
                 echo "Une erreur s'est produite, le format d'image n'est pas compatible !";
                 break;
         }
-
         $new_image_size = filesize($new_image_name);
         clearstatcache();
     } while ($new_image_size > $max_size && $new_width > 200);

@@ -1,7 +1,6 @@
 <?php
-
-require_once('../Classes/User.php');
 session_start();
+require_once('../Classes/User.php');
 
 
 $identifier = $_POST['username'];

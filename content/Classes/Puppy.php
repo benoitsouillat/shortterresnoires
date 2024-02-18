@@ -1,10 +1,10 @@
 <?php
-
 require_once(__DIR__ . "/../Controllers/function.php");
 require_once(__DIR__ . '/../Classes/RequestPDO.php');
 require_once(__DIR__ . '/../Classes/Litter.php');
 require_once(__DIR__ . '/../Classes/Image.php');
 require_once(__DIR__ . '/../php/resizer.php');
+
 class Puppy
 {
     private $id = 0;
@@ -136,8 +136,18 @@ class Puppy
             }
             $file_tmp = $_FILES['mainImg']['tmp_name'];
             $file_destination = '../../src/img/puppies/' . $fileName . '.jpg';
-            move_uploaded_file($file_tmp, $file_destination);
-            resizeimage($file_destination, $fileName, '/../../src/img/puppies/');
+            try {
+                move_uploaded_file($file_tmp, $file_destination);
+            } catch (ErrorException $e) {
+                echo "Erreur : Impossible de déplacer cette image dans son dossier de destination.";
+                die();
+            }
+            try {
+                resizeimage($file_destination, $fileName, '/../../src/img/puppies/');
+            } catch (ErrorException $e) {
+                echo "Erreur : Impossible de redimensionner l'image " . $e;
+                die();
+            }
             $this->setMainImg($file_destination);
         }
     }
