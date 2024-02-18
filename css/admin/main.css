@@ -28,7 +28,9 @@ body .order-container {
   padding: 10px;
   margin-bottom: 12px;
 }
-body .order-container .btn {
+body .order-container .btn-sm {
+  margin-top: 4px;
+  display: inline-block;
   transition: unset;
   transform: unset;
 }
@@ -86,13 +88,8 @@ body .repro-line p.btn:hover {
   }
 }
 @media all and (max-width: 576px) {
-  body .repro-line a,
   body .repro-line p {
-    font-size: 0.9rem;
-  }
-  body .repro-line a.btn,
-  body .repro-line p.btn {
-    font-size: 0.8rem;
+    display: none;
   }
 }
 body .repro-line .image-space {
@@ -101,6 +98,13 @@ body .repro-line .image-space {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media all and (max-width: 768px) {
+  body .repro-line .image-space {
+    max-width: 0;
+    width: 0;
+    overflow: hidden;
+  }
 }
 body .repro-line .image-space a {
   display: flex;
@@ -129,6 +133,11 @@ body .section-repro {
   padding: 10px;
   margin: 10px;
   width: 100%;
+}
+@media all and (max-width: 768px) {
+  body .section-repro {
+    flex-wrap: wrap-reverse;
+  }
 }
 body .infos-repro {
   flex: 0 1 39%;
@@ -189,6 +198,11 @@ body .repro-form-container {
   flex-wrap: wrap;
   flex: 2 0 60%;
 }
+@media all and (max-width: 768px) {
+  body .repro-form-container {
+    width: 85%;
+  }
+}
 body .repro-form-container h2 {
   width: 100%;
   margin-bottom: 1.5rem;
@@ -210,6 +224,12 @@ body .repro-form-container .repro-form select {
   margin: 5px;
   width: 35%;
 }
+@media all and (max-width: 768px) {
+  body .repro-form-container .repro-form option,
+  body .repro-form-container .repro-form select {
+    width: 50%;
+  }
+}
 body .repro-form-container .repro-form input {
   border: solid 2px beige;
   padding: 2px;
@@ -217,6 +237,11 @@ body .repro-form-container .repro-form input {
   background: #e7e7e7;
   border-radius: 5px;
   width: 60%;
+}
+@media all and (max-width: 768px) {
+  body .repro-form-container .repro-form input {
+    width: 85%;
+  }
 }
 body .repro-form-container .repro-form input[type=radio] {
   width: 20px;
@@ -232,6 +257,11 @@ body .repro-form-container .repro-form input[type=radio]#Male {
 }
 body .repro-form-container .repro-form fieldset {
   width: 60%;
+}
+@media all and (max-width: 768px) {
+  body .repro-form-container .repro-form fieldset {
+    width: 100%;
+  }
 }
 body .repro-form-container .repro-form label,
 body .repro-form-container .repro-form legend {
@@ -324,9 +354,21 @@ body .repro-form-container .repro-form .adn-field input {
 }
 .puppies-container .puppy-litter-container .puppy-card {
   border: solid 1px beige;
-  max-width: 30%;
+  width: 30%;
+  max-width: 380px;
   padding: 10px;
   margin: 5px;
+}
+@media all and (max-width: 768px) {
+  .puppies-container .puppy-litter-container .puppy-card {
+    width: 45%;
+    max-width: 330px;
+  }
+}
+@media all and (max-width: 576px) {
+  .puppies-container .puppy-litter-container .puppy-card {
+    width: auto;
+  }
 }
 .puppies-container .puppy-litter-container .puppy-card .card-top {
   display: flex;
@@ -345,17 +387,20 @@ body .repro-form-container .repro-form .adn-field input {
 }
 .puppies-container .puppy-litter-container .puppy-card .card-top .avail-zone {
   background-color: beige;
-  font-weight: bold;
+  font-weight: bolder;
   padding: 10px 20px;
   margin: 2px;
 }
+.puppies-container .puppy-litter-container .puppy-card .card-top .Disponible,
 .puppies-container .puppy-litter-container .puppy-card .card-top .disponible {
   color: rgb(2, 58, 2);
 }
+.puppies-container .puppy-litter-container .puppy-card .card-top .Option,
 .puppies-container .puppy-litter-container .puppy-card .card-top .option {
   color: rgb(120, 79, 3);
 }
-.puppies-container .puppy-litter-container .puppy-card .card-top .Réservé {
+.puppies-container .puppy-litter-container .puppy-card .card-top .Réservé,
+.puppies-container .puppy-litter-container .puppy-card .card-top .réservé {
   color: rgb(108, 3, 3);
 }
 .puppies-container .puppy-litter-container .puppy-card .card-info {

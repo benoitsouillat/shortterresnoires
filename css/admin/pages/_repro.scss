@@ -34,7 +34,9 @@ body {
         padding: 10px;
         margin-bottom: 12px;
 
-        .btn {
+        .btn-sm {
+            margin-top: 4px;
+            display: inline-block;
             transition: unset;
             transform: unset;
         }
@@ -105,14 +107,8 @@ body {
 
         @media all and (max-width: $sm) {
 
-            a,
             p {
-
-                font-size: .9rem;
-
-                &.btn {
-                    font-size: .8rem;
-                }
+                display: none;
             }
         }
 
@@ -122,6 +118,12 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @media all and (max-width: $md) {
+                max-width: 0;
+                width: 0;
+                overflow: hidden;
+            }
 
             a {
                 display: flex;
@@ -160,6 +162,9 @@ body {
         margin: 10px;
         width: 100%;
 
+        @media all and (max-width: $md) {
+            flex-wrap: wrap-reverse;
+        }
     }
 
     .infos-repro {
@@ -230,6 +235,11 @@ body {
         flex-wrap: wrap;
         flex: 2 0 60%;
 
+        @media all and (max-width: $md) {
+            width: 85%;
+
+        }
+
         h2 {
             width: 100%;
             margin-bottom: 1.5rem;
@@ -253,6 +263,10 @@ body {
                 padding: 2px;
                 margin: 5px;
                 width: 35%;
+
+                @media all and (max-width: $md) {
+                    width: 50%;
+                }
             }
 
             input {
@@ -262,6 +276,10 @@ body {
                 background: #e7e7e7;
                 border-radius: 5px;
                 width: 60%;
+
+                @media all and (max-width: $md) {
+                    width: 85%;
+                }
             }
 
             input[type="radio"] {
@@ -281,6 +299,10 @@ body {
 
             fieldset {
                 width: 60%;
+
+                @media all and (max-width: $md) {
+                    width: 100%;
+                }
             }
 
             label,
