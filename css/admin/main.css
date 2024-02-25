@@ -391,7 +391,7 @@ body .repro-form-container .repro-form .adn-field input {
 }
 @media all and (max-width: 576px) {
   .puppies-container .puppy-litter-container .puppy-card {
-    width: auto;
+    width: 330px;
   }
 }
 .puppies-container .puppy-litter-container .puppy-card .card-top {
