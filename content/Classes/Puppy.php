@@ -63,8 +63,8 @@ class Puppy
         $this->setColor($_POST['puppyColor']);
         $this->setNecklace($_POST['puppyNecklace']);
         $this->setAvailable($_POST['puppyAvailable']);
+        $this->setPrice($_POST['price']);
         $this->setMainImg($_POST['mainImg']);
-        $this->setMainImg($_POST['price']);
         // $this->setDisplay($_POST['puppyDisplay']);
     }
 
