@@ -1,0 +1,483 @@
+@charset "UTF-8";
+body {
+  background-color: #03040E;
+  color: #C7C7C7;
+  text-align: center;
+}
+body .male-color {
+  color: lightblue;
+}
+body .female-color {
+  color: pink;
+}
+body .admin-nav {
+  width: 100%;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+body .admin-nav a {
+  margin: 2px;
+  transition: all 0.8s 0.1s;
+}
+body .admin-nav a:hover {
+  transform: scale(1.04);
+  text-decoration: underline;
+}
+body .order-container {
+  border-bottom: solid beige 1px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+body .order-container .btn-sm {
+  margin-top: 4px;
+  display: inline-block;
+  transition: unset;
+  transform: unset;
+}
+body h1 {
+  text-align: center;
+  padding-bottom: 30px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #C7C7C7;
+}
+body .repro-line {
+  margin: 2px 20px;
+  padding: 5px;
+  height: 9vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #C7C7C7;
+  margin-bottom: 10px;
+}
+body .repro-line a,
+body .repro-line p {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #C7C7C7;
+}
+body .repro-line a:hover,
+body .repro-line p:hover {
+  color: purple;
+  transform: unset;
+}
+body .repro-line a.btn,
+body .repro-line p.btn {
+  font-size: 1.2rem;
+}
+body .repro-line a.btn:hover,
+body .repro-line p.btn:hover {
+  color: white;
+}
+@media all and (max-width: 992px) {
+  body .repro-line a,
+  body .repro-line p {
+    font-size: 1.3rem;
+  }
+  body .repro-line a.btn,
+  body .repro-line p.btn {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 768px) {
+  body .repro-line a,
+  body .repro-line p {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 576px) {
+  body .repro-line p {
+    display: none;
+  }
+}
+body .repro-line .image-space {
+  width: 200px;
+  max-width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media all and (max-width: 768px) {
+  body .repro-line .image-space {
+    max-width: 0;
+    width: 0;
+    overflow: hidden;
+  }
+}
+body .repro-line .image-space a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+body .repro-line .image-space a img {
+  margin: auto 5px;
+}
+body .repro-line img {
+  max-height: 8vh;
+}
+body .error-div {
+  background-color: rgb(211, 98, 98);
+  color: #FFF;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+body .section-repro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+}
+@media all and (max-width: 768px) {
+  body .section-repro {
+    flex-wrap: wrap-reverse;
+  }
+}
+body .infos-repro {
+  flex: 0 1 39%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+}
+@media all and (max-width: 768px) {
+  body .infos-repro {
+    flex: 0 1 90%;
+  }
+}
+body .infos-repro .button-zone {
+  width: 100%;
+  margin-top: 2.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.8s 0.1s;
+}
+body .infos-repro .button-zone:hover {
+  transform: scale(1.06);
+}
+body .infos-repro img {
+  width: 80%;
+  min-width: 200px;
+  max-width: 400px;
+  margin: 10px;
+}
+body .infos-repro h3,
+body .infos-repro h4 {
+  width: 100%;
+  text-align: center;
+  margin: 1.7rem auto;
+  font-size: 1.5rem;
+}
+body .infos-repro h4,
+body .infos-repro h5,
+body .infos-repro p {
+  margin-left: 10px;
+}
+body .infos-repro .diapo-img-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body .infos-repro .diapo-img-container .diapo-elm {
+  max-width: 30%;
+  text-align: left;
+}
+@media all and (max-width: 768px) {
+  body .infos-repro .diapo-img-container .diapo-elm {
+    max-width: 50%;
+  }
+}
+body .infos-repro .diapo-img-container .diapo-elm img {
+  min-width: unset;
+  width: 90%;
+  max-width: 90%;
+}
+body .infos-repro .diapo-img-container .diapo-elm a.deleteDiapo {
+  z-index: 1000;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: -20px;
+  left: 5px;
+}
+body .repro-form-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 2 0 60%;
+}
+@media all and (max-width: 768px) {
+  body .repro-form-container {
+    width: 85%;
+  }
+}
+body .repro-form-container h2 {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+body .repro-form-container .repro-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+}
+body .repro-form-container .repro-form option,
+body .repro-form-container .repro-form select {
+  border: solid 2px beige;
+  background: #e7e7e7;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 5px;
+  width: 35%;
+}
+@media all and (max-width: 768px) {
+  body .repro-form-container .repro-form option,
+  body .repro-form-container .repro-form select {
+    width: 50%;
+  }
+}
+body .repro-form-container .repro-form input {
+  border: solid 2px beige;
+  padding: 2px;
+  margin: 5px;
+  background: #e7e7e7;
+  border-radius: 5px;
+  width: 60%;
+}
+@media all and (max-width: 768px) {
+  body .repro-form-container .repro-form input {
+    width: 85%;
+  }
+}
+body .repro-form-container .repro-form input[type=radio] {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 0;
+  margin-left: 30px;
+}
+body .repro-form-container .repro-form input[type=radio]#Female {
+  accent-color: pink;
+}
+body .repro-form-container .repro-form input[type=radio]#Male {
+  accent-color: rgb(53, 202, 252);
+}
+body .repro-form-container .repro-form fieldset {
+  width: 60%;
+}
+@media all and (max-width: 768px) {
+  body .repro-form-container .repro-form fieldset {
+    width: 100%;
+  }
+}
+body .repro-form-container .repro-form label,
+body .repro-form-container .repro-form legend {
+  font-size: 20px;
+}
+body .repro-form-container .repro-form .notmydog-field input[type=checkbox] {
+  accent-color: red;
+}
+body .repro-form-container .repro-form .notmydog-field,
+body .repro-form-container .repro-form .adn-field {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 5px auto;
+}
+body .repro-form-container .repro-form .notmydog-field input,
+body .repro-form-container .repro-form .adn-field input {
+  margin-top: 0;
+  margin-left: 20px;
+  height: 20px;
+  width: 20px;
+}
+
+.parents-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
+}
+.parents-container .mother-container,
+.parents-container .father-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.parents-container h3,
+.parents-container h4,
+.parents-container h5 {
+  width: 100%;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.litter-infos-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.repro-form .litter-infos-puppies {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.repro-form .litter-infos-puppies i {
+  font-size: 0.8em;
+}
+.repro-form .litter-infos-puppies legend {
+  width: 100%;
+}
+.repro-form .litter-infos-puppies input {
+  max-width: 40px;
+}
+
+.puppies-container {
+  width: 100%;
+}
+.puppies-container .cards-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.puppies-container .puppy-litter-container .puppy-card {
+  width: 30%;
+  max-width: 380px;
+  max-height: 440px;
+  padding: 10px;
+  margin: 5px;
+}
+@media all and (max-width: 768px) {
+  .puppies-container .puppy-litter-container .puppy-card {
+    width: 45%;
+    max-width: 330px;
+  }
+}
+@media all and (max-width: 576px) {
+  .puppies-container .puppy-litter-container .puppy-card {
+    width: 330px;
+  }
+}
+.puppies-container .puppy-litter-container .puppy-card .card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.puppies-container .puppy-litter-container .puppy-card .card-top h4 {
+  padding: 10px;
+  margin: 2px;
+  color: beige;
+}
+.puppies-container .puppy-litter-container .puppy-card .card-top h4 a {
+  color: beige;
+}
+.puppies-container .puppy-litter-container .puppy-card .card-top .avail-zone {
+  background-color: beige;
+  font-weight: bolder;
+  padding: 10px 20px;
+  margin: 2px;
+}
+.puppies-container .puppy-litter-container .puppy-card .card-top .Disponible,
+.puppies-container .puppy-litter-container .puppy-card .card-top .disponible {
+  color: rgb(2, 58, 2);
+}
+.puppies-container .puppy-litter-container .puppy-card .card-top .Option,
+.puppies-container .puppy-litter-container .puppy-card .card-top .option {
+  color: rgb(120, 79, 3);
+}
+.puppies-container .puppy-litter-container .puppy-card .card-top .Réservé,
+.puppies-container .puppy-litter-container .puppy-card .card-top .réservé {
+  color: rgb(108, 3, 3);
+}
+.puppies-container .puppy-litter-container .puppy-card .card-info {
+  margin: 2px;
+  padding: 10px;
+}
+.puppies-container .puppy-litter-container .puppy-card .card-info img {
+  max-width: 90%;
+  max-height: 240px;
+  width: auto;
+}
+
+.Disponible,
+.disponible {
+  color: #198c19;
+}
+
+.Option,
+.option {
+  color: sandybrown;
+}
+
+.Réservé,
+.réservé {
+  color: #d04b56;
+}
+
+.border-Disponible,
+.border-disponible {
+  border: 2px solid #90eb90;
+}
+
+.border-Option,
+.border-option {
+  border: 2px solid sandybrown;
+}
+
+.border-Réservé,
+.border-réservé {
+  border: 2px solid #d04b56;
+}
+
+.bg-Disponible,
+.bg-disponible {
+  background-color: #198c19;
+}
+
+.bg-Option,
+.bg-option {
+  background-color: sandybrown;
+}
+
+.bg-Réservé,
+.bg-réservé {
+  background-color: #d04b56;
+}/*# sourceMappingURL=main.css.map */

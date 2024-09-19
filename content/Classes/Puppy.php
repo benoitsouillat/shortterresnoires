@@ -77,9 +77,9 @@ class Puppy
         $this->setColor($data->color);
         $this->setAvailable($data->available);
         $this->setNecklace($data->necklace);
-        $this->setDisplay($data->display);
+        $this->setPrice($data->price);
         $this->setMainImg($data->mainImg);
-        $this->setMainImg($data->price);
+        $this->setDisplay($data->display);
     }
 
     public function fillFromFetchAssoc(array $array)
@@ -91,9 +91,9 @@ class Puppy
         $this->setColor($array['color']);
         $this->setAvailable($array['available']);
         $this->setNecklace($array['necklace']);
-        $this->setDisplay($array['display']);
+        $this->setPrice($array['price']);
         $this->setMainImg($array['mainImg']);
-        $this->setMainImg($array['price']);
+        $this->setDisplay($array['display']);
     }
 
     public function fetchFromDatabase($puppyID)
@@ -130,7 +130,7 @@ class Puppy
         $stmt->bindValue(':necklace', $this->getNecklace());
         $stmt->bindValue(':available', $this->getAvailable());
         $stmt->bindValue(':mainImg', $this->getMainImg());
-        $stmt->bindValue(':mainImg', $this->getPrice());
+        $stmt->bindValue(':price', $this->getPrice());
         $stmt->bindValue(':display', $this->getDisplay());
         $stmt->execute();
     }

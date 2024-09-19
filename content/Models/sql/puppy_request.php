@@ -56,10 +56,19 @@ function deletePuppyFemales()
 function createPuppy()
 {
     return "INSERT INTO `puppies` 
-    (name, litter, sex, color, necklace, available, mainImg, display) 
-    VALUES (:name, :litter, :sex, :color, :necklace, :available, :mainImg, :display)";
+    (name, litter, sex, color, necklace, available, mainImg, price, display) 
+    VALUES (:name, :litter, :sex, :color, :necklace, :available, :mainImg, :price, :display)";
 }
 function managePuppy()
 {
-    return "UPDATE `puppies` SET name = :name, litter = :litter, sex = :sex, color = :color, necklace = :necklace, available = :available, mainImg = :mainImg, display = :display WHERE puppyID = :puppyID";
+    return "UPDATE `puppies` 
+    SET name = :name, 
+    litter = :litter, 
+    sex = :sex, 
+    color = :color, 
+    necklace = :necklace, 
+    available = :available, 
+    mainImg = :mainImg, 
+    price = :price, 
+    display = :display WHERE puppyID = :puppyID";
 }

@@ -45,6 +45,7 @@ $user->checkRole();
                             <div>
                                 <p class='avail-zone {$puppy->getAvailable()}'>{$puppy->getAvailable()}</p>
                                 <p class='necklace'>Collier {$puppy->getNecklace()}</p>
+                                <p class='price'>Prix: {$puppy->getPrice()}€</p>
                             </div>
                         </div>
                         <div class='card-info'>

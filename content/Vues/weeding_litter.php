@@ -33,9 +33,9 @@
     <script src="https://kit.fontawesome.com/5944b63bf2.js" crossorigin="anonymous"></script>
     <script src="/content/assets/slider.js" crossorigin="anonymous"></script>
     <script>
-    window.onload = () => {
-        slider()
-    };
+        window.onload = () => {
+            slider()
+        };
     </script>
 
 </head>
@@ -87,6 +87,7 @@
                     } else {
                         echo "<button class='btn-avail btn-sm btn-undispo'>Réservé</button>";
                     }
+                    echo "<p class='price'>Prix : {$puppy->getPrice()}€ </p>";
 
                     $stmt = $pdo->connect()->prepare("SELECT * FROM `diapos` WHERE puppyID = :puppyID");
                     $stmt->bindValue(':puppyID', $puppy->getId());
@@ -124,7 +125,7 @@
                 ?>
             </div>
         </section>
-        <section class="puppy-para">
+        <!-- <section class="puppy-para">
             <br>
             <i>
                 <p id="price">Le prix d'un chiot de cette portée est fixé à 1200€ pour un mâle ou une femelle</p>
@@ -133,7 +134,7 @@
                 <p>Merci de votre compréhension </p>
             </i>
             <br>
-        </section>
+        </section> -->
     </main>
 
     <?php

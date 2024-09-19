@@ -54,6 +54,7 @@ $table_puppies = "CREATE TABLE IF NOT EXISTS `terresnoires`.`puppies` (
     `necklace` VARCHAR(20) NOT NULL DEFAULT '',
     `available` VARCHAR(20) NOT NULL DEFAULT 'Disponible',
     `mainImg` VARCHAR(255) NOT NULL DEFAULT '../src/img/puppy-default.jpg',
+    `price` INT DEFAULT 1200,
     `display` TINYINT(1) DEFAULT 1,
     PRIMARY KEY(`puppyID`),
     FOREIGN KEY(`litter`) REFERENCES litters(litterId)

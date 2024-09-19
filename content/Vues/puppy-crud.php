@@ -117,6 +117,9 @@ if (isset($_GET['puppyID']) && $_GET['puppyID'] > 0) {
                         Réservé --</option>
                 </select>
 
+                <label for="price">Prix du chiot :</label>
+                <input type="text" id="price" name="price" value="<?php echo $puppy->getPrice() ?>">
+
                 <label for="mainImg">Image Principale : </label>
                 <input type="file" name="mainImg" id="mainImg" value="<?php echo $puppy->getMainImg() ?>">
 
