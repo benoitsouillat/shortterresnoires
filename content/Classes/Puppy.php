@@ -17,6 +17,7 @@ class Puppy
     private $mainImg = "../../src/img/puppy-default.jpg";
     private $display = true;
     private $pdo = null;
+    private $price = 0;
 
     public function __construct(
         string $name = "",
@@ -26,6 +27,7 @@ class Puppy
         string $necklace = '',
         string $available = "Disponible",
         string $mainImg = "../../src/img/puppy-default.jpg",
+        int $price = 1200,
         bool $display = true,
         RequestPDO $pdo = null
     ) {
@@ -36,6 +38,7 @@ class Puppy
         $this->necklace = $necklace;
         $this->available = $available;
         $this->mainImg = $mainImg;
+        $this->price = $price;
         $this->display = $display;
         $this->pdo = $pdo ?? new RequestPDO();
     }
@@ -61,6 +64,7 @@ class Puppy
         $this->setNecklace($_POST['puppyNecklace']);
         $this->setAvailable($_POST['puppyAvailable']);
         $this->setMainImg($_POST['mainImg']);
+        $this->setMainImg($_POST['price']);
         // $this->setDisplay($_POST['puppyDisplay']);
     }
 
@@ -75,6 +79,7 @@ class Puppy
         $this->setNecklace($data->necklace);
         $this->setDisplay($data->display);
         $this->setMainImg($data->mainImg);
+        $this->setMainImg($data->price);
     }
 
     public function fillFromFetchAssoc(array $array)
@@ -88,6 +93,7 @@ class Puppy
         $this->setNecklace($array['necklace']);
         $this->setDisplay($array['display']);
         $this->setMainImg($array['mainImg']);
+        $this->setMainImg($array['price']);
     }
 
     public function fetchFromDatabase($puppyID)
@@ -110,6 +116,7 @@ class Puppy
         $stmt->bindValue(':necklace', $this->getNecklace());
         $stmt->bindValue(':available', $this->getAvailable());
         $stmt->bindValue(':mainImg', $this->getMainImg());
+        $stmt->bindValue(':price', $this->getPrice());
         $stmt->bindValue(':display', $this->getDisplay());
         $stmt->execute();
     }
@@ -123,6 +130,7 @@ class Puppy
         $stmt->bindValue(':necklace', $this->getNecklace());
         $stmt->bindValue(':available', $this->getAvailable());
         $stmt->bindValue(':mainImg', $this->getMainImg());
+        $stmt->bindValue(':mainImg', $this->getPrice());
         $stmt->bindValue(':display', $this->getDisplay());
         $stmt->execute();
     }
@@ -346,6 +354,26 @@ class Puppy
     public function setNecklace($necklace)
     {
         $this->necklace = $necklace;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of price
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set the value of price
+     *
+     * @return  self
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
 
         return $this;
     }
