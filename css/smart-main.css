@@ -1049,6 +1049,7 @@ body p {
 #puppy-page .puppy_info-align .price {
   position: absolute;
   right: 40px;
+  bottom: 51px;
 }
 #puppy-page .puppy_img {
   order: 1;
@@ -1210,15 +1211,16 @@ body p {
 #ourdog .ourdog-container .dog-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   flex-wrap: wrap;
   box-sizing: border-box;
 }
 #ourdog .ourdog-container .dog-list .vignet-dog {
-  min-width: 242px;
+  min-width: 25%;
   max-width: 370px;
   width: 28%;
   transform: none;
+  display: flex;
+  justify-content: center;
 }
 #ourdog .ourdog-container .dog-list .vignet-dog:hover {
   box-sizing: border-box;
