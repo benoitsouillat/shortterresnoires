@@ -1003,7 +1003,6 @@ body p {
   font-weight: bold;
 }
 #puppy-page .puppy_info-align {
-  position: relative;
   order: 2;
   display: flex;
   flex-direction: column;
@@ -1045,11 +1044,6 @@ body p {
 }
 #puppy-page .puppy_info-align p:nth-child(4) {
   order: 5;
-}
-#puppy-page .puppy_info-align .price {
-  position: absolute;
-  right: 40px;
-  bottom: 51px;
 }
 #puppy-page .puppy_img {
   order: 1;
@@ -1211,16 +1205,15 @@ body p {
 #ourdog .ourdog-container .dog-list {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
   box-sizing: border-box;
 }
 #ourdog .ourdog-container .dog-list .vignet-dog {
-  min-width: 25%;
+  min-width: 242px;
   max-width: 370px;
   width: 28%;
   transform: none;
-  display: flex;
-  justify-content: center;
 }
 #ourdog .ourdog-container .dog-list .vignet-dog:hover {
   box-sizing: border-box;

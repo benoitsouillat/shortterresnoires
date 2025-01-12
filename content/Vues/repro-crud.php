@@ -140,6 +140,10 @@ if (isset($_GET['error'])) {
                     <label for="notMyDog"> Reproducteur extérieur </label>
                     <input type="checkbox" id="notMyDog" name="notMyDog" value="1" <?php echo ($repro->getNotMyDog() == true) ? 'checked' : NULL ?>>
                 </fieldset>
+                <fieldset class="retirement-field">
+                    <label for="retirement"> Retraité(e) <label>
+                            <input type="checkbox" id="retirement" name="retirement" value="1" <?php echo ($repro->getRetirement() == true) ? 'checked' : NULL ?>>
+                </fieldset>
 
                 <label for="mainImg">Image Principale : </label>
                 <input type="file" name="mainImg" id="mainImg" value="<?php echo $repro->getMainImg() ?>">

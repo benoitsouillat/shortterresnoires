@@ -1,6 +1,6 @@
     <!-- Meta Informations -->
     <meta charset="utf-8">
-    <meta name="description" content="Votre Elevage Familial de Cane Corso LOF en Corrèze (19 - Limousin) à Vigeois - Bienvenue sur notre site, n'hésitez pas à nous contacter au 06.70.37.81.13">
+    <meta name="description" content="Votre Elevage Familial de Cane Corso LOF en Corrèze (19 - Limousin) à Vigeois - Bienvenue sur notre site, nos chiots sont élevés à la campagne, sociabilisés en présence d'autres races et autres animaux. N'hésitez pas à nous contacter au 06.70.37.81.13">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
     <!-- Font CDN -->

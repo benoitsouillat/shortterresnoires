@@ -21,6 +21,7 @@ class Repro
     private $adn = true;
     private $mainImg = "";
     private $notMyDog = false;
+    private $retirement = false;
     private $pdo = null;
 
     public function __construct(
@@ -31,6 +32,7 @@ class Repro
         string $breeder = "du Domaine des Terres Noires",
         bool $adn = true,
         bool $notMyDog = false,
+        bool $retirement = false,
         string $mainImg = self::DEFAULT_IMG,
         RequestPDO $pdo = null
     ) {
@@ -41,6 +43,7 @@ class Repro
         $this->breeder = $breeder;
         $this->adn = $adn;
         $this->notMyDog = $notMyDog ?? false;
+        $this->retirement = $retirement ?? false;
         $this->mainImg = $mainImg;
         $this->pdo = $pdo ?? new RequestPDO();
     }
@@ -56,6 +59,7 @@ class Repro
         $this->setInsert($_POST['reproInsert']);
         $this->setAdn($_POST['reproADN']);
         $this->setNotMyDog(isset($_POST['notMyDog']) ? 1 : 0);
+        $this->setRetirement(isset($_POST['retirement']) ? 1 : 0);
         $this->setBreeder($_POST['reproBreeder']);
     }
     public function fillFromStdClass(stdClass $data): void
@@ -67,6 +71,7 @@ class Repro
         $this->setInsert($data->insert);
         $this->setAdn($data->adn ?? true);
         $this->setNotMyDog($data->notMyDog ?? false);
+        $this->setRetirement($data->retirement ?? false);
         $this->setBreeder($data->breeder ?? "du Domaine des Terres Noires");
         $this->setMainImg($data->mainImg ?? self::DEFAULT_IMG);
     }
@@ -297,6 +302,26 @@ class Repro
     public function setNotMyDog($notMyDog)
     {
         $this->notMyDog = $notMyDog;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of retirement
+     */
+    public function getRetirement()
+    {
+        return $this->retirement;
+    }
+
+    /**
+     * Set the value of retirement
+     *
+     * @return  self
+     */
+    public function setRetirement($retirement)
+    {
+        $this->retirement = $retirement;
 
         return $this;
     }

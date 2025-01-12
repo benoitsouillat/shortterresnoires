@@ -54,7 +54,6 @@ $table_puppies = "CREATE TABLE IF NOT EXISTS `terresnoires`.`puppies` (
     `necklace` VARCHAR(20) NOT NULL DEFAULT '',
     `available` VARCHAR(20) NOT NULL DEFAULT 'Disponible',
     `mainImg` VARCHAR(255) NOT NULL DEFAULT '../src/img/puppy-default.jpg',
-    `price` INT DEFAULT 1200,
     `display` TINYINT(1) DEFAULT 1,
     PRIMARY KEY(`puppyID`),
     FOREIGN KEY(`litter`) REFERENCES litters(litterId)
@@ -71,14 +70,9 @@ $table_diapos = "CREATE TABLE IF NOT EXISTS `terresnoires`.`diapos` (
     FOREIGN KEY(`puppyID`) REFERENCES puppies(puppyID)
 )
 ENGINE = InnoDB;";
-
-if ($pdo = $conn->connect()) {
-    $pdo->exec($databaseCreator);
-    $pdo->exec($table_repros);
-    $pdo->exec($table_users);
-    $pdo->exec($table_litters);
-    $pdo->exec($table_puppies);
-    $pdo->exec($table_diapos);
-} else {
-    echo "Impossible de se connecter à la base de données";
-}
+$conn->connect()->exec($databaseCreator);
+$conn->connect()->exec($table_repros);
+$conn->connect()->exec($table_users);
+$conn->connect()->exec($table_litters);
+$conn->connect()->exec($table_puppies);
+$conn->connect()->exec($table_diapos);

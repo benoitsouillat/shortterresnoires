@@ -20,7 +20,20 @@
             <br>
             <i>Textes, vidéos et photos tous droits réservés pour tous pays</i>
         </p>
+        <p><a href="/content/Vues/administration.php" class="btn btn-sm btn-beige">Espace Connexion</a></p>
     </div>
 </footer>
 <script src="/app/anim.js" defer></script>
 <script src="https://kit.fontawesome.com/5944b63bf2.js" defer></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5CHT1DV24K"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5CHT1DV24K');
+</script>

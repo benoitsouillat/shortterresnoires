@@ -12,6 +12,7 @@
     <?php
     include_once "../content/php/header.php";
     ?>
+            <h1 class='hidden'>Le Domaine des Terres Noires</h1>
 
     <section>
         <aside id="standard">

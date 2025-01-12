@@ -15,6 +15,7 @@
     </header>
     <div id="breed-info">
         <section id="breed-standard">
+            <h1 class='hidden'>Le Domaine des Terres Noires</h1>
             <h2>Le standard du Cane Corso</h2>
             <div>
                 <div class="breed-para">
@@ -105,7 +106,7 @@
         <section>
             <h2>Un Mâle ou une Femelle - Que choisir ?</h2>
             <div>
-                <img src="/src/img/randyCanape.jpg" alt="un chiot cane corso joue avec sa peluche" />
+                <img src="/src/img/randyCanape.jpg" alt="chien-male-ou-femelle?" />
                 <div class="breed-para">
                     <p>Comme beaucoup de races, chez le Cane Corso, avoir un mâle ou une femelle est un choix important
                         compte tenu des différences d’avoir l’un ou l’autre. <br />
@@ -160,16 +161,6 @@
                 </div>
             </div>
         </section>
-        <!--
-        <section id="breed-work">
-            <h2>Travailler avec cette race</h2>
-            <div>
-                <img src="../src/img/okkaina8.jpg" alt="okkaina-cane-corso" />
-                <div class="breed-para">
-
-                </div>
-            </div>
-        </section> -->
     </div>
     <?php
     include "./php/footer.php";

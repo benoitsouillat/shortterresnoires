@@ -11,6 +11,7 @@ if (isset($_GET['litterID']) && $_GET['litterID'] != null) {
 
     // SUPPRESSION
 
+
     // Faire un message d'avertissement !! Supprime également les chiots !!
     if (isset($_GET['delete']) && $_GET['delete'] == true) {
         $stmt = $pdo->connect()->prepare(deleteLitterFromId());

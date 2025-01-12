@@ -21,3 +21,6 @@ if (isset($_GET['order'])) {
 }
 $stmt->execute();
 $repros = $stmt->fetchAll(PDO::FETCH_OBJ);
+$stmt = $pdo->connect()->prepare(getAllRetirements());
+$stmt->execute();
+$retirements = $stmt->fetchAll(PDO::FETCH_OBJ);

@@ -69,6 +69,31 @@ $user->checkRole();
             <a href='./repro-crud.php?reproID={$repro->getId()}' class='btn btn-primary'>Modifier</a>
         </div>";
         }
+        echo '<h3>Les retraités : </h3>';
+        foreach ($retirements as $data) {
+            $retirement = new Repro();
+            $retirement->fillFromStdClass($data);
+            echo " 
+            <div class='repro-line'>
+            <div class='image-space'>
+            <a href='./repro-crud.php?reproID={$retirement->getId()}'><img src=../{$retirement->getMainImg()} alt={$retirement->getName()}></a>
+            </div>
+            <a href='./repro-crud.php?reproID={$retirement->getId()}'><span  ";
+            if ($retirement->getSex() == 'Male') {
+                echo "class='male-color";
+            } else {
+                echo "class='female-color";
+            }
+
+            echo "'> {$retirement->getName()} </span></a>
+            <p>{$retirement->getBreeder()}</p>
+            <p>";
+            $today = date('Y-m-d');
+            $diff = date_diff(date_create($retirement->getBirthdate()->format('Y-m-d')), date_create($today));
+            echo $diff->format('%y') . " Ans</p>
+            <a href='./repro-crud.php?reproID={$retirement->getId()}' class='btn btn-primary'>Modifier</a>
+        </div>";
+        }
         ?>
     </section>
 </body>

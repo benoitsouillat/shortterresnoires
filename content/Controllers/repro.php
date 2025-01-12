@@ -35,6 +35,7 @@ $stmt->bindValue(':insert', $_POST['reproInsert']);
 $stmt->bindValue(':breeder', $_POST['reproBreeder']);
 $stmt->bindValue(':adn', $_POST['reproADN']);
 $stmt->bindValue(':notMyDog', isset($_POST['notMyDog']) ? 1 : 0);
+$stmt->bindValue(':retirement', isset($_POST['retirement']) ? 1 : 0);
 $stmt->bindValue(':mainImg', $repro->getMainImg());
 try {
     $stmt->execute();

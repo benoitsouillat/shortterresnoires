@@ -30,7 +30,12 @@ if (isset($jsonData['reproID'])) {
     $stmtImages->execute();
     $reproImages = $stmtImages->fetchAll(PDO::FETCH_ASSOC);
 
-    echo json_encode(['reproData' => $reproData, 'reprosWithPuppies' => $reprosWithPuppies, 'littersActive' => $littersActive, 'reproImages' => $reproImages]);
+    echo json_encode([
+        'reproData' => $reproData,
+        'reprosWithPuppies' => $reprosWithPuppies,
+        'littersActive' => array_reverse($littersActive),
+        'reproImages' => $reproImages
+    ]);
 } else {
     echo json_encode(['error' => 'ID du repro non fourni']);
 }

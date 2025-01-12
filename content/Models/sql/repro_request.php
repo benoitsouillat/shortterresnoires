@@ -2,11 +2,15 @@
 
 function getAllRepros()
 {
-    return "SELECT * FROM `repros` ORDER BY `sex` ASC, `birthdate` ASC";
+    return "SELECT * FROM `repros` WHERE retirement = false ORDER BY `sex` ASC, `birthdate` ASC";
+}
+function getAllRetirements()
+{
+    return "SELECT * FROM `repros` WHERE retirement = true ORDER BY `birthdate` ASC";
 }
 function getAllReprosAreMyDogs()
 {
-    return "SELECT * FROM `repros` WHERE notMyDog = false ORDER BY `birthdate` ASC";
+    return "SELECT * FROM `repros` WHERE notMyDog = false AND retirement = false ORDER BY `birthdate` ASC";
 }
 function getReproFromID()
 {
@@ -18,7 +22,7 @@ function getReprosWithPuppies()
 }
 function getAllMyRepros()
 {
-    return "SELECT * FROM `repros` WHERE notMyDog = false ORDER BY sex ASC, birthdate ASC ";
+    return "SELECT * FROM `repros` WHERE notMyDog = false AND retirement = false ORDER BY sex ASC, birthdate ASC ";
 }
 function getAllMalesRepro()
 {
@@ -55,6 +59,7 @@ function createRepro()
         breeder, 
         adn,
         notMyDog,
+        retirement,
         mainImg) 
         VALUES (
             :name, 
@@ -64,6 +69,7 @@ function createRepro()
             :breeder, 
             :adn, 
             :notMyDog,
+            :retirement,
             :mainImg)";
 }
 function manageRepro()
@@ -76,5 +82,6 @@ function manageRepro()
     breeder = :breeder,
     adn = :adn,
     notMyDog = :notMyDog,
+    retirement = :retirement,
     mainImg = :mainImg WHERE id = :reproID";
 }

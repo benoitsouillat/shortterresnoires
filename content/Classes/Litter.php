@@ -17,7 +17,7 @@ class Litter
     private $numberOfMales = 0;
     private $numberOfFemales = 0;
     private $numberLof = "";
-    private $birthdate = null;
+    private $birthdate = "2020-01-01";
     private $display = true;
     private $pdo = null;
 
@@ -106,7 +106,6 @@ class Litter
             $stmt->bindValue(':necklace', $puppy->getNecklace());
             $stmt->bindValue(':available', $puppy->getAvailable());
             $stmt->bindValue(':mainImg', $puppy->getMainImg());
-            $stmt->bindValue(':price', $puppy->getPrice());
             $stmt->bindValue(':display', $puppy->getDisplay());
 
             $stmt->execute();
@@ -143,7 +142,6 @@ class Litter
             $stmt->bindValue(':necklace', $puppy->getNecklace());
             $stmt->bindValue(':available', $puppy->getAvailable());
             $stmt->bindValue(':mainImg', $puppy->getMainImg());
-            $stmt->bindValue(':price', $puppy->getPrice());
             $stmt->bindValue(':display', $puppy->getDisplay());
             $stmt->execute();
         }
