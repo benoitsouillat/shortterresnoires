@@ -15,9 +15,9 @@
         .puppy-card {
             width: 30%;
             max-width: 380px;
-            max-height: 440px;
+            max-height: 500px;
             padding: 10px;
-            margin: 5px;
+            margin: 5px 15px;
 
             @media all and (max-width: $md) {
                 width: 45%;

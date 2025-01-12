@@ -28,21 +28,19 @@
 
                 <div class="carousel-inner">
                     <div class='carousel-item active'>
-                        <img src="../src/img/accueil_safari.jpg" alt="Le standard du Cane Corso et chiots disponibles">
+                        <img src="../src/img/safari.jpg" alt="Le standard du Cane Corso et chiots disponibles">
                         <div class="carousel-caption opacity-4">
-                            <p>Retrouvez nos adorables chiots disponibles de Panama et Tonnerre</p>
-                            <a href="/content/Vues/weeding.php" class="btn btn-info btn__anim"
-                                title="Découvrez nos adorables chiots Cane Corso LOF">Nos chiots
-                                disponibles</a>
+                            <p>Les bébés de Safari et Tibérius sont arrivés 😍. <br>Les photos arrivent très bientôt 📸</p>
+                            <a href="/content/Vues/weeding_litter.php?litterID=9" class="btn btn-info btn__anim"
+                                title="Découvrez nos adorables chiots Cane Corso LOF">Nos chiots disponibles</a>
                         </div>
                     </div>
                     <div class='carousel-item'>
                         <img src="../src/img/bebe_raia3j.jpg" alt="Annonce Gestation et Portée">
                         <div class="carousel-caption opacity-4">
-                            <p>Mariage de Tornade et Tyson <br>De magnifiques bébés arrivent à mi-juillet 🥰</p>
-                            <a href="/content/Vues/weeding_litter.php?litterID=7" class="btn btn-success btn__anim"
-                                title="Retrouvez nos dernières portées et nos chiots disponibles à la réservation">Voir
-                                nos bébés </a>
+                            <p>Mariage de Sansa Stark et Draco <br>Très belle portée prévue très prochainement 🥰</p>
+                            <a href="/content/Vues/weeding.php" class="btn btn-success btn__anim"
+                                title="Retrouvez nos dernières portées et nos chiots disponibles à la réservation">Voir nos mariages </a>
                         </div>
                     </div>
                     <div class='carousel-item'>
